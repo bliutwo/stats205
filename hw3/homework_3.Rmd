@@ -138,6 +138,10 @@ Z.obs.seven = numerator / denominator; Z.obs.seven
     = P_{p = 0.7}(B \geq 1.645(67(0.6)(0.4))^{\frac{1}{2}} + 67(0.6))
 \]
 
+\[
+    = P_{p=0.7}(\frac{B - 67(0.7)}{(50(0.7)(0.3))^{\frac{1}{2}}} \geq )
+\]
+
 There is a function in R that calculates the same thing:
 
 ```{r}
