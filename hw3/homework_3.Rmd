@@ -113,6 +113,19 @@ Power is the probability of rejecting $H_0$ when $H_A$ is true. We found that te
 
 is no longer standard normal.
 
+We have 
+
+\[
+    Z_{o7} = \frac{58 - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}} = 4.44
+\]
+
+```{r}
+p1 = 0.7
+numerator = successes - (n * p1)
+denominator = sqrt(n * p1 * (1.0 - p1))
+Z.obs.seven = numerator / denominator; Z.obs.seven
+```
+
 \[
     Power = P(Z \geq 1.645 | p = 0.7)
 \]
