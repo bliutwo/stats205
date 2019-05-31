@@ -105,7 +105,13 @@ The large sample approximation value $Z_o = 2.5 > 1.645$ and thus we reject $H_0
 
 ### (ii)
 
-Power is the probability of rejecting $H_0$ when $H_A$ is true. We found that test reject $H_0$ is $Z \geq z_{0.05} = 1.645$. Therefore, if $p = 0.7$, then
+Power is the probability of rejecting $H_0$ when $H_A$ is true. We found that test reject $H_0$ is $Z \geq z_{0.05} = 1.645$. Therefore, if $p = 0.7$,
+
+\[
+    Z_o = \frac{58 - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} = 4.44
+\]
+
+is no longer standard normal.
 
 \[
     Power = P(Z \geq 1.645 | p = 0.7)
