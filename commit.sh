@@ -1,3 +1,4 @@
 git add -A
-git commit
+dt=$(date '+%d/%m/%Y %H:%M:%S')
+git commit -m dt
 git push

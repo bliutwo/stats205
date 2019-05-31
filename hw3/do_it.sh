@@ -16,3 +16,5 @@ $ -l mem_free=8G
 $ -l h_rt=00:06:00
 
 R --vanilla --no-save < make_hw3.R
+
+bash ../commit.sh
