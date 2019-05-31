@@ -1,0 +1,115 @@
+---
+title: 'STATS 205: Homework Assignment 3'
+author: "Brian Liu"
+date: "4/26/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Solution to Problem 1
+
+### (i)
+
+```{r}
+library(bootstrap); data(law)
+t(law)
+theta.hat = cor(law$LSAT, law$GPA); theta.hat
+library(partitions)
+n = 15
+allCompositions = compositions(n, n);allCompositions[,1:5]
+allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=10000, replace=FALSE)]
+
+draw.bootstrap.samples = function(df){
+  n = dim(df)[1]
+  ind = sample(n, replace = TRUE)
+  cor.bootstrap.replicate = cor(df[ind, "LSAT"], df[ind, "GPA"])
+  return(cor.bootstrap.replicate)
+}
+R = 10000
+theta.hat.star = replicate(R, draw.bootstrap.samples(law))
+# make a ggplot
+library(ggplot2)
+theta.hat.star.df = data.frame(theta.hat.star = theta.hat.star)
+ggplot(theta.hat.star.df) +
+  geom_density(aes(x = theta.hat.star, y = ..scaled..),
+    fill = "lightblue") +
+  geom_hline(yintercept=0, colour="white", size=1) +
+  theme_bw() +
+  ylab("density") +
+  xlab(bquote(hat(theta))) +
+  geom_vline(xintercept = theta.hat, col = "red")+
+  scale_y_continuous(expand = c(0,0))
+```
+
+### (ii)
+
+```{r}
+sd(theta.hat.star)
+```
+
+## Solution to Problem 2
+
+### (i)
+
+```
+67 runs resulting in swallowing attempts
+58 successful
+9 failed
+
+H_0 : p = 0.6
+H_A : p > 0.6
+
+
+```
+
+```{r}
+n = 67
+successes = 58
+pbar = successes / n; pbar
+
+p0 = 0.6; nsim = 10000
+B = rbinom(nsim, size = n, prob = p0)
+hist(B, breaks = 30)
+```
+
+Test statistic $Z$:
+
+\[
+    Z_0 = \frac{B - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}}
+\]
+
+```{r}
+qnorm((1-0.05), mean = 0, sd = 1)
+```
+
+Rejection region: $Z \geq z_{0.05} = 1.645$
+
+Observed test statistic $Z_o$:
+
+\[
+    Z_o = \frac{58 - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} = 4.44
+\]
+
+```{r}
+numerator = successes - (n * p0)
+denominator = sqrt(n * p0 * (1.0 - p0))
+Z.obs = numerator / denominator; Z.obs
+```
+
+The large sample approximation value $Z_o = 2.5 > 1.645$ and thus we reject $H_0 : p = 0.6$ in favor of $p > 0.6$ at the approximate $\alpha = 0.05$ level. Thus there is evidence that the success rate of swallowing attempts is greater than $0.6$.
+
+### (ii)
+
+Power is the probability of rejecting $H_0$ when $H_A$ is true. We found that test reject $H_0$ is $Z \geq z_{0.05} = 1.645$. Therefore, if $p = 0.7$, then
+
+
+
+```{r}
+library(beepr)
+beep()
+```

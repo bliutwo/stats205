@@ -1,0 +1,184 @@
+---
+title: 'STATS 205: Homework Assignment 2'
+author: "Brian Liu"
+date: "4/19/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Solution to Problem 1
+
+```{r}
+patient_before     = c(1.83, 0.50, 1.62, 2.48, 1.68, 1.88, 1.55, 3.06, 1.30)
+patient_before_mod = c(1.83, 0.50, 16.2, 2.48, 1.68, 1.88, 1.55, 3.06, 1.30)
+patient_after      = c(0.878, 0.647, 0.598, 2.05, 1.06, 1.29, 1.06, 3.14, 1.29)
+
+patient_z     = patient_after - patient_before
+patient_z_mod = patient_after - patient_before_mod
+
+# mean before modification
+mean(patient_z)
+
+# mean after modification
+mean(patient_z_mod)
+```
+
+The mean, $\bar{Z}$ is substantially different after the change. However,
+
+```{r}
+# wilcox test before modification
+wilcox.test(patient_before, patient_after, alternative="greater", paired=TRUE, conf.int = TRUE)
+
+# wilcox test after modification
+wilcox.test(patient_before, patient_after, alternative="greater", paired=TRUE, conf.int = TRUE)
+```
+
+the estimate of $\theta$ given by $\hat{\theta}$ is the same for both tests, before and after the modification of a single value:
+
+```
+## sample estimates:
+## (pseudo)median 
+##           0.46
+```
+
+which is further evidence that supports Comment 16:
+
+>The estimator $\hat{\theta}$ is relatively insensitive to outliers. This is not the case with the classical estimator $\bar{Z} = \sum_{i = 1}^{n} Z_i / n$. Thus the use of $\hat{\theta}$ provides protection against gross errors.
+
+## Solution to Problem 2
+
+The reason the Hodges-Lehmann estimator is less influenced by outlying observations than the sample mean of the $Z$'s is that the Hodges-Lehmann estimator is computed by:
+
+>*Sensitivity to Gross Errors.* For a dataset with $n$ measurements, the set of all possible one- or two- element subsets of it has $n(n+1)/2$ elements. For each such subset, the mean is computed; finally, the median of these $n(n+1)/2$ averages is defined to be the Hodges-Lehmann estimator of location.
+> -- <cite>[Hodges-Lehmann estimator][1]</cite>
+
+[1]:https://en.wikipedia.org/wiki/Hodges%E2%80%93Lehmann_estimator
+
+This is described by Equation 3.23 in HWC:
+
+$$ \hat{\theta} = \text{median} 
+\left \{
+\frac{Z_i + Z_j}{2}, i \leq j = 1,...,n
+\right \}
+$$
+
+In other words, the Hodges-Lehmann estimator associated with the Wilcoxon test computes a value related to the median (the median of the averages of ranked, consecutive values), which does not take into account edge-cases, or outliers, and is therefore robust to outliers.
+
+## Solution to Problem 3
+
+```{r}
+beak_dark = c(5.8, 13.5, 26.1, 7.4, 7.6, 23.0, 10.7, 9.1, 19.3, 26.3, 17.5, 17.9, 18.3, 14.2, 55.2, 15.4, 30.0, 21.3, 26.8, 8.1, 24.3, 21.3, 18.2, 22.5, 31.1)
+
+beak_lite = c(5, 21, 73, 25, 3, 77, 59, 13, 36, 46, 9, 25, 59, 38, 70, 36, 55, 46, 25, 30, 29, 46, 71, 31, 33)
+
+beak_lite_mod = c(5, 21, 173, 25, 3, 77, 59, 13, 36, 46, 9, 25, 59, 38, 70, 36, 55, 46, 25, 30, 29, 46, 71, 31, 33)
+
+beak_diff     = beak_lite - beak_dark
+beak_diff_mod = beak_lite_mod - beak_dark
+
+mean(beak_diff)
+mean(beak_diff_mod)
+```
+
+The mean, $\bar{Z}$ is substantially different after the change. However,
+
+```{r}
+library(BSDA) # required to run SIGN.test
+
+# sign test before modification
+SIGN.test(beak_dark, beak_lite, estimate=TRUE)
+# sign test after modification
+SIGN.test(beak_dark, beak_lite_mod, estimate=TRUE)
+```
+
+the estimate of $\theta$ given by $\tilde{\theta}$ is the same for both tests, before and after the modification of a single value:
+
+```
+## sample estimates:
+## median of x-y 
+##         -17.6 
+```
+
+which is further evidence that supports Comment 40:
+
+>*Sensitivity to Gross Errors.* The estimator $\tilde{\theta}$ (3.58) is even less sensitive to outliers than the estimator $\hat{\theta}$ (3.23) associated with the signed rank statistics $T^+$ (3.3). (See Comment 16 and Problems 20 and 60.) As a result, $\tilde{\theta}$ protects well against gross errors. However, all the information contained in the collected sample is not utilized in computing $\tilde{\theta}$. Consequently, $\tilde{\theta}$ is rather inefficient for many populations.
+
+## Solution to Problem 4
+
+**NOTE**: I realized after looking at Problem 6 that the notation for "Uniform(0,1)" meant that the mean is 0 and the standard deviation is 1, not that it's a Uniform distribution where the values range from 0 to 1. Oops. Maybe I can fix it later.
+
+Small note about empty vectors and their usage [^1]
+
+[^1]: [This is a useful page](https://stackoverflow.com/questions/22235809/append-value-to-empty-vector-in-r) about empty vectors and habits not to build when making them.
+
+### $(i)$
+
+```{r}
+x <- list()
+for(i in 1:100000)
+{
+  # If min or max are not specified they assume the default values of 0 and 1 respectively.
+  x[[i]] = runif(50)
+}
+maxes <- double(length(x))
+for(i in 1:100000)
+{
+  curr_list = x[[i]]
+  maxes[i] = max(curr_list)
+}
+# maxes
+wilcox.test(maxes, mu = 1, conf.int = TRUE)
+```
+
+According to the above, the approximation to the true distribution of $\hat{\theta} = 0.9832971$.
+
+### $(ii)$
+
+```{r}
+library(boot)
+runif_custom <- function(dat, ind) {
+  return(runif(50))
+}
+boot_results <- boot(data = maxes, statistic = runif_custom, R=1000)
+boot_results
+plot(boot_results)
+library(car) #qqPlot
+library(wrapr) #qc
+# qqPlot(maxes, boot_results)
+```
+
+Unfortunately, I get [this error](https://i.imgur.com/rRoVH95.png) when I try to run the commented line. I probably spent too long trying to get qqPlot to work.
+
+## Solution to Problem 5
+
+### $(i)$
+
+```{r}
+
+placebo = c(rep(1, 30), rep(0, 20))
+treated = c(rep(1, 40), rep(0, 10))
+
+nll <- function(p1, p2) {
+  return(p1 - p2)
+}
+
+# library(stats4)
+# mle(minuslogl = nll, start = list(p1 = .6, p2 = .8))
+
+```
+
+[This is the error message associated with commented code](https://i.imgur.com/llC3YJ4.png)
+
+## Solution to Problem 6
+
+### $(i)$
+
+```{r}
+n <- rnorm(100, 1, 1)
+# jackknife(x, theta = )
+```
