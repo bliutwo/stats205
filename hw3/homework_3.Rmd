@@ -108,7 +108,8 @@ The large sample approximation value $Z_o = 2.5 > 1.645$ and thus we reject $H_0
 Power is the probability of rejecting $H_0$ when $H_A$ is true. We found that test reject $H_0$ is $Z \geq z_{0.05} = 1.645$. Therefore, if $p = 0.7$, then
 
 \[
-    Power = P(Z \geq )
+    Power = P(Z \geq 1.645 | p = 0.7)
+          = 
 \]
 
 
