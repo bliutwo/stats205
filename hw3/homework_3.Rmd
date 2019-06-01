@@ -200,14 +200,22 @@ pvalue = pnorm(Pp_8_zvalue); pvalue
 
 ## Solution to Problem 3
 
+Estimate for $p$:
+
 ```{r}
 library(binom)
 binom.confint(x=56, n=65, conf.level=.95, methods = "asymptotic")
+
+prop.test(x=56, n=65, conf.level=0.95, correct = FALSE)
 ```
 
 \[
     \hat{p} = (0.7776, 0.9455)
 \]
+
+Standard error for $p$:
+
+
 
 
 ```{r}
