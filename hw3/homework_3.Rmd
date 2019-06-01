@@ -181,13 +181,13 @@ first_term = 1.645 * sqrt(triple_product)
 second_term = n * p0
 third_term = n * p2
 bottom_term = n * p2 * (1.0 - p2)
-p7_numerator = first_term + second_term - third_term
-p7_denominator = sqrt(bottom_term)
-Pp_7_zvalue = p7_numerator / p7_denominator; Pp_7_zvalue
+p8_numerator = first_term + second_term - third_term
+p8_denominator = sqrt(bottom_term)
+Pp_8_zvalue = p8_numerator / p8_denominator; Pp_8_zvalue
 ```
 
 \[
-    P(Z^* \geq -0.0276) = 0.4890
+    P(Z^* \geq -2.078) = 0.01886
 \]
 
 ```{r}
