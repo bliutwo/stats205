@@ -203,8 +203,9 @@ pvalue = pnorm(Pp_8_zvalue); pvalue
 ```{r}
 library(binom)
 binom.confint(x=56, n=65, conf.level=.95, methods = "asymptotic")
-
 ```
+
+$\hat{p} = (0.7776, 0.9455)
 
 
 ```{r}
