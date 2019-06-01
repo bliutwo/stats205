@@ -143,7 +143,7 @@ Z.obs.seven = numerator / denominator; Z.obs.seven
 \]
 
 \[
-    P(Z^* \geq ) = 
+    P(Z^* \geq 24.98) = 
 \]
 
 ```{r}
