@@ -131,7 +131,7 @@ Z.obs.seven = numerator / denominator; Z.obs.seven
 \]
 
 \[
-    = P_{p = 0.7}(\frac{B - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} \geq 1.645)
+    = P_{p = 0.7}\bigg(\frac{B - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} \geq 1.645\bigg)
 \]
 
 \[
