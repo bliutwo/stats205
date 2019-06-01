@@ -162,11 +162,11 @@ Pp_7_zvalue = p7_numerator / p7_denominator; Pp_7_zvalue
 pvalue = pnorm(-abs(Pp_7_zvalue)); pvalue
 ```
 
-There is a function in R that calculates the same thing:
+<!-- There is a function in R that calculates the same thing: -->
 
 ```{r}
-library(pwr)
-pwr.p.test(h = 0, n = 67, sig.level = 0.05, power = NULL, alternative = c("greater"))
+# library(pwr)
+# pwr.p.test(h = 0, n = 67, sig.level = 0.05, power = NULL, alternative = c("greater"))
 ```
 
 
