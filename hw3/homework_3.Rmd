@@ -192,7 +192,7 @@ Pp_8_zvalue = p8_numerator / p8_denominator; Pp_8_zvalue
 
 ```{r}
 # pvalue = pnorm(-abs(Pp_7_zvalue)); pvalue
-pvalue = pnorm(Pp_7_zvalue); pvalue
+pvalue = pnorm(Pp_8_zvalue); pvalue
 ```
 
 
