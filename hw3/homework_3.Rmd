@@ -200,18 +200,26 @@ pvalue = pnorm(Pp_8_zvalue); pvalue
 
 ## Solution to Problem 3
 
-Estimate for $p$:
+Estimate for $p$ using binomial confidence interval, `binom.confint()`:
 
 ```{r}
 library(binom)
 binom.confint(x=56, n=65, conf.level=.95, methods = "asymptotic")
-
-prop.test(x=56, n=65, conf.level=0.95, correct = FALSE)
 ```
 
 \[
     \hat{p} = (0.7776, 0.9455)
 \]
+
+Estimate for $p$ using proportions test, `prop.test()`:
+```{r}
+prop.test(x=56, n=65, conf.level=0.95, correct = FALSE)
+```
+
+\[
+    p = 0.8615
+\]
+
 
 Standard error for $p$:
 
