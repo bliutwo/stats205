@@ -139,12 +139,9 @@ Z.obs.seven = numerator / denominator; Z.obs.seven
 \]
 
 \[
-    = P_{p=0.7}\bigg(\frac{B - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}} \geq \frac{1.645(67(0.6)(0.4))^{\frac{1}{2}} + 67(0.6) + 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}}\bigg)
+    = P_{p=0.7}\bigg(\frac{B - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}} \geq \frac{1.645(67(0.6)(0.4))^{\frac{1}{2}} + 67(0.6) - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}}\bigg)
 \]
 
-\[
-    P(Z^* \geq 24.98) = 
-\]
 
 ```{r}
 triple_product = n * p0 * (1.0 - p0)
@@ -152,10 +149,14 @@ first_term = 1.645 * sqrt(triple_product)
 second_term = n * p0
 third_term = n * p1
 bottom_term = n * p1 * (1.0 - p1)
-p7_numerator = first_term + second_term + third_term
+p7_numerator = first_term + second_term - third_term
 p7_denominator = sqrt(bottom_term)
 Pp_7_zvalue = p7_numerator / p7_denominator; Pp_7_zvalue
 ```
+
+\[
+    P(Z^* \geq 24.98) = 
+\]
 
 There is a function in R that calculates the same thing:
 
