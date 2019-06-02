@@ -269,8 +269,21 @@ denominator = n
 answer = sqrt(numerator/denominator); answer
 ```
 
+## Solution to Problem 4
 
 ```{r}
-library(beepr)
-beep()
+
+binom.confint(x = 56, n = 65, conf.level = 0.96, methods = "all")
+
+# Wilson confidence interval
+# binom.confint(x = 56, n = 65, conf.level = 0.96, methods = c("wilson"))
+
+# Laplace-Wald confidence interval
+
+# Agresti-Coull
+# binom.confint(x = 56, n = 65, conf.level = 0.96, methods = c("agresti-coull"))
+
+# Clopper-Pearson
+# binom.lrt(x = 56, n = 65, conf.level = 0.96, conf.adj = FALSE)
+
 ```
