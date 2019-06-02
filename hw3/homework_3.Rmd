@@ -200,6 +200,8 @@ pvalue = pnorm(Pp_8_zvalue); pvalue
 
 ## Solution to Problem 3
 
+**Summary**: Estimate for $\hat{p} = 0.8615$ and estimate for standard deviation of $\hat{p} = 0.04284$.
+
 Estimate for $p$ using binomial confidence interval, `binom.confint()`:
 
 ```{r}
@@ -269,7 +271,6 @@ numerator = p.hat * (1 - p.hat)
 denominator = n
 answer = sqrt(numerator/denominator); answer
 ```
-
 
 
 ```{r}
