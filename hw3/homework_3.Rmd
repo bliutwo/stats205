@@ -230,6 +230,17 @@ binom.test(x=56, n=65, p = 0.6, alternative = c("greater"), conf.level = 0.95)
 
 Standard error for $p$:
 
+Standard error of $\hat{p}$ is:
+
+\[
+    \sqrt{\frac{p(1 - p)}{n}}
+\]
+
+and estimate is:
+
+\[
+    $\sqrt{\frac}
+\]
 
 
 
