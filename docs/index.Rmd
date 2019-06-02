@@ -1,3 +1,6 @@
 # Stats Homework Repository
 
-<a href="homework_3.html">Homework 3</a>
+- <a href="homework_3.html">Homework 3</a>
+- Homework 4
+- Homework 5
+- Homework 6
