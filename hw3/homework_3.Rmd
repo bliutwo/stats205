@@ -235,11 +235,23 @@ Standard error of $\hat{p}$ is:
 \[
     \sqrt{\frac{p(1 - p)}{n}}
 \]
+\[
+    = \sqrt{\frac{(0.6)(0.4)}{65}}
+\]
+\[
+    = 
+\]
 
 and estimate is:
 
 \[
     \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}
+\]
+\[
+    = \sqrt{\frac{(0.8615)(1 - 0.8615)}{65}}
+\]
+\[
+    = 
 \]
 
 
