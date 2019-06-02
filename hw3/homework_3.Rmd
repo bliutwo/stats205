@@ -239,7 +239,7 @@ Standard error of $\hat{p}$ is:
 and estimate is:
 
 \[
-    $\sqrt{\frac{\hat{p}(1 - \hat{p}){n}}}
+    \sqrt{\frac{\hat{p}(1 - \hat{p}){n}}}
 \]
 
 
