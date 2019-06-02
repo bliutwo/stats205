@@ -242,6 +242,14 @@ Standard error of $\hat{p}$ is:
     = 
 \]
 
+```{r}
+p = 0.6
+n = 65
+numerator = p * (1 - p)
+denominator = n
+answer = sqrt(numerator/denominator); answer
+```
+
 and estimate is:
 
 \[
@@ -253,6 +261,14 @@ and estimate is:
 \[
     = 
 \]
+
+```{r}
+p.hat = 0.8615
+n = 65
+numerator = p.hat * (1 - p.hat)
+denominator = n
+answer = sqrt(numerator/denominator); answer
+```
 
 
 
