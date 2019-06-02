@@ -276,6 +276,14 @@ answer = sqrt(numerator/denominator); answer
 binom.confint(x = 56, n = 65, conf.level = 0.96, methods = "all")
 ```
 
-```
+Here are the rows relevant to our problem:
 
 ```
+##           method  x  n      mean     lower     upper
+## 1  agresti-coull 56 65 0.8615385 0.7488973 0.9301180
+## 2     asymptotic 56 65 0.8615385 0.7735567 0.9495202
+## 5          exact 56 65 0.8615385 0.7480632 0.9371740
+## 11        wilson 56 65 0.8615385 0.7514483 0.9275670
+```
+
+where `asymptotic` is Laplace-Wald, `agresti-coull` is Agresti-Coull, `exact` is Clopper-Pearson, and `wilson` is Wilson.
