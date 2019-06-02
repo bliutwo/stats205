@@ -275,3 +275,7 @@ answer = sqrt(numerator/denominator); answer
 
 binom.confint(x = 56, n = 65, conf.level = 0.96, methods = "all")
 ```
+
+```
+
+```
