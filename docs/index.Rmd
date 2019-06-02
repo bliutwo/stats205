@@ -1,0 +1,3 @@
+# Stats Homework Repository
+
+<a href="homework_3.html">Homework 3</a>
