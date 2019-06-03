@@ -298,4 +298,9 @@ plant_vector <- c(926, 288, 293, 104)
 expected = c(9/16, 3/16, 3/16, 1/16)
 
 res <- chisq.test(x = plant_vector, p = expected); res
+
+res$expected
+res$observed
 ```
+
+The **p-value** of the test is $p = 0.6895$, which is more than the significance level $\alpha = 0.05$. We cannot conclude that the data does *not* support Mendelian theory at the $\alpha = 0.05$ level.
