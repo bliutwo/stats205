@@ -291,3 +291,4 @@ where `asymptotic` is Laplace-Wald, `agresti-coull` is Agresti-Coull, `exact` is
 It looks like `agresti-coull` and `exact` are fairly similar in terms of the location of the interval, while `asymptotic` is skewed towards the "right" side of the intervals, and `wilson` has the smallest range.
 
 ## Solution to Problem 5
+
