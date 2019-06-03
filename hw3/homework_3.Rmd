@@ -293,7 +293,8 @@ It looks like `agresti-coull` and `exact` are fairly similar in terms of the loc
 ## Solution to Problem 5
 
 ```{r}
-plants <- matrix(c(926, 288, 293, 104), ncol = 2, byrow=FALSE)
+plant_vector <- c(926, 288, 293, 104)
+plants <- matrix(plant_vector, ncol = 2, byrow=FALSE)
 colnames(plants) <- c('tall', 'dwarf')
 rownames(plants) <- c('cut-leaf', 'potato-leaf')
 plants
@@ -308,4 +309,10 @@ mosaicplot(dt, shade = TRUE, las=2,
 
 chisq.test(plants, correct = F)
 chisq.test(plants, correct = F)$expected
+
+9/16
+
+expected = c(9/16, 3/16, 3/16, 1/16); expected
+
+res <- chisq.test(plant_vector, expected); res
 ```
