@@ -299,4 +299,5 @@ rownames(plants) <- c('cut-leaf', 'potato-leaf')
 plants
 
 chisq.test(plants, correct = F)
+chisq.test(plants, correct = F)$expected
 ```
