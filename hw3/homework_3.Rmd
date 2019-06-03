@@ -295,7 +295,7 @@ It looks like `agresti-coull` and `exact` are fairly similar in terms of the loc
 ```{r}
 plant_vector <- c(926, 288, 293, 104)
 
-expected = c(9/16, 3/16, 3/16, 1/16); expected
+expected = c(9/16, 3/16, 3/16, 1/16)
 
 res <- chisq.test(x = plant_vector, p = expected); res
 ```
