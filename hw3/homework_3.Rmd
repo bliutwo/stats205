@@ -297,5 +297,5 @@ plant_vector <- c(926, 288, 293, 104)
 
 expected = c(9/16, 3/16, 3/16, 1/16); expected
 
-res <- chisq.test(plant_vector, expected); res
+res <- chisq.test(x = plant_vector, p = expected); res
 ```
