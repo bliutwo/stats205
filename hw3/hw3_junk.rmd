@@ -1,0 +1,17 @@
+# plants <- matrix(plant_vector, ncol = 2, byrow=FALSE)
+# colnames(plants) <- c('tall', 'dwarf')
+# rownames(plants) <- c('cut-leaf', 'potato-leaf')
+# plants
+
+# library("gplots")
+# dt <- as.table(as.matrix(plants))
+# balloonplot(t(dt), main ="plants", xlab ="", ylab="", label = FALSE, show.margins = FALSE)
+
+# library("graphics")
+# mosaicplot(dt, shade = TRUE, las=2,
+#            main = "housetasks")
+
+# chisq.test(plants, correct = F)
+# chisq.test(plants, correct = F)$expected
+
+# 9/16
