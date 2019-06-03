@@ -1,3 +1,12 @@
+---
+title: 'STATS 205: Homework Repository'
+author: 'Brian Liu'
+date: '6/3/2019'
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Stats Homework Repository
 
 - <a href="homework_3.html">Homework 3 Webpage</a>(<a href="homework_3.pdf">pdf</a>) (<a href="homework_3.Rmd">rmd</a>)
