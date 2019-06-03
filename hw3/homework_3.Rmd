@@ -315,4 +315,10 @@ rownames(df) = c("Multiple attack", "Primary attack"); df
 fisher.test(df, alternative = "less")
 ```
 
-There is not enough evidence that the unknown probability that a multiple-attack patience will have low reactivity is less than the unknown probability that a primary-attack patient will have low reactivity. The $P$-value achieved by these data if we use Fisher's exact test of $H_0$ against the alternative $p_1 < p_2$ is .
+There is not enough evidence that the unknown probability that a multiple-attack patient will have low reactivity is less than the unknown probability that a primary-attack patient will have low reactivity. The $P$-value achieved by these data if we use Fisher's exact test of $H_0$ against the alternative $p_1 < p_2$ is 0.1071.
+
+```{r}
+df = data.frame(Low = c(0, 2), High = c(5, 1))
+rownames(df) = c("Multiple attack", "Primary attack"); df
+fisher.test(df, alternative = "two.sided")
+```
