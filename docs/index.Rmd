@@ -7,8 +7,6 @@ output:
   html_document: default
 ---
 
-# Stats Homework Repository
-
 - <a href="homework_3.html">Homework 3</a>(<a href="homework_3.pdf">pdf</a>) (<a href="homework_3.Rmd">rmd</a>)
 - Homework 4
 - Homework 5
