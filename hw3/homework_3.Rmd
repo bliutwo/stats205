@@ -292,7 +292,9 @@ It looks like `agresti-coull` and `exact` are fairly similar in terms of the loc
 
 ## Solution to Problem 5
 
+```{r}
 plants <- Matrix(c(926, 288, 293, 104), ncol = 2, byrow=TRUE)
 colnames(plants) <- c('tall', 'dwarf')
 rownames(plants) <- c('cut-leaf', 'potato-leaf')
 plants
+```
