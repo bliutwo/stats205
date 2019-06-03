@@ -299,6 +299,8 @@ rownames(plants) <- c('cut-leaf', 'potato-leaf')
 plants
 
 library("gplots")
+
+dt <- as.table(as.matrix(plants))
 balloonplot(t(dt), main ="plants", xlab ="", ylab="", label = FALSE, show.margins = FALSE)
 
 chisq.test(plants, correct = F)
