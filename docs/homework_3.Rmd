@@ -344,10 +344,7 @@ prop.test(x, n, alternative = c("greater"), conf.level = 0.99)
 
 The 99% confidence interval for difference between rate of tonsillectomy in Hodgkin's cases and rate of tonsillectomy in non-Hodgkin's cases is between 9.66% and 100%.
 
-```{r}
-x = c(67, 43)
-n = c(101, 107)
-prop.test(x, n, alternative = c("greater"), conf.level = 0.95)
-```
+The $P$-value achieved by these data if we use a `2-sample test for equality of proportions with continuity correction` is $0.0001379$. There is *strong evidence* at the $\alpha = 0.05$ level that there is higher rate of tonsillectomy among Hodgkin's cases.
 
-The 95% confidence interval for difference between rate of tonsillectomy in Hodgkin's cases and rate of tonsillectomy in non-Hodgkin's cases is between 
+## Solution to Problem 8
+
