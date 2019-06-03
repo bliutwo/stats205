@@ -1,0 +1,328 @@
+---
+title: 'STATS 205: Homework Assignment 3'
+author: "Brian Liu"
+date: "4/26/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Solution to Problem 1
+
+### (i)
+
+```{r}
+library(bootstrap); data(law)
+t(law)
+theta.hat = cor(law$LSAT, law$GPA); theta.hat
+library(partitions)
+n = 15
+allCompositions = compositions(n, n);allCompositions[,1:5]
+allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=10000, replace=FALSE)]
+
+draw.bootstrap.samples = function(df){
+  n = dim(df)[1]
+  ind = sample(n, replace = TRUE)
+  cor.bootstrap.replicate = cor(df[ind, "LSAT"], df[ind, "GPA"])
+  return(cor.bootstrap.replicate)
+}
+R = 10000
+theta.hat.star = replicate(R, draw.bootstrap.samples(law))
+# make a ggplot
+library(ggplot2)
+theta.hat.star.df = data.frame(theta.hat.star = theta.hat.star)
+ggplot(theta.hat.star.df) +
+  geom_density(aes(x = theta.hat.star, y = ..scaled..),
+    fill = "lightblue") +
+  geom_hline(yintercept=0, colour="white", size=1) +
+  theme_bw() +
+  ylab("density") +
+  xlab(bquote(hat(theta))) +
+  geom_vline(xintercept = theta.hat, col = "red")+
+  scale_y_continuous(expand = c(0,0))
+```
+
+### (ii)
+
+```{r}
+sd(theta.hat.star)
+```
+
+## Solution to Problem 2
+
+### (i)
+
+```
+67 runs resulting in swallowing attempts
+58 successful
+9 failed
+
+H_0 : p = 0.6
+H_A : p > 0.6
+
+
+```
+
+```{r}
+n = 67
+successes = 58
+pbar = successes / n; pbar
+
+p0 = 0.6; nsim = 10000
+B = rbinom(nsim, size = n, prob = p0)
+hist(B, breaks = 30)
+```
+
+Test statistic $Z$:
+
+\[
+    Z_0 = \frac{B - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}}
+\]
+
+```{r}
+qnorm((1-0.05), mean = 0, sd = 1)
+```
+
+Rejection region: $Z \geq z_{0.05} = 1.645$
+
+Observed test statistic $Z_o$:
+
+\[
+    Z_o = \frac{58 - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} = 4.44
+\]
+
+```{r}
+numerator = successes - (n * p0)
+denominator = sqrt(n * p0 * (1.0 - p0))
+Z.obs = numerator / denominator; Z.obs
+```
+
+The large sample approximation value $Z_o = 2.5 > 1.645$ and thus we reject $H_0 : p = 0.6$ in favor of $p > 0.6$ at the approximate $\alpha = 0.05$ level. Thus there is evidence that the success rate of swallowing attempts is greater than $0.6$.
+
+### (ii)
+
+Power is the probability of rejecting $H_0$ when $H_A$ is true. We found that test reject $H_0$ is $Z \geq z_{0.05} = 1.645$. Therefore, if $p = 0.7$,
+
+\[
+    Z_o = \frac{58 - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} = 4.44
+\]
+
+is no longer standard normal.
+
+We have 
+
+\[
+    Z_{o7} = \frac{58 - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}} = 2.96
+\]
+
+```{r}
+p1 = 0.7
+numerator = successes - (n * p1)
+denominator = sqrt(n * p1 * (1.0 - p1))
+Z.obs.seven = numerator / denominator; Z.obs.seven
+```
+
+\[
+    Power = P(Z \geq 1.645 | p = 0.7)
+\]
+
+\[
+    = P_{p = 0.7}\bigg(\frac{B - 67(0.6)}{(67(0.6)(0.4))^{\frac{1}{2}}} \geq 1.645\bigg)
+\]
+
+\[
+    = P_{p = 0.7}(B \geq 1.645(67(0.6)(0.4))^{\frac{1}{2}} + 67(0.6))
+\]
+
+\[
+    = P_{p=0.7}\bigg(\frac{B - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}} \geq \frac{1.645(67(0.6)(0.4))^{\frac{1}{2}} + 67(0.6) - 67(0.7)}{(67(0.7)(0.3))^{\frac{1}{2}}}\bigg)
+\]
+
+
+```{r}
+triple_product = n * p0 * (1.0 - p0)
+first_term = 1.645 * sqrt(triple_product)
+second_term = n * p0
+third_term = n * p1
+bottom_term = n * p1 * (1.0 - p1)
+p7_numerator = first_term + second_term - third_term
+p7_denominator = sqrt(bottom_term)
+Pp_7_zvalue = p7_numerator / p7_denominator; Pp_7_zvalue
+```
+
+\[
+    P(Z^* \geq -0.0276) = 0.4890
+\]
+
+```{r}
+# pvalue = pnorm(-abs(Pp_7_zvalue)); pvalue
+pvalue = pnorm(Pp_7_zvalue); pvalue
+```
+
+If $p = 0.8$,
+
+\[
+    Power = P(Z \geq 1.645 | p = 0.8)
+\]
+
+\[
+    = P_{p=0.8}\bigg(\frac{B - 67(0.8)}{(67(0.8)(0.2))^{\frac{1}{2}}} \geq \frac{1.645(67(0.6)(0.4))^{\frac{1}{2}} + 67(0.6) - 67(0.8)}{(67(0.8)(0.2))^{\frac{1}{2}}}\bigg)
+\]
+
+
+```{r}
+p2 = 0.8
+triple_product = n * p0 * (1.0 - p0)
+first_term = 1.645 * sqrt(triple_product)
+second_term = n * p0
+third_term = n * p2
+bottom_term = n * p2 * (1.0 - p2)
+p8_numerator = first_term + second_term - third_term
+p8_denominator = sqrt(bottom_term)
+Pp_8_zvalue = p8_numerator / p8_denominator; Pp_8_zvalue
+```
+
+\[
+    P(Z^* \geq -2.078) = 0.01886
+\]
+
+```{r}
+# pvalue = pnorm(-abs(Pp_7_zvalue)); pvalue
+pvalue = pnorm(Pp_8_zvalue); pvalue
+```
+
+
+<!-- There is a function in R that calculates the same thing: library(pwr), pwr.p.test()-->
+
+## Solution to Problem 3
+
+**Summary**: **Estimate for $\hat{p} = 0.8615$** and **estimate for standard deviation of $\hat{p} = 0.04284$**.
+
+Estimate for $p$ using binomial confidence interval, `binom.confint()`:
+
+```{r}
+library(binom)
+binom.confint(x=56, n=65, conf.level=.95, methods = "asymptotic")
+```
+
+\[
+    \hat{p} = (0.7776, 0.9455)
+\]
+
+Estimate for $p$ using 1-sample proportions test without continuity correction, `prop.test()`:
+
+```{r}
+prop.test(x=56, n=65, p = 0.6, conf.level=0.95, alternative = c("greater"))
+```
+
+\[
+    p = 0.8615
+\]
+
+Estimate for $p$ using Exact Binomial Test:
+
+```{r}
+binom.test(x=56, n=65, p = 0.6, alternative = c("greater"), conf.level = 0.95)
+```
+
+Standard error of $\hat{p}$ is:
+
+\[
+    \sqrt{\frac{p(1 - p)}{n}}
+\]
+\[
+    = \sqrt{\frac{(0.6)(0.4)}{65}}
+\]
+\[
+    = 0.06076
+\]
+
+```{r}
+p = 0.6
+n = 65
+numerator = p * (1 - p)
+denominator = n
+answer = sqrt(numerator/denominator); answer
+```
+
+and estimate is:
+
+\[
+    \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}
+\]
+\[
+    = \sqrt{\frac{(0.8615)(1 - 0.8615)}{65}}
+\]
+\[
+    = 0.04284
+\]
+
+```{r}
+p.hat = 0.8615
+n = 65
+numerator = p.hat * (1 - p.hat)
+denominator = n
+answer = sqrt(numerator/denominator); answer
+```
+
+## Solution to Problem 4
+
+```{r}
+
+binom.confint(x = 56, n = 65, conf.level = 0.96, methods = "all")
+```
+
+Here are the rows relevant to our problem:
+
+```
+##           method  x  n      mean     lower     upper
+## 1  agresti-coull 56 65 0.8615385 0.7488973 0.9301180
+## 2     asymptotic 56 65 0.8615385 0.7735567 0.9495202
+## 5          exact 56 65 0.8615385 0.7480632 0.9371740
+## 11        wilson 56 65 0.8615385 0.7514483 0.9275670
+```
+
+where `asymptotic` is Laplace-Wald, `agresti-coull` is Agresti-Coull, `exact` is Clopper-Pearson, and `wilson` is Wilson.
+
+It looks like `agresti-coull` and `exact` are fairly similar in terms of the location of the interval, while `asymptotic` is skewed towards the "right" side of the intervals, and `wilson` has the smallest range.
+
+## Solution to Problem 5
+
+```{r}
+plant_vector <- c(926, 288, 293, 104)
+
+expected = c(9/16, 3/16, 3/16, 1/16)
+
+# goodness-of-fit test
+
+res <- chisq.test(x = plant_vector, p = expected); res
+
+res$expected
+res$observed
+```
+
+The **p-value** of the test is $p = 0.6895$, which is more than the significance level $\alpha = 0.05$. We cannot conclude that the data does *not* support Mendelian theory at the $\alpha = 0.05$ level.
+
+## Solution to Problem 6
+
+```{r}
+df = data.frame(Low = c(0, 2), High = c(5, 1))
+rownames(df) = c("Multiple attack", "Primary attack"); df
+fisher.test(df, alternative = "less")
+```
+
+There is *not enough evidence* that the unknown probability that a multiple-attack patient will have low reactivity is *less than* the unknown probability that a primary-attack patient will have low reactivity. The $P$-value achieved by these data if we use Fisher's exact test of $H_0$ against the alternative $p_1 < p_2$ is 0.1071.
+
+```{r}
+df = data.frame(Low = c(0, 2), High = c(5, 1))
+rownames(df) = c("Multiple attack", "Primary attack"); df
+fisher.test(df, alternative = "two.sided")
+```
+
+The $P$-value achieved when testing the null against a two-sided hypothesis is the same, and therefore, there is *not enough evidence* that the unknown probability that a multiple-attack patient will have low reactivity is *not equal* to the unknown probability that a primary-attack patient will have low reactivity.
+
+## Solution to Problem 7
