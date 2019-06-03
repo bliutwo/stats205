@@ -312,5 +312,7 @@ The **p-value** of the test is $p = 0.6895$, which is more than the significance
 ```{r}
 df = data.frame(Low = c(0, 2), High = c(5, 1))
 rownames(df) = c("Multiple attack", "Primary attack"); df
-fisher.test(df, alternative = "less")
+fisher.test(df, alternative = "greater")
 ```
+
+There is not enough evidence that 
