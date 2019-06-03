@@ -294,23 +294,23 @@ It looks like `agresti-coull` and `exact` are fairly similar in terms of the loc
 
 ```{r}
 plant_vector <- c(926, 288, 293, 104)
-plants <- matrix(plant_vector, ncol = 2, byrow=FALSE)
-colnames(plants) <- c('tall', 'dwarf')
-rownames(plants) <- c('cut-leaf', 'potato-leaf')
-plants
+# plants <- matrix(plant_vector, ncol = 2, byrow=FALSE)
+# colnames(plants) <- c('tall', 'dwarf')
+# rownames(plants) <- c('cut-leaf', 'potato-leaf')
+# plants
 
-library("gplots")
-dt <- as.table(as.matrix(plants))
-balloonplot(t(dt), main ="plants", xlab ="", ylab="", label = FALSE, show.margins = FALSE)
+# library("gplots")
+# dt <- as.table(as.matrix(plants))
+# balloonplot(t(dt), main ="plants", xlab ="", ylab="", label = FALSE, show.margins = FALSE)
 
-library("graphics")
-mosaicplot(dt, shade = TRUE, las=2,
-           main = "housetasks")
+# library("graphics")
+# mosaicplot(dt, shade = TRUE, las=2,
+#            main = "housetasks")
 
-chisq.test(plants, correct = F)
-chisq.test(plants, correct = F)$expected
+# chisq.test(plants, correct = F)
+# chisq.test(plants, correct = F)$expected
 
-9/16
+# 9/16
 
 expected = c(9/16, 3/16, 3/16, 1/16); expected
 
