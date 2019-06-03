@@ -297,4 +297,6 @@ plants <- matrix(c(926, 288, 293, 104), ncol = 2, byrow=FALSE)
 colnames(plants) <- c('tall', 'dwarf')
 rownames(plants) <- c('cut-leaf', 'potato-leaf')
 plants
+
+chisq.test(plants, correct = F)
 ```
