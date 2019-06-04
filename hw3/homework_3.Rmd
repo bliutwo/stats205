@@ -351,5 +351,5 @@ The $P$-value achieved by these data if we use a `2-sample test for equality of 
 ```{r}
 elisa_matrix <- matrix(c(82, 13, 6, 0), nrow=2, ncol=2, byrow=TRUE, dimnames = list("ABC-ELISA" = c("+", "-"), "Standard ELISA" = c("+", "-"))); elisa_matrix
 
-
+mcnemar.test(x = elisa_matrix)
 ```
