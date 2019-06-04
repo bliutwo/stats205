@@ -63,8 +63,6 @@ sd(theta.hat.star)
 
 H_0 : p = 0.6
 H_A : p > 0.6
-
-
 ```
 
 ```{r}
@@ -159,8 +157,10 @@ Pp_7_zvalue = p7_numerator / p7_denominator; Pp_7_zvalue
 \]
 
 ```{r}
-pvalue = pnorm(Pp_7_zvalue); pvalue
+power7 = pnorm(Pp_7_zvalue); power7
 ```
+
+**The power of the test (the probability of rejecting $H_0$ when $H_A$ is true) when $p = 0.7$ is $0.4890$.**
 
 If $p = 0.8$,
 
@@ -190,16 +190,17 @@ Pp_8_zvalue = p8_numerator / p8_denominator; Pp_8_zvalue
 \]
 
 ```{r}
-# pvalue = pnorm(-abs(Pp_7_zvalue)); pvalue
-pvalue = pnorm(Pp_8_zvalue); pvalue
+power8 = pnorm(Pp_8_zvalue); power8
 ```
+
+**The power of the test (the probability of rejecting $H_0$ when $H_A$ is true) when $p = 0.8$ is $0.01886$.**
 
 
 <!-- There is a function in R that calculates the same thing: library(pwr), pwr.p.test()-->
 
 ## Solution to Problem 3
 
-**Summary**: **Estimate for $\hat{p} = 0.8615$** and **estimate for standard deviation of $\hat{p} = 0.04284$**.
+**Summary**: **Estimate** for $\hat{p} = 0.8615$ and **estimate for standard deviation** of $\hat{p} = 0.04284$.
 
 Estimate for $p$ using binomial confidence interval, `binom.confint()`:
 
@@ -212,7 +213,7 @@ binom.confint(x=56, n=65, conf.level=.95, methods = "asymptotic")
     \hat{p} = (0.7776, 0.9455)
 \]
 
-Estimate for $p$ using 1-sample proportions test without continuity correction, `prop.test()`:
+Estimate for $p$ using `1-sample proportions test without continuity correction`, `prop.test()`:
 
 ```{r}
 prop.test(x=56, n=65, p = 0.6, conf.level=0.95, alternative = c("greater"))
@@ -222,7 +223,7 @@ prop.test(x=56, n=65, p = 0.6, conf.level=0.95, alternative = c("greater"))
     p = 0.8615
 \]
 
-Estimate for $p$ using Exact Binomial Test:
+Estimate for $p$ using `Exact binomial test`:
 
 ```{r}
 binom.test(x=56, n=65, p = 0.6, alternative = c("greater"), conf.level = 0.95)
@@ -322,7 +323,7 @@ rownames(df) = c("Multiple attack", "Primary attack"); df
 fisher.test(df, alternative = "two.sided")
 ```
 
-The $P$-value achieved when testing the null against a two-sided hypothesis is the same, $0.1071$, and therefore, there is *not enough evidence* that the unknown probability that a multiple-attack patient will have low reactivity is *not equal* to the unknown probability that a primary-attack patient will have low reactivity.
+The $P$-value achieved when testing the null against a two-sided hypothesis is the same, $0.1071$, and therefore, there is still *not enough evidence* that the unknown probability that a multiple-attack patient will have low reactivity is *not equal* to the unknown probability that a primary-attack patient will have low reactivity.
 
 ## Solution to Problem 7
 
@@ -351,7 +352,7 @@ The $P$-value achieved by these data if we use a `2-sample test for equality of 
 ```{r}
 elisa_matrix <- matrix(c(82, 13, 6, 0), nrow=2, ncol=2, byrow=TRUE, dimnames = list("ABC-ELISA" = c("+", "-"), "Standard ELISA" = c("+", "-"))); elisa_matrix
 
-# prop.test(x = elisa_matrix)
+# prop.test(x = elisa_matrix) <-- this produced a p value not less than 0.005, so I may be using it wrong
 
 mcnemar.test(x = elisa_matrix)
 ```
