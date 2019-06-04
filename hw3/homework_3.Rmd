@@ -351,9 +351,15 @@ The $P$-value achieved by these data if we use a `2-sample test for equality of 
 ```{r}
 elisa_matrix <- matrix(c(82, 13, 6, 0), nrow=2, ncol=2, byrow=TRUE, dimnames = list("ABC-ELISA" = c("+", "-"), "Standard ELISA" = c("+", "-"))); elisa_matrix
 
-prop.test(x = elisa_matrix)
+# prop.test(x = elisa_matrix)
 
 mcnemar.test(x = elisa_matrix)
 ```
 
-The $P$-value for McNemar's test is $0.1687$, while the $P$-value for the ordinary unpaired chi-squared test is . We can conclude that the hypothesis of equal proportions 
+The $P$-value for McNemar's test is $0.1687$<!-- , while the $P$-value for the ordinary unpaired chi-squared test is $0.7322$ -->. What we can conclude concerning the hypothesis of equal proportions positive for both ELISA tests is that equal proportions may not be positive for both ELISA tests.
+
+## Solution to Problem 9
+
+```{r}
+ptsd_matrix <- matrix(c(29, 7, 21, 30), nrow = 2, ncol = 2, byrow = TRUE, dimnames = list(c("Yes", "No"), c("Battered women", "Maritally distressed women who had not experienced battering"))); ptsd_matrix
+```
