@@ -7,7 +7,7 @@ output:
   html_document: default
 ---
 
-- <a href="homework_3.html">Homework 3</a> (<a href="homework_3.pdf">pdf</a>) (<a href="homework_3.Rmd">rmd</a>) *In progress...*
-- Homework 4
+- <a href="homework_3.html">Homework 3</a> (<a href="homework_3.pdf">pdf</a>) (<a href="homework_3.Rmd">rmd</a>) *DONE!*
+- <a href="homework_4.html">Homework 4</a> (<a href="homework_4.pdf">pdf</a>) (<a href="homework_4.Rmd">rmd</a>) *In progress...*
 - Homework 5
 - Homework 6
