@@ -362,4 +362,6 @@ The $P$-value for McNemar's test is $0.1687$<!-- , while the $P$-value for the o
 
 ```{r}
 ptsd_matrix <- matrix(c(29, 7, 21, 30), nrow = 2, ncol = 2, byrow = TRUE, dimnames = list(c("Yes", "No"), c("Battered women", "Maritally distressed women who had not experienced battering"))); ptsd_matrix
+
+prop.test(ptsd_matrix, correct = F, alternative = "two.sided")
 ```
