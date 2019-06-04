@@ -1,0 +1,23 @@
+---
+title: 'STATS 205: Homework Assignment 4'
+author: "Brian Liu"
+date: "6/3/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Solution to Problem 1
+
+
+```{r}
+ptsd_matrix <- matrix(c(29, 7, 21, 30), nrow = 2, ncol = 2, byrow = TRUE, dimnames = list(c("Yes", "No"), c("Battered women", "Maritally distressed women who had not experienced battering"))); ptsd_matrix
+
+prop.test(ptsd_matrix, correct = F, alternative = "two.sided")
+```
+
+The $P$-value for `2-sample test for equality of proportions without continuity correction` is $0.0002531$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that there is a significant difference in the PTSD rates for battered women versus maritally distressed women (who had not experienced battering).
