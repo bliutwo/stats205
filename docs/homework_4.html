@@ -383,27 +383,60 @@ $(document).ready(function () {
 
 <div id="solution-to-problem-1" class="section level2">
 <h2>Solution to Problem 1</h2>
-<pre class="r"><code>ptsd_matrix &lt;- matrix(c(29, 7, 21, 30), nrow = 2, ncol = 2, byrow = TRUE, dimnames = list(c(&quot;Yes&quot;, &quot;No&quot;), c(&quot;Battered women&quot;, &quot;Maritally distressed women who had not experienced battering&quot;))); ptsd_matrix</code></pre>
-<pre><code>##     Battered women
-## Yes             29
-## No              21
-##     Maritally distressed women who had not experienced battering
-## Yes                                                            7
-## No                                                            30</code></pre>
-<pre class="r"><code>prop.test(ptsd_matrix, correct = F, alternative = &quot;two.sided&quot;)</code></pre>
-<pre><code>## 
-##  2-sample test for equality of proportions without continuity
-##  correction
-## 
-## data:  ptsd_matrix
-## X-squared = 13.389, df = 1, p-value = 0.0002531
-## alternative hypothesis: two.sided
-## 95 percent confidence interval:
-##  0.2068191 0.5807626
-## sample estimates:
-##    prop 1    prop 2 
-## 0.8055556 0.4117647</code></pre>
-<p>The <span class="math inline">\(P\)</span>-value for <code>2-sample test for equality of proportions without continuity correction</code> is <span class="math inline">\(0.0002531\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is strong evidence that there is a significant difference in the PTSD rates for battered women versus maritally distressed women (who had not experienced battering).</p>
+<pre class="r"><code>allergics = c(1651.0, 1112.0, 102.4, 100.0, 67.6, 65.9, 64.7, 39.6, 31.0)
+nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6, 5.2, 4.7)
+histamine_data = matrix(allergics, nonallergics); histamine_data</code></pre>
+<pre><code>## Warning in matrix(allergics, nonallergics): data length [9] is not a sub-
+## multiple or multiple of the number of rows [48]</code></pre>
+<pre><code>##         [,1]
+##  [1,] 1651.0
+##  [2,] 1112.0
+##  [3,]  102.4
+##  [4,]  100.0
+##  [5,]   67.6
+##  [6,]   65.9
+##  [7,]   64.7
+##  [8,]   39.6
+##  [9,]   31.0
+## [10,] 1651.0
+## [11,] 1112.0
+## [12,]  102.4
+## [13,]  100.0
+## [14,]   67.6
+## [15,]   65.9
+## [16,]   64.7
+## [17,]   39.6
+## [18,]   31.0
+## [19,] 1651.0
+## [20,] 1112.0
+## [21,]  102.4
+## [22,]  100.0
+## [23,]   67.6
+## [24,]   65.9
+## [25,]   64.7
+## [26,]   39.6
+## [27,]   31.0
+## [28,] 1651.0
+## [29,] 1112.0
+## [30,]  102.4
+## [31,]  100.0
+## [32,]   67.6
+## [33,]   65.9
+## [34,]   64.7
+## [35,]   39.6
+## [36,]   31.0
+## [37,] 1651.0
+## [38,] 1112.0
+## [39,]  102.4
+## [40,]  100.0
+## [41,]   67.6
+## [42,]   65.9
+## [43,]   64.7
+## [44,]   39.6
+## [45,]   31.0
+## [46,] 1651.0
+## [47,] 1112.0
+## [48,]  102.4</code></pre>
 </div>
 
 
