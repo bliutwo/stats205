@@ -123,7 +123,8 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 
 ```{r}
 install.packages("RVAideMemoire", dependencies = TRUE, repos = "http://cran.us.r-project.org")
-fp.test(x = term, y = gest, alternative = 'two.sided')
+# fp.test(x = term, y = gest, alternative = 'two.sided')
+fp.test(x = term, y = gest)
 ```
 
 ## Solution to Problem 5
