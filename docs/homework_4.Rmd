@@ -115,4 +115,8 @@ ks.test(x = term, y = gest, alternative = "greater")
 ks.test(x = term, y = gest)
 ```
 
-The $p$-value for the Wilcoxon ranked test is $0.1272$. The $p$-value for the one-sided Two-sample Kolmogorov-Smirnov test is $0.9355$, which is larger than the $p$-value for the Wilcoxon ranked test. The $p$-value for the two-sided  Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.
+The $p$-value for the Wilcoxon ranked test is $0.1272$.
+
+The $p$-value for the one-sided Two-sample Kolmogorov-Smirnov test is $0.9355$, which is larger than the $p$-value for the Wilcoxon ranked test.
+
+The $p$-value for the two-sided  Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.
