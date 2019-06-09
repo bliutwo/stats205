@@ -617,6 +617,34 @@ saveRDS(Darwin.data, &quot;Darwin_data.rds&quot;); Darwin.data</code></pre>
 <p>– <cite><a href="https://www.investopedia.com/ask/answers/073115/what-assumptions-are-made-when-conducting-ttest.asp">What assumptions are made when conducting a t-test?</a></cite></p>
 </blockquote>
 </div>
+<div id="ii" class="section level3">
+<h3>(ii)</h3>
+<pre class="r"><code>install.packages(&quot;coin&quot;, dependencies=TRUE, repos=&#39;http://cran.us.r-project.org&#39;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre class="r"><code># use permutation test here</code></pre>
+</div>
+<div id="iii" class="section level3">
+<h3>(iii)</h3>
+<p>The null hypothesis is that there is <em>no</em> difference between heights of crossed and self-fertilized plants. That is,</p>
+<p><span class="math display">\[
+    H_0: h_c = h_s
+\]</span></p>
+<p>The alternative hypothesis is that there <em>is</em> a difference between heights of crossed and self-fertilized plants. That is</p>
+<p><span class="math display">\[
+    H_0: h_c \neq h_s
+\]</span></p>
+<pre class="r"><code>wilcox.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = &quot;two.sided&quot;)</code></pre>
+<pre><code>## Warning in wilcox.test.default(x = Darwin.data$cross.height, y =
+## Darwin.data$self.height, : cannot compute exact p-value with ties</code></pre>
+<pre><code>## 
+##  Wilcoxon rank sum test with continuity correction
+## 
+## data:  Darwin.data$cross.height and Darwin.data$self.height
+## W = 185.5, p-value = 0.002608
+## alternative hypothesis: true location shift is not equal to 0</code></pre>
+<p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.02328\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <em>strong evidence</em> that there <em>is</em> a difference between heights of crossed and self-fertilized plants.</p>
+</div>
 </div>
 
 
