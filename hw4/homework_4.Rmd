@@ -54,7 +54,7 @@ olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 
 karate; olympics
 ```
 
-The null hypothesis is that children who viewed the violent TV take the same amount of time to seek help (were the same amount of tolerant) as the children who viewed the nonviolent sports-action TV. That is, 
+The null hypothesis is that children who viewed the violent TV take the same amount of time to seek help (were as tolerant) as the children who viewed the nonviolent sports-action TV. That is, 
 
 \[
     H_0: t_k = t_o
