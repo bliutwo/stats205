@@ -643,7 +643,18 @@ saveRDS(Darwin.data, &quot;Darwin_data.rds&quot;); Darwin.data</code></pre>
 ## data:  Darwin.data$cross.height and Darwin.data$self.height
 ## W = 185.5, p-value = 0.002608
 ## alternative hypothesis: true location shift is not equal to 0</code></pre>
-<p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.02328\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <em>strong evidence</em> that there <em>is</em> a difference between heights of crossed and self-fertilized plants.</p>
+<p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.002608\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <em>strong evidence</em> that there <em>is</em> a difference between heights of crossed and self-fertilized plants.</p>
+<blockquote>
+<p>The Wilcoxon Sign test makes four important assumptions:</p>
+<ol style="list-style-type: decimal">
+<li><p>Dependent samples – the two samples need to be dependent observations of the cases. The Wilcoxon sign test assess for differences between a before and after measurement, while accounting for individual differences in the baseline.</p></li>
+<li><p>Independence – The Wilcoxon sign test assumes independence, meaning that the paired observations are randomly and independently drawn.</p></li>
+<li><p>Continuous dependent variable – Although the Wilcoxon signed rank test ranks the differences according to their size and is therefore a non-parametric test, it assumes that the measurements are continuous in theoretical nature. To account for the fact that in most cases the dependent variable is binominal distributed, a continuity correction is applied.</p></li>
+<li><p>Ordinal level of measurement – The Wilcoxon sign test needs both dependent measurements to be at least of ordinal scale. This is necessary to ensure that the two values can be compared, and for each pair, it can be said if one value is greater, equal, or less than the other.</p></li>
+</ol>
+<p>Furthermore, in order for the differences between measures to be rankable, the observations must be comparable. For every difference of observations, it must be clear which one is greater of if both observations are equal.</p>
+<p>The test of significance of the Wilcoxon test further assumes that both samples have a continuous distribution function. This implies that tied ranks cannot occur. However, if tied ranks exist in the sample a continuity correction can be calculated. It is also possible to use an exact test that relies on permutation testing.</p>
+</blockquote>
 </div>
 </div>
 

@@ -262,4 +262,18 @@ The alternative hypothesis is that there *is* a difference between heights of cr
 wilcox.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
 ```
 
-The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that there *is* a difference between heights of crossed and self-fertilized plants.
+The $p$-value is $0.002608$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that there *is* a difference between heights of crossed and self-fertilized plants.
+
+>The Wilcoxon Sign test makes four important assumptions:
+>
+>1. Dependent samples – the two samples need to be dependent observations of the cases.  The Wilcoxon sign test assess for differences between a before and after measurement, while accounting for individual differences in the baseline.
+>
+>2. Independence – The Wilcoxon sign test assumes independence, meaning that the paired observations are randomly and independently drawn.
+>
+>3. Continuous dependent variable – Although the Wilcoxon signed rank test ranks the differences according to their size and is therefore a non-parametric test, it assumes that the measurements are continuous in theoretical nature.  To account for the fact that in most cases the dependent variable is binominal distributed, a continuity correction is applied.
+>
+>4. Ordinal level of measurement – The Wilcoxon sign test needs both dependent measurements to be at least of ordinal scale.  This is necessary to ensure that the two values can be compared, and for each pair, it can be said if one value is greater, equal, or less than the other.
+>
+>Furthermore, in order for the differences between measures to be rankable, the observations must be comparable.  For every difference of observations, it must be clear which one is greater of if both observations are equal.
+>
+>The test of significance of the Wilcoxon test further assumes that both samples have a continuous distribution function.  This implies that tied ranks cannot occur.  However, if tied ranks exist in the sample a continuity correction can be calculated.  It is also possible to use an exact test that relies on permutation testing.
