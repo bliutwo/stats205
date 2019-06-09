@@ -200,6 +200,18 @@ saveRDS(Darwin.data, "Darwin_data.rds"); Darwin.data
 
 ### (i)
 
+The null hypothesis is that there is *no* difference between heights of crossed and self-fertilized plants. That is,
+
+\[
+    H_0: h_c = h_f
+\]
+
+The alternative hypothesis is that there *is* a difference between heights of crossed and self-fertilized plants. That is
+
+\[
+    H_0: h_c \neq h_f
+\]
+
 ```{r}
 t.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
 ```
