@@ -86,9 +86,9 @@ allergics = c(1651.0, 1112.0, 102.4, 100.0, 67.6, 65.9, 64.7, 39.6, 31.0)
 nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6, 5.2, 4.7)
 allergics; nonallergics
 
-wilcox.test(x = nonallergics, y = allergics, conf.int=TRUE, conf.level=.90)
+wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
 
-wilcox.test(x = nonallergics, y = allergics, alternative = "less", conf.int=TRUE, conf.level=.90)
+wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE, conf.level=.90)
 ```
 
 \[
