@@ -132,10 +132,17 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 ```{r}
 library(npsm)
 fp.test(x = term, y = gest, alternative = 'two.sided')
-install.packages("NSM3", dependencies=TRUE, repos = "http://cran.us.r-project.org")
+```
+
+The $p$-value for the two-sided Fligner-Policello Test is $0.2002$, which is similar to that of the Wilcoxon ranked test.
+
+```{r}
 library(NSM3)
 pFligPoli(x = term, y = gest, method = "Monte Carlo")
 ```
+
+0.1906
+The $p$-value for the two-sided Fligner-Policello Test with Monte Carlo method is $0.1906$, which is similar to that of the Wilcoxon ranked test.
 
 <!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
 
@@ -143,8 +150,6 @@ pFligPoli(x = term, y = gest, method = "Monte Carlo")
 - [`RVAideMemoire` package, with `fp.test()` demonstrated here](https://rdrr.io/cran/RVAideMemoire/man/fp.test.html)
 - [R Documentation of `npsm` package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
 - [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf) -->
-
-The $p$-value for the two-sided Fligner-Policello Test is $0.2002$, which is similar to that of the Wilcoxon ranked test.
 
 ## Solution to Problem 5
 

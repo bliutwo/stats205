@@ -496,23 +496,21 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <pre class="r"><code>library(npsm)
 fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)</code></pre>
 <pre><code>## statistic =  -1.3484 , p-value =  0.2002008</code></pre>
-<pre class="r"><code>install.packages(&quot;NSM3&quot;, dependencies=TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
-<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
+<p>The <span class="math inline">\(p\)</span>-value for the two-sided Fligner-Policello Test is <span class="math inline">\(0.2002\)</span>, which is similar to that of the Wilcoxon ranked test.</p>
 <pre class="r"><code>library(NSM3)
 pFligPoli(x = term, y = gest, method = &quot;Monte Carlo&quot;)</code></pre>
 <pre><code>## Number of X values: 10 Number of Y values: 5
 ## Fligner-Policello U Statistic: -1.3484
-## Monte Carlo (Using 10000 Iterations) upper-tail probability: 0.9047
-## Monte Carlo (Using 10000 Iterations) two-sided p-value: 0.1906
+## Monte Carlo (Using 10000 Iterations) upper-tail probability: 0.9031
+## Monte Carlo (Using 10000 Iterations) two-sided p-value: 0.1938
 ## </code></pre>
+<p>0.1906 The <span class="math inline">\(p\)</span>-value for the two-sided Fligner-Policello Test with Monte Carlo method is <span class="math inline">\(0.1906\)</span>, which is similar to that of the Wilcoxon ranked test.</p>
 <!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
 
 - [`npsm` package](https://cran.r-project.org/web/packages/npsm/index.html)
 - [`RVAideMemoire` package, with `fp.test()` demonstrated here](https://rdrr.io/cran/RVAideMemoire/man/fp.test.html)
 - [R Documentation of `npsm` package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
 - [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf) -->
-<p>The <span class="math inline">\(p\)</span>-value for the two-sided Fligner-Policello Test is <span class="math inline">\(0.2002\)</span>, which is similar to that of the Wilcoxon ranked test.</p>
 </div>
 <div id="solution-to-problem-5" class="section level2">
 <h2>Solution to Problem 5</h2>
