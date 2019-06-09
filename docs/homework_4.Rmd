@@ -133,9 +133,8 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 library(npsm)
 fp.test(x = term, y = gest, alternative = 'two.sided')
 install.packages("NSM3", dependencies=TRUE, repos = "http://cran.us.r-project.org")
-# library(NSM3)
-# pFligPoli(x = term, y = gest, method = "Monte Carlo")
-# Error here: "there is no package called 'NSM3'"
+library(NSM3)
+pFligPoli(x = term, y = gest, method = "Monte Carlo")
 ```
 
 <!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
