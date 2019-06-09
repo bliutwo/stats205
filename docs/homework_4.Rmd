@@ -34,8 +34,8 @@ The alternative hypothesis is that allergic smokers have higher sputum histamine
 To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
 
 >Two data samples are independent if they come from distinct populations and the samples do not affect each other.
->
->-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
+
+-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
 
 [1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
 
@@ -232,8 +232,8 @@ The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. T
 >The fourth assumption is a reasonably large sample size is used. A larger sample size means the distribution of results should approach a normal bell-shaped curve.
 >
 >The final assumption is homogeneity of variance. Homogeneous, or equal, variance exists when the standard deviations of samples are approximately equal.
->
->-- <cite>[What assumptions are made when conducting a t-test?][2]</cite>
+
+-- <cite>[What assumptions are made when conducting a t-test?][2]</cite>
 
 [2]:https://www.investopedia.com/ask/answers/073115/what-assumptions-are-made-when-conducting-ttest.asp
 
