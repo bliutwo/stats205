@@ -484,23 +484,11 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 ## data:  term and gest
 ## W = 35, p-value = 0.1272
 ## alternative hypothesis: true location shift is greater than 0</code></pre>
-<pre class="r"><code>ks.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
-<pre><code>## 
-##  Two-sample Kolmogorov-Smirnov test
-## 
-## data:  term and gest
-## D^+ = 0.1, p-value = 0.9355
-## alternative hypothesis: the CDF of x lies above that of y</code></pre>
-<pre class="r"><code>ks.test(x = term, y = gest)</code></pre>
-<pre><code>## 
-##  Two-sample Kolmogorov-Smirnov test
-## 
-## data:  term and gest
-## D = 0.6, p-value = 0.1658
-## alternative hypothesis: two-sided</code></pre>
+<pre class="r"><code># ks.test(x = term, y = gest, alternative = &quot;greater&quot;)
+# ks.test(x = term, y = gest)</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test is <span class="math inline">\(0.1272\)</span>.</p>
-<p>The <span class="math inline">\(p\)</span>-value for the one-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.9355\)</span>, which is larger than the <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test.</p>
-<p>The <span class="math inline">\(p\)</span>-value for the two-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.1658\)</span>, which is similar to that of the Wilcoxon ranked test.</p>
+<p><del>The <span class="math inline">\(p\)</span>-value for the one-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.9355\)</span>, which is larger than the <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test.</del></p>
+<p><del>The <span class="math inline">\(p\)</span>-value for the two-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.1658\)</span>, which is similar to that of the Wilcoxon ranked test.</del></p>
 </div>
 <div id="solution-to-problem-5" class="section level2">
 <h2>Solution to Problem 5</h2>
