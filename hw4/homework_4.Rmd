@@ -92,5 +92,5 @@ wilcox.test(x = nonallergics, y = allergics, alternative = "less", conf.int=TRUE
 ```
 
 \[
-    P(X < Y) = 
+    \delta = P(X < Y) \simeq 
 \]
