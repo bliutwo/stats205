@@ -196,3 +196,9 @@ Darwin.data
 
 saveRDS(Darwin.data, "Darwin_data.rds"); Darwin.data
 ```
+
+### (i)
+
+```{r}
+Darwin.data$cross.height
+```
