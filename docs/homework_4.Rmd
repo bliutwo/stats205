@@ -127,7 +127,7 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 
 ~~The $p$-value for the one-sided Two-sample Kolmogorov-Smirnov test is $0.9355$, which is larger than the $p$-value for the Wilcoxon ranked test.~~
 
-~~The $p$-value for the two-sided  Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.~~
+~~The $p$-value for the two-sided Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.~~
 
 ```{r}
 library(npsm)
@@ -141,7 +141,7 @@ fp.test(x = term, y = gest, alternative = 'two.sided')
 - [R Documentation of `npsm` package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
 - [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf) -->
 
-
+The $p$-value for the two-sided Fligner-Policello Test is $0.2002$, which is similar to that of the Wilcoxon ranked test.
 
 ## Solution to Problem 5
 
