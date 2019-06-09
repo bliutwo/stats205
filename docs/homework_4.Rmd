@@ -19,8 +19,6 @@ nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6
 allergics; nonallergics
 ```
 
-[1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
-
 The null hypothesis is that allergic smokers have the same sputum histamine levels as nonallergic smokers. That is,
 
 \[
@@ -38,6 +36,8 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 >Two data samples are independent if they come from distinct populations and the samples do not affect each other.
 >-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
 
+[1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
+
 ```{r}
 wilcox.test(x = allergics, y = nonallergics, alternative = "greater")
 ```
@@ -45,3 +45,29 @@ wilcox.test(x = allergics, y = nonallergics, alternative = "greater")
 The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
 
 ## Solution to Problem 2
+
+```{r}
+olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 8, 0, 154, 146)
+karate = c(37,39,30,7,13,139,45,25,16,146,94,16,23,1,290,169,62,145,36,20,13)
+olympics; karate
+```
+
+[Original problem statement](https://i.imgur.com/WXQHBJ9.png)
+
+The null hypothesis is that children who viewed the violent TV take the same amount of time to seek help (were the same amount of tolerant) as the children who viewed the nonviolent sports-action TV. That is, 
+
+\[
+    H_0: t_k = t_o
+\]
+
+The alternative hypothesis is that children who viewed the violent TV take longer to seek help (were more tolerant) than the children who viewed the nonviolent sports-action TV. That is,
+
+\[
+    H_0: t_k > t_o
+\]
+
+```{r}
+wilcox.test(x = olympics, y = karate, alternative = "greater")
+```
+
+The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
