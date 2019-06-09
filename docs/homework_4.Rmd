@@ -185,3 +185,9 @@ wilcox.test(x = a, y = b, alternative = "two.sided")
 ```
 
 The $p$-value is $0.0008201$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects.
+
+## Solution to Problem 7
+
+```{r}
+saveRDS(Darwin.data, "Darwin_data.rds"); Darwin.data
+```
