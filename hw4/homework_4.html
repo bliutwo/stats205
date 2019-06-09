@@ -398,7 +398,10 @@ allergics; nonallergics</code></pre>
 \]</span></p>
 <p>To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.</p>
 <blockquote>
-<p>Two data samples are independent if they come from distinct populations and the samples do not affect each other. – <cite><a href="http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test">Mann-Whitney-Wilcoxon Test</a></cite></p>
+<p>Two data samples are independent if they come from distinct populations and the samples do not affect each other.</p>
+</blockquote>
+<blockquote>
+<p>– <cite><a href="http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test">Mann-Whitney-Wilcoxon Test</a></cite></p>
 </blockquote>
 <pre class="r"><code>wilcox.test(x = allergics, y = nonallergics, alternative = &quot;greater&quot;)</code></pre>
 <pre><code>## 
@@ -613,7 +616,10 @@ Darwin.data</code></pre>
 <p>The fourth assumption is a reasonably large sample size is used. A larger sample size means the distribution of results should approach a normal bell-shaped curve.</p>
 </blockquote>
 <blockquote>
-<p>The final assumption is homogeneity of variance. Homogeneous, or equal, variance exists when the standard deviations of samples are approximately equal. – <cite><a href="https://www.investopedia.com/ask/answers/073115/what-assumptions-are-made-when-conducting-ttest.asp">What assumptions are made when conducting a t-test?</a></cite></p>
+<p>The final assumption is homogeneity of variance. Homogeneous, or equal, variance exists when the standard deviations of samples are approximately equal.</p>
+</blockquote>
+<blockquote>
+<p>– <cite><a href="https://www.investopedia.com/ask/answers/073115/what-assumptions-are-made-when-conducting-ttest.asp">What assumptions are made when conducting a t-test?</a></cite></p>
 </blockquote>
 </div>
 </div>
