@@ -445,18 +445,24 @@ nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6
 allergics; nonallergics</code></pre>
 <pre><code>## [1] 1651.0 1112.0  102.4  100.0   67.6   65.9   64.7   39.6   31.0</code></pre>
 <pre><code>##  [1] 48.1 48.0 45.5 41.7 35.4 34.3 32.4 29.1 27.3 18.9  6.6  5.2  4.7</code></pre>
-<pre class="r"><code>wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)</code></pre>
+<pre class="r"><code>wilcox.test(x = allergics, y = nonallergics, alternative = &quot;less&quot;, conf.int=TRUE, conf.level=.90)</code></pre>
 <pre><code>## 
 ##  Wilcoxon rank sum test
 ## 
 ## data:  allergics and nonallergics
-## W = 106, p-value = 0.000772
-## alternative hypothesis: true location shift is not equal to 0
+## W = 106, p-value = 0.9997
+## alternative hypothesis: true location shift is less than 0
 ## 90 percent confidence interval:
-##  25.9 81.1
+##  -Inf   70
 ## sample estimates:
 ## difference in location 
 ##                   54.3</code></pre>
+<pre><code>## 90 percent confidence interval:
+##  25.9 81.1</code></pre>
+<pre><code>## sample estimates:
+## difference in location 
+##                   54.3</code></pre>
+<p><span class="math inline">\(\delta = P(X &lt; Y)\)</span>. Therefore,</p>
 </div>
 
 
