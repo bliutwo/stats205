@@ -109,5 +109,7 @@ and the $90%$ confidence interval for $\delta$ is
 ```{r}
 term = c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
 gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
+
+ks.test(x = term, y = gest)
 ```
 
