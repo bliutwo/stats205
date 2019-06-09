@@ -84,15 +84,4 @@ wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE
 wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE, conf.level=.90)
 ```
 
-```
-## 90 percent confidence interval:
-##  25.9 81.1
-```
-
-```
-## sample estimates:
-## difference in location 
-##                   54.3
-```
-
 $\delta = P(X < Y)$. Therefore, 
