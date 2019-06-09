@@ -132,6 +132,7 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 ```{r}
 library(npsm)
 fp.test(x = term, y = gest, alternative = 'two.sided')
+install.packages("NSM3", dependencies=TRUE)
 library(NSM3)
 pFligPoli(x = term, y = gest, method = "Monte Carlo")
 ```
