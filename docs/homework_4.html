@@ -462,10 +462,16 @@ allergics; nonallergics</code></pre>
 ## difference in location 
 ##                   54.3</code></pre>
 <pre class="r"><code># wilcox.test(x = allergics, y = nonallergics, alternative = &quot;less&quot;, conf.int=TRUE, conf.level=.90)</code></pre>
+<!-- The $p$-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true.
+ -->
+<p>The estimate for <span class="math inline">\(\delta\)</span> is</p>
 <p><span class="math display">\[
-    \delta = P(X &lt; Y) \simeq 
+    \hat{\delta} = P(X &lt; Y) \simeq 54.3
 \]</span></p>
-<p>The <span class="math inline">\(p\)</span>-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or <span class="math inline">\(H_0: p_a = p_n\)</span>) is true. Therefore,</p>
+<p>and the <span class="math inline">\(90%\)</span> confidence interval for <span class="math inline">\(\delta\)</span> is</p>
+<p><span class="math display">\[
+    \hat{\delta} = P(X &lt; Y) = (25.9, 81.1)
+\]</span></p>
 </div>
 <div id="solution-to-problem-4" class="section level2">
 <h2>Solution to Problem 4</h2>

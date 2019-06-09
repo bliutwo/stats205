@@ -91,11 +91,20 @@ wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
 # wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE, conf.level=.90)
 ```
 
+<!-- The $p$-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true.
+ -->
+The estimate for $\delta$ is
+
 \[
-    \delta = P(X < Y) \simeq 
+    \hat{\delta} = P(X < Y) \simeq 54.3
 \]
 
-The $p$-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true. Therefore, 
+and the $90%$ confidence interval for $\delta$ is
+
+\[
+    \hat{\delta} = P(X < Y) = (25.9, 81.1)
+\]
+
 
 ## Solution to Problem 4
 
