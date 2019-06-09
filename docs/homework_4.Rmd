@@ -88,7 +88,7 @@ allergics; nonallergics
 
 wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
 
-wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE, conf.level=.90)
+# wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE, conf.level=.90)
 ```
 
 \[
