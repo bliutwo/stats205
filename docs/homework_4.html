@@ -489,20 +489,10 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test is <span class="math inline">\(0.1272\)</span>.</p>
 <p><del>The <span class="math inline">\(p\)</span>-value for the one-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.9355\)</span>, which is larger than the <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test.</del></p>
 <p><del>The <span class="math inline">\(p\)</span>-value for the two-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.1658\)</span>, which is similar to that of the Wilcoxon ranked test.</del></p>
-<pre class="r"><code>install.packages(&quot;npsm&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
-<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre class="r"><code>install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
-<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## Warning: dependency &#39;mixOmics&#39; is not available</code></pre>
-<pre><code>## Warning in install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos =
-## &quot;http://cran.us.r-project.org&quot;): installation of package &#39;RVAideMemoire&#39;
-## had non-zero exit status</code></pre>
-<pre class="r"><code>install.packages(&quot;robustrank&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
-<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre class="r"><code># fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)
+<pre class="r"><code># install.packages(&quot;npsm&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
+# install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
+# install.packages(&quot;robustrank&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
+# fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)
 # fp.test(x = term, y = gest)</code></pre>
 <p>Unfortunately, the package for <code>fp.test()</code> doesn’t seem to be within reach, despite installing the following packages:</p>
 <ul>
@@ -557,6 +547,45 @@ b = c(16.2, 17.4, 8.5, 15.6, 5.4, 9.8, 14.9, 16.6, 15.9, 5.3, 10.5)</code></pre>
 ## W = 7, p-value = 0.0008201
 ## alternative hypothesis: true location shift is not equal to 0</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.0008201\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <em>strong evidence</em> that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects.</p>
+</div>
+<div id="solution-to-problem-7" class="section level2">
+<h2>Solution to Problem 7</h2>
+<pre class="r"><code>Darwin.data = data.frame(pair = seq(1, 15), pot = c(rep(1, times=3), rep(2, times = 3), rep(3, times = 5), rep(4, times = 4)), cross.height = c(23.500, 12.000, 21.00, 22.000, 19.125, 21.500, 22.125, 20.375, 18.250, 21.625, 23.250, 21.000, 22.125, 23.000, 12.000), self.height = c(17.375, 20.375,20.000, 20.000, 18.375, 18.625, 18.625, 15.250, 16.500, 18.000, 16.250, 18.000, 12.750, 15.500, 18.000))
+
+Darwin.data</code></pre>
+<pre><code>##    pair pot cross.height self.height
+## 1     1   1       23.500      17.375
+## 2     2   1       12.000      20.375
+## 3     3   1       21.000      20.000
+## 4     4   2       22.000      20.000
+## 5     5   2       19.125      18.375
+## 6     6   2       21.500      18.625
+## 7     7   3       22.125      18.625
+## 8     8   3       20.375      15.250
+## 9     9   3       18.250      16.500
+## 10   10   3       21.625      18.000
+## 11   11   3       23.250      16.250
+## 12   12   4       21.000      18.000
+## 13   13   4       22.125      12.750
+## 14   14   4       23.000      15.500
+## 15   15   4       12.000      18.000</code></pre>
+<pre class="r"><code>saveRDS(Darwin.data, &quot;Darwin_data.rds&quot;); Darwin.data</code></pre>
+<pre><code>##    pair pot cross.height self.height
+## 1     1   1       23.500      17.375
+## 2     2   1       12.000      20.375
+## 3     3   1       21.000      20.000
+## 4     4   2       22.000      20.000
+## 5     5   2       19.125      18.375
+## 6     6   2       21.500      18.625
+## 7     7   3       22.125      18.625
+## 8     8   3       20.375      15.250
+## 9     9   3       18.250      16.500
+## 10   10   3       21.625      18.000
+## 11   11   3       23.250      16.250
+## 12   12   4       21.000      18.000
+## 13   13   4       22.125      12.750
+## 14   14   4       23.000      15.500
+## 15   15   4       12.000      18.000</code></pre>
 </div>
 
 
