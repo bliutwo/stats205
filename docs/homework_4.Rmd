@@ -200,5 +200,5 @@ saveRDS(Darwin.data, "Darwin_data.rds"); Darwin.data
 ### (i)
 
 ```{r}
-Darwin.data$cross.height
+t.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
 ```

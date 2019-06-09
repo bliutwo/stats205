@@ -588,9 +588,18 @@ Darwin.data</code></pre>
 ## 15   15   4       12.000      18.000</code></pre>
 <div id="i" class="section level3">
 <h3>(i)</h3>
-<pre class="r"><code>Darwin.data$cross.height</code></pre>
-<pre><code>##  [1] 23.500 12.000 21.000 22.000 19.125 21.500 22.125 20.375 18.250 21.625
-## [11] 23.250 21.000 22.125 23.000 12.000</code></pre>
+<pre class="r"><code>t.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = &quot;two.sided&quot;)</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Darwin.data$cross.height and Darwin.data$self.height
+## t = 2.4371, df = 22.164, p-value = 0.02328
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  0.3909566 4.8423767
+## sample estimates:
+## mean of x mean of y 
+##  20.19167  17.57500</code></pre>
 </div>
 </div>
 
