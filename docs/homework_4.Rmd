@@ -41,3 +41,7 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 ```{r}
 wilcox.test(x = allergics, y = nonallergics, alternative = "greater")
 ```
+
+The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
+
+## Solution to Problem 2
