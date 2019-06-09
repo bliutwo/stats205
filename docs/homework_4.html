@@ -477,7 +477,14 @@ allergics; nonallergics</code></pre>
 <pre class="r"><code>term = c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
 gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
 
-ks.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
+wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
+<pre><code>## 
+##  Wilcoxon rank sum test
+## 
+## data:  term and gest
+## W = 35, p-value = 0.1272
+## alternative hypothesis: true location shift is greater than 0</code></pre>
+<pre class="r"><code>ks.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Two-sample Kolmogorov-Smirnov test
 ## 
