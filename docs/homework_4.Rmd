@@ -94,3 +94,5 @@ wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE
 \[
     \delta = P(X < Y) \simeq 
 \]
+
+The $p$-value stands for the probability that sample data like this would occur given that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers) is true. Therefore, 
