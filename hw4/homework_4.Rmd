@@ -131,7 +131,7 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 
 ```{r}
 # install.packages("npsm", dependencies = TRUE, repos = "http://cran.us.r-project.org")
-# install.packages("RVAideMemoire", dependencies = TRUE, repos = "http://cran.us.r-project.org")
+install.packages("RVAideMemoire", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 # install.packages("robustrank", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 # library(npsm)
 library(RVAideMemoire)
