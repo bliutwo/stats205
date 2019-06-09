@@ -94,7 +94,7 @@ wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
 The estimate for $\delta$ is
 
 \[
-    \hat{\delta} = P(X < Y) \simeq 54.3
+    \hat{\delta} = P(X < Y) = 54.3
 \]
 
 and the $90%$ confidence interval for $\delta$ is
