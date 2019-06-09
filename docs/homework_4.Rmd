@@ -93,7 +93,9 @@ wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
 <!-- The $p$-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true.
  -->
 
- >Recall that the p-value is defined as the probability of getting data as extreme as the observed data when the null hypothesis is true. >-- <cite>[Introduction to Permutation Tests][3]</cite>
+ >Recall that the p-value is defined as the probability of getting data as extreme as the observed data when the null hypothesis is true.
+
+ >--<cite>[Introduction to Permutation Tests][3]</cite>
 
 [3]:https://rcompanion.org/handbook/K_01.html
 
