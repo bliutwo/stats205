@@ -240,7 +240,7 @@ The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. T
 ### (ii)
 
 ```{r}
-install.packages("coin", dependencies=TRUE, repos='http://cran.us.r-project.org')
+# install.packages("coin", dependencies=TRUE, repos='http://cran.us.r-project.org')
 # use permutation test here
 ```
 
@@ -281,3 +281,7 @@ The $p$-value is $0.002608$, which is significant at the $\alpha = 0.05$ level. 
 -- <cite>[Assumptions of the Wilcoxon Sign Test][4]</cite>
 
 [4]:https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/
+
+```{r}
+demo(graphics)
+```
