@@ -496,15 +496,16 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <pre class="r"><code># install.packages(&quot;npsm&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
 # install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
 # install.packages(&quot;robustrank&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
+library(npsm)
 # fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)
-# fp.test(x = term, y = gest)</code></pre>
-<p>Unfortunately, the package for <code>fp.test()</code> doesn’t seem to be within reach, despite installing the following packages:</p>
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/npsm/index.html"><code>npsm</code> package</a></li>
-<li><a href="https://rdrr.io/cran/RVAideMemoire/man/fp.test.html"><code>RVAideMemoire</code> package, with <code>fp.test()</code> demonstrated here</a></li>
-<li><a href="https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test">R Documentation of <code>npsm</code> package including fp.test()</a></li>
-<li><a href="https://cran.r-project.org/web/packages/robustrank/robustrank.pdf"><code>robustrank</code> package</a></li>
-</ul>
+fp.test(x = term, y = gest)</code></pre>
+<pre><code>## statistic =  -1.3484 , p-value =  0.2002008</code></pre>
+<!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
+
+- [`npsm` package](https://cran.r-project.org/web/packages/npsm/index.html)
+- [`RVAideMemoire` package, with `fp.test()` demonstrated here](https://rdrr.io/cran/RVAideMemoire/man/fp.test.html)
+- [R Documentation of `npsm` package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
+- [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf) -->
 </div>
 <div id="solution-to-problem-5" class="section level2">
 <h2>Solution to Problem 5</h2>

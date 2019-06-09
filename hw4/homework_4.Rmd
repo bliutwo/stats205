@@ -133,16 +133,19 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 # install.packages("npsm", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 # install.packages("RVAideMemoire", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 # install.packages("robustrank", dependencies = TRUE, repos = "http://cran.us.r-project.org")
+library(npsm)
 # fp.test(x = term, y = gest, alternative = 'two.sided')
-# fp.test(x = term, y = gest)
+fp.test(x = term, y = gest)
 ```
 
-Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
+<!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
 
 - [`npsm` package](https://cran.r-project.org/web/packages/npsm/index.html)
 - [`RVAideMemoire` package, with `fp.test()` demonstrated here](https://rdrr.io/cran/RVAideMemoire/man/fp.test.html)
 - [R Documentation of `npsm` package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
-- [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf)
+- [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf) -->
+
+
 
 ## Solution to Problem 5
 
