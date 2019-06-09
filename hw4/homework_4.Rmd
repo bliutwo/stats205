@@ -70,4 +70,4 @@ The alternative hypothesis is that children who viewed the violent TV take longe
 wilcox.test(x = karate, y = olympics, alternative = "greater")
 ```
 
-The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
+The $p$-value is $0.08126$, which is *not* significant at the $\alpha = 0.05$ level. There is *not enough* evidence that children who viewed the violent TV take longer to seek help (were more tolerant) than the children who viewed the nonviolent sports-action TV.
