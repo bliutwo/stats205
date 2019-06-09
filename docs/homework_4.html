@@ -438,6 +438,26 @@ karate; olympics</code></pre>
 ## alternative hypothesis: true location shift is greater than 0</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.08126\)</span>, which is <em>not</em> significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <em>not enough</em> evidence that children who viewed the violent TV take longer to seek help (were more tolerant) than the children who viewed the nonviolent sports-action TV.</p>
 </div>
+<div id="solution-to-problem-3" class="section level2">
+<h2>Solution to Problem 3</h2>
+<pre class="r"><code>allergics = c(1651.0, 1112.0, 102.4, 100.0, 67.6, 65.9, 64.7, 39.6, 31.0)
+nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6, 5.2, 4.7)
+allergics; nonallergics</code></pre>
+<pre><code>## [1] 1651.0 1112.0  102.4  100.0   67.6   65.9   64.7   39.6   31.0</code></pre>
+<pre><code>##  [1] 48.1 48.0 45.5 41.7 35.4 34.3 32.4 29.1 27.3 18.9  6.6  5.2  4.7</code></pre>
+<pre class="r"><code>wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)</code></pre>
+<pre><code>## 
+##  Wilcoxon rank sum test
+## 
+## data:  allergics and nonallergics
+## W = 106, p-value = 0.000772
+## alternative hypothesis: true location shift is not equal to 0
+## 90 percent confidence interval:
+##  25.9 81.1
+## sample estimates:
+## difference in location 
+##                   54.3</code></pre>
+</div>
 
 
 
