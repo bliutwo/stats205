@@ -237,3 +237,29 @@ The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. T
 
 [2]:https://www.investopedia.com/ask/answers/073115/what-assumptions-are-made-when-conducting-ttest.asp
 
+### (ii)
+
+```{r}
+install.packages("coin", dependencies=TRUE)
+# use permutation test here
+```
+
+### (iii)
+
+The null hypothesis is that there is *no* difference between heights of crossed and self-fertilized plants. That is,
+
+\[
+    H_0: h_c = h_s
+\]
+
+The alternative hypothesis is that there *is* a difference between heights of crossed and self-fertilized plants. That is
+
+\[
+    H_0: h_c \neq h_s
+\]
+
+```{r}
+wilcox.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
+```
+
+The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that there *is* a difference between heights of crossed and self-fertilized plants.
