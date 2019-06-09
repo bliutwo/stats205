@@ -87,6 +87,7 @@ nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6
 allergics; nonallergics
 
 wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
+wilcox.test(x = allergics, y = nonallergics, conf.int=T, conf.level=.90)
 
 # wilcox.test(x = allergics, y = nonallergics, alternative = "less", conf.int=TRUE, conf.level=.90)
 ```
@@ -95,4 +96,7 @@ wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
     \delta = P(X < Y) \simeq 
 \]
 
-The $p$-value stands for the probability that sample data like this would occur given that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true. Therefore, 
+The $p$-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true. Therefore, 
+
+## Solution to Problem 4
+
