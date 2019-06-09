@@ -19,22 +19,25 @@ nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6
 allergics; nonallergics
 ```
 
-**Assumption**: The two samples are from independent populations.
-
->Two data samples are independent if they come from distinct populations and the samples do not affect each other.
->-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
-
 [1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
 
-$H_0$: Allergic smokers have the sputum histamine levels as nonallergic smokers. That is,
+The null hypothesis is that allergic smokers have the same sputum histamine levels as nonallergic smokers. That is,
 
 \[
     H_0: p_a = p_n
 \]
 
-$H_A$: Allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
+The alternative hypothesis is that allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
 
 \[
     H_0: p_a > p_n
 \]
 
+To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
+
+>Two data samples are independent if they come from distinct populations and the samples do not affect each other.
+>-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
+
+```{r}
+wilcox.test(x = allergics, y = nonallergics, alternative = "greater")
+```
