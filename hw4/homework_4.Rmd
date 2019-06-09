@@ -278,6 +278,6 @@ The $p$-value is $0.002608$, which is significant at the $\alpha = 0.05$ level. 
 >
 >The test of significance of the Wilcoxon test further assumes that both samples have a continuous distribution function.  This implies that tied ranks cannot occur.  However, if tied ranks exist in the sample a continuity correction can be calculated.  It is also possible to use an exact test that relies on permutation testing.
 
--- <cite>[Mann-Whitney-Wilcoxon Test][4]</cite>
+-- <cite>[Assumptions of the Wilcoxon Sign Test][4]</cite>
 
 [4]:https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/
