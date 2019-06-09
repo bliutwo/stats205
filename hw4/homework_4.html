@@ -497,8 +497,9 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 # install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
 # install.packages(&quot;robustrank&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
 library(npsm)
-# fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)
-fp.test(x = term, y = gest)</code></pre>
+fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)</code></pre>
+<pre><code>## statistic =  -1.3484 , p-value =  0.2002008</code></pre>
+<pre class="r"><code>fp.test(x = term, y = gest)</code></pre>
 <pre><code>## statistic =  -1.3484 , p-value =  0.2002008</code></pre>
 <!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
 
