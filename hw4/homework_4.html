@@ -489,6 +489,28 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test is <span class="math inline">\(0.1272\)</span>.</p>
 <p><del>The <span class="math inline">\(p\)</span>-value for the one-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.9355\)</span>, which is larger than the <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test.</del></p>
 <p><del>The <span class="math inline">\(p\)</span>-value for the two-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.1658\)</span>, which is similar to that of the Wilcoxon ranked test.</del></p>
+<pre class="r"><code>install.packages(&quot;npsm&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre class="r"><code>install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## Warning: dependency &#39;mixOmics&#39; is not available</code></pre>
+<pre><code>## Warning in install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos =
+## &quot;http://cran.us.r-project.org&quot;): installation of package &#39;RVAideMemoire&#39;
+## had non-zero exit status</code></pre>
+<pre class="r"><code>install.packages(&quot;robustrank&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre class="r"><code># fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)
+# fp.test(x = term, y = gest)</code></pre>
+<p>Unfortunately, the package for <code>fp.test()</code> doesn’t seem to be within reach, despite installing the following packages:</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/npsm/index.html">npsm package</a></li>
+<li><a href="https://rdrr.io/cran/RVAideMemoire/man/fp.test.html">RVAideMemoire package, with <code>fp.test()</code> demonstrated here</a></li>
+<li><a href="https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test">R Documentation of npsm package including fp.test()</a></li>
+<li><a href="https://cran.r-project.org/web/packages/robustrank/robustrank.pdf">robustrank package</a></li>
+</ul>
 </div>
 <div id="solution-to-problem-5" class="section level2">
 <h2>Solution to Problem 5</h2>
@@ -514,6 +536,27 @@ ansari.test(x = term, y = gest, alternative = &quot;t&quot;)</code></pre>
 </div>
 <div id="solution-to-problem-6" class="section level2">
 <h2>Solution to Problem 6</h2>
+<pre class="r"><code>a = c(3.6, 2.6, 4.7, 8.0, 3.1, 8.8, 4.6, 5.8, 4.0, 4.6)
+b = c(16.2, 17.4, 8.5, 15.6, 5.4, 9.8, 14.9, 16.6, 15.9, 5.3, 10.5)</code></pre>
+<p>The null hypothesis is that Type A subjects have the same Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects. That is,</p>
+<p><span class="math display">\[
+    H_0: l_a = l_b
+\]</span></p>
+<p>The alternative hypothesis is that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects. That is,</p>
+<p><span class="math display">\[
+    H_0: l_a &gt; l_b
+\]</span></p>
+<p>To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.</p>
+<pre class="r"><code>wilcox.test(x = a, y = b, alternative = &quot;greater&quot;)</code></pre>
+<pre><code>## Warning in wilcox.test.default(x = a, y = b, alternative = &quot;greater&quot;):
+## cannot compute exact p-value with ties</code></pre>
+<pre><code>## 
+##  Wilcoxon rank sum test with continuity correction
+## 
+## data:  a and b
+## W = 7, p-value = 0.9997
+## alternative hypothesis: true location shift is greater than 0</code></pre>
+<p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.000386\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <code>fill in this blank</code> evidence that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects.</p>
 </div>
 
 

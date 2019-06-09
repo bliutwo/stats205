@@ -125,9 +125,16 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 install.packages("npsm", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 install.packages("RVAideMemoire", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 install.packages("robustrank", dependencies = TRUE, repos = "http://cran.us.r-project.org")
-fp.test(x = term, y = gest, alternative = 'two.sided')
+# fp.test(x = term, y = gest, alternative = 'two.sided')
 # fp.test(x = term, y = gest)
 ```
+
+Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
+
+- [npsm package](https://cran.r-project.org/web/packages/npsm/index.html)
+- [RVAideMemoire package, with `fp.test()` demonstrated here](https://rdrr.io/cran/RVAideMemoire/man/fp.test.html)
+- [R Documentation of npsm package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
+- [robustrank package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf)
 
 ## Solution to Problem 5
 
@@ -177,4 +184,4 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 wilcox.test(x = a, y = b, alternative = "greater")
 ```
 
-The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
+The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is `fill in this blank` evidence that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects.
