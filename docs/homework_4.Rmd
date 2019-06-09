@@ -122,3 +122,22 @@ The $p$-value for the one-sided Two-sample Kolmogorov-Smirnov test is $0.9355$, 
 The $p$-value for the two-sided  Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.
 
 ## Solution to Problem 5
+
+Null hypothesis: "equal dispersions"
+
+\[
+    H_0: p_{term} = p_{gest}
+\]
+
+Alternative hypothesis: "the variation in tritiated water diffusion across human chorioamnion is different at term than at 12–26 weeks gestational age"
+
+\[
+    H_A: p_{term} \neq p_{gest}
+\]
+
+```{r}
+term = c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
+gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
+
+ansari.test(x = term, y = gest, alternative = "t")
+```

@@ -504,6 +504,24 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 </div>
 <div id="solution-to-problem-5" class="section level2">
 <h2>Solution to Problem 5</h2>
+<p>Null hypothesis: “equal dispersions”</p>
+<p><span class="math display">\[
+    H_0: p_{term} = p_{gest}
+\]</span></p>
+<p>Alternative hypothesis: “the variation in tritiated water diffusion across human chorioamnion is different at term than at 12–26 weeks gestational age”</p>
+<p><span class="math display">\[
+    H_A: p_{term} \neq p_{gest}
+\]</span></p>
+<pre class="r"><code>term = c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
+gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
+
+ansari.test(x = term, y = gest, alternative = &quot;t&quot;)</code></pre>
+<pre><code>## 
+##  Ansari-Bradley test
+## 
+## data:  term and gest
+## AB = 36, p-value = 0.1372
+## alternative hypothesis: true ratio of scales is not equal to 1</code></pre>
 </div>
 
 
