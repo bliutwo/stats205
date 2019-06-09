@@ -449,38 +449,30 @@ nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6
 allergics; nonallergics</code></pre>
 <pre><code>## [1] 1651.0 1112.0  102.4  100.0   67.6   65.9   64.7   39.6   31.0</code></pre>
 <pre><code>##  [1] 48.1 48.0 45.5 41.7 35.4 34.3 32.4 29.1 27.3 18.9  6.6  5.2  4.7</code></pre>
-<pre class="r"><code>wilcox.test(x = nonallergics, y = nonallergics, conf.int=TRUE, conf.level=.90)</code></pre>
-<pre><code>## Warning in wilcox.test.default(x = nonallergics, y = nonallergics, conf.int
-## = TRUE, : cannot compute exact p-value with ties</code></pre>
-<pre><code>## Warning in wilcox.test.default(x = nonallergics, y = nonallergics, conf.int
-## = TRUE, : cannot compute exact confidence intervals with ties</code></pre>
+<pre class="r"><code>wilcox.test(x = nonallergics, y = allergics, conf.int=TRUE, conf.level=.90)</code></pre>
 <pre><code>## 
-##  Wilcoxon rank sum test with continuity correction
+##  Wilcoxon rank sum test
 ## 
-## data:  nonallergics and nonallergics
-## W = 84.5, p-value = 1
+## data:  nonallergics and allergics
+## W = 11, p-value = 0.000772
 ## alternative hypothesis: true location shift is not equal to 0
 ## 90 percent confidence interval:
-##  -12.29997  12.29998
+##  -81.1 -25.9
 ## sample estimates:
 ## difference in location 
-##          -3.561629e-05</code></pre>
-<pre class="r"><code>wilcox.test(x = nonallergics, y = nonallergics, alternative = &quot;less&quot;, conf.int=TRUE, conf.level=.90)</code></pre>
-<pre><code>## Warning in wilcox.test.default(x = nonallergics, y = nonallergics,
-## alternative = &quot;less&quot;, : cannot compute exact p-value with ties</code></pre>
-<pre><code>## Warning in wilcox.test.default(x = nonallergics, y = nonallergics,
-## alternative = &quot;less&quot;, : cannot compute exact confidence intervals with ties</code></pre>
+##                  -54.3</code></pre>
+<pre class="r"><code>wilcox.test(x = nonallergics, y = allergics, alternative = &quot;less&quot;, conf.int=TRUE, conf.level=.90)</code></pre>
 <pre><code>## 
-##  Wilcoxon rank sum test with continuity correction
+##  Wilcoxon rank sum test
 ## 
-## data:  nonallergics and nonallergics
-## W = 84.5, p-value = 0.5103
+## data:  nonallergics and allergics
+## W = 11, p-value = 0.000386
 ## alternative hypothesis: true location shift is less than 0
 ## 90 percent confidence interval:
-##     -Inf 7.00001
+##   -Inf -31.6
 ## sample estimates:
 ## difference in location 
-##          -3.561629e-05</code></pre>
+##                  -54.3</code></pre>
 <p><span class="math display">\[
     P(X &lt; Y) = 
 \]</span></p>
