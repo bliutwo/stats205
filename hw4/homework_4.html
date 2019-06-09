@@ -496,6 +496,28 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <pre class="r"><code>library(npsm)
 fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)</code></pre>
 <pre><code>## statistic =  -1.3484 , p-value =  0.2002008</code></pre>
+<pre class="r"><code>install.packages(&quot;NSM3&quot;, dependencies=TRUE, repos = &quot;http://cran.us.r-project.org&quot;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## also installing the dependencies &#39;units&#39;, &#39;sf&#39;, &#39;spdep&#39;, &#39;agricolae&#39;</code></pre>
+<pre><code>## Warning in install.packages(&quot;NSM3&quot;, dependencies = TRUE, repos = &quot;http://
+## cran.us.r-project.org&quot;): installation of package &#39;units&#39; had non-zero exit
+## status</code></pre>
+<pre><code>## Warning in install.packages(&quot;NSM3&quot;, dependencies = TRUE, repos = &quot;http://
+## cran.us.r-project.org&quot;): installation of package &#39;sf&#39; had non-zero exit
+## status</code></pre>
+<pre><code>## Warning in install.packages(&quot;NSM3&quot;, dependencies = TRUE, repos = &quot;http://
+## cran.us.r-project.org&quot;): installation of package &#39;spdep&#39; had non-zero exit
+## status</code></pre>
+<pre><code>## Warning in install.packages(&quot;NSM3&quot;, dependencies = TRUE, repos = &quot;http://
+## cran.us.r-project.org&quot;): installation of package &#39;agricolae&#39; had non-zero
+## exit status</code></pre>
+<pre><code>## Warning in install.packages(&quot;NSM3&quot;, dependencies = TRUE, repos = &quot;http://
+## cran.us.r-project.org&quot;): installation of package &#39;NSM3&#39; had non-zero exit
+## status</code></pre>
+<pre class="r"><code># library(NSM3)
+# pFligPoli(x = term, y = gest, method = &quot;Monte Carlo&quot;)
+# Error here: &quot;there is no package called &#39;NSM3&#39;&quot;</code></pre>
 <!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
 
 - [`npsm` package](https://cran.r-project.org/web/packages/npsm/index.html)
