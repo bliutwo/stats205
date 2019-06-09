@@ -122,6 +122,7 @@ The $p$-value for the Wilcoxon ranked test is $0.1272$.
 ~~The $p$-value for the two-sided  Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.~~
 
 ```{r}
+install.packages("RVAideMemoire", dependencies = TRUE)
 fp.test(x = term, y = gest, alternative = 'two.sided')
 ```
 
