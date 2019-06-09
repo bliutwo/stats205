@@ -203,13 +203,13 @@ saveRDS(Darwin.data, "Darwin_data.rds"); Darwin.data
 The null hypothesis is that there is *no* difference between heights of crossed and self-fertilized plants. That is,
 
 \[
-    H_0: h_c = h_f
+    H_0: h_c = h_s
 \]
 
 The alternative hypothesis is that there *is* a difference between heights of crossed and self-fertilized plants. That is
 
 \[
-    H_0: h_c \neq h_f
+    H_0: h_c \neq h_s
 \]
 
 ```{r}
