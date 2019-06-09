@@ -49,9 +49,9 @@ The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. 
 [Original problem statement](https://i.imgur.com/WXQHBJ9.png)
 
 ```{r}
-olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 8, 0, 154, 146)
 karate = c(37, 39, 30, 7, 13, 139, 45, 25, 16, 146, 94, 16, 23, 1, 290, 169, 62, 145, 36, 20, 13)
-olympics; karate
+olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 8, 0, 154, 146)
+karate; olympics
 ```
 
 The null hypothesis is that children who viewed the violent TV take the same amount of time to seek help (were the same amount of tolerant) as the children who viewed the nonviolent sports-action TV. That is, 
@@ -67,7 +67,7 @@ The alternative hypothesis is that children who viewed the violent TV take longe
 \]
 
 ```{r}
-wilcox.test(x = olympics, y = karate, alternative = "greater")
+wilcox.test(x = karate, y = olympics, alternative = "greater")
 ```
 
 The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.

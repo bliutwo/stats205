@@ -412,13 +412,13 @@ allergics; nonallergics</code></pre>
 <div id="solution-to-problem-2" class="section level2">
 <h2>Solution to Problem 2</h2>
 <p><a href="https://i.imgur.com/WXQHBJ9.png">Original problem statement</a></p>
-<pre class="r"><code>olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 8, 0, 154, 146)
-karate = c(37, 39, 30, 7, 13, 139, 45, 25, 16, 146, 94, 16, 23, 1, 290, 169, 62, 145, 36, 20, 13)
-olympics; karate</code></pre>
-<pre><code>##  [1]  12  44  34  14   9  19 156  23  13  11  47  26  14  33  15  62   5
-## [18]   8   0 154 146</code></pre>
+<pre class="r"><code>karate = c(37, 39, 30, 7, 13, 139, 45, 25, 16, 146, 94, 16, 23, 1, 290, 169, 62, 145, 36, 20, 13)
+olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 8, 0, 154, 146)
+karate; olympics</code></pre>
 <pre><code>##  [1]  37  39  30   7  13 139  45  25  16 146  94  16  23   1 290 169  62
 ## [18] 145  36  20  13</code></pre>
+<pre><code>##  [1]  12  44  34  14   9  19 156  23  13  11  47  26  14  33  15  62   5
+## [18]   8   0 154 146</code></pre>
 <p>The null hypothesis is that children who viewed the violent TV take the same amount of time to seek help (were the same amount of tolerant) as the children who viewed the nonviolent sports-action TV. That is,</p>
 <p><span class="math display">\[
     H_0: t_k = t_o
@@ -427,14 +427,14 @@ olympics; karate</code></pre>
 <p><span class="math display">\[
     H_0: t_k &gt; t_o
 \]</span></p>
-<pre class="r"><code>wilcox.test(x = olympics, y = karate, alternative = &quot;greater&quot;)</code></pre>
-<pre><code>## Warning in wilcox.test.default(x = olympics, y = karate, alternative =
+<pre class="r"><code>wilcox.test(x = karate, y = olympics, alternative = &quot;greater&quot;)</code></pre>
+<pre><code>## Warning in wilcox.test.default(x = karate, y = olympics, alternative =
 ## &quot;greater&quot;): cannot compute exact p-value with ties</code></pre>
 <pre><code>## 
 ##  Wilcoxon rank sum test with continuity correction
 ## 
-## data:  olympics and karate
-## W = 164.5, p-value = 0.9225
+## data:  karate and olympics
+## W = 276.5, p-value = 0.08126
 ## alternative hypothesis: true location shift is greater than 0</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.000386\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.</p>
 </div>
