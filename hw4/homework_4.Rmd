@@ -216,6 +216,8 @@ The alternative hypothesis is that there *is* a difference between heights of cr
 t.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
 ```
 
+The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that there *is* a difference between heights of crossed and self-fertilized plants.
+
 >The first assumption made regarding t-tests concerns the scale of measurement. The assumption for a t-test is that the scale of measurement applied to the data collected follows a continuous or ordinal scale, such as the scores for an IQ test.
 
 >The second assumption made is that of a simple random sample, that the data is collected from a representative, randomly selected portion of the total population.
