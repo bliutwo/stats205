@@ -493,11 +493,7 @@ wilcox.test(x = term, y = gest, alternative = &quot;greater&quot;)</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test is <span class="math inline">\(0.1272\)</span>.</p>
 <p><del>The <span class="math inline">\(p\)</span>-value for the one-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.9355\)</span>, which is larger than the <span class="math inline">\(p\)</span>-value for the Wilcoxon ranked test.</del></p>
 <p><del>The <span class="math inline">\(p\)</span>-value for the two-sided Two-sample Kolmogorov-Smirnov test is <span class="math inline">\(0.1658\)</span>, which is similar to that of the Wilcoxon ranked test.</del></p>
-<pre class="r"><code># install.packages(&quot;npsm&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
-# install.packages(&quot;RVAideMemoire&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
-# install.packages(&quot;robustrank&quot;, dependencies = TRUE, repos = &quot;http://cran.us.r-project.org&quot;)
-library(npsm)
-# library(RVAideMemoire)
+<pre class="r"><code>library(npsm)
 fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)</code></pre>
 <pre><code>## statistic =  -1.3484 , p-value =  0.2002008</code></pre>
 <pre class="r"><code>fp.test(x = term, y = gest)</code></pre>
