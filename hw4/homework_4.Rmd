@@ -25,3 +25,16 @@ allergics; nonallergics
 >-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
 
 [1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
+
+$H_0$: Allergic smokers have the sputum histamine levels as nonallergic smokers. That is,
+
+\[
+    H_0: p_a = p_n
+\]
+
+$H_A$: Allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
+
+\[
+    H_0: p_a > p_n
+\]
+
