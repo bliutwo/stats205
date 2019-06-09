@@ -141,3 +141,8 @@ gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
 
 ansari.test(x = term, y = gest, alternative = "t")
 ```
+
+The $p$-value is $0.1372$, which is *not* significant at the $\alpha = 0.05$ level. There is *not enough* evidence that the variation in tritiated water diffusion across human chorioamnion is different at term than at 12–26 weeks gestational age.
+
+## Solution to Problem 6
+
