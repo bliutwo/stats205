@@ -501,8 +501,8 @@ fp.test(x = term, y = gest, alternative = &#39;two.sided&#39;)</code></pre>
 pFligPoli(x = term, y = gest, method = &quot;Monte Carlo&quot;)</code></pre>
 <pre><code>## Number of X values: 10 Number of Y values: 5
 ## Fligner-Policello U Statistic: -1.3484
-## Monte Carlo (Using 10000 Iterations) upper-tail probability: 0.9031
-## Monte Carlo (Using 10000 Iterations) two-sided p-value: 0.1938
+## Monte Carlo (Using 10000 Iterations) upper-tail probability: 0.8987
+## Monte Carlo (Using 10000 Iterations) two-sided p-value: 0.2026
 ## </code></pre>
 <p>0.1906 The <span class="math inline">\(p\)</span>-value for the two-sided Fligner-Policello Test with Monte Carlo method is <span class="math inline">\(0.1906\)</span>, which is similar to that of the Wilcoxon ranked test.</p>
 <!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
@@ -648,6 +648,9 @@ saveRDS(Darwin.data, &quot;Darwin_data.rds&quot;); Darwin.data</code></pre>
 <p>The test of significance of the Wilcoxon test further assumes that both samples have a continuous distribution function. This implies that tied ranks cannot occur. However, if tied ranks exist in the sample a continuity correction can be calculated. It is also possible to use an exact test that relies on permutation testing.</p>
 </blockquote>
 <p>– <cite><a href="https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/">Assumptions of the Wilcoxon Sign Test</a></cite></p>
+</div>
+<div id="iv" class="section level3">
+<h3>(iv)</h3>
 </div>
 </div>
 
