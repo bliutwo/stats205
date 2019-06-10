@@ -1,0 +1,293 @@
+---
+title: 'STATS 205: Homework Assignment 4'
+author: "Brian Liu"
+date: "6/3/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Solution to Problem 1
+
+```{r}
+allergics = c(1651.0, 1112.0, 102.4, 100.0, 67.6, 65.9, 64.7, 39.6, 31.0)
+nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6, 5.2, 4.7)
+allergics; nonallergics
+```
+
+The null hypothesis is that allergic smokers have the same sputum histamine levels as nonallergic smokers. That is,
+
+\[
+    H_0: p_a = p_n
+\]
+
+The alternative hypothesis is that allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
+
+\[
+    H_0: p_a > p_n
+\]
+
+To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
+
+>Two data samples are independent if they come from distinct populations and the samples do not affect each other.
+
+-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
+
+[1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
+
+```{r}
+wilcox.test(x = allergics, y = nonallergics, alternative = "greater")
+```
+
+The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
+
+## Solution to Problem 2
+
+[Original problem statement](https://i.imgur.com/WXQHBJ9.png)
+
+```{r}
+karate = c(37, 39, 30, 7, 13, 139, 45, 25, 16, 146, 94, 16, 23, 1, 290, 169, 62, 145, 36, 20, 13)
+olympics = c(12, 44, 34, 14, 9, 19, 156, 23, 13, 11, 47, 26, 14, 33, 15, 62, 5, 8, 0, 154, 146)
+karate; olympics
+```
+
+The null hypothesis is that children who viewed the violent TV take the same amount of time to seek help (were as tolerant) as the children who viewed the nonviolent sports-action TV. That is, 
+
+\[
+    H_0: t_k = t_o
+\]
+
+The alternative hypothesis is that children who viewed the violent TV take longer to seek help (were more tolerant) than the children who viewed the nonviolent sports-action TV. That is,
+
+\[
+    H_0: t_k > t_o
+\]
+
+```{r}
+wilcox.test(x = karate, y = olympics, alternative = "greater")
+```
+
+The $p$-value is $0.08126$, which is *not* significant at the $\alpha = 0.05$ level. There is *not enough* evidence that children who viewed the violent TV take longer to seek help (were more tolerant) than the children who viewed the nonviolent sports-action TV.
+
+## Solution to Problem 3
+
+Let $X$ be the nonallergics and $Y$ be the allergics.
+
+\[
+    \delta = P(X < Y)
+\]
+
+
+```{r}
+allergics = c(1651.0, 1112.0, 102.4, 100.0, 67.6, 65.9, 64.7, 39.6, 31.0)
+nonallergics = c(48.1, 48.0, 45.5, 41.7, 35.4, 34.3, 32.4, 29.1, 27.3, 18.9, 6.6, 5.2, 4.7)
+allergics; nonallergics
+
+wilcox.test(x = allergics, y = nonallergics, conf.int=TRUE, conf.level=.90)
+```
+
+<!-- The $p$-value stands for how likely the sample data would occur, assuming that the null hypothesis (that allergic smokers have the same sputum histamine levels as nonallergic smokers, or $H_0: p_a = p_n$) is true.
+ -->
+
+ <!-- >Recall that the p-value is defined as the probability of getting data as extreme as the observed data when the null hypothesis is true.
+
+ >--<cite>[Introduction to Permutation Tests][3]</cite> -->
+
+[3]:https://rcompanion.org/handbook/K_01.html
+
+The estimate for $\delta$ is
+
+\[
+    \hat{\delta} = P(X < Y) = 54.3
+\]
+
+and the $90%$ confidence interval for $\delta$ is
+
+\[
+    \hat{\delta} = P(X < Y) = (25.9, 81.1)
+\]
+
+
+## Solution to Problem 4
+
+```{r}
+term = c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
+gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
+
+wilcox.test(x = term, y = gest, alternative = "greater")
+# ks.test(x = term, y = gest, alternative = "greater")
+# ks.test(x = term, y = gest)
+```
+
+The $p$-value for the Wilcoxon ranked test is $0.1272$.
+
+~~The $p$-value for the one-sided Two-sample Kolmogorov-Smirnov test is $0.9355$, which is larger than the $p$-value for the Wilcoxon ranked test.~~
+
+~~The $p$-value for the two-sided Two-sample Kolmogorov-Smirnov test is $0.1658$, which is similar to that of the Wilcoxon ranked test.~~
+
+```{r}
+library(npsm)
+fp.test(x = term, y = gest, alternative = 'two.sided')
+```
+
+The $p$-value for the two-sided Fligner-Policello Test is $0.2002$, which is similar to that of the Wilcoxon ranked test.
+
+```{r}
+library(NSM3)
+pFligPoli(x = term, y = gest, method = "Monte Carlo")
+```
+
+0.1906
+The $p$-value for the two-sided Fligner-Policello Test with Monte Carlo method is $0.1906$, which is similar to that of the Wilcoxon ranked test.
+
+<!-- Unfortunately, the package for `fp.test()` doesn't seem to be within reach, despite installing the following packages:
+
+- [`npsm` package](https://cran.r-project.org/web/packages/npsm/index.html)
+- [`RVAideMemoire` package, with `fp.test()` demonstrated here](https://rdrr.io/cran/RVAideMemoire/man/fp.test.html)
+- [R Documentation of `npsm` package including fp.test()](https://www.rdocumentation.org/packages/npsm/versions/0.5/topics/fp.test)
+- [`robustrank` package](https://cran.r-project.org/web/packages/robustrank/robustrank.pdf) -->
+
+## Solution to Problem 5
+
+Null hypothesis: "equal dispersions"
+
+\[
+    H_0: p_{term} = p_{gest}
+\]
+
+Alternative hypothesis: "the variation in tritiated water diffusion across human chorioamnion is different at term than at 12–26 weeks gestational age"
+
+\[
+    H_A: p_{term} \neq p_{gest}
+\]
+
+```{r}
+term = c(0.80, 0.83, 1.89, 1.04, 1.45, 1.38, 1.91, 1.64, 0.73, 1.46)
+gest = c(1.15, 0.88, 0.90, 0.74, 1.21)
+
+ansari.test(x = term, y = gest, alternative = "t")
+```
+
+The $p$-value is $0.1372$, which is *not* significant at the $\alpha = 0.05$ level. There is *not enough* evidence that the variation in tritiated water diffusion across human chorioamnion is different at term than at 12–26 weeks gestational age.
+
+## Solution to Problem 6
+
+```{r}
+a = c(3.6, 2.6, 4.7, 8.0, 3.1, 8.8, 4.6, 5.8, 4.0, 4.6)
+b = c(16.2, 17.4, 8.5, 15.6, 5.4, 9.8, 14.9, 16.6, 15.9, 5.3, 10.5)
+```
+
+The null hypothesis is that Type A subjects have the same Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects. That is,
+
+\[
+    H_0: l_a = l_b
+\]
+
+The alternative hypothesis is that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects. That is,
+
+\[
+    H_0: l_a > l_b
+\]
+
+To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
+
+```{r}
+wilcox.test(x = a, y = b, alternative = "two.sided")
+```
+
+The $p$-value is $0.0008201$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that Type A subjects have different Peak Levels of Human Plasma Growth Hormone after Arginine Hydrochloride Infusion as Type B subjects.
+
+## Solution to Problem 7
+
+```{r}
+
+Darwin.data = data.frame(pair = seq(1, 15), pot = c(rep(1, times=3), rep(2, times = 3), rep(3, times = 5), rep(4, times = 4)), cross.height = c(23.500, 12.000, 21.00, 22.000, 19.125, 21.500, 22.125, 20.375, 18.250, 21.625, 23.250, 21.000, 22.125, 23.000, 12.000), self.height = c(17.375, 20.375,20.000, 20.000, 18.375, 18.625, 18.625, 15.250, 16.500, 18.000, 16.250, 18.000, 12.750, 15.500, 18.000))
+
+saveRDS(Darwin.data, "Darwin_data.rds"); Darwin.data
+```
+
+### (i)
+
+The null hypothesis is that there is *no* difference between heights of crossed and self-fertilized plants. That is,
+
+\[
+    H_0: h_c = h_s
+\]
+
+The alternative hypothesis is that there *is* a difference between heights of crossed and self-fertilized plants. That is
+
+\[
+    H_0: h_c \neq h_s
+\]
+
+```{r}
+t.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
+```
+
+The $p$-value is $0.02328$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that there *is* a difference between heights of crossed and self-fertilized plants.
+
+>The first assumption made regarding t-tests concerns the scale of measurement. The assumption for a t-test is that the scale of measurement applied to the data collected follows a continuous or ordinal scale, such as the scores for an IQ test.
+>
+>The second assumption made is that of a simple random sample, that the data is collected from a representative, randomly selected portion of the total population.
+>
+>The third assumption is the data, when plotted, results in a normal distribution, bell-shaped distribution curve.
+>
+>The fourth assumption is a reasonably large sample size is used. A larger sample size means the distribution of results should approach a normal bell-shaped curve.
+>
+>The final assumption is homogeneity of variance. Homogeneous, or equal, variance exists when the standard deviations of samples are approximately equal.
+
+-- <cite>[What assumptions are made when conducting a t-test?][2]</cite>
+
+[2]:https://www.investopedia.com/ask/answers/073115/what-assumptions-are-made-when-conducting-ttest.asp
+
+### (ii)
+
+```{r}
+# install.packages("coin", dependencies=TRUE, repos='http://cran.us.r-project.org')
+# use permutation test here
+```
+
+### (iii)
+
+The null hypothesis is that there is *no* difference between heights of crossed and self-fertilized plants. That is,
+
+\[
+    H_0: h_c = h_s
+\]
+
+The alternative hypothesis is that there *is* a difference between heights of crossed and self-fertilized plants. That is
+
+\[
+    H_0: h_c \neq h_s
+\]
+
+```{r}
+wilcox.test(x = Darwin.data$cross.height, y = Darwin.data$self.height, alternative = "two.sided")
+```
+
+The $p$-value is $0.002608$, which is significant at the $\alpha = 0.05$ level. There is *strong evidence* that there *is* a difference between heights of crossed and self-fertilized plants.
+
+>The Wilcoxon Sign test makes four important assumptions:
+>
+>1. Dependent samples – the two samples need to be dependent observations of the cases.  The Wilcoxon sign test assess for differences between a before and after measurement, while accounting for individual differences in the baseline.
+>
+>2. Independence – The Wilcoxon sign test assumes independence, meaning that the paired observations are randomly and independently drawn.
+>
+>3. Continuous dependent variable – Although the Wilcoxon signed rank test ranks the differences according to their size and is therefore a non-parametric test, it assumes that the measurements are continuous in theoretical nature.  To account for the fact that in most cases the dependent variable is binominal distributed, a continuity correction is applied.
+>
+>4. Ordinal level of measurement – The Wilcoxon sign test needs both dependent measurements to be at least of ordinal scale.  This is necessary to ensure that the two values can be compared, and for each pair, it can be said if one value is greater, equal, or less than the other.
+>
+>Furthermore, in order for the differences between measures to be rankable, the observations must be comparable.  For every difference of observations, it must be clear which one is greater of if both observations are equal.
+>
+>The test of significance of the Wilcoxon test further assumes that both samples have a continuous distribution function.  This implies that tied ranks cannot occur.  However, if tied ranks exist in the sample a continuity correction can be calculated.  It is also possible to use an exact test that relies on permutation testing.
+
+-- <cite>[Assumptions of the Wilcoxon Sign Test][4]</cite>
+
+[4]:https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/
+
+### (iv)
+
