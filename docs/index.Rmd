@@ -13,3 +13,8 @@ output:
 - <a href="homework_4.html">Homework 4</a> (<a href="homework_4.pdf">pdf</a>) (<a href="homework_4.Rmd">rmd</a>) (<a href="https://github.com/bliutwo/stats205/blob/master/hw4/homework_4.pdf">github pdf</a>) *In progress...*
 - Homework 5
 - Homework 6
+
+Project:
+
+- <a href="project_proposal.html">Project Proposal</a> (<a href="project_proposal.pdf">pdf</a>) (<a href="project_proposal.Rmd">rmd</a>) (<a href="https://github.com/bliutwo/stats205/blob/master/project/project_proposal.pdf">github pdf</a>) *DONE!*
+
