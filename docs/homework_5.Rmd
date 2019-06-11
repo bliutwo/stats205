@@ -1,7 +1,7 @@
 ---
-title: 'STATS 205: Homework Assignment 4'
+title: 'STATS 205: Homework Assignment 5'
 author: "Brian Liu"
-date: "6/3/2019"
+date: "6/10/2019"
 output:
   pdf_document: default
   html_document: default
@@ -13,3 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Solution to Problem 1
 
+>In deciding whether your own observations are exchangeable and a permutation test applicable, the key question is the one we posed in the very first chapter: Under the null hypothesis of no differences among the various experimental or survey groups, can we exchange the labels on the observations without significantly affecting the results?
+
+-- <cite>[2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I][1]</cite>
+
+[1]:https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/
