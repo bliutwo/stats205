@@ -13,7 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Solution to Problem 1
 
->We say that two observations $X_1$ and $X_2$ are *independent* of one another with respect to a collection of events $\mathcal{A}$
+>We say that two observations $X_1$ and $X_2$ are *independent* of one another with respect to a collection of events $\mathcal{Andreas}$ if
+>
+>\[
+>     Pr{X_i }
+>\]
 
 >In deciding whether your own observations are exchangeable and a permutation test applicable, the key question is the one we posed in the very first chapter: Under the null hypothesis of no differences among the various experimental or survey groups, can we exchange the labels on the observations without significantly affecting the results?
 
