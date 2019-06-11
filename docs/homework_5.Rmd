@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 >We say that two observations $X_1$ and $X_2$ are *independent* of one another with respect to a collection of events $\mathcal{A}$ if
 >
 >\[
->     Pr\left\{X_1 \in A \textnormal{  and  } X_2 \in B\right\} = Pr\left\{X_1 \in A \right\}Pr\left\{X_2 \in B\right\}
+>     Pr\left\{X_1 \in A \textrm{  and  } X_2 \in B\right\} = Pr\left\{X_1 \in A \right\}Pr\left\{X_2 \in B\right\}
 >\]
 >where A and B are any two not necessarily distinct sets of outcomes belonging to $\mathcal{A}^3$.
 
