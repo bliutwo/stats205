@@ -20,8 +20,10 @@ knitr::opts_chunk$set(echo = TRUE)
 >\]
 >where A and B are any two not necessarily distinct sets of outcomes belonging to $\mathcal{A}^3$.
 
+-- <cite>[2.2.1 Independent Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I][2]</cite>
+
 >In deciding whether your own observations are exchangeable and a permutation test applicable, the key question is the one we posed in the very first chapter: Under the null hypothesis of no differences among the various experimental or survey groups, can we exchange the labels on the observations without significantly affecting the results?
 
--- <cite>[2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I][1]</cite>
+-- <cite>[2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I][2]</cite>
 
-[1]:https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/
+[2]:https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/
