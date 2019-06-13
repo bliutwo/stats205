@@ -73,7 +73,7 @@ fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 
 ```
 
 \[
-    \hat{\tau} = 
+    \hat{\tau} = \frac{2K}{n(n - 1)} = \bar{K}
 \]
 
 ## Solution to Problem 5
