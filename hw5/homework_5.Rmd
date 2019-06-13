@@ -36,3 +36,29 @@ worms_reco <- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0); worms_rec
 length(cysticerci)
 length(worms_reco)
 ```
+
+The null hypothesis is that the mean weight of introduced cysticerci *has no correlation with* the mean weight of worms recovered.  That is,
+
+\[
+    H_0: \uptau = 0
+\]
+
+The alternative hypothesis is that allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
+
+\[
+    H_0: p_a > p_n
+\]
+
+To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
+
+>Two data samples are independent if they come from distinct populations and the samples do not affect each other.
+
+-- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
+
+[1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
+
+```{r}
+wilcox.test(x = allergics, y = nonallergics, alternative = "greater")
+```
+
+The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
