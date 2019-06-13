@@ -389,11 +389,11 @@ $(document).ready(function () {
     Pr\left\{X_1 \in A \textrm{  and  } X_2 \in B\right\} = Pr\left\{X_1 \in A \right\}Pr\left\{X_2 \in B\right\}
 \]</span> where A and B are any two not necessarily distinct sets of outcomes belonging to <span class="math inline">\(\mathcal{A}^3\)</span>.</p>
 </blockquote>
-<p>– <cite><a href="https://searchworks.stanford.edu/view/12473402">2.2.1 Independent Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
+<p>– <cite><a href="http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test">2.2.1 Independent Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
 <blockquote>
 <p>In deciding whether your own observations are exchangeable and a permutation test applicable, the key question is the one we posed in the very first chapter: Under the null hypothesis of no differences among the various experimental or survey groups, can we exchange the labels on the observations without significantly affecting the results?</p>
 </blockquote>
-<p>– <cite><a href="https://searchworks.stanford.edu/view/12473402">2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
+<p>– <cite><a href="http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test">2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
 </div>
 <div id="solution-to-problem-2" class="section level2">
 <h2>Solution to Problem 2</h2>
@@ -405,6 +405,20 @@ $(document).ready(function () {
 <pre><code>## [1] 10</code></pre>
 <pre class="r"><code>length(worms_reco)</code></pre>
 <pre><code>## [1] 10</code></pre>
+<p>The null hypothesis is that the mean weight of introduced cysticerci <em>has no correlation with</em> the mean weight of worms recovered. That is,</p>
+<p><span class="math display">\[
+    H_0: \tau = 0
+\]</span></p>
+<p>The alternative hypothesis is that allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,</p>
+<p><span class="math display">\[
+    H_0: p_a &gt; p_n
+\]</span></p>
+<p>To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.</p>
+<blockquote>
+<p>Two data samples are independent if they come from distinct populations and the samples do not affect each other.</p>
+</blockquote>
+<p>– <cite><a href="http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test">Mann-Whitney-Wilcoxon Test</a></cite></p>
+<p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.000386\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.</p>
 </div>
 
 

@@ -40,7 +40,7 @@ length(worms_reco)
 The null hypothesis is that the mean weight of introduced cysticerci *has no correlation with* the mean weight of worms recovered.  That is,
 
 \[
-    H_0: \uptau = 0
+    H_0: \tau = 0
 \]
 
 The alternative hypothesis is that allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
