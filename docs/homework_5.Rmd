@@ -120,16 +120,22 @@ The $p$-value is $0.72$, which is *not* significant at the $\alpha = 0.05$ level
 
 ---
 
-### Test of methods
-
-```{r}
-x = c(7.1, 7.1, 7.2, 8.3, 9.4, 10.5, 11.4)
-y = c(2.8, 2.9, 2.8, 2.6, 3.5, 4.6, 5.0)
-
-qSpearman(0.01, 7)
-cor(x, y, method="spearman")
-cor.test(x, y, method = "spearman", alternative = "greater")
-```
-
 ## Solution to Problem 6
 
+The null hypothesis is that the mean weight of introduced cysticerci *has no correlation with* the mean weight of worms recovered. That is,
+
+\[
+    H_0: \beta = \beta_{0}
+\]
+
+The alternative hypothesis is that the mean weight of introduced cysticerci is *positively correlated with* the mean weight of worms recovered. That is,
+
+\[
+    H_A: r_s \geq r_{s,\alpha}
+\]
+
+```{r}
+x = c(0, 5000, 10000, 15000, 20000, 25000, 30000, 100000)
+y = c(0.924, 0.988, 0.992, 1.118, 1.133, 1.145, 1.157, 1.357)
+theil = 
+```
