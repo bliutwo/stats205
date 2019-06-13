@@ -464,7 +464,7 @@ qSpearman(0.05, r = 10)</code></pre>
 <p>Calculating <span class="math inline">\(r_s\)</span>,</p>
 <pre class="r"><code>cor(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;)</code></pre>
 <pre><code>## [1] -0.2</code></pre>
-<p>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is <em>true</em>. Thus, we</p>
+<p>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is <em>true</em>. Thus, we <em>reject</em> the null hypothesis. There is <em>sufficient</em> evidence that the mean weight of introduced cysticerci is <em>positively correlated with</em> the mean weight of worms recovered.</p>
 <pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;, alt = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
