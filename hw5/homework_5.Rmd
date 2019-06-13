@@ -142,7 +142,6 @@ The alternative hypothesis is that the mean weight of introduced cysticerci is *
 \]
 
 ```{r}
-install.packages("NSM3", dependencies=TRUE, repos='http://cran.us.r-project.org')
 library(NSM3)
-theil(x, y, alpha=0.05, beta.0=0, type = "upper")
+theil(x, y, alpha=0.05, beta.0=0, type = "u")
 ```
