@@ -454,6 +454,14 @@ worms_reco &lt;- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0)</code><
     H_A: r_s \geq r_{s,\alpha}
 \]</span></p>
 <p>To test the null hypothesis against the alternative hypothesis, we will use the Spearman test, a distribution-free test for independence based on ranks.</p>
+<pre class="r"><code>install.packages(&quot;SuppDists&quot;, dependencies=TRUE, repos=&#39;http://cran.us.r-project.org&#39;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre class="r"><code>library(SuppDists)
+qSpearman(0.01, r = 7)</code></pre>
+<pre><code>## [1] -0.7857143</code></pre>
+<pre class="r"><code>qSpearman(0.05, r = 10)</code></pre>
+<pre><code>## [1] -0.5393939</code></pre>
 <pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;, alt = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
