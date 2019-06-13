@@ -465,6 +465,7 @@ qSpearman(p = 0.05, r = 10)</code></pre>
 <pre class="r"><code>cor(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;)</code></pre>
 <pre><code>## [1] -0.2</code></pre>
 <p>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is <em>true</em>. Thus, we <em>reject</em> the null hypothesis. There is <em>sufficient</em> evidence that the mean weight of introduced cysticerci is <em>positively correlated with</em> the mean weight of worms recovered.</p>
+<p><strong>NOTE</strong>: At this point, I tried to use <code>cor.test()</code> with <code>method = &quot;spearman&quot;</code> but I got a different result, and I’m not sure why.</p>
 <pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;, alternative = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
@@ -486,6 +487,9 @@ qSpearman(p = 0.05, r = 10)</code></pre>
 ##  rho 
 ## -0.2</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.72\)</span>, which is <em>not</em> significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is <em>not enough</em> evidence that the mean weight of introduced cysticerci is <em>positively correlated with</em> the mean weight of worms recovered.</p>
+</div>
+<div id="solution-to-problem-6" class="section level2">
+<h2>Solution to Problem 6</h2>
 </div>
 
 
