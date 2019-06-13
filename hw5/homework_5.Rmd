@@ -46,10 +46,10 @@ The null hypothesis is that the mean weight of introduced cysticerci *has no cor
 The alternative hypothesis is that the mean weight of introduced cysticerci is *positively correlated with* the mean weight of worms recovered. That is,
 
 \[
-    H_A: \tau \neq
+    H_A: \tau > 0
 \]
 
-To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
+To test the null hypothesis against the alternative hypothesis, we will use the Kendall test, a distribution-free test for independence based on signs.
 
 >Two data samples are independent if they come from distinct populations and the samples do not affect each other.
 
