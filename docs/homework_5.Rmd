@@ -89,6 +89,8 @@ The alternative hypothesis is that the mean weight of introduced cysticerci is *
 To test the null hypothesis against the alternative hypothesis, we will use the Spearman test, a distribution-free test for independence based on ranks.
 
 ```{r}
+qSpearman(0.01, r = 7)
+qSpearman(0.05, r = 10)
 cor.test(x = cysticerci, y = worms_reco, method = "spearman", alt = "greater")
 ```
 
