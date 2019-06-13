@@ -33,8 +33,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 cysticerci <- c(28.9, 32.8, 12.0, 9.9, 15.0, 38.0, 12.5, 36.5, 8.6, 26.8);cysticerci
 worms_reco <- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0); worms_reco
-length(cysticerci)
-length(worms_reco)
 ```
 
 The null hypothesis is that the mean weight of introduced cysticerci *has no correlation with* the mean weight of worms recovered. That is,
@@ -60,6 +58,8 @@ The $p$-value is $0.7578$, which is *not* significant at the $\alpha = 0.05$ lev
 ## Solution to Problem 3
 
 ```{r}
+cysticerci <- c(28.9, 32.8, 12.0, 9.9, 15.0, 38.0, 12.5, 36.5, 8.6, 26.8);cysticerci
+worms_reco <- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0); worms_reco
 cor.test(x = cysticerci, y = worms_reco, method = "kendall", alt = "greater")
 ```
 
