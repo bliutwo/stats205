@@ -457,16 +457,17 @@ worms_reco &lt;- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0)</code><
 <p>To test the null hypothesis against the alternative hypothesis, we will use the Spearman test, a distribution-free test for independence based on ranks.</p>
 <!-- # install.packages("SuppDists", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 <!-- # qSpearman(0.01, r = 7) -->
-<pre class="r"><code>library(SuppDists)
+<pre class="r"><code># this method of performing the test was given in the textbook
+library(SuppDists)
 qSpearman(p = 0.05, r = 10)</code></pre>
 <pre><code>## [1] -0.5393939</code></pre>
-<p>Since <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, we will reject the null hypothesis only if <span class="math inline">\(r_s \geq -0.5393939\)</span>.</p>
-<p>Calculating <span class="math inline">\(r_s\)</span>,</p>
+<p><del>Since <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, we will reject the null hypothesis only if <span class="math inline">\(r_s \geq -0.5393939\)</span>.</del></p>
+<p><del>Calculating <span class="math inline">\(r_s\)</span>,</del></p>
 <pre class="r"><code>cor(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;)</code></pre>
 <pre><code>## [1] -0.2</code></pre>
-<p>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is <em>true</em>. Thus, we <em>reject</em> the null hypothesis. There is <em>sufficient</em> evidence that the mean weight of introduced cysticerci is <em>positively correlated with</em> the mean weight of worms recovered.</p>
+<p><del>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is <em>true</em>. Thus, we <em>reject</em> the null hypothesis. There is <em>sufficient</em> evidence that the mean weight of introduced cysticerci is <em>positively correlated with</em> the mean weight of worms recovered.</del></p>
 <hr />
-<p><strong>NOTE</strong>: At this point, I tried to use <code>cor.test()</code> with <code>method = &quot;spearman&quot;</code> but I got a different result than I expected, and I’m not sure why. Maybe I’m interpreting the output incorrectly?</p>
+<p><del><strong>NOTE</strong>: At this point, I tried to use <code>cor.test()</code> with <code>method = &quot;spearman&quot;</code> but I got a different result than I expected, and I’m not sure why. Maybe I’m interpreting the output incorrectly?</del></p>
 <pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;, alternative = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
