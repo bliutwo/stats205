@@ -150,5 +150,12 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 
 ```{r}
 library(NSM3)
-theil(x, y, alpha=0.05, beta.0=0, type = "u")
+# theil(x, y, alpha=0.05, beta.0=0, type = "u")
+theil.fit = theil (x, 
+  y,
+  beta.0 = 0 ,
+  slopes=TRUE,
+  type = "l", 
+  doplot = FALSE)
+theil.fit
 ```
