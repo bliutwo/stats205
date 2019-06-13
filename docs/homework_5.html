@@ -389,11 +389,21 @@ $(document).ready(function () {
     Pr\left\{X_1 \in A \textrm{  and  } X_2 \in B\right\} = Pr\left\{X_1 \in A \right\}Pr\left\{X_2 \in B\right\}
 \]</span> where A and B are any two not necessarily distinct sets of outcomes belonging to <span class="math inline">\(\mathcal{A}^3\)</span>.</p>
 </blockquote>
-<p>– <cite><a href="https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/">2.2.1 Independent Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
+<p>– <cite><a href="https://searchworks.stanford.edu/view/12473402">2.2.1 Independent Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
 <blockquote>
 <p>In deciding whether your own observations are exchangeable and a permutation test applicable, the key question is the one we posed in the very first chapter: Under the null hypothesis of no differences among the various experimental or survey groups, can we exchange the labels on the observations without significantly affecting the results?</p>
 </blockquote>
-<p>– <cite><a href="https://www.statisticssolutions.com/assumptions-of-the-wilcox-sign-test/">2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
+<p>– <cite><a href="https://searchworks.stanford.edu/view/12473402">2.2.2 Exchangeable Observations; Permutation, Parametric, and Bootstrap Tests of Hypotheses; Good, Phillip I</a></cite></p>
+</div>
+<div id="solution-to-problem-2" class="section level2">
+<h2>Solution to Problem 2</h2>
+<pre class="r"><code>cysticerci &lt;- c(28.9, 32.8, 12.0, 9.9, 15.0, 38.0, 12.5, 36.5, 8.6, 26.8);cysticerci</code></pre>
+<pre><code>##  [1] 28.9 32.8 12.0  9.9 15.0 38.0 12.5 36.5  8.6 26.8</code></pre>
+<pre class="r"><code>worms_reco &lt;- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0); worms_reco</code></pre>
+<pre><code>##  [1]  1.0  7.7  7.3  7.9  1.1  3.5 18.9 33.9 28.6 25.0</code></pre>
+<pre class="r"><code>lengths(cysticerci)</code></pre>
+<pre><code>##  [1] 1 1 1 1 1 1 1 1 1 1</code></pre>
+<pre class="r"><code># lengths(worm_reco)</code></pre>
 </div>
 
 
