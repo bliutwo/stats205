@@ -131,13 +131,16 @@ The null hypothesis is that the mean weight of introduced cysticerci *has no cor
 
 \[
     H_0: \beta = \beta_{0}
+    H_0: \beta = 0
 \]
 
 The alternative hypothesis is that the mean weight of introduced cysticerci is *positively correlated with* the mean weight of worms recovered. That is,
 
 \[
     H_A: \beta > \beta_{0}
+    H_A: \beta > 0
 \]
 
 ```{r}
-theil(x, y, alpha=0.05, beta.0=0, )
+theil(x, y, alpha=0.05, beta.0=0, type = "upper")
+```
