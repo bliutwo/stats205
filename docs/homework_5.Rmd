@@ -95,7 +95,7 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 <!-- # qSpearman(0.01, r = 7) -->
 ```{r}
 library(SuppDists)
-qSpearman(0.01, r = 10)
+qSpearman(p = 0.05, r = 10)
 ```
 
 Since $r_{s,\alpha} = -0.5393939$, we will reject the null hypothesis only if $r_s \geq -0.5393939$.
