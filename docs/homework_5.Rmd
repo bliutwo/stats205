@@ -158,4 +158,10 @@ theil.fit = theil (x,
   type = "l", 
   doplot = FALSE)
 theil.fit
+theil.output = theil(x, 
+  y,
+  beta.0 = 0 ,
+  slopes=TRUE,
+  type = "t", doplot = FALSE, alpha = .05)
+c(theil.output$L, theil.output$U)
 ```

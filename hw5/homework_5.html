@@ -546,6 +546,13 @@ theil.fit</code></pre>
 ## 
 ## 1 - alpha = 0.95 lower bound for beta:
 ## 0, Inf</code></pre>
+<pre class="r"><code>theil.output = theil(x, 
+  y,
+  beta.0 = 0 ,
+  slopes=TRUE,
+  type = &quot;t&quot;, doplot = FALSE, alpha = .05)
+c(theil.output$L, theil.output$U)</code></pre>
+<pre><code>## [1] 0 0</code></pre>
 </div>
 
 
