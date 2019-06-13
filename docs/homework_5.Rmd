@@ -55,4 +55,4 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 cor.test(x = cysticerci, y = worms_reco, method = "kendall", alt = "greater")
 ```
 
-The $p$-value is $0.000386$, which is significant at the $\alpha = 0.05$ level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.
+The $p$-value is $0.7578$, which is *not* significant at the $\alpha = 0.05$ level. There is *not enough* evidence that the mean weight of introduced cysticerci is *positively correlated with* the mean weight of worms recovered.
