@@ -70,9 +70,11 @@ The estimate for $\tau = -0.1555556$.
 ```{r}
 brain_weight = c(515, 286, 469, 410, 461, 436, 479, 198, 389, 262, 536)
 fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 22500, 26000)
-length(brain_weight)
-length(fiber_count)
 ```
+
+\[
+    \hat{\tau} = 
+\]
 
 ## Solution to Problem 5
 
