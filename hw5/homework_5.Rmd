@@ -63,6 +63,7 @@ The $p$-value is $0.7578$, which is *not* significant at the $\alpha = 0.05$ lev
 cor.test(x = cysticerci, y = worms_reco, method = "kendall", alt = "greater")
 ```
 
-
+The estimate for $\tau = -0.1555556$.
 
 ## Solution to Problem 4
+
