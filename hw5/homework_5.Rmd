@@ -145,6 +145,8 @@ The alternative hypothesis is that the mean weight of introduced cysticerci is *
     H_A: \beta > 0
 \]
 
+To test the null hypothesis against the alternative hypothesis, we will use the Theil test, a distribution-free test for the slope of the regression line.
+
 ```{r}
 library(NSM3)
 theil(x, y, alpha=0.05, beta.0=0, type = "u")
