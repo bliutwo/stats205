@@ -108,7 +108,7 @@ cor(x = cysticerci, y = worms_reco, method = "spearman")
 
 Since $r_s = -0.2$ and $r_{s,\alpha} = -0.5393939$, the statement $r_s \geq r_{s,\alpha}$ is *true*. Thus, we *reject* the null hypothesis. There is *sufficient* evidence that the mean weight of introduced cysticerci is *positively correlated with* the mean weight of worms recovered.
 
-**NOTE**: At this point, I tried to use `cor.test()` with `method = "spearman"` but I got a different result, and I'm not sure why.
+**NOTE**: *At this point, I tried to use `cor.test()` with `method = "spearman"` but I got a different result, and I'm not sure why.*
 
 ```{r}
 cor.test(x = cysticerci, y = worms_reco, method = "spearman", alternative = "greater")
