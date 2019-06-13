@@ -51,12 +51,6 @@ The alternative hypothesis is that the mean weight of introduced cysticerci is *
 
 To test the null hypothesis against the alternative hypothesis, we will use the Kendall test, a distribution-free test for independence based on signs.
 
->Two data samples are independent if they come from distinct populations and the samples do not affect each other.
-
--- <cite>[Mann-Whitney-Wilcoxon Test][1]</cite>
-
-[1]:http://www.r-tutor.com/elementary-statistics/non-parametric-methods/mann-whitney-wilcoxon-test
-
 ```{r}
 
 ```
