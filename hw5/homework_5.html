@@ -414,6 +414,16 @@ $(document).ready(function () {
     H_A: \tau &gt; 0
 \]</span></p>
 <p>To test the null hypothesis against the alternative hypothesis, we will use the Kendall test, a distribution-free test for independence based on signs.</p>
+<pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;kendall&quot;, alt = &quot;greater&quot;)</code></pre>
+<pre><code>## 
+##  Kendall&#39;s rank correlation tau
+## 
+## data:  cysticerci and worms_reco
+## T = 19, p-value = 0.7578
+## alternative hypothesis: true tau is greater than 0
+## sample estimates:
+##        tau 
+## -0.1555556</code></pre>
 <p>The <span class="math inline">\(p\)</span>-value is <span class="math inline">\(0.000386\)</span>, which is significant at the <span class="math inline">\(\alpha = 0.05\)</span> level. There is strong evidence that allergic smokers have higher sputum histamine levels than nonallergic smokers.</p>
 </div>
 
