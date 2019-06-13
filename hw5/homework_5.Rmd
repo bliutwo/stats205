@@ -37,16 +37,16 @@ length(cysticerci)
 length(worms_reco)
 ```
 
-The null hypothesis is that the mean weight of introduced cysticerci *has no correlation with* the mean weight of worms recovered.  That is,
+The null hypothesis is that the mean weight of introduced cysticerci *has no correlation with* the mean weight of worms recovered. That is,
 
 \[
     H_0: \tau = 0
 \]
 
-The alternative hypothesis is that allergic smokers have higher sputum histamine levels than nonallergic smokers. That is,
+The alternative hypothesis is that the mean weight of introduced cysticerci is *positively correlated with* the mean weight of worms recovered. That is,
 
 \[
-    H_0: p_a > p_n
+    H_A: \tau \neq
 \]
 
 To test the null hypothesis against the alternative hypothesis, we will use the Mann-Whitney-Wilcoxin test, since the two samples are independent.
