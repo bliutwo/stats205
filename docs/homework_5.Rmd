@@ -86,6 +86,8 @@ The alternative hypothesis is that the mean weight of introduced cysticerci is *
     H_A: r_s \geq r_{s,\alpha}
 \]
 
+Otherwise, do not reject.
+
 To test the null hypothesis against the alternative hypothesis, we will use the Spearman test, a distribution-free test for independence based on ranks.
 
 <!-- # install.packages("SuppDists", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
@@ -104,7 +106,7 @@ Calculating $r_s$,
 cor(x = cysticerci, y = worms_reco, method = "spearman")
 ```
 
-Since $r_s = -0.2$ and $r_{s,\alpha} = -0.5393939$, the statement $r_s \geq r_{s,\alpha}$ is 
+Since $r_s = -0.2$ and $r_{s,\alpha} = -0.5393939$, the statement $r_s \geq r_{s,\alpha}$ is *true*. Thus, we 
 
 ```{r}
 cor.test(x = cysticerci, y = worms_reco, method = "spearman", alt = "greater")

@@ -453,6 +453,7 @@ worms_reco &lt;- c(1.0, 7.7, 7.3, 7.9, 1.1, 3.5, 18.9, 33.9, 28.6, 25.0)</code><
 <p><span class="math display">\[
     H_A: r_s \geq r_{s,\alpha}
 \]</span></p>
+<p>Otherwise, do not reject.</p>
 <p>To test the null hypothesis against the alternative hypothesis, we will use the Spearman test, a distribution-free test for independence based on ranks.</p>
 <!-- # install.packages("SuppDists", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 <!-- # qSpearman(0.01, r = 7) -->
@@ -463,7 +464,7 @@ qSpearman(0.05, r = 10)</code></pre>
 <p>Calculating <span class="math inline">\(r_s\)</span>,</p>
 <pre class="r"><code>cor(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;)</code></pre>
 <pre><code>## [1] -0.2</code></pre>
-<p>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is</p>
+<p>Since <span class="math inline">\(r_s = -0.2\)</span> and <span class="math inline">\(r_{s,\alpha} = -0.5393939\)</span>, the statement <span class="math inline">\(r_s \geq r_{s,\alpha}\)</span> is <em>true</em>. Thus, we</p>
 <pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;, alt = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
