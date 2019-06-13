@@ -455,7 +455,7 @@ cor.test(x = cysticerci, y = worms_reco, method = &quot;kendall&quot;, alt = &qu
 <p><span class="math display">\[
     H_A: \tau &gt; 0
 \]</span></p>
-<p>To test the null hypothesis against the alternative hypothesis, we will use the Kendall test, a distribution-free test for independence based on signs.</p>
+<p>To test the null hypothesis against the alternative hypothesis, we will use the Spearman test, a distribution-free test for independence based on ranks.</p>
 <pre class="r"><code>cor.test(x = cysticerci, y = worms_reco, method = &quot;spearman&quot;, alt = &quot;greater&quot;)</code></pre>
 <pre><code>## 
 ##  Spearman&#39;s rank correlation rho
