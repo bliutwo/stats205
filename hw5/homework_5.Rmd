@@ -105,7 +105,7 @@ library(NSM3)
 kendall.ci(x=brain_weight, y=fiber_count, alpha = 0.1, type = 't', bootstrap = T, B = 1000)
 ```
 
-The confidence interval is $(-0.234, 0.654)$ for this iteration.
+The confidence interval is $(-0.234, 0.654)$ for this iteration. It may be different on a different iteration.
 
 
 <!-- 
