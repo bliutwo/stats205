@@ -685,8 +685,7 @@ first_drop_test</code></pre>
 <pre class="r"><code># summary(first_drop_test)
 
 r.02 &lt;- rfit(heart_catheter_length ~ weight)
-f.02 &lt;- rfit(heart_catheter_length ~ height + weight)
-second_drop_test &lt;- drop.test(f.02, r.02)
+second_drop_test &lt;- drop.test(f.01, r.02)
 second_drop_test</code></pre>
 <pre><code>## 
 ## Drop in Dispersion Test

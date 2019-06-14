@@ -241,8 +241,7 @@ first_drop_test
 # summary(first_drop_test)
 
 r.02 <- rfit(heart_catheter_length ~ weight)
-f.02 <- rfit(heart_catheter_length ~ height + weight)
-second_drop_test <- drop.test(f.02, r.02)
+second_drop_test <- drop.test(f.01, r.02)
 second_drop_test
 # summary(second_drop_test)
 ```
