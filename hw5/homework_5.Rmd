@@ -233,4 +233,7 @@ library(Rfit)
 rfit(heart_catheter_length ~ height + weight)
 rankfit_object <- rfit(heart_catheter_length ~ height + weight)
 summary(rankfit_object)
+
+r.01 <- rfit(heart_catheter_length ~ height)
+f.01 <- rfit(heart_catheter_length ~ height + weight)
 ```
