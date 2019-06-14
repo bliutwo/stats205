@@ -28,6 +28,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [1]:https://searchworks.stanford.edu/view/12473402
 
+**TODO**: Utilize these definitions in a clear, mathy answer.
+
 ## Solution to Problem 2
 
 ```{r}
