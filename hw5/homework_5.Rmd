@@ -150,7 +150,7 @@ To test the null hypothesis against the alternative hypothesis, we will use the 
 
 <!-- # qSpearman(0.01, r = 7) -->
 ```{r}
-# this method of performing the test was given in the textbook
+# this method of performing the test was given in the textbook, but may not be done correctly here - hence, I eventually end up performing the same function as on the slides
 library(SuppDists)
 qSpearman(p = 0.05, r = 10)
 ```
