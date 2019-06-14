@@ -101,6 +101,7 @@ ggplot(theta.hat.star.df) +
 brain_weight = c(515, 286, 469, 410, 461, 436, 479, 198, 389, 262, 536); length(brain_weight)
 fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 22500, 26000); length(fiber_count)
 
+library(NSM3)
 kendall.ci(x, y, alpha = 0.1, type = 't', bootstrap = T, B = 1000)
 ```
 
