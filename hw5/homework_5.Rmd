@@ -236,4 +236,5 @@ summary(rankfit_object)
 
 r.01 <- rfit(heart_catheter_length ~ height)
 f.01 <- rfit(heart_catheter_length ~ height + weight)
+drop.test(f.01, r.01)
 ```
