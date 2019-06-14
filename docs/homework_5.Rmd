@@ -226,4 +226,5 @@ heart_catheter_length = c(37.0, 49.5, 34.5, 36.0, 43.0, 28.0, 37.0, 20.0, 33.5, 
 
 model1 <- lm (heart_catheter_length ~ height + weight)
 summary(model1)
+cor.test(x = height, y = weight, method = "pearson")
 ```
