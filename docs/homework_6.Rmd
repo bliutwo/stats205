@@ -18,8 +18,8 @@ library(datasets)
 data(cars)
 head(cars)
 cars.supsmu = supsmu(cars$speed, cars$dist, bass = 0, span = "cv")
-cars.supsmu
-library(ggplot2)
+
+# library(ggplot2)
 # qplot(x = cars.supsmu$x, y = cars.supsmu$y)
 plot(x = cars.supsmu$x, y = cars.supsmu$y, type = "l", col = "red", main = "Stopping distances for various speeds", xlab = "Speed", ylab = "Stopping Distance")
 lines(x = cars$speed, y = cars$dist, col = "green")
