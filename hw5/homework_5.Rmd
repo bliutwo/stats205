@@ -72,19 +72,20 @@ brain_weight = c(515, 286, 469, 410, 461, 436, 479, 198, 389, 262, 536)
 fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 22500, 26000)
 ```
 
+<!-- 
 \[
     \hat{\tau} = \frac{2K}{n(n - 1)} = \bar{K}
 \]
-
-```{r}
-cor.test(brain_weight, fiber_count, method="kendall") 
-```
-
+ -->
+ <!-- cor.test(brain_weight, fiber_count, method="kendall")  -->
+<!-- 
 The estimate for *Kendall's sample rank correlation coefficient* is
 
 \[
     \hat{\tau} = 0.2727273
 \]
+ -->
+
 
 ## Solution to Problem 5
 
