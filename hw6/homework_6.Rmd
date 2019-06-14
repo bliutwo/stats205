@@ -18,4 +18,6 @@ library(datasets)
 data(cars)
 head(cars)
 cars.supsmu = supsmu(cars$speed, cars$dist, bass = 0, span = "cv")
+library(ggplot2)
+qplot(data = cars.supsmu)
 ```
