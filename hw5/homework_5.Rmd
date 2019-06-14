@@ -228,4 +228,6 @@ model1 <- lm (heart_catheter_length ~ height + weight)
 summary(model1)
 cor.test(x = height, y = weight, method = "pearson")
 confint(model1, conf.level = 0.95)
+
+rfit(heart_catheter_length ~ height + weight)
 ```
