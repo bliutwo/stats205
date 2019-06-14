@@ -23,4 +23,5 @@ library(ggplot2)
 # qplot(x = cars.supsmu$x, y = cars.supsmu$y)
 plot(x = cars.supsmu$x, y = cars.supsmu$y, type = "l", col = "red")
 lines(x = cars$speed, y = cars$dist, col = "green")
+legend(legend=c("Original Cars Data", "Super Smoothed Cars Data"))
 ```
