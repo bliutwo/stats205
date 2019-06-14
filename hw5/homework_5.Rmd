@@ -89,6 +89,8 @@ theta.hat.star = replicate(R, draw.bootstrap.samples(law))
 # make a ggplot
 library(ggplot2)
 theta.hat.star.df = data.frame(theta.hat.star = theta.hat.star)
+theta.hat.star
+theta.hat.star.df
 ggplot(theta.hat.star.df) +
   geom_density(aes(x = theta.hat.star, y = ..scaled..),
     fill = "lightblue") +
