@@ -654,13 +654,19 @@ summary(model1)</code></pre>
 ## height      -0.6193422  1.0120555
 ## weight      -0.1827991  0.5644547</code></pre>
 <pre class="r"><code>library(Rfit)
-rfit(heart_catheter_length ~ height + weight)</code></pre>
+rankfit_object &lt;- rfit(heart_catheter_length ~ height + weight)
+summary(rankfit_object)</code></pre>
 <pre><code>## Call:
 ## rfit.default(formula = heart_catheter_length ~ height + weight)
 ## 
 ## Coefficients:
-## (Intercept)      height      weight 
-##  25.9212658   0.0291139   0.2455696</code></pre>
+##              Estimate Std. Error t.value p.value   
+## (Intercept) 25.921266   7.550102  3.4332 0.00747 **
+## height       0.029114   0.311060  0.0936 0.92748   
+## weight       0.245570   0.142480  1.7235 0.11888   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## Overall Wald Test: 43.11247 p-value: 1e-05</code></pre>
 </div>
 
 
