@@ -70,7 +70,36 @@ The estimate for $\tau = -0.1555556$.
 ```{r}
 brain_weight = c(515, 286, 469, 410, 461, 436, 479, 198, 389, 262, 536)
 fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 22500, 26000)
+
+library(bootstrap)
+theta.hat = cor(brain_weight, fiber_count); theta.hat
+library(partitions)
+n = 1000
+allCompositions = compositions(n, n);allCompositions[,1:5]
+allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=10000, replace=FALSE)]
+
+draw.bootstrap.samples = function(df){
+  n = dim(df)[1]
+  ind = sample(n, replace = TRUE)
+  cor.bootstrap.replicate = cor(df[ind, "LSAT"], df[ind, "GPA"])
+  return(cor.bootstrap.replicate)
+}
+R = 10000
+theta.hat.star = replicate(R, draw.bootstrap.samples(law))
+# make a ggplot
+library(ggplot2)
+theta.hat.star.df = data.frame(theta.hat.star = theta.hat.star)
+ggplot(theta.hat.star.df) +
+  geom_density(aes(x = theta.hat.star, y = ..scaled..),
+    fill = "lightblue") +
+  geom_hline(yintercept=0, colour="white", size=1) +
+  theme_bw() +
+  ylab("density") +
+  xlab(bquote(hat(theta))) +
+  geom_vline(xintercept = theta.hat, col = "red")+
+  scale_y_continuous(expand = c(0,0))
 ```
+
 
 <!-- 
 \[
@@ -180,7 +209,7 @@ theil.fit = theil (x,
 theil.fit
 theil.output = theil(x, 
   y,
-  beta.0 = 0 ,
+  beta.0 = 0,
   slopes=TRUE,
   type = "u", doplot = FALSE, alpha = .05)
 c(theil.output$L, theil.output$U)
