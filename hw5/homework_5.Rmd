@@ -234,6 +234,15 @@ library(Rfit)
 rfit(heart_catheter_length ~ height + weight)
 rankfit_object <- rfit(heart_catheter_length ~ height + weight)
 summary(rankfit_object)
+```
+
+```{r}
+cor.test(x = height, y = heart_catheter_length, method = "pearson")
+cor.test(x = weight, y = heart_catheter_length, method = "pearson")
+```
+
+There is *strong evidence* that, individually, height and weight contribute to the determination of heart catheter length.
+```
 
 r.01 <- rfit(heart_catheter_length ~ height)
 f.01 <- rfit(heart_catheter_length ~ height + weight)
@@ -245,11 +254,4 @@ second_drop_test <- drop.test(f.01, r.02)
 second_drop_test
 ```
 
-Based on the large p-values, there is *not enough evidence* to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.
-
-```{r}
-cor.test(x = height, y = heart_catheter_length, method = "pearson")
-cor.test(x = weight, y = heart_catheter_length, method = "pearson")
-```
-
-However, there is *strong evidence* that height and weight individually contribute to the determination of heart catheter length.
+However, based on the large p-values, there is *not enough evidence* to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.
