@@ -80,6 +80,10 @@ fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 
 cor.test(brain_weight, fiber_count, method="kendall") 
 ```
 
+\[
+    \hat{\tau} = 0.2727273
+\]
+
 ## Solution to Problem 5
 
 ```{r}
