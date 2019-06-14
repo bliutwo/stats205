@@ -229,5 +229,6 @@ summary(model1)
 cor.test(x = height, y = weight, method = "pearson")
 confint(model1, conf.level = 0.95)
 
+library(Rfit)
 rfit(heart_catheter_length ~ height + weight)
 ```
