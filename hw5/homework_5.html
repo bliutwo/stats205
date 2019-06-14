@@ -447,8 +447,8 @@ cor.test(x = cysticerci, y = worms_reco, method = &quot;kendall&quot;, alt = &qu
 <pre class="r"><code>library(bootstrap)
 theta.hat = cor(brain_weight, fiber_count); theta.hat</code></pre>
 <pre><code>## [1] 0.1604644</code></pre>
-<pre class="r"><code># library(partitions)
-# n = 1000
+<pre class="r"><code>library(partitions)
+n = 1000
 # allCompositions = compositions(n, n);allCompositions[,1:5]
 # allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=1000, replace=FALSE)]
 
