@@ -245,7 +245,7 @@ second_drop_test <- drop.test(f.01, r.02)
 second_drop_test
 ```
 
-Based on the large p-values, there is *no evidence* that height or weight contribute significantly over each other to the determination of heart catheter length.
+Based on the large p-values, there is *not enough evidence* to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.
 
 ```{r}
 cor.test(x = height, y = heart_catheter_length, method = "pearson")
