@@ -615,7 +615,27 @@ c(theil.output$L, theil.output$U)</code></pre>
 <pre><code>## [1] 12</code></pre>
 <pre class="r"><code>heart_catheter_length = c(37.0, 49.5, 34.5, 36.0, 43.0, 28.0, 37.0, 20.0, 33.5, 30.5, 38.5, 47.0); length(heart_catheter_length)</code></pre>
 <pre><code>## [1] 12</code></pre>
-<pre class="r"><code>model1 &lt;- lm (heart_catheter_length ~ height + weight)</code></pre>
+<pre class="r"><code>model1 &lt;- lm (heart_catheter_length ~ height + weight)
+summary(model1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = heart_catheter_length ~ height + weight)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -7.048 -1.258 -0.259  1.899  7.004 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)  
+## (Intercept)  21.0084     8.7512   2.401   0.0399 *
+## height        0.1964     0.3606   0.545   0.5993  
+## weight        0.1908     0.1652   1.155   0.2777  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.943 on 9 degrees of freedom
+## Multiple R-squared:  0.8053, Adjusted R-squared:  0.7621 
+## F-statistic: 18.62 on 2 and 9 DF,  p-value: 0.0006336</code></pre>
 </div>
 
 
