@@ -238,12 +238,10 @@ r.01 <- rfit(heart_catheter_length ~ height)
 f.01 <- rfit(heart_catheter_length ~ height + weight)
 first_drop_test <- drop.test(f.01, r.01)
 first_drop_test
-# summary(first_drop_test)
 
 r.02 <- rfit(heart_catheter_length ~ weight)
 second_drop_test <- drop.test(f.01, r.02)
 second_drop_test
-# summary(second_drop_test)
 ```
 
 Based on the large p-values, there is no evidence that height or weight contribute significantly over each other to the determination of heart catheter length.
