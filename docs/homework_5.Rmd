@@ -76,6 +76,10 @@ fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 
     \hat{\tau} = \frac{2K}{n(n - 1)} = \bar{K}
 \]
 
+```{r}
+cor.test(brain_weight, fiber_count, method="kendall") 
+```
+
 ## Solution to Problem 5
 
 ```{r}

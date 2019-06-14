@@ -445,6 +445,16 @@ fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 
 <p><span class="math display">\[
     \hat{\tau} = \frac{2K}{n(n - 1)} = \bar{K}
 \]</span></p>
+<pre class="r"><code>cor.test(brain_weight, fiber_count, method=&quot;kendall&quot;) </code></pre>
+<pre><code>## 
+##  Kendall&#39;s rank correlation tau
+## 
+## data:  brain_weight and fiber_count
+## T = 35, p-value = 0.283
+## alternative hypothesis: true tau is not equal to 0
+## sample estimates:
+##       tau 
+## 0.2727273</code></pre>
 </div>
 <div id="solution-to-problem-5" class="section level2">
 <h2>Solution to Problem 5</h2>
