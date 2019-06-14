@@ -654,7 +654,14 @@ summary(model1)</code></pre>
 ## height      -0.6193422  1.0120555
 ## weight      -0.1827991  0.5644547</code></pre>
 <pre class="r"><code>library(Rfit)
-rankfit_object &lt;- rfit(heart_catheter_length ~ height + weight)
+rfit(heart_catheter_length ~ height + weight)</code></pre>
+<pre><code>## Call:
+## rfit.default(formula = heart_catheter_length ~ height + weight)
+## 
+## Coefficients:
+## (Intercept)      height      weight 
+##  25.9212658   0.0291139   0.2455696</code></pre>
+<pre class="r"><code>rankfit_object &lt;- rfit(heart_catheter_length ~ height + weight)
 summary(rankfit_object)</code></pre>
 <pre><code>## Call:
 ## rfit.default(formula = heart_catheter_length ~ height + weight)
