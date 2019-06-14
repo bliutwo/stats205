@@ -254,3 +254,9 @@ second_drop_test
 ```
 
 However, based on the large p-values from the Drop in Dispersion tests, there is *not enough evidence* to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.
+
+### Note
+
+>Treating length of heart catheter as the *independent* variable, test for the importance of height and weight in *determining* the required catheter length.
+
+If height and weight are the determiners of length of heart catheter, heart catheter must be the *dependent* variable.
