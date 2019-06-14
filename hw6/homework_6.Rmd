@@ -1,7 +1,7 @@
 ---
-title: 'STATS 205: Homework Assignment 5'
+title: 'STATS 205: Homework Assignment 6'
 author: "Brian Liu"
-date: "6/10/2019"
+date: "6/14/2019"
 output:
   pdf_document: default
   html_document: default
