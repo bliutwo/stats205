@@ -17,5 +17,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(datasets)
 data(cars)
 head(cars)
-supsmu(cars$speed, cars$dist, bass = 0, span = "cv")
+cars.supsmu = supsmu(cars$speed, cars$dist, bass = 0, span = "cv")
+graph(cars.supsmu)
 ```
