@@ -620,8 +620,6 @@ summary(rankfit_object) -->
 weight = c(40.0, 93.5, 35.5, 30.0, 52.0, 17.0, 38.5, 8.5, 33.0, 9.5, 21.0, 79.0)
 heart_catheter_length = c(37.0, 49.5, 34.5, 36.0, 43.0, 28.0, 37.0, 20.0, 33.5, 30.5, 38.5, 47.0)
 
-library(Rfit)
-
 cor.test(x = height, y = heart_catheter_length, method = &quot;pearson&quot;)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s product-moment correlation
@@ -647,15 +645,23 @@ cor.test(x = height, y = heart_catheter_length, method = &quot;pearson&quot;)</c
 ##       cor 
 ## 0.8938226</code></pre>
 <p>There is <em>strong evidence</em> that, individually, height and weight contribute to the determination of heart catheter length.</p>
-<pre><code>
+<pre class="r"><code>library(Rfit)
+
 r.01 &lt;- rfit(heart_catheter_length ~ height)
 f.01 &lt;- rfit(heart_catheter_length ~ height + weight)
 first_drop_test &lt;- drop.test(f.01, r.01)
-first_drop_test
-
-r.02 &lt;- rfit(heart_catheter_length ~ weight)
+first_drop_test</code></pre>
+<pre><code>## 
+## Drop in Dispersion Test
+## F-Statistic     p-value 
+##     1.55202     0.24429</code></pre>
+<pre class="r"><code>r.02 &lt;- rfit(heart_catheter_length ~ weight)
 second_drop_test &lt;- drop.test(f.01, r.02)
 second_drop_test</code></pre>
+<pre><code>## 
+## Drop in Dispersion Test
+## F-Statistic     p-value 
+##    0.014435    0.907007</code></pre>
 <p>However, based on the large p-values, there is <em>not enough evidence</em> to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.</p>
 </div>
 
