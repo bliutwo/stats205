@@ -1,0 +1,54 @@
+# ANOVA
+
+- ANOVA
+  - compare means of two or more groups
+  - factors (variables)
+    - ex. dosage
+  - levels
+    - ex. *mg* of dosage
+- Types of ANOVA
+  - One way ANOVA
+    - one factor with at least two levels, levels are independent
+  - Repeated-Measures ANOVA
+    - one factor with at least two levels, levels are dependent
+    - [notes on Independent and Dependent Samples](#independent-and-dependent-samples)
+  - Factorial ANOVA
+    - two or more factors (each of which with at least two levels), levels can be either independently dependent, or both (mixed)
+- Assumptions in ANOVA
+  1. Normality of Sampling Distribution of Means
+     - The distribution of sample means is normally distributed.
+  2. Independence of Errors
+     - Errors between cases are independent of one another.
+  3. Absence of Outliers
+     - Outlying scores have been removed from the data set.
+  4. Homoegeneity of Variance
+     - Population variances in different levels of each independent variable are equal.
+- Hypotheses in ANOVA
+  - ANOVA with one factor ("A", three levels):
+    - ka
+
+
+---
+
+# Independent and Dependent Variables
+
+- Variable: property that can take on many values
+  - in a situation with multiple variables:
+    - **independent variable**: any variable that is being manipulated
+    - **dependent variable**: any variable that is being measured
+
+---
+
+# Independent and Dependent Samples
+
+- One-Sample and Two-Sample Methods
+  - 1-sample
+    - one sample compared to population
+  - 2-sample
+    - samples are being compared to other samples
+- Independent and dependent samples
+  - samples are *independent* if members of one sample are *unrelated* to members of the other sample
+  - samples are *dependent* if members of one sample are *related* to members of the other sample
+  - examples:
+    - before and after <- dependent
+    - two different test subjects from two different groups <- independent
