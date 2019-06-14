@@ -24,7 +24,7 @@ cars.supsmu2= supsmu(cars$speed, cars$dist, bass = 0, span = )
 # qplot(x = cars.supsmu$x, y = cars.supsmu$y)
 # plot(x = cars.supsmu$x, y = cars.supsmu$y, type = "l", col = "red", main = "Stopping distances for various speeds", xlab = "Speed", ylab = "Stopping Distance")
 # lines(x = cars$speed, y = cars$dist, col = "green")
-plot(x = cars$speed, y = cars.supsmu$dist, main = "Stopping distances for various speeds", xlab = "Speed", ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, main = "Stopping distances for various speeds", xlab = "Speed", ylab = "Stopping Distance")
 lines(x = cars.supsmu$x, y = cars.supsmu$y, col = "green")
 legend(5, 90, legend=c("Super Smoothed Cars Data with 'cv' span"),
  col=c("green"), lty=1:1, cex=0.8)
