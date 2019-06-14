@@ -676,11 +676,20 @@ summary(rankfit_object)</code></pre>
 ## Overall Wald Test: 43.11247 p-value: 1e-05</code></pre>
 <pre class="r"><code>r.01 &lt;- rfit(heart_catheter_length ~ height)
 f.01 &lt;- rfit(heart_catheter_length ~ height + weight)
-drop.test(f.01, r.01)</code></pre>
+first_drop_test &lt;- drop.test(f.01, r.01)
+first_drop_test</code></pre>
 <pre><code>## 
 ## Drop in Dispersion Test
 ## F-Statistic     p-value 
 ##     1.55202     0.24429</code></pre>
+<pre class="r"><code>summary(first_drop_test)</code></pre>
+<pre><code>##         Length Class  Mode   
+## F       1      -none- numeric
+## p.value 1      -none- numeric
+## RD      1      -none- numeric
+## tauhat  1      -none- numeric
+## df1     1      -none- numeric
+## df2     1      -none- numeric</code></pre>
 </div>
 
 
