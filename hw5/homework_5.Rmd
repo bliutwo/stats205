@@ -76,7 +76,7 @@ theta.hat = cor(brain_weight, fiber_count); theta.hat
 library(partitions)
 n = 1000
 allCompositions = compositions(n, n);allCompositions[,1:5]
-allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=10000, replace=FALSE)]
+allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=1000, replace=FALSE)]
 
 draw.bootstrap.samples = function(df){
   n = dim(df)[1]
@@ -84,7 +84,7 @@ draw.bootstrap.samples = function(df){
   cor.bootstrap.replicate = cor(df[ind, "LSAT"], df[ind, "GPA"])
   return(cor.bootstrap.replicate)
 }
-R = 10000
+R = 1000
 theta.hat.star = replicate(R, draw.bootstrap.samples(law))
 # make a ggplot
 library(ggplot2)
