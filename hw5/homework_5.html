@@ -644,7 +644,7 @@ cor.test(x = height, y = heart_catheter_length, method = &quot;pearson&quot;)</c
 ## sample estimates:
 ##       cor 
 ## 0.8938226</code></pre>
-<p>There is <em>strong evidence</em> that, individually, height and weight contribute to the determination of heart catheter length.</p>
+<p>From the Pearson correlation tests, there is <em>strong evidence</em> that, individually, height and weight contribute to the determination of heart catheter length.</p>
 <pre class="r"><code>library(Rfit)
 
 r.01 &lt;- rfit(heart_catheter_length ~ height)
@@ -662,7 +662,7 @@ second_drop_test</code></pre>
 ## Drop in Dispersion Test
 ## F-Statistic     p-value 
 ##    0.014435    0.907007</code></pre>
-<p>However, based on the large p-values, there is <em>not enough evidence</em> to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.</p>
+<p>However, based on the large p-values from the Drop in Dispersion tests, there is <em>not enough evidence</em> to suggest that height or weight contribute significantly over each other to the determination of heart catheter length.</p>
 </div>
 
 
