@@ -609,50 +609,16 @@ c(theil.output$L, theil.output$U)</code></pre>
 </div>
 <div id="solution-to-problem-7" class="section level2">
 <h2>Solution to Problem 7</h2>
+<!-- model1 <- lm (heart_catheter_length ~ height + weight)
+summary(model1)
+cor.test(x = height, y = weight, method = "pearson")
+confint(model1, conf.level = 0.95) -->
 <pre class="r"><code>height = c(42.8, 63.5, 37.5, 39.5, 45.5, 38.5, 43.0, 22.5, 37.0, 23.5, 33.0, 58.0); length(height)</code></pre>
 <pre><code>## [1] 12</code></pre>
 <pre class="r"><code>weight = c(40.0, 93.5, 35.5, 30.0, 52.0, 17.0, 38.5, 8.5, 33.0, 9.5, 21.0, 79.0); length(weight)</code></pre>
 <pre><code>## [1] 12</code></pre>
 <pre class="r"><code>heart_catheter_length = c(37.0, 49.5, 34.5, 36.0, 43.0, 28.0, 37.0, 20.0, 33.5, 30.5, 38.5, 47.0); length(heart_catheter_length)</code></pre>
 <pre><code>## [1] 12</code></pre>
-<pre class="r"><code>model1 &lt;- lm (heart_catheter_length ~ height + weight)
-summary(model1)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = heart_catheter_length ~ height + weight)
-## 
-## Residuals:
-##    Min     1Q Median     3Q    Max 
-## -7.048 -1.258 -0.259  1.899  7.004 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)  
-## (Intercept)  21.0084     8.7512   2.401   0.0399 *
-## height        0.1964     0.3606   0.545   0.5993  
-## weight        0.1908     0.1652   1.155   0.2777  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 3.943 on 9 degrees of freedom
-## Multiple R-squared:  0.8053, Adjusted R-squared:  0.7621 
-## F-statistic: 18.62 on 2 and 9 DF,  p-value: 0.0006336</code></pre>
-<pre class="r"><code>cor.test(x = height, y = weight, method = &quot;pearson&quot;)</code></pre>
-<pre><code>## 
-##  Pearson&#39;s product-moment correlation
-## 
-## data:  height and weight
-## t = 11.003, df = 10, p-value = 6.576e-07
-## alternative hypothesis: true correlation is not equal to 0
-## 95 percent confidence interval:
-##  0.8634453 0.9893154
-## sample estimates:
-##       cor 
-## 0.9610936</code></pre>
-<pre class="r"><code>confint(model1, conf.level = 0.95)</code></pre>
-<pre><code>##                  2.5 %     97.5 %
-## (Intercept)  1.2119071 40.8048885
-## height      -0.6193422  1.0120555
-## weight      -0.1827991  0.5644547</code></pre>
 <pre class="r"><code>library(Rfit)
 rfit(heart_catheter_length ~ height + weight)</code></pre>
 <pre><code>## Call:
@@ -690,6 +656,31 @@ second_drop_test</code></pre>
 ## F-Statistic     p-value 
 ##    0.014435    0.907007</code></pre>
 <p>Based on the large p-values, there is no evidence that height or weight contribute significantly over each other to the determination of heart catheter length.</p>
+<pre class="r"><code>cor.test(x = height, y = heart_catheter_length, method = &quot;pearson&quot;)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  height and heart_catheter_length
+## t = 5.8936, df = 10, p-value = 0.0001524
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.6216270 0.9663721
+## sample estimates:
+##       cor 
+## 0.8811691</code></pre>
+<pre class="r"><code>cor.test(x = weight, y = heart_catheter_length, method = &quot;pearson&quot;)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  weight and heart_catheter_length
+## t = 6.3033, df = 10, p-value = 8.871e-05
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.6568763 0.9700971
+## sample estimates:
+##       cor 
+## 0.8938226</code></pre>
+<p>Moreover,</p>
 </div>
 
 
