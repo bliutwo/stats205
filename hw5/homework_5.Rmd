@@ -68,8 +68,8 @@ The estimate for $\tau = -0.1555556$.
 ## Solution to Problem 4
 
 ```{r}
-brain_weight = c(515, 286, 469, 410, 461, 436, 479, 198, 389, 262, 536)
-fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 22500, 26000)
+brain_weight = c(515, 286, 469, 410, 461, 436, 479, 198, 389, 262, 536); length(brain_weight)
+fiber_count  = c(32500, 26800, 11410, 14850, 23640, 23820, 29840, 21830, 24650, 22500, 26000); length(fiber_count)
 
 library(bootstrap)
 theta.hat = cor(brain_weight, fiber_count); theta.hat
