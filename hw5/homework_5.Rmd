@@ -76,28 +76,28 @@ theta.hat = cor(brain_weight, fiber_count); theta.hat
 library(partitions)
 n = length(brain_weight)
 allCompositions = compositions(n, n);allCompositions[,1:length(brain_weight)]
-# allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=1000, replace=FALSE)]
+allCompositions.sub = allCompositions[, sample(1:dim(allCompositions)[2], size=1000, replace=FALSE)]
 
-# draw.bootstrap.samples = function(df){
-#   n = dim(df)[1]
-#   ind = sample(n, replace = TRUE)
-#   cor.bootstrap.replicate = cor(df[ind, "LSAT"], df[ind, "GPA"])
-#   return(cor.bootstrap.replicate)
-# }
-# R = 1000
-# theta.hat.star = replicate(R, draw.bootstrap.samples(law))
-# # make a ggplot
-# library(ggplot2)
-# theta.hat.star.df = data.frame(theta.hat.star = theta.hat.star)
-# ggplot(theta.hat.star.df) +
-#   geom_density(aes(x = theta.hat.star, y = ..scaled..),
-#     fill = "lightblue") +
-#   geom_hline(yintercept=0, colour="white", size=1) +
-#   theme_bw() +
-#   ylab("density") +
-#   xlab(bquote(hat(theta))) +
-#   geom_vline(xintercept = theta.hat, col = "red")+
-#   scale_y_continuous(expand = c(0,0))
+draw.bootstrap.samples = function(df){
+  n = dim(df)[1]
+  ind = sample(n, replace = TRUE)
+  cor.bootstrap.replicate = cor(df[ind, "LSAT"], df[ind, "GPA"])
+  return(cor.bootstrap.replicate)
+}
+R = 1000
+theta.hat.star = replicate(R, draw.bootstrap.samples(law))
+# make a ggplot
+library(ggplot2)
+theta.hat.star.df = data.frame(theta.hat.star = theta.hat.star)
+ggplot(theta.hat.star.df) +
+  geom_density(aes(x = theta.hat.star, y = ..scaled..),
+    fill = "lightblue") +
+  geom_hline(yintercept=0, colour="white", size=1) +
+  theme_bw() +
+  ylab("density") +
+  xlab(bquote(hat(theta))) +
+  geom_vline(xintercept = theta.hat, col = "red")+
+  scale_y_continuous(expand = c(0,0))
 ```
 
 
