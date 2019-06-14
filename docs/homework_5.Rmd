@@ -169,6 +169,8 @@ cor(x = cysticerci, y = worms_reco, method = "spearman")
 
 ~~**NOTE**: At this point, I tried to use `cor.test()` with `method = "spearman"` but I got a different result than I expected, and I'm not sure why. Maybe I'm interpreting the output incorrectly?~~
 
+As shown on the slides,
+
 ```{r}
 cor.test(x = cysticerci, y = worms_reco, method = "spearman", alternative = "greater")
 ```
