@@ -245,3 +245,5 @@ second_drop_test <- drop.test(f.01, r.02)
 second_drop_test
 # summary(second_drop_test)
 ```
+
+Based on the large p-values, there is no evidence that 
