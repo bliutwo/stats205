@@ -690,6 +690,22 @@ first_drop_test</code></pre>
 ## tauhat  1      -none- numeric
 ## df1     1      -none- numeric
 ## df2     1      -none- numeric</code></pre>
+<pre class="r"><code>r.02 &lt;- rfit(heart_catheter_length ~ weight)
+f.02 &lt;- rfit(heart_catheter_length ~ height + weight)
+second_drop_test &lt;- drop.test(f.02, r.02)
+second_drop_test</code></pre>
+<pre><code>## 
+## Drop in Dispersion Test
+## F-Statistic     p-value 
+##    0.014435    0.907007</code></pre>
+<pre class="r"><code>summary(second_drop_test)</code></pre>
+<pre><code>##         Length Class  Mode   
+## F       1      -none- numeric
+## p.value 1      -none- numeric
+## RD      1      -none- numeric
+## tauhat  1      -none- numeric
+## df1     1      -none- numeric
+## df2     1      -none- numeric</code></pre>
 </div>
 
 
