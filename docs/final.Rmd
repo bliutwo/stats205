@@ -37,6 +37,7 @@ colnames(who_suicide_statistics_df)
 library(tidyverse)
 filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
 nrow(filtered_suicide_df)
+write.csv(filtered_suicide_df 'filtered_suicide.csv')
 ```
 
 After filtering countries with missing suicide rate, take a random 
