@@ -224,10 +224,11 @@ for (i in seq_along(samples_of_countries))
 		# 	print(sample[[k]])
 		# }
 		print(samples_of_countries[[i]][[j]])
+		print(typeof(samples_of_countries[[i]][[j]]))
 		# countries_to_test[a] <- samples_of_countries[[i]][[j]]
 		# a <- a + 1
 	}
-	cat("\n")
+	cat("\n\n")
 }
 
 # length(countries_to_test)
