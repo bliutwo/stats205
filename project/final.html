@@ -543,6 +543,11 @@ head(asdfg)</code></pre>
 ## 6NANANA</code></pre>
 <pre class="r"><code>length(countries_per_continent)</code></pre>
 <pre><code>## [1] 6</code></pre>
+<pre class="r"><code>countries_per_continent[0] &lt;- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
+head(countries_per_continent[0])</code></pre>
+<pre><code>## list()</code></pre>
+<pre class="r"><code>length(countries_per_continent)</code></pre>
+<pre><code>## [1] 6</code></pre>
 <pre class="r"><code># head(countries_per_continent)
 for (i in seq_along(countries_per_continent))
 {
