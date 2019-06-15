@@ -667,51 +667,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Sweden              &lt;NA&gt;                Republic of Moldova
-##  [4] Estonia             Italy               Latvia             
-##  [7] Belgium             Denmark             Ireland            
-## [10] Norway              Albania             Malta              
-## [13] Belarus             United Kingdom      Serbia             
-## [16] Lithuania           Iceland            
+##  [1] Slovakia            Serbia              Lithuania          
+##  [4] Czech Republic      Albania             Monaco             
+##  [7] United Kingdom      Hungary             Luxembourg         
+## [10] Republic of Moldova Spain               Germany            
+## [13] Poland              Switzerland         Croatia            
+## [16] Russian Federation  &lt;NA&gt;               
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Falkland Islands (Malvinas) Uruguay                    
-##  [3] Ecuador                     Dominican Republic         
-##  [5] Antigua and Barbuda         Argentina                  
-##  [7] Cayman Islands              Canada                     
-##  [9] Nicaragua                   Aruba                      
-## [11] Bolivia                     Chile                      
-## [13] Trinidad and Tobago         Paraguay                   
-## [15] Peru                        Guadeloupe                 
-## [17] Anguilla                   
+##  [1] Bolivia                     Suriname                   
+##  [3] Aruba                       Uruguay                    
+##  [5] Ecuador                     Anguilla                   
+##  [7] Panama                      Puerto Rico                
+##  [9] Barbados                    Brazil                     
+## [11] Turks and Caicos Islands    Dominican Republic         
+## [13] Guadeloupe                  Montserrat                 
+## [15] Martinique                  Falkland Islands (Malvinas)
+## [17] Chile                      
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Sri Lanka                      Turkey                        
-##  [3] Kyrgyzstan                     Occupied Palestinian Territory
-##  [5] Singapore                      Turkmenistan                  
-##  [7] Bahrain                        Thailand                      
-##  [9] Georgia                        &lt;NA&gt;                          
-## [11] Macau                          Republic of Korea             
-## [13] Kazakhstan                     Jordan                        
-## [15] Cyprus                         Maldives                      
-## [17] Brunei Darussalam             
+##  [1] Tajikistan                     Occupied Palestinian Territory
+##  [3] Philippines                    Macau                         
+##  [5] &lt;NA&gt;                           Qatar                         
+##  [7] Republic of Korea              Cyprus                        
+##  [9] Georgia                        Azerbaijan                    
+## [11] Syrian Arab Republic           Iran (Islamic Rep of)         
+## [13] Mongolia                       Brunei Darussalam             
+## [15] Armenia                        Uzbekistan                    
+## [17] Turkey                        
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] &lt;NA&gt;        Australia   New Zealand Kiribati    Fiji       
+## [1] Australia   New Zealand &lt;NA&gt;        Fiji        Kiribati   
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Mayotte               Reunion               Zimbabwe             
-##  [4] South Africa          Seychelles            Morocco              
-##  [7] Sao Tome and Principe Egypt                 Mauritius            
-## [10] Cabo Verde            Tunisia               &lt;NA&gt;                 
+##  [1] Morocco               Mauritius             &lt;NA&gt;                 
+##  [4] Reunion               Cabo Verde            Sao Tome and Principe
+##  [7] Zimbabwe              Mayotte               Egypt                
+## [10] South Africa          Tunisia               Seychelles           
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -754,152 +754,12 @@ for (i in seq_along(samples_of_countries))
         # {
         #   print(sample[[k]])
         # }
-        print(samples_of_countries[[i]][[j]])
+        # print(samples_of_countries[[i]][[j]])
         countries_to_test[a] &lt;- samples_of_countries[[i]][[j]]
         a &lt;- a + 1
     }
     cat(&quot;\n&quot;)
 }</code></pre>
-<pre><code>## [1] Sweden
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Republic of Moldova
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Estonia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Italy
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Latvia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Belgium
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Denmark
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Ireland
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Norway
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Albania
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Malta
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Belarus
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] United Kingdom
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Serbia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Lithuania
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Iceland
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## 
-## [1] Falkland Islands (Malvinas)
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Uruguay
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Ecuador
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Dominican Republic
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Antigua and Barbuda
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Argentina
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Cayman Islands
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Canada
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Nicaragua
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Aruba
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Bolivia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Chile
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Trinidad and Tobago
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Paraguay
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Peru
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Guadeloupe
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Anguilla
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## 
-## [1] Sri Lanka
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Turkey
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Kyrgyzstan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Occupied Palestinian Territory
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Singapore
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Turkmenistan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Bahrain
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Thailand
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Georgia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Macau
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Republic of Korea
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Kazakhstan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Jordan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Cyprus
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Maldives
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Brunei Darussalam
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## 
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Australia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] New Zealand
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Kiribati
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Fiji
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## 
-## [1] Mayotte
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Reunion
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Zimbabwe
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] South Africa
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Seychelles
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Morocco
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Sao Tome and Principe
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Egypt
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Mauritius
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Cabo Verde
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] Tunisia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
