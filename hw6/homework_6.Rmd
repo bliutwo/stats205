@@ -27,6 +27,6 @@ lines(x = cars.supsmu$x, y = cars.supsmu$y, col = "green")
 lines(x = cars.supsmu2$x, y = cars.supsmu2$y, col = "red")
 lines(x = cars.supsmu3$x, y = cars.supsmu3$y, col = "blue")
 lines(x = cars.supsmu4$x, y = cars.supsmu4$y, col = "yellow")
-legend(5, 110, legend=c("Super Smoothed Cars Data with 'cv' span", ".30 span", ".05 span", ".175 span"),
+legend(5, 110, legend=c("Friedman smoothed with 'cv' span", ".30 span", ".05 span", ".175 span"),
  col=c("green", "red", "blue", "yellow"), lty=1:1, cex=0.8)
 ```
