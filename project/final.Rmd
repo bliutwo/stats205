@@ -40,6 +40,10 @@ nrow(filtered_suicide_df)
 write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 ```
 
-After filtering countries with missing suicide rate, take a random 
+>After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.
+
+```{r}
+
+```
 
 # 4. Interpretation of the results or discussion
