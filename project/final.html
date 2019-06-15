@@ -554,12 +554,14 @@ length(countries_per_continent)</code></pre>
 <pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;</code></pre>
 <pre class="r"><code>for (i in seq_along(countries_per_continent))
 {
+    print(list_of_continents[i])
     countries &lt;- unique(countries_per_continent[[i]]$country)
     print(countries)
     print(length(countries))
     cat(&quot;\n&quot;)
 }</code></pre>
-<pre><code>##  [1] Albania                Austria                Belarus               
+<pre><code>## [1] &quot;Europe&quot;
+##  [1] Albania                Austria                Belarus               
 ##  [4] Belgium                Bosnia and Herzegovina Bulgaria              
 ##  [7] Croatia                Czech Republic         Denmark               
 ## [10] Estonia                Finland                France                
@@ -576,6 +578,7 @@ length(countries_per_continent)</code></pre>
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 42
 ## 
+## [1] &quot;Americas&quot;
 ##  [1] Anguilla                           Antigua and Barbuda               
 ##  [3] Argentina                          Aruba                             
 ##  [5] Bahamas                            Barbados                          
@@ -604,6 +607,7 @@ length(countries_per_continent)</code></pre>
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 50
 ## 
+## [1] &quot;Asia&quot;
 ##  [1] Armenia                        Azerbaijan                    
 ##  [3] Bahrain                        Brunei Darussalam             
 ##  [5] Cyprus                         Georgia                       
@@ -625,10 +629,12 @@ length(countries_per_continent)</code></pre>
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 35
 ## 
+## [1] &quot;Oceania&quot;
 ## [1] Australia   Fiji        Kiribati    New Zealand &lt;NA&gt;       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
+## [1] &quot;Africa&quot;
 ##  [1] Cabo Verde            Egypt                 Mauritius            
 ##  [4] Mayotte               Morocco               Reunion              
 ##  [7] &lt;NA&gt;                  Sao Tome and Principe Seychelles           
