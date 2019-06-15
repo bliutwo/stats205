@@ -58,7 +58,7 @@ Let us find out which continents are counted:
 
 ```{r}
 # Get list of continents
-unique(filtered_suicide_df$continent)
+list_of_continents <- unique(filtered_suicide_df$continent); list_of_continents
 ```
 
 Therefore,
@@ -85,21 +85,25 @@ Let us make the choice not to include these countries in the analysis, since the
 We will now create six dataframes, filtered by list of countries for each continent.
 
 ```{r}
-europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
-head(europe_suicide)
-length(europe_suicide)
-americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Americas',]
-head(americas_suicide)
-length(americas_suicide)
-asia_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Asia',]
-head(asia_suicide)
-length(asia_suicide)
-oceania_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Oceania',]
-head(oceania_suicide)
-length(oceania_suicide)
-africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
-head(africa_suicide)
-length(africa_suicide)
+# europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
+# head(europe_suicide)
+# length(europe_suicide$country)
+# americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Americas',]
+# head(americas_suicide)
+# length(americas_suicide$country)
+# asia_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Asia',]
+# head(asia_suicide)
+# length(asia_suicide$country)
+# oceania_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Oceania',]
+# head(oceania_suicide)
+# length(oceania_suicide$country)
+# africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
+# head(africa_suicide)
+# length(africa_suicide$country)
+for (continent in list_of_continents)
+{
+	continent
+}
 ```
 
 # 4. Interpretation of the results or discussion
