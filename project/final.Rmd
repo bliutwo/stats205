@@ -126,8 +126,8 @@ for (i in seq_along(countries_per_continent))
 }
 ```
 
-[This text links to very important information about why a `for` loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop) You will never again spend hours trying to find out why a `for` loop doesn't print anything because you're no longer an R newbie. 
+[This text links to very important information about why a `for` loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop)[^1]
 
-Basically, `for` loops are functions themselves. Since R prints out the result of a command automatically, but functions are not inherently a command (unless explicitly run), you need to have `print(command())` in order to get output.
+[^1]:Basically, `for` loops are functions themselves. Since R prints out the result of a command automatically, but functions are not inherently a command (unless explicitly run), you need to have `print(command())` in order to get output. You will never again spend hours trying to find out why a `for` loop doesn't print anything because you're no longer an R newbie. 
 
 # 4. Interpretation of the results or discussion
