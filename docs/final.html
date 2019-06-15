@@ -554,7 +554,10 @@ length(countries_per_continent)</code></pre>
 <pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;</code></pre>
 <pre class="r"><code>for (i in seq_along(countries_per_continent))
 {
-    print(unique(countries_per_continent[[i]]$country))
+    countries &lt;- unique(countries_per_continent[[i]]$country)
+    print(countries)
+    print(length(countries))
+    cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>##  [1] Albania                Austria                Belarus               
 ##  [4] Belgium                Bosnia and Herzegovina Bulgaria              
@@ -571,6 +574,8 @@ length(countries_per_continent)</code></pre>
 ## [37] Spain                  Sweden                 Switzerland           
 ## [40] TFYR Macedonia         Ukraine                United Kingdom        
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 42
+## 
 ##  [1] Anguilla                           Antigua and Barbuda               
 ##  [3] Argentina                          Aruba                             
 ##  [5] Bahamas                            Barbados                          
@@ -597,6 +602,8 @@ length(countries_per_continent)</code></pre>
 ## [47] Turks and Caicos Islands           United States of America          
 ## [49] Uruguay                            Venezuela (Bolivarian Republic of)
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 50
+## 
 ##  [1] Armenia                        Azerbaijan                    
 ##  [3] Bahrain                        Brunei Darussalam             
 ##  [5] Cyprus                         Georgia                       
@@ -616,13 +623,18 @@ length(countries_per_continent)</code></pre>
 ## [33] Turkmenistan                   United Arab Emirates          
 ## [35] Uzbekistan                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 35
+## 
 ## [1] Australia   Fiji        Kiribati    New Zealand &lt;NA&gt;       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 5
+## 
 ##  [1] Cabo Verde            Egypt                 Mauritius            
 ##  [4] Mayotte               Morocco               Reunion              
 ##  [7] &lt;NA&gt;                  Sao Tome and Principe Seychelles           
 ## [10] South Africa          Tunisia               Zimbabwe             
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 12</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
