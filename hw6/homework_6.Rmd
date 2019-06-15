@@ -19,8 +19,8 @@ data(cars)
 head(cars)
 cars.supsmu = supsmu(cars$speed, cars$dist, bass = 0, span = "cv")
 cars.supsmu2= supsmu(cars$speed, cars$dist, bass = 0, span = .30)
-cars.supsmu3= supsmu(cars$speed, cars$dist, bass = 0, span = .05)
-cars.supsmu4= supsmu(cars$speed, cars$dist, bass = 0, span = .175)
+cars.supsmu3= supsmu(cars$speed, cars$dist, bass = 0, span = .175)
+cars.supsmu4= supsmu(cars$speed, cars$dist, bass = 0, span = .05)
 
 plot(x = cars$speed, y = cars$dist,
 	main = "Stopping distances for various speeds",
@@ -29,6 +29,6 @@ lines(x = cars.supsmu$x, y = cars.supsmu$y, col = "green")
 lines(x = cars.supsmu2$x, y = cars.supsmu2$y, col = "red")
 lines(x = cars.supsmu3$x, y = cars.supsmu3$y, col = "blue")
 lines(x = cars.supsmu4$x, y = cars.supsmu4$y, col = "yellow")
-legend(5, 110, legend=c("Friedman smoothed with 'cv' span", ".30 span", ".05 span",
-	".175 span"), col=c("green", "red", "blue", "yellow"), lty=1:1, cex=0.8)
+legend(5, 110, legend=c("Friedman smoothed with 'cv' span", ".30 span", ".175 span",
+	".05 span"), col=c("green", "red", "blue", "yellow"), lty=1:1, cex=0.8)
 ```
