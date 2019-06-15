@@ -56,6 +56,8 @@ filtered_suicide_df$continent <- countrycode(sourcevar = df[, "country"],
                             origin = "country.name",
                             destination = "continent")
 
+head(filtered_suicide_df)
+
 # Get seven dataframes, filtered by list of countries for each continent.
 
 ```
