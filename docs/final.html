@@ -504,7 +504,9 @@ length(list_of_continents)</code></pre>
 for (i in seq_along(countries_per_continent))
 {
     head(countries_per_continent[[i]])
+    head(countries_per_continent[i])
     typeof(countries_per_continent[[i]])
+    typeof(countries_per_continent[i])
     cat(&quot;\n&quot;)
 }</code></pre>
 </div>
