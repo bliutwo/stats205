@@ -106,7 +106,7 @@ length(list_of_continents)
 list_of_continents
 for (i in seq_along(list_of_continents))
 {
-	cat(list_of_continents[i])
+	cat(toString(list_of_continents[i]))
 	cat("\n")
 	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == toString(list_of_continents[i]),]
 	head(countries_per_continent[[i]])
