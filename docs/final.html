@@ -414,6 +414,25 @@ nrow(filtered_suicide_df)</code></pre>
 <blockquote>
 <p>After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.</p>
 </blockquote>
+<p><span class="math display">\[
+    \frac{100 countries}{7 continents} \approx 14 countries per continent
+\]</span></p>
+<p>Filter countries by continent:</p>
+<pre class="r"><code>install.packages(&quot;countrycode&quot;, dependencies=TRUE, repos=&#39;http://cran.us.r-project.org&#39;)</code></pre>
+<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre class="r"><code>library(countrycode)
+df &lt;- data.frame(country = c(&quot;Afghanistan&quot;,
+                             &quot;Algeria&quot;,
+                             &quot;USA&quot;,
+                             &quot;France&quot;,
+                             &quot;New Zealand&quot;,
+                             &quot;Fantasyland&quot;))
+df$continent &lt;- countrycode(sourcevar = df[, &quot;country&quot;],
+                            origin = &quot;country.name&quot;,
+                            destination = &quot;continent&quot;)</code></pre>
+<pre><code>## Warning in countrycode(sourcevar = df[, &quot;country&quot;], origin = &quot;country.name&quot;, : Some values were not matched unambiguously: Fantasyland</code></pre>
+<pre class="r"><code># Get seven dataframes, filtered by list of countries for each continent.</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>

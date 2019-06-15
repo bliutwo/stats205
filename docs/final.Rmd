@@ -50,6 +50,7 @@ Filter countries by continent:
 
 
 ```{r}
+install.packages("countrycode", dependencies=TRUE, repos='http://cran.us.r-project.org')
 library(countrycode)
 df <- data.frame(country = c("Afghanistan",
                              "Algeria",
