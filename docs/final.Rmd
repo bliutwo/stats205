@@ -107,6 +107,10 @@ list_of_continents
 # does this work?
 continent_eur <- filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
     head(continent_eur)
+# ^ It seems to work! How about this?
+stringerino <- "Europe"
+asdfg <- filtered_suicide_df[filtered_suicide_df$continent == stringerino,]
+head(asdfg)
 
 for (i in seq_along(list_of_continents))
 {

@@ -505,6 +505,17 @@ continent_eur &lt;- filtered_suicide_df[filtered_suicide_df$continent == &#39;Eu
 ## 28 Albania 1987 female  5-14 years           0     311000    Europe
 ## 29 Albania 1987 female 55-74 years           0     144600    Europe
 ## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
+<pre class="r"><code># ^ It seems to work! How about this?
+stringerino &lt;- &quot;Europe&quot;
+asdfg &lt;- filtered_suicide_df[filtered_suicide_df$continent == stringerino,]
+head(asdfg)</code></pre>
+<pre><code>##    country year    sex         age suicides_no population continent
+## 25 Albania 1987 female 15-24 years          14     289700    Europe
+## 26 Albania 1987 female 25-34 years           4     257200    Europe
+## 27 Albania 1987 female 35-54 years           6     278800    Europe
+## 28 Albania 1987 female  5-14 years           0     311000    Europe
+## 29 Albania 1987 female 55-74 years           0     144600    Europe
+## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
 <pre class="r"><code>for (i in seq_along(list_of_continents))
 {
     cat(i)
