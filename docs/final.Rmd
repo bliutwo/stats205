@@ -106,7 +106,7 @@ length(list_of_continents)
 list_of_continents
 for (i in seq_along(list_of_continents))
 {
-	i
+	cat(i)
 	cat(toString(list_of_continents[i]))
 	cont_string = toString(list_of_continents[i])
 	cat("\n")
