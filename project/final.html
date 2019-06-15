@@ -445,7 +445,10 @@ filtered_suicide_df$continent &lt;- countrycode(sourcevar = filtered_suicide_df[
 ## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
 <pre class="r"><code>write.csv(filtered_suicide_df, &#39;filtered_suicide.csv&#39;)
 
-# Get seven dataframes, filtered by list of countries for each continent.
+# Get list of continents
+unique(filtered_suicide_df$continent)</code></pre>
+<pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;   NA</code></pre>
+<pre class="r"><code># Get seven dataframes, filtered by list of countries for each continent.
 europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]
 head(europe_suicide)</code></pre>
 <pre><code>##    country year    sex         age suicides_no population continent
@@ -455,6 +458,7 @@ head(europe_suicide)</code></pre>
 ## 28 Albania 1987 female  5-14 years           0     311000    Europe
 ## 29 Albania 1987 female 55-74 years           0     144600    Europe
 ## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
+<pre class="r"><code>americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>

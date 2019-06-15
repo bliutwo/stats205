@@ -57,9 +57,13 @@ filtered_suicide_df$continent <- countrycode(sourcevar = filtered_suicide_df[, "
 head(filtered_suicide_df)
 write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 
+# Get list of continents
+unique(filtered_suicide_df$continent)
+
 # Get seven dataframes, filtered by list of countries for each continent.
 europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 head(europe_suicide)
+americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 ```
 
 # 4. Interpretation of the results or discussion
