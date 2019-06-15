@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
-colnames(who_suicide_statistics)
+colnames(who_suicide_statistics_df)
 ```
 
 Filter and save countries with missing suicide rate.
