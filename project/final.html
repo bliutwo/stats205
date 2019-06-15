@@ -491,7 +491,7 @@ for (continent in list_of_continents)
     cat(continent)
     cat(&quot;\n&quot;)
     list.append(countries_per_continent, filtered_suicide_df[filtered_suicide_df$continent == continent,])
-    cat(tail(countries_per_continent, n=1))
+    tail(countries_per_continent, n=1)
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## Europe
