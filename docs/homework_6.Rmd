@@ -23,8 +23,8 @@ cars.supsmu3= supsmu(cars$speed, cars$dist, bass = 0, span = .05)
 cars.supsmu4= supsmu(cars$speed, cars$dist, bass = 0, span = .175)
 
 plot(x = cars$speed, y = cars$dist,
-	main = "Stopping distances for various speeds", xlab = "Speed", 
-	ylab = "Stopping Distance")
+	main = "Stopping distances for various speeds",
+	xlab = "Speed",	ylab = "Stopping Distance")
 lines(x = cars.supsmu$x, y = cars.supsmu$y, col = "green")
 lines(x = cars.supsmu2$x, y = cars.supsmu2$y, col = "red")
 lines(x = cars.supsmu3$x, y = cars.supsmu3$y, col = "blue")
