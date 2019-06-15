@@ -667,51 +667,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Slovakia            Serbia              Lithuania          
-##  [4] Czech Republic      Albania             Monaco             
-##  [7] United Kingdom      Hungary             Luxembourg         
-## [10] Republic of Moldova Spain               Germany            
-## [13] Poland              Switzerland         Croatia            
-## [16] Russian Federation  &lt;NA&gt;               
+##  [1] Estonia             Czech Republic      Lithuania          
+##  [4] Germany             Republic of Moldova Belgium            
+##  [7] Norway              Spain               United Kingdom     
+## [10] Switzerland         Portugal            Ireland            
+## [13] Poland              Montenegro          Latvia             
+## [16] Croatia             Finland            
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Bolivia                     Suriname                   
-##  [3] Aruba                       Uruguay                    
-##  [5] Ecuador                     Anguilla                   
-##  [7] Panama                      Puerto Rico                
-##  [9] Barbados                    Brazil                     
-## [11] Turks and Caicos Islands    Dominican Republic         
-## [13] Guadeloupe                  Montserrat                 
-## [15] Martinique                  Falkland Islands (Malvinas)
-## [17] Chile                      
+##  [1] Brazil                   Anguilla                
+##  [3] Netherlands Antilles     Colombia                
+##  [5] United States of America El Salvador             
+##  [7] Bahamas                  Bolivia                 
+##  [9] Dominican Republic       Puerto Rico             
+## [11] Mexico                   Nicaragua               
+## [13] Cuba                     Argentina               
+## [15] Honduras                 French Guiana           
+## [17] Saint Kitts and Nevis   
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Tajikistan                     Occupied Palestinian Territory
-##  [3] Philippines                    Macau                         
-##  [5] &lt;NA&gt;                           Qatar                         
-##  [7] Republic of Korea              Cyprus                        
-##  [9] Georgia                        Azerbaijan                    
-## [11] Syrian Arab Republic           Iran (Islamic Rep of)         
-## [13] Mongolia                       Brunei Darussalam             
-## [15] Armenia                        Uzbekistan                    
-## [17] Turkey                        
+##  [1] Turkey                         Kuwait                        
+##  [3] Armenia                        &lt;NA&gt;                          
+##  [5] Maldives                       Republic of Korea             
+##  [7] Uzbekistan                     Bahrain                       
+##  [9] Macau                          Saudi Arabia                  
+## [11] Thailand                       Kazakhstan                    
+## [13] Turkmenistan                   Kyrgyzstan                    
+## [15] Singapore                      Occupied Palestinian Territory
+## [17] Sri Lanka                     
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Australia   New Zealand &lt;NA&gt;        Fiji        Kiribati   
+## [1] Australia   Fiji        New Zealand &lt;NA&gt;        Kiribati   
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Morocco               Mauritius             &lt;NA&gt;                 
-##  [4] Reunion               Cabo Verde            Sao Tome and Principe
-##  [7] Zimbabwe              Mayotte               Egypt                
-## [10] South Africa          Tunisia               Seychelles           
+##  [1] Reunion               Tunisia               Seychelles           
+##  [4] Cabo Verde            Sao Tome and Principe Morocco              
+##  [7] Mauritius             &lt;NA&gt;                  Mayotte              
+## [10] Zimbabwe              Egypt                 South Africa         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -760,6 +760,207 @@ for (i in seq_along(samples_of_countries))
     }
     cat(&quot;\n&quot;)
 }</code></pre>
+<pre class="r"><code>countries_to_test</code></pre>
+<pre><code>## [[1]]
+## [1] 32
+## 
+## [[2]]
+## [1] 70
+## 
+## [[3]]
+## [1] 46
+## 
+## [[4]]
+## [1] 101
+## 
+## [[5]]
+## [1] 14
+## 
+## [[6]]
+## [1] 89
+## 
+## [[7]]
+## [1] 119
+## 
+## [[8]]
+## [1] 135
+## 
+## [[9]]
+## [1] 123
+## 
+## [[10]]
+## [1] 97
+## 
+## [[11]]
+## [1] 59
+## 
+## [[12]]
+## [1] 96
+## 
+## [[13]]
+## [1] 82
+## 
+## [[14]]
+## [1] 69
+## 
+## [[15]]
+## [1] 29
+## 
+## [[16]]
+## [1] 42
+## 
+## [[17]]
+## [1] 19
+## 
+## [[18]]
+## [1] 2
+## 
+## [[19]]
+## [1] 86
+## 
+## [[20]]
+## [1] 27
+## 
+## [[21]]
+## [1] 136
+## 
+## [[22]]
+## [1] 38
+## 
+## [[23]]
+## [1] 10
+## 
+## [[24]]
+## [1] 17
+## 
+## [[25]]
+## [1] 35
+## 
+## [[26]]
+## [1] 98
+## 
+## [[27]]
+## [1] 79
+## 
+## [[28]]
+## [1] 88
+## 
+## [[29]]
+## [1] 30
+## 
+## [[30]]
+## [1] 4
+## 
+## [[31]]
+## [1] 53
+## 
+## [[32]]
+## [1] 44
+## 
+## [[33]]
+## [1] 106
+## 
+## [[34]]
+## [1] 130
+## 
+## [[35]]
+## [1] 67
+## 
+## [[36]]
+## [1] 5
+## 
+## [[37]]
+## [1] NA
+## 
+## [[38]]
+## [1] 74
+## 
+## [[39]]
+## [1] 100
+## 
+## [[40]]
+## [1] 138
+## 
+## [[41]]
+## [1] 11
+## 
+## [[42]]
+## [1] 72
+## 
+## [[43]]
+## [1] 112
+## 
+## [[44]]
+## [1] 127
+## 
+## [[45]]
+## [1] 65
+## 
+## [[46]]
+## [1] 131
+## 
+## [[47]]
+## [1] 68
+## 
+## [[48]]
+## [1] 115
+## 
+## [[49]]
+## [1] 90
+## 
+## [[50]]
+## [1] 120
+## 
+## [[51]]
+## [1] 7
+## 
+## [[52]]
+## [1] 41
+## 
+## [[53]]
+## [1] 87
+## 
+## [[54]]
+## [1] NA
+## 
+## [[55]]
+## [1] 66
+## 
+## [[56]]
+## [1] 102
+## 
+## [[57]]
+## [1] 129
+## 
+## [[58]]
+## [1] 114
+## 
+## [[59]]
+## [1] 23
+## 
+## [[60]]
+## [1] 111
+## 
+## [[61]]
+## [1] 84
+## 
+## [[62]]
+## [1] 77
+## 
+## [[63]]
+## [1] NA
+## 
+## [[64]]
+## [1] 78
+## 
+## [[65]]
+## [1] 141
+## 
+## [[66]]
+## [1] 37
+## 
+## [[67]]
+## [1] 118</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
