@@ -104,6 +104,9 @@ library(rlist)
 countries_per_continent <- list()
 length(list_of_continents)
 list_of_continents
+# does this work?
+continent_eur <- filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
+    head(continent_eur)
 for (i in seq_along(list_of_continents))
 {
 	cat(i)
@@ -115,6 +118,7 @@ for (i in seq_along(list_of_continents))
 	head(countries_per_continent[[i]])
 	continent <- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
 	head(continent)
+	# why does THIS not work if that works?
 	continent_eur <- filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 	head(continent_eur)
 }
