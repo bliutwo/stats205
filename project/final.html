@@ -466,57 +466,25 @@ head(not_in_a_continent)</code></pre>
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
 <p>Let us make the choice not to include these countries in the analysis, since there are only two countries.</p>
 <p>We will now create six dataframes, filtered by list of countries for each continent.</p>
-<pre class="r"><code># europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]
+<!-- # europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 # head(europe_suicide)
 # length(europe_suicide$country)
-# americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Americas&#39;,]
+# americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Americas',]
 # head(americas_suicide)
 # length(americas_suicide$country)
-# asia_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Asia&#39;,]
+# asia_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Asia',]
 # head(asia_suicide)
 # length(asia_suicide$country)
-# oceania_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Oceania&#39;,]
+# oceania_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Oceania',]
 # head(oceania_suicide)
-# length(oceania_suicide$country)
-africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Africa&#39;,]
-head(africa_suicide)</code></pre>
-<pre><code>##         country year    sex         age suicides_no population continent
-## 7669 Cabo Verde 2011 female 15-24 years           1      56039    Africa
-## 7670 Cabo Verde 2011 female 25-34 years           0      38528    Africa
-## 7671 Cabo Verde 2011 female 35-54 years           2      49078    Africa
-## 7672 Cabo Verde 2011 female  5-14 years           0      56558    Africa
-## 7673 Cabo Verde 2011 female 55-74 years           2      19887    Africa
-## 7674 Cabo Verde 2011 female   75+ years           0       7582    Africa</code></pre>
-<pre class="r"><code>length(africa_suicide$country)</code></pre>
-<pre><code>## [1] 1956</code></pre>
-<pre class="r"><code>library(rlist)
+# length(oceania_suicide$country) -->
+<!-- # africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
+# head(africa_suicide)
+# length(africa_suicide$country) -->
+<pre class="r"><code># library(rlist)
 countries_per_continent &lt;- list()
-length(list_of_continents)</code></pre>
-<pre><code>## [1] 6</code></pre>
-<pre class="r"><code>list_of_continents</code></pre>
-<pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;   NA</code></pre>
-<pre class="r"><code># does this work?
-continent_eur &lt;- filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]
-    head(continent_eur)</code></pre>
-<pre><code>##    country year    sex         age suicides_no population continent
-## 25 Albania 1987 female 15-24 years          14     289700    Europe
-## 26 Albania 1987 female 25-34 years           4     257200    Europe
-## 27 Albania 1987 female 35-54 years           6     278800    Europe
-## 28 Albania 1987 female  5-14 years           0     311000    Europe
-## 29 Albania 1987 female 55-74 years           0     144600    Europe
-## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
-<pre class="r"><code># ^ It seems to work! How about this?
-stringerino &lt;- &quot;Europe&quot;
-asdfg &lt;- filtered_suicide_df[filtered_suicide_df$continent == stringerino,]
-head(asdfg)</code></pre>
-<pre><code>##    country year    sex         age suicides_no population continent
-## 25 Albania 1987 female 15-24 years          14     289700    Europe
-## 26 Albania 1987 female 25-34 years           4     257200    Europe
-## 27 Albania 1987 female 35-54 years           6     278800    Europe
-## 28 Albania 1987 female  5-14 years           0     311000    Europe
-## 29 Albania 1987 female 55-74 years           0     144600    Europe
-## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
-<pre class="r"><code>for (i in seq_along(list_of_continents))
+
+for (i in seq_along(list_of_continents))
 {
     countries_per_continent[[i]] &lt;- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
 }
