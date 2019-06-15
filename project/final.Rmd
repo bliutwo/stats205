@@ -61,7 +61,6 @@ write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 
 europe_suicide = filtered_suicide_df[filtered_suicide_df$country == 'Europe']
 head(europe_suicide)
-
 ```
 
 # 4. Interpretation of the results or discussion
