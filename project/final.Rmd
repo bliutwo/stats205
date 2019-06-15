@@ -210,8 +210,8 @@ total
 Let's filter the original dataframe only to include countries that we have sampled:
 
 ```{r}
-countries_to_test <- list()
-a <- 0
+# countries_to_test <- list()
+# a <- 0
 for (i in seq_along(samples_of_countries))
 {
 	# find out a way to access each country name
@@ -223,15 +223,15 @@ for (i in seq_along(samples_of_countries))
 		# {
 		# 	print(sample[[k]])
 		# }
-		# print(samples_of_countries[[i]][[j]])
-		countries_to_test[a] <- samples_of_countries[[i]][[j]]
-		a <- a + 1
+		print(samples_of_countries[[i]][[j]])
+		# countries_to_test[a] <- samples_of_countries[[i]][[j]]
+		# a <- a + 1
 	}
 	cat("\n")
 }
 
-length(countries_to_test)
-countries_to_test
+# length(countries_to_test)
+# countries_to_test
 ```
 
 
