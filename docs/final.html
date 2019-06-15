@@ -481,17 +481,14 @@ head(not_in_a_continent)</code></pre>
 # africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Africa&#39;,]
 # head(africa_suicide)
 # length(africa_suicide$country)
-install.packages(&quot;rlist&quot;, dependencies=TRUE, repos=&#39;http://cran.us.r-project.org&#39;)</code></pre>
-<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre class="r"><code>library(rlist)
+library(rlist)
 countries_per_continent &lt;- list()
 for (continent in list_of_continents)
 {
     cat(continent)
     cat(&quot;\n&quot;)
     list.append(countries_per_continent, filtered_suicide_df[filtered_suicide_df$continent == continent,])
-    tail(countries_per_continent, n=1)
+    head(tail(countries_per_continent, n=1))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## Europe
