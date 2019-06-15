@@ -43,7 +43,7 @@ write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 >After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.
 
 \[
-	\frac{100 countries}{7 continents} \approx 14 countries per continent
+	\frac{100 \textrm{ countries}}{7 \textrm{ continents}} \approx 14 \textrm{ countries per continent}
 \]
 
 Filter countries by continent:
