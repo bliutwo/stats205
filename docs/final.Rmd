@@ -42,7 +42,26 @@ write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 
 >After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.
 
+\[
+	\frac{100 countries}{7 continents} \approx 14 countries per continent
+\]
+
+Filter countries by continent:
+
+
 ```{r}
+library(countrycode)
+df <- data.frame(country = c("Afghanistan",
+                             "Algeria",
+                             "USA",
+                             "France",
+                             "New Zealand",
+                             "Fantasyland"))
+df$continent <- countrycode(sourcevar = df[, "country"],
+                            origin = "country.name",
+                            destination = "continent")
+
+# Get seven dataframes, filtered by list of countries for each continent.
 
 ```
 
