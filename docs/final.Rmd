@@ -13,13 +13,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 1. Background of the data and why it is interesting or important
 
-```{r}
-dataframe <- read.csv("who_suicide_statistics.csv")
-dataframe
-```
-
 # 2. Explanation of the method studied and its properties
 
 # 3. Data analysis or simulation study
+
+```{r}
+who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
+colnames(who_suicide_statistics)
+```
+
+Filter and save countries with missing suicide rate.
+
+```{r}
+# filtered_suicide_df <- filter(who_suicide_statistics, )
+```
 
 # 4. Interpretation of the results or discussion
