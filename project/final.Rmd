@@ -147,5 +147,29 @@ for (i in seq_along(countries_per_continent))
 }
 ```
 
+Since there are only 5 countries in Oceania and 12 countries in Africa, we will use all 5 countries of Oceania and all 12 countries of Africa.
+
+```{r}
+samples_of_countries <- list()
+for (i in seq_along(countries_per_continent))
+{
+	countries <- unique(countries_per_continent[[i]]$country)
+	current_sample <- sample(countries, 17)
+	samples_of_countries[[i]] <- current_sample
+}
+```
+
+Let's see the countries that we will be sampling:
+
+```{r}
+for (i in seq_along(samples_of_countries))
+{
+	print(list_of_continents[i])
+	print(samples_of_countries[[i]])
+	print(length(samples_of_countries))
+	cat("\n")
+}
+```
+
 # 4. Interpretation of the results or discussion
 
