@@ -25,7 +25,11 @@ colnames(who_suicide_statistics_df)
 
 Filter and save countries with missing suicide rate.
 
+<!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
+
 ```{r}
+install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org')
+install.packages("tidyverse", dependencies=TRUE, repos='http://cran.us.r-project.org')
 install.packages("tidyr", dependencies=TRUE, repos='http://cran.us.r-project.org')
 filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
 nrow(filtered_suicide_df)
