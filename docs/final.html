@@ -490,13 +490,33 @@ for (i in seq_along(list_of_continents))
     # list.append(countries_per_continent, filtered_suicide_df[filtered_suicide_df$continent == continent,])
     # head(countries_per_continent[[length(countries_per_continent) - 1]])
     # cat(&quot;\n&quot;)
+    countries_per_continent[i] &lt;- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
+    head(countries_per_continent[i])
 }</code></pre>
-<pre><code>## Europe
-## Americas
-## Asia
-## Oceania
-## Africa
-## NA</code></pre>
+<pre><code>## Europe</code></pre>
+<pre><code>## Warning in countries_per_continent[i] &lt;-
+## filtered_suicide_df[filtered_suicide_df$continent == : number of items to
+## replace is not a multiple of replacement length</code></pre>
+<pre><code>## Americas</code></pre>
+<pre><code>## Warning in countries_per_continent[i] &lt;-
+## filtered_suicide_df[filtered_suicide_df$continent == : number of items to
+## replace is not a multiple of replacement length</code></pre>
+<pre><code>## Asia</code></pre>
+<pre><code>## Warning in countries_per_continent[i] &lt;-
+## filtered_suicide_df[filtered_suicide_df$continent == : number of items to
+## replace is not a multiple of replacement length</code></pre>
+<pre><code>## Oceania</code></pre>
+<pre><code>## Warning in countries_per_continent[i] &lt;-
+## filtered_suicide_df[filtered_suicide_df$continent == : number of items to
+## replace is not a multiple of replacement length</code></pre>
+<pre><code>## Africa</code></pre>
+<pre><code>## Warning in countries_per_continent[i] &lt;-
+## filtered_suicide_df[filtered_suicide_df$continent == : number of items to
+## replace is not a multiple of replacement length</code></pre>
+<pre><code>## NA</code></pre>
+<pre><code>## Warning in countries_per_continent[i] &lt;-
+## filtered_suicide_df[filtered_suicide_df$continent == : number of items to
+## replace is not a multiple of replacement length</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
