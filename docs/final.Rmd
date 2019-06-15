@@ -178,5 +178,19 @@ for (i in seq_along(samples_of_countries))
 }
 ```
 
+Let's filter the original dataframe only to include countries that we have sampled:
+
+```{r}
+# Make singular list of countries
+countries_to_test <-- list()
+for (i in seq_along(samples_of_countries))
+{
+	current_samples <- samples_of_countries[[i]]
+	list.append(countries_to_test, current_samples)
+}
+
+countries_to_test
+```
+
 # 4. Interpretation of the results or discussion
 
