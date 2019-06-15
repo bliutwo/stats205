@@ -13,9 +13,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 1. Background of the data and why it is interesting or important
 
+>The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate...
+
 # 2. Explanation of the method studied and its properties
 
 # 3. Data analysis or simulation study
+
+We will use the crude rate of suicide per 100,000 people.
+
+>This analysis provides information on age-standardized rates...
 
 ```{r}
 who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
@@ -23,7 +29,7 @@ nrow(who_suicide_statistics_df)
 colnames(who_suicide_statistics_df)
 ```
 
-Filter and save countries with missing suicide rate.
+>Filter and save countries with missing suicide rate.
 
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 
@@ -33,6 +39,6 @@ filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
 nrow(filtered_suicide_df)
 ```
 
-
+After filtering countries with missing suicide rate, take a random 
 
 # 4. Interpretation of the results or discussion

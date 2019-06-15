@@ -383,24 +383,34 @@ $(document).ready(function () {
 
 <div id="background-of-the-data-and-why-it-is-interesting-or-important" class="section level1">
 <h1>1. Background of the data and why it is interesting or important</h1>
+<blockquote>
+<p>The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate…</p>
+</blockquote>
 </div>
 <div id="explanation-of-the-method-studied-and-its-properties" class="section level1">
 <h1>2. Explanation of the method studied and its properties</h1>
 </div>
 <div id="data-analysis-or-simulation-study" class="section level1">
 <h1>3. Data analysis or simulation study</h1>
+<p>We will use the crude rate of suicide per 100,000 people.</p>
+<blockquote>
+<p>This analysis provides information on age-standardized rates…</p>
+</blockquote>
 <pre class="r"><code>who_suicide_statistics_df &lt;- read.csv(&quot;who_suicide_statistics.csv&quot;)
 nrow(who_suicide_statistics_df)</code></pre>
 <pre><code>## [1] 43776</code></pre>
 <pre class="r"><code>colnames(who_suicide_statistics_df)</code></pre>
 <pre><code>## [1] &quot;country&quot;     &quot;year&quot;        &quot;sex&quot;         &quot;age&quot;         &quot;suicides_no&quot;
 ## [6] &quot;population&quot;</code></pre>
+<blockquote>
 <p>Filter and save countries with missing suicide rate.</p>
+</blockquote>
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 <pre class="r"><code>library(tidyverse)
 filtered_suicide_df &lt;- drop_na(who_suicide_statistics_df, &quot;suicides_no&quot;)
 nrow(filtered_suicide_df)</code></pre>
 <pre><code>## [1] 41520</code></pre>
+<p>After filtering countries with missing suicide rate, take a random</p>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
