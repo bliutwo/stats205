@@ -32,3 +32,5 @@ lines(x = cars.supsmu$x, y = cars.supsmu$y, col = "green")
 legend(5, 110, legend=c("Friedman smoothed with 'cv' span", ".30 span", ".175 span",
 	".05 span"), col=c("green", "red", "blue", "yellow"), lty=1:1, cex=0.8)
 ```
+
+**TODO**: How do you tell what the `cv` value for span was?
