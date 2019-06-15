@@ -122,6 +122,7 @@ length(countries_per_continent)
 for (i in seq_along(countries_per_continent))
 {
 	print(head(countries_per_continent[[i]]))
+	print(length(countries_per_continent[[i]]))
 	cat("\n")
 }
 ```

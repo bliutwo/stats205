@@ -500,6 +500,7 @@ length(countries_per_continent)</code></pre>
 <pre class="r"><code>for (i in seq_along(countries_per_continent))
 {
     print(head(countries_per_continent[[i]]))
+    print(length(countries_per_continent[[i]]))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>##    country year    sex         age suicides_no population continent
@@ -509,6 +510,7 @@ length(countries_per_continent)</code></pre>
 ## 28 Albania 1987 female  5-14 years           0     311000    Europe
 ## 29 Albania 1987 female 55-74 years           0     144600    Europe
 ## 30 Albania 1987 female   75+ years           1      35600    Europe
+## [1] 7
 ## 
 ##      country year    sex         age suicides_no population continent
 ## 373 Anguilla 1983 female 15-24 years           0         NA  Americas
@@ -517,6 +519,7 @@ length(countries_per_continent)</code></pre>
 ## 376 Anguilla 1983 female  5-14 years           0         NA  Americas
 ## 377 Anguilla 1983 female 55-74 years           0         NA  Americas
 ## 378 Anguilla 1983 female   75+ years           0         NA  Americas
+## [1] 7
 ## 
 ##      country year    sex         age suicides_no population continent
 ## 1501 Armenia 1981 female 15-24 years           5     348000      Asia
@@ -525,6 +528,7 @@ length(countries_per_continent)</code></pre>
 ## 1504 Armenia 1981 female  5-14 years           0     295200      Asia
 ## 1505 Armenia 1981 female 55-74 years          10     164300      Asia
 ## 1506 Armenia 1981 female   75+ years           7      43100      Asia
+## [1] 7
 ## 
 ##        country year    sex         age suicides_no population continent
 ## 2161 Australia 1979 female 15-24 years          71    1236800   Oceania
@@ -533,6 +537,7 @@ length(countries_per_continent)</code></pre>
 ## 2164 Australia 1979 female  5-14 years           1    1246500   Oceania
 ## 2165 Australia 1979 female 55-74 years         135    1137800   Oceania
 ## 2166 Australia 1979 female   75+ years          15     309900   Oceania
+## [1] 7
 ## 
 ##         country year    sex         age suicides_no population continent
 ## 7669 Cabo Verde 2011 female 15-24 years           1      56039    Africa
@@ -540,7 +545,8 @@ length(countries_per_continent)</code></pre>
 ## 7671 Cabo Verde 2011 female 35-54 years           2      49078    Africa
 ## 7672 Cabo Verde 2011 female  5-14 years           0      56558    Africa
 ## 7673 Cabo Verde 2011 female 55-74 years           2      19887    Africa
-## 7674 Cabo Verde 2011 female   75+ years           0       7582    Africa</code></pre>
+## 7674 Cabo Verde 2011 female   75+ years           0       7582    Africa
+## [1] 7</code></pre>
 <p><a href="https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop">This text links to very important information about why a <code>for</code> loop doesn’t print anything.</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p><a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex">Link to Pandoc Markdown formatting</a></p>
 <p>Randomly sample 17 countries from each continent:</p>
