@@ -122,7 +122,7 @@ for (i in seq_along(list_of_continents))
 	cat("\n")
 
 	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
-	head(countries_per_continent[[i]])
+	print(head(countries_per_continent[[i]]))
 
 	continent <- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
 	head(continent)
@@ -131,7 +131,7 @@ for (i in seq_along(list_of_continents))
 	continent_eur <- filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 	head(continent_eur)
 
-	# LITERALLY COPY PASTING IT
+	# LITERALLY COPY PASTING IT, and it still doesn't work
 	stringerino <- "Europe"
 	asdfg <- filtered_suicide_df[filtered_suicide_df$continent == stringerino,]
 	head(asdfg)
@@ -146,12 +146,14 @@ length(countries_per_continent)
 # head(countries_per_continent)
 for (i in seq_along(countries_per_continent))
 {
-	head(countries_per_continent[[i]])
-	head(countries_per_continent[i])
+	print(head(countries_per_continent[[i]]))
+	print(head(countries_per_continent[i]))
 	typeof(countries_per_continent[[i]])
 	typeof(countries_per_continent[i])
 	cat("\n")
 }
 ```
+
+[This text links to very important information about why for loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop)
 
 # 4. Interpretation of the results or discussion
