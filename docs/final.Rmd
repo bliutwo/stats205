@@ -112,6 +112,7 @@ for (i in seq_along(list_of_continents))
 {
 	cat(i)
 	cat(toString(list_of_continents[i]))
+	cat(list_of_continents[i])
 	cont_string = toString(list_of_continents[i])
 	cat(cont_string)
 	cat("\n")
@@ -121,7 +122,7 @@ for (i in seq_along(list_of_continents))
 
 	continent <- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
 	head(continent)
-	
+
 	# why does THIS not work if that works?
 	continent_eur <- filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 	head(continent_eur)

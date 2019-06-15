@@ -509,6 +509,7 @@ continent_eur &lt;- filtered_suicide_df[filtered_suicide_df$continent == &#39;Eu
 {
     cat(i)
     cat(toString(list_of_continents[i]))
+    cat(list_of_continents[i])
     cont_string = toString(list_of_continents[i])
     cat(cont_string)
     cat(&quot;\n&quot;)
@@ -518,17 +519,17 @@ continent_eur &lt;- filtered_suicide_df[filtered_suicide_df$continent == &#39;Eu
 
     continent &lt;- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
     head(continent)
-    
+
     # why does THIS not work if that works?
     continent_eur &lt;- filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]
     head(continent_eur)
 }</code></pre>
-<pre><code>## 1EuropeEurope
-## 2AmericasAmericas
-## 3AsiaAsia
-## 4OceaniaOceania
-## 5AfricaAfrica
-## 6NANA</code></pre>
+<pre><code>## 1EuropeEuropeEurope
+## 2AmericasAmericasAmericas
+## 3AsiaAsiaAsia
+## 4OceaniaOceaniaOceania
+## 5AfricaAfricaAfrica
+## 6NANANA</code></pre>
 <pre class="r"><code>length(countries_per_continent)</code></pre>
 <pre><code>## [1] 6</code></pre>
 <pre class="r"><code># head(countries_per_continent)
