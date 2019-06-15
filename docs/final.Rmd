@@ -214,7 +214,10 @@ for (i in seq_along(samples_of_countries))
 	for (j in seq_along(samples_of_countries[[i]]))
 	{
 		sample <- samples_of_countries[[i]]
-		print(sample)
+		for (k in seq_along(sample))
+		{
+			print(sample[[k]])
+		}
 	}
 	cat("\n")
 }
