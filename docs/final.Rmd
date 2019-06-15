@@ -28,11 +28,11 @@ Filter and save countries with missing suicide rate.
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 
 ```{r}
-install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org')
-install.packages("tidyverse", dependencies=TRUE, repos='http://cran.us.r-project.org')
-install.packages("tidyr", dependencies=TRUE, repos='http://cran.us.r-project.org')
+library(tidyverse)
 filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
 nrow(filtered_suicide_df)
 ```
+
+
 
 # 4. Interpretation of the results or discussion

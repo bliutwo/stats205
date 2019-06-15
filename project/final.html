@@ -396,9 +396,11 @@ nrow(who_suicide_statistics_df)</code></pre>
 <pre><code>## [1] &quot;country&quot;     &quot;year&quot;        &quot;sex&quot;         &quot;age&quot;         &quot;suicides_no&quot;
 ## [6] &quot;population&quot;</code></pre>
 <p>Filter and save countries with missing suicide rate.</p>
-<pre class="r"><code>filtered_suicide_df &lt;- filter(who_suicide_statistics_df, &quot;suicides_no&quot; == &quot;&quot;)
+<!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
+<pre class="r"><code>library(tidyverse)
+filtered_suicide_df &lt;- drop_na(who_suicide_statistics_df, &quot;suicides_no&quot;)
 nrow(filtered_suicide_df)</code></pre>
-<pre><code>## [1] 43776</code></pre>
+<pre><code>## [1] 41520</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
