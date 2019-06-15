@@ -1,0 +1,397 @@
+"","country","year","sex","age","suicides_no","population","continent"
+"32317","Rodrigues",2001,"female","15-24 years",0,NA,NA
+"32318","Rodrigues",2001,"female","25-34 years",0,NA,NA
+"32319","Rodrigues",2001,"female","35-54 years",0,NA,NA
+"32320","Rodrigues",2001,"female","5-14 years",0,NA,NA
+"32321","Rodrigues",2001,"female","55-74 years",0,NA,NA
+"32322","Rodrigues",2001,"female","75+ years",0,NA,NA
+"32323","Rodrigues",2001,"male","15-24 years",0,NA,NA
+"32324","Rodrigues",2001,"male","25-34 years",0,NA,NA
+"32325","Rodrigues",2001,"male","35-54 years",1,NA,NA
+"32326","Rodrigues",2001,"male","5-14 years",0,NA,NA
+"32327","Rodrigues",2001,"male","55-74 years",1,NA,NA
+"32328","Rodrigues",2001,"male","75+ years",0,NA,NA
+"32329","Rodrigues",2002,"female","15-24 years",1,NA,NA
+"32330","Rodrigues",2002,"female","25-34 years",0,NA,NA
+"32331","Rodrigues",2002,"female","35-54 years",0,NA,NA
+"32332","Rodrigues",2002,"female","5-14 years",0,NA,NA
+"32333","Rodrigues",2002,"female","55-74 years",0,NA,NA
+"32334","Rodrigues",2002,"female","75+ years",0,NA,NA
+"32335","Rodrigues",2002,"male","15-24 years",1,NA,NA
+"32336","Rodrigues",2002,"male","25-34 years",0,NA,NA
+"32337","Rodrigues",2002,"male","35-54 years",1,NA,NA
+"32338","Rodrigues",2002,"male","5-14 years",0,NA,NA
+"32339","Rodrigues",2002,"male","55-74 years",0,NA,NA
+"32340","Rodrigues",2002,"male","75+ years",0,NA,NA
+"32341","Rodrigues",2004,"female","15-24 years",0,4180,NA
+"32342","Rodrigues",2004,"female","25-34 years",0,2620,NA
+"32343","Rodrigues",2004,"female","35-54 years",0,3716,NA
+"32344","Rodrigues",2004,"female","5-14 years",0,3638,NA
+"32345","Rodrigues",2004,"female","55-74 years",0,1962,NA
+"32346","Rodrigues",2004,"female","75+ years",0,455,NA
+"32347","Rodrigues",2004,"male","15-24 years",0,4126,NA
+"32348","Rodrigues",2004,"male","25-34 years",0,2503,NA
+"32349","Rodrigues",2004,"male","35-54 years",1,3765,NA
+"32350","Rodrigues",2004,"male","5-14 years",0,3585,NA
+"32351","Rodrigues",2004,"male","55-74 years",0,1838,NA
+"32352","Rodrigues",2004,"male","75+ years",0,259,NA
+"32353","Rodrigues",2005,"female","15-24 years",1,4071,NA
+"32354","Rodrigues",2005,"female","25-34 years",0,2659,NA
+"32355","Rodrigues",2005,"female","35-54 years",0,3761,NA
+"32356","Rodrigues",2005,"female","5-14 years",0,3658,NA
+"32357","Rodrigues",2005,"female","55-74 years",0,2014,NA
+"32358","Rodrigues",2005,"female","75+ years",0,450,NA
+"32359","Rodrigues",2005,"male","15-24 years",0,4061,NA
+"32360","Rodrigues",2005,"male","25-34 years",0,2557,NA
+"32361","Rodrigues",2005,"male","35-54 years",0,3789,NA
+"32362","Rodrigues",2005,"male","5-14 years",0,3576,NA
+"32363","Rodrigues",2005,"male","55-74 years",0,1870,NA
+"32364","Rodrigues",2005,"male","75+ years",0,279,NA
+"32365","Rodrigues",2006,"female","15-24 years",1,4008,NA
+"32366","Rodrigues",2006,"female","25-34 years",0,2737,NA
+"32367","Rodrigues",2006,"female","35-54 years",0,3778,NA
+"32368","Rodrigues",2006,"female","5-14 years",0,3639,NA
+"32369","Rodrigues",2006,"female","55-74 years",0,2044,NA
+"32370","Rodrigues",2006,"female","75+ years",0,485,NA
+"32371","Rodrigues",2006,"male","15-24 years",1,4002,NA
+"32372","Rodrigues",2006,"male","25-34 years",0,2604,NA
+"32373","Rodrigues",2006,"male","35-54 years",1,3778,NA
+"32374","Rodrigues",2006,"male","5-14 years",0,3594,NA
+"32375","Rodrigues",2006,"male","55-74 years",0,1915,NA
+"32376","Rodrigues",2006,"male","75+ years",0,287,NA
+"32377","Rodrigues",2007,"female","15-24 years",0,3838,NA
+"32378","Rodrigues",2007,"female","25-34 years",0,2920,NA
+"32379","Rodrigues",2007,"female","35-54 years",0,3765,NA
+"32380","Rodrigues",2007,"female","5-14 years",0,3625,NA
+"32381","Rodrigues",2007,"female","55-74 years",0,2100,NA
+"32382","Rodrigues",2007,"female","75+ years",0,515,NA
+"32383","Rodrigues",2007,"male","15-24 years",0,3860,NA
+"32384","Rodrigues",2007,"male","25-34 years",0,2745,NA
+"32385","Rodrigues",2007,"male","35-54 years",1,3752,NA
+"32386","Rodrigues",2007,"male","5-14 years",0,3668,NA
+"32387","Rodrigues",2007,"male","55-74 years",0,1938,NA
+"32388","Rodrigues",2007,"male","75+ years",0,317,NA
+"32389","Rodrigues",2008,"female","15-24 years",0,3761,NA
+"32390","Rodrigues",2008,"female","25-34 years",0,3058,NA
+"32391","Rodrigues",2008,"female","35-54 years",0,3783,NA
+"32392","Rodrigues",2008,"female","5-14 years",0,3661,NA
+"32393","Rodrigues",2008,"female","55-74 years",0,2136,NA
+"32394","Rodrigues",2008,"female","75+ years",0,518,NA
+"32395","Rodrigues",2008,"male","15-24 years",0,3766,NA
+"32396","Rodrigues",2008,"male","25-34 years",1,2847,NA
+"32397","Rodrigues",2008,"male","35-54 years",1,3753,NA
+"32398","Rodrigues",2008,"male","5-14 years",0,3756,NA
+"32399","Rodrigues",2008,"male","55-74 years",0,1954,NA
+"32400","Rodrigues",2008,"male","75+ years",0,351,NA
+"32401","Rodrigues",2009,"female","15-24 years",0,NA,NA
+"32402","Rodrigues",2009,"female","25-34 years",0,NA,NA
+"32403","Rodrigues",2009,"female","35-54 years",0,NA,NA
+"32404","Rodrigues",2009,"female","5-14 years",0,NA,NA
+"32405","Rodrigues",2009,"female","55-74 years",0,NA,NA
+"32406","Rodrigues",2009,"female","75+ years",0,NA,NA
+"32407","Rodrigues",2009,"male","15-24 years",0,NA,NA
+"32408","Rodrigues",2009,"male","25-34 years",3,NA,NA
+"32409","Rodrigues",2009,"male","35-54 years",0,NA,NA
+"32410","Rodrigues",2009,"male","5-14 years",0,NA,NA
+"32411","Rodrigues",2009,"male","55-74 years",0,NA,NA
+"32412","Rodrigues",2009,"male","75+ years",0,NA,NA
+"32413","Rodrigues",2010,"female","15-24 years",0,3612,NA
+"32414","Rodrigues",2010,"female","25-34 years",0,3198,NA
+"32415","Rodrigues",2010,"female","35-54 years",1,3816,NA
+"32416","Rodrigues",2010,"female","5-14 years",0,3775,NA
+"32417","Rodrigues",2010,"female","55-74 years",1,2211,NA
+"32418","Rodrigues",2010,"female","75+ years",0,565,NA
+"32419","Rodrigues",2010,"male","15-24 years",0,3629,NA
+"32420","Rodrigues",2010,"male","25-34 years",1,2997,NA
+"32421","Rodrigues",2010,"male","35-54 years",2,3673,NA
+"32422","Rodrigues",2010,"male","5-14 years",0,3916,NA
+"32423","Rodrigues",2010,"male","55-74 years",0,2102,NA
+"32424","Rodrigues",2010,"male","75+ years",0,372,NA
+"32425","Rodrigues",2011,"female","15-24 years",0,3631,NA
+"32426","Rodrigues",2011,"female","25-34 years",1,3204,NA
+"32427","Rodrigues",2011,"female","35-54 years",1,3810,NA
+"32428","Rodrigues",2011,"female","5-14 years",0,3821,NA
+"32429","Rodrigues",2011,"female","55-74 years",0,2279,NA
+"32430","Rodrigues",2011,"female","75+ years",0,585,NA
+"32431","Rodrigues",2011,"male","15-24 years",1,3612,NA
+"32432","Rodrigues",2011,"male","25-34 years",0,3023,NA
+"32433","Rodrigues",2011,"male","35-54 years",0,3613,NA
+"32434","Rodrigues",2011,"male","5-14 years",0,3998,NA
+"32435","Rodrigues",2011,"male","55-74 years",0,2183,NA
+"32436","Rodrigues",2011,"male","75+ years",0,386,NA
+"32437","Rodrigues",2012,"female","15-24 years",0,3590,NA
+"32438","Rodrigues",2012,"female","25-34 years",1,3238,NA
+"32439","Rodrigues",2012,"female","35-54 years",0,3793,NA
+"32440","Rodrigues",2012,"female","5-14 years",0,3914,NA
+"32441","Rodrigues",2012,"female","55-74 years",0,2381,NA
+"32442","Rodrigues",2012,"female","75+ years",0,609,NA
+"32443","Rodrigues",2012,"male","15-24 years",0,3551,NA
+"32444","Rodrigues",2012,"male","25-34 years",0,3097,NA
+"32445","Rodrigues",2012,"male","35-54 years",0,3541,NA
+"32446","Rodrigues",2012,"male","5-14 years",0,4088,NA
+"32447","Rodrigues",2012,"male","55-74 years",0,2295,NA
+"32448","Rodrigues",2012,"male","75+ years",0,412,NA
+"32449","Rodrigues",2013,"female","15-24 years",0,3455,NA
+"32450","Rodrigues",2013,"female","25-34 years",1,3290,NA
+"32451","Rodrigues",2013,"female","35-54 years",0,5064,NA
+"32452","Rodrigues",2013,"female","5-14 years",0,4119,NA
+"32453","Rodrigues",2013,"female","55-74 years",0,2553,NA
+"32454","Rodrigues",2013,"female","75+ years",0,732,NA
+"32455","Rodrigues",2013,"male","15-24 years",0,3351,NA
+"32456","Rodrigues",2013,"male","25-34 years",0,3104,NA
+"32457","Rodrigues",2013,"male","35-54 years",1,4965,NA
+"32458","Rodrigues",2013,"male","5-14 years",0,4149,NA
+"32459","Rodrigues",2013,"male","55-74 years",0,2511,NA
+"32460","Rodrigues",2013,"male","75+ years",0,480,NA
+"32461","Rodrigues",2014,"female","15-24 years",0,3500,NA
+"32462","Rodrigues",2014,"female","25-34 years",0,3220,NA
+"32463","Rodrigues",2014,"female","35-54 years",0,5200,NA
+"32464","Rodrigues",2014,"female","5-14 years",1,4080,NA
+"32465","Rodrigues",2014,"female","55-74 years",1,2640,NA
+"32466","Rodrigues",2014,"female","75+ years",0,780,NA
+"32467","Rodrigues",2014,"male","15-24 years",1,3380,NA
+"32468","Rodrigues",2014,"male","25-34 years",0,3050,NA
+"32469","Rodrigues",2014,"male","35-54 years",2,5040,NA
+"32470","Rodrigues",2014,"male","5-14 years",0,4170,NA
+"32471","Rodrigues",2014,"male","55-74 years",1,2620,NA
+"32472","Rodrigues",2014,"male","75+ years",0,490,NA
+"32473","Rodrigues",2015,"female","15-24 years",1,3601,NA
+"32474","Rodrigues",2015,"female","25-34 years",0,3104,NA
+"32475","Rodrigues",2015,"female","35-54 years",0,5342,NA
+"32476","Rodrigues",2015,"female","5-14 years",0,4046,NA
+"32477","Rodrigues",2015,"female","55-74 years",0,2720,NA
+"32478","Rodrigues",2015,"female","75+ years",0,804,NA
+"32479","Rodrigues",2015,"male","15-24 years",0,3503,NA
+"32480","Rodrigues",2015,"male","25-34 years",1,2917,NA
+"32481","Rodrigues",2015,"male","35-54 years",0,5210,NA
+"32482","Rodrigues",2015,"male","5-14 years",0,4105,NA
+"32483","Rodrigues",2015,"male","55-74 years",0,2660,NA
+"32484","Rodrigues",2015,"male","75+ years",0,521,NA
+"32485","Rodrigues",2016,"female","15-24 years",0,3671,NA
+"32486","Rodrigues",2016,"female","25-34 years",0,2965,NA
+"32487","Rodrigues",2016,"female","35-54 years",0,5501,NA
+"32488","Rodrigues",2016,"female","5-14 years",0,3947,NA
+"32489","Rodrigues",2016,"female","55-74 years",0,2817,NA
+"32490","Rodrigues",2016,"female","75+ years",0,847,NA
+"32491","Rodrigues",2016,"male","15-24 years",1,3595,NA
+"32492","Rodrigues",2016,"male","25-34 years",3,2801,NA
+"32493","Rodrigues",2016,"male","35-54 years",3,5277,NA
+"32494","Rodrigues",2016,"male","5-14 years",0,4017,NA
+"32495","Rodrigues",2016,"male","55-74 years",1,2760,NA
+"32496","Rodrigues",2016,"male","75+ years",0,560,NA
+"43525","Virgin Islands (USA)",1980,"female","15-24 years",0,8900,NA
+"43526","Virgin Islands (USA)",1980,"female","25-34 years",0,8100,NA
+"43527","Virgin Islands (USA)",1980,"female","35-54 years",0,10600,NA
+"43528","Virgin Islands (USA)",1980,"female","5-14 years",0,12100,NA
+"43529","Virgin Islands (USA)",1980,"female","55-74 years",0,4600,NA
+"43530","Virgin Islands (USA)",1980,"female","75+ years",0,800,NA
+"43531","Virgin Islands (USA)",1980,"male","15-24 years",2,7900,NA
+"43532","Virgin Islands (USA)",1980,"male","25-34 years",0,6700,NA
+"43533","Virgin Islands (USA)",1980,"male","35-54 years",1,9600,NA
+"43534","Virgin Islands (USA)",1980,"male","5-14 years",0,12000,NA
+"43535","Virgin Islands (USA)",1980,"male","55-74 years",0,4000,NA
+"43536","Virgin Islands (USA)",1980,"male","75+ years",0,500,NA
+"43561","Virgin Islands (USA)",1997,"female","15-24 years",0,7767,NA
+"43562","Virgin Islands (USA)",1997,"female","25-34 years",0,7715,NA
+"43563","Virgin Islands (USA)",1997,"female","35-54 years",0,16085,NA
+"43564","Virgin Islands (USA)",1997,"female","5-14 years",0,9406,NA
+"43565","Virgin Islands (USA)",1997,"female","55-74 years",0,7884,NA
+"43566","Virgin Islands (USA)",1997,"female","75+ years",0,1495,NA
+"43567","Virgin Islands (USA)",1997,"male","15-24 years",0,7206,NA
+"43568","Virgin Islands (USA)",1997,"male","25-34 years",0,6723,NA
+"43569","Virgin Islands (USA)",1997,"male","35-54 years",2,14363,NA
+"43570","Virgin Islands (USA)",1997,"male","5-14 years",0,9090,NA
+"43571","Virgin Islands (USA)",1997,"male","55-74 years",1,7679,NA
+"43572","Virgin Islands (USA)",1997,"male","75+ years",0,1347,NA
+"43573","Virgin Islands (USA)",1998,"female","15-24 years",0,7650,NA
+"43574","Virgin Islands (USA)",1998,"female","25-34 years",0,7664,NA
+"43575","Virgin Islands (USA)",1998,"female","35-54 years",0,16310,NA
+"43576","Virgin Islands (USA)",1998,"female","5-14 years",0,9589,NA
+"43577","Virgin Islands (USA)",1998,"female","55-74 years",0,8233,NA
+"43578","Virgin Islands (USA)",1998,"female","75+ years",0,1569,NA
+"43579","Virgin Islands (USA)",1998,"male","15-24 years",2,7062,NA
+"43580","Virgin Islands (USA)",1998,"male","25-34 years",1,6619,NA
+"43581","Virgin Islands (USA)",1998,"male","35-54 years",1,14490,NA
+"43582","Virgin Islands (USA)",1998,"male","5-14 years",0,9384,NA
+"43583","Virgin Islands (USA)",1998,"male","55-74 years",1,8087,NA
+"43584","Virgin Islands (USA)",1998,"male","75+ years",0,1403,NA
+"43585","Virgin Islands (USA)",1999,"female","15-24 years",0,7578,NA
+"43586","Virgin Islands (USA)",1999,"female","25-34 years",0,7558,NA
+"43587","Virgin Islands (USA)",1999,"female","35-54 years",0,16497,NA
+"43588","Virgin Islands (USA)",1999,"female","5-14 years",0,9776,NA
+"43589","Virgin Islands (USA)",1999,"female","55-74 years",0,8614,NA
+"43590","Virgin Islands (USA)",1999,"female","75+ years",0,1652,NA
+"43591","Virgin Islands (USA)",1999,"male","15-24 years",2,7002,NA
+"43592","Virgin Islands (USA)",1999,"male","25-34 years",0,6457,NA
+"43593","Virgin Islands (USA)",1999,"male","35-54 years",4,14587,NA
+"43594","Virgin Islands (USA)",1999,"male","5-14 years",0,9677,NA
+"43595","Virgin Islands (USA)",1999,"male","55-74 years",0,8524,NA
+"43596","Virgin Islands (USA)",1999,"male","75+ years",0,1458,NA
+"43597","Virgin Islands (USA)",2000,"female","15-24 years",0,7566,NA
+"43598","Virgin Islands (USA)",2000,"female","25-34 years",0,7364,NA
+"43599","Virgin Islands (USA)",2000,"female","35-54 years",0,16602,NA
+"43600","Virgin Islands (USA)",2000,"female","5-14 years",0,9845,NA
+"43601","Virgin Islands (USA)",2000,"female","55-74 years",0,9006,NA
+"43602","Virgin Islands (USA)",2000,"female","75+ years",0,1725,NA
+"43603","Virgin Islands (USA)",2000,"male","15-24 years",0,7034,NA
+"43604","Virgin Islands (USA)",2000,"male","25-34 years",1,6200,NA
+"43605","Virgin Islands (USA)",2000,"male","35-54 years",3,14621,NA
+"43606","Virgin Islands (USA)",2000,"male","5-14 years",0,9816,NA
+"43607","Virgin Islands (USA)",2000,"male","55-74 years",1,8960,NA
+"43608","Virgin Islands (USA)",2000,"male","75+ years",0,1515,NA
+"43609","Virgin Islands (USA)",2001,"female","15-24 years",0,7791,NA
+"43610","Virgin Islands (USA)",2001,"female","25-34 years",0,7210,NA
+"43611","Virgin Islands (USA)",2001,"female","35-54 years",0,16605,NA
+"43612","Virgin Islands (USA)",2001,"female","5-14 years",0,9570,NA
+"43613","Virgin Islands (USA)",2001,"female","55-74 years",0,9401,NA
+"43614","Virgin Islands (USA)",2001,"female","75+ years",0,1817,NA
+"43615","Virgin Islands (USA)",2001,"male","15-24 years",1,7263,NA
+"43616","Virgin Islands (USA)",2001,"male","25-34 years",1,6079,NA
+"43617","Virgin Islands (USA)",2001,"male","35-54 years",0,14599,NA
+"43618","Virgin Islands (USA)",2001,"male","5-14 years",0,9563,NA
+"43619","Virgin Islands (USA)",2001,"male","55-74 years",0,9354,NA
+"43620","Virgin Islands (USA)",2001,"male","75+ years",2,1579,NA
+"43621","Virgin Islands (USA)",2002,"female","15-24 years",1,7955,NA
+"43622","Virgin Islands (USA)",2002,"female","25-34 years",0,7037,NA
+"43623","Virgin Islands (USA)",2002,"female","35-54 years",0,16524,NA
+"43624","Virgin Islands (USA)",2002,"female","5-14 years",0,9257,NA
+"43625","Virgin Islands (USA)",2002,"female","55-74 years",0,9818,NA
+"43626","Virgin Islands (USA)",2002,"female","75+ years",0,1885,NA
+"43627","Virgin Islands (USA)",2002,"male","15-24 years",0,7401,NA
+"43628","Virgin Islands (USA)",2002,"male","25-34 years",0,5951,NA
+"43629","Virgin Islands (USA)",2002,"male","35-54 years",1,14536,NA
+"43630","Virgin Islands (USA)",2002,"male","5-14 years",0,9297,NA
+"43631","Virgin Islands (USA)",2002,"male","55-74 years",0,9742,NA
+"43632","Virgin Islands (USA)",2002,"male","75+ years",0,1645,NA
+"43633","Virgin Islands (USA)",2003,"female","15-24 years",0,8020,NA
+"43634","Virgin Islands (USA)",2003,"female","25-34 years",0,6877,NA
+"43635","Virgin Islands (USA)",2003,"female","35-54 years",1,16390,NA
+"43636","Virgin Islands (USA)",2003,"female","5-14 years",0,8916,NA
+"43637","Virgin Islands (USA)",2003,"female","55-74 years",0,10238,NA
+"43638","Virgin Islands (USA)",2003,"female","75+ years",0,1940,NA
+"43639","Virgin Islands (USA)",2003,"male","15-24 years",2,7425,NA
+"43640","Virgin Islands (USA)",2003,"male","25-34 years",2,5841,NA
+"43641","Virgin Islands (USA)",2003,"male","35-54 years",2,14433,NA
+"43642","Virgin Islands (USA)",2003,"male","5-14 years",0,9021,NA
+"43643","Virgin Islands (USA)",2003,"male","55-74 years",2,10110,NA
+"43644","Virgin Islands (USA)",2003,"male","75+ years",0,1706,NA
+"43645","Virgin Islands (USA)",2004,"female","15-24 years",0,7985,NA
+"43646","Virgin Islands (USA)",2004,"female","25-34 years",0,6765,NA
+"43647","Virgin Islands (USA)",2004,"female","35-54 years",0,16253,NA
+"43648","Virgin Islands (USA)",2004,"female","5-14 years",0,8567,NA
+"43649","Virgin Islands (USA)",2004,"female","55-74 years",0,10662,NA
+"43650","Virgin Islands (USA)",2004,"female","75+ years",0,1989,NA
+"43651","Virgin Islands (USA)",2004,"male","15-24 years",0,7345,NA
+"43652","Virgin Islands (USA)",2004,"male","25-34 years",2,5777,NA
+"43653","Virgin Islands (USA)",2004,"male","35-54 years",3,14332,NA
+"43654","Virgin Islands (USA)",2004,"male","5-14 years",0,8742,NA
+"43655","Virgin Islands (USA)",2004,"male","55-74 years",0,10455,NA
+"43656","Virgin Islands (USA)",2004,"male","75+ years",0,1758,NA
+"43657","Virgin Islands (USA)",2005,"female","15-24 years",0,7875,NA
+"43658","Virgin Islands (USA)",2005,"female","25-34 years",0,6720,NA
+"43659","Virgin Islands (USA)",2005,"female","35-54 years",0,16142,NA
+"43660","Virgin Islands (USA)",2005,"female","5-14 years",0,8233,NA
+"43661","Virgin Islands (USA)",2005,"female","55-74 years",0,11071,NA
+"43662","Virgin Islands (USA)",2005,"female","75+ years",0,2047,NA
+"43663","Virgin Islands (USA)",2005,"male","15-24 years",0,7195,NA
+"43664","Virgin Islands (USA)",2005,"male","25-34 years",1,5764,NA
+"43665","Virgin Islands (USA)",2005,"male","35-54 years",0,14253,NA
+"43666","Virgin Islands (USA)",2005,"male","5-14 years",0,8477,NA
+"43667","Virgin Islands (USA)",2005,"male","55-74 years",0,10773,NA
+"43668","Virgin Islands (USA)",2005,"male","75+ years",1,1798,NA
+"43669","Virgin Islands (USA)",2006,"female","15-24 years",0,7697,NA
+"43670","Virgin Islands (USA)",2006,"female","25-34 years",0,6707,NA
+"43671","Virgin Islands (USA)",2006,"female","35-54 years",4,16020,NA
+"43672","Virgin Islands (USA)",2006,"female","5-14 years",0,7923,NA
+"43673","Virgin Islands (USA)",2006,"female","55-74 years",0,11427,NA
+"43674","Virgin Islands (USA)",2006,"female","75+ years",0,2158,NA
+"43675","Virgin Islands (USA)",2006,"male","15-24 years",2,7010,NA
+"43676","Virgin Islands (USA)",2006,"male","25-34 years",2,5786,NA
+"43677","Virgin Islands (USA)",2006,"male","35-54 years",4,14205,NA
+"43678","Virgin Islands (USA)",2006,"male","5-14 years",0,8252,NA
+"43679","Virgin Islands (USA)",2006,"male","55-74 years",1,10928,NA
+"43680","Virgin Islands (USA)",2006,"male","75+ years",1,1854,NA
+"43681","Virgin Islands (USA)",2007,"female","15-24 years",0,7499,NA
+"43682","Virgin Islands (USA)",2007,"female","25-34 years",0,6716,NA
+"43683","Virgin Islands (USA)",2007,"female","35-54 years",3,15926,NA
+"43684","Virgin Islands (USA)",2007,"female","5-14 years",0,7638,NA
+"43685","Virgin Islands (USA)",2007,"female","55-74 years",0,11755,NA
+"43686","Virgin Islands (USA)",2007,"female","75+ years",0,2279,NA
+"43687","Virgin Islands (USA)",2007,"male","15-24 years",1,6823,NA
+"43688","Virgin Islands (USA)",2007,"male","25-34 years",2,5792,NA
+"43689","Virgin Islands (USA)",2007,"male","35-54 years",1,14189,NA
+"43690","Virgin Islands (USA)",2007,"male","5-14 years",1,8031,NA
+"43691","Virgin Islands (USA)",2007,"male","55-74 years",2,11057,NA
+"43692","Virgin Islands (USA)",2007,"male","75+ years",1,1892,NA
+"43693","Virgin Islands (USA)",2008,"female","15-24 years",0,7303,NA
+"43694","Virgin Islands (USA)",2008,"female","25-34 years",0,6713,NA
+"43695","Virgin Islands (USA)",2008,"female","35-54 years",1,15838,NA
+"43696","Virgin Islands (USA)",2008,"female","5-14 years",0,7395,NA
+"43697","Virgin Islands (USA)",2008,"female","55-74 years",0,12078,NA
+"43698","Virgin Islands (USA)",2008,"female","75+ years",0,2404,NA
+"43699","Virgin Islands (USA)",2008,"male","15-24 years",0,6663,NA
+"43700","Virgin Islands (USA)",2008,"male","25-34 years",2,5762,NA
+"43701","Virgin Islands (USA)",2008,"male","35-54 years",3,14188,NA
+"43702","Virgin Islands (USA)",2008,"male","5-14 years",0,7823,NA
+"43703","Virgin Islands (USA)",2008,"male","55-74 years",0,11182,NA
+"43704","Virgin Islands (USA)",2008,"male","75+ years",0,1919,NA
+"43705","Virgin Islands (USA)",2009,"female","15-24 years",0,7117,NA
+"43706","Virgin Islands (USA)",2009,"female","25-34 years",0,6667,NA
+"43707","Virgin Islands (USA)",2009,"female","35-54 years",0,15743,NA
+"43708","Virgin Islands (USA)",2009,"female","5-14 years",0,7203,NA
+"43709","Virgin Islands (USA)",2009,"female","55-74 years",0,12400,NA
+"43710","Virgin Islands (USA)",2009,"female","75+ years",0,2526,NA
+"43711","Virgin Islands (USA)",2009,"male","15-24 years",1,6543,NA
+"43712","Virgin Islands (USA)",2009,"male","25-34 years",0,5661,NA
+"43713","Virgin Islands (USA)",2009,"male","35-54 years",4,14175,NA
+"43714","Virgin Islands (USA)",2009,"male","5-14 years",0,7647,NA
+"43715","Virgin Islands (USA)",2009,"male","55-74 years",4,11337,NA
+"43716","Virgin Islands (USA)",2009,"male","75+ years",0,1941,NA
+"43717","Virgin Islands (USA)",2010,"female","15-24 years",0,6946,NA
+"43718","Virgin Islands (USA)",2010,"female","25-34 years",1,6553,NA
+"43719","Virgin Islands (USA)",2010,"female","35-54 years",2,15632,NA
+"43720","Virgin Islands (USA)",2010,"female","5-14 years",0,7060,NA
+"43721","Virgin Islands (USA)",2010,"female","55-74 years",0,12740,NA
+"43722","Virgin Islands (USA)",2010,"female","75+ years",0,2651,NA
+"43723","Virgin Islands (USA)",2010,"male","15-24 years",0,6463,NA
+"43724","Virgin Islands (USA)",2010,"male","25-34 years",1,5472,NA
+"43725","Virgin Islands (USA)",2010,"male","35-54 years",2,14141,NA
+"43726","Virgin Islands (USA)",2010,"male","5-14 years",0,7510,NA
+"43727","Virgin Islands (USA)",2010,"male","55-74 years",1,11537,NA
+"43728","Virgin Islands (USA)",2010,"male","75+ years",1,1953,NA
+"43729","Virgin Islands (USA)",2011,"female","15-24 years",0,6883,NA
+"43730","Virgin Islands (USA)",2011,"female","25-34 years",0,6376,NA
+"43731","Virgin Islands (USA)",2011,"female","35-54 years",0,15382,NA
+"43732","Virgin Islands (USA)",2011,"female","5-14 years",0,6961,NA
+"43733","Virgin Islands (USA)",2011,"female","55-74 years",1,13041,NA
+"43734","Virgin Islands (USA)",2011,"female","75+ years",1,2790,NA
+"43735","Virgin Islands (USA)",2011,"male","15-24 years",0,6553,NA
+"43736","Virgin Islands (USA)",2011,"male","25-34 years",1,5271,NA
+"43737","Virgin Islands (USA)",2011,"male","35-54 years",2,13857,NA
+"43738","Virgin Islands (USA)",2011,"male","5-14 years",0,7400,NA
+"43739","Virgin Islands (USA)",2011,"male","55-74 years",3,11730,NA
+"43740","Virgin Islands (USA)",2011,"male","75+ years",0,2046,NA
+"43741","Virgin Islands (USA)",2012,"female","15-24 years",0,6833,NA
+"43742","Virgin Islands (USA)",2012,"female","25-34 years",1,6185,NA
+"43743","Virgin Islands (USA)",2012,"female","35-54 years",1,15126,NA
+"43744","Virgin Islands (USA)",2012,"female","5-14 years",0,6929,NA
+"43745","Virgin Islands (USA)",2012,"female","55-74 years",2,13364,NA
+"43746","Virgin Islands (USA)",2012,"female","75+ years",0,2940,NA
+"43747","Virgin Islands (USA)",2012,"male","15-24 years",2,6663,NA
+"43748","Virgin Islands (USA)",2012,"male","25-34 years",2,5061,NA
+"43749","Virgin Islands (USA)",2012,"male","35-54 years",2,13542,NA
+"43750","Virgin Islands (USA)",2012,"male","5-14 years",0,7334,NA
+"43751","Virgin Islands (USA)",2012,"male","55-74 years",0,11957,NA
+"43752","Virgin Islands (USA)",2012,"male","75+ years",0,2135,NA
+"43753","Virgin Islands (USA)",2015,"female","15-24 years",0,6675,NA
+"43754","Virgin Islands (USA)",2015,"female","25-34 years",0,5662,NA
+"43755","Virgin Islands (USA)",2015,"female","35-54 years",0,14278,NA
+"43756","Virgin Islands (USA)",2015,"female","5-14 years",0,7099,NA
+"43757","Virgin Islands (USA)",2015,"female","55-74 years",0,14269,NA
+"43758","Virgin Islands (USA)",2015,"female","75+ years",0,3508,NA
+"43759","Virgin Islands (USA)",2015,"male","15-24 years",0,6933,NA
+"43760","Virgin Islands (USA)",2015,"male","25-34 years",2,4609,NA
+"43761","Virgin Islands (USA)",2015,"male","35-54 years",1,12516,NA
+"43762","Virgin Islands (USA)",2015,"male","5-14 years",0,7291,NA
+"43763","Virgin Islands (USA)",2015,"male","55-74 years",0,12615,NA
+"43764","Virgin Islands (USA)",2015,"male","75+ years",0,2496,NA

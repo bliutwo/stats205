@@ -65,6 +65,7 @@ Notably, there are countries that are not on any of the listed continents. Let's
 
 ```{r}
 not_in_a_continent = filtered_suicide_df[is.na(filtered_suicide_df$continent),]
+write.csv(not_in_a_continent, 'not_in_a_continent.csv')
 head(not_in_a_continent)
 unique(not_in_a_continent$country)
 ```

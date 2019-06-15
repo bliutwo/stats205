@@ -450,6 +450,7 @@ unique(filtered_suicide_df$continent)</code></pre>
 <pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;   NA</code></pre>
 <p>Notably, there are countries that are not on any of the listed continents. Let’s see which ones those are:</p>
 <pre class="r"><code>not_in_a_continent = filtered_suicide_df[is.na(filtered_suicide_df$continent),]
+write.csv(not_in_a_continent, &#39;not_in_a_continent.csv&#39;)
 head(not_in_a_continent)</code></pre>
 <pre><code>##         country year    sex         age suicides_no population continent
 ## 32317 Rodrigues 2001 female 15-24 years           0         NA      &lt;NA&gt;
