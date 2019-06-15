@@ -41,10 +41,6 @@ head(filtered_suicide_df)
 
 >After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.
 
-\[
-	\frac{100 \textrm{ countries}}{7 \textrm{ continents}} \approx 14 \textrm{ to } 15 \textrm{ countries per continent}
-\]
-
 Filter countries by continent:
 
 
@@ -56,12 +52,25 @@ filtered_suicide_df$continent <- countrycode(sourcevar = filtered_suicide_df[, "
 
 head(filtered_suicide_df)
 write.csv(filtered_suicide_df, 'filtered_suicide.csv')
+```
 
+Let us find out which continents are counted:
+
+```{r}
 # Get list of continents
 unique(filtered_suicide_df$continent)
 ```
 
-Notably, there are countries that are not on any of the listed continents. Let's see which ones those are:
+Therefore,
+
+\[
+	\frac{100 \textrm{ countries}}{6 \textrm{ continents}} \approx 16 \textrm{ to } 17 \textrm{ countries per continent}
+\]
+
+we should randomly sample 17 countries from each continent.
+
+
+Notably, there are countries that are not on any of the listed continents. Let us see which ones those are:
 
 ```{r}
 not_in_a_continent = filtered_suicide_df[is.na(filtered_suicide_df$continent),]
@@ -70,18 +79,27 @@ head(not_in_a_continent)
 unique(not_in_a_continent$country)
 ```
 
+Let us make the choice not to include these countries in the analysis, since there are only two countries.
+
+
+We will now create six dataframes, filtered by list of countries for each continent.
+
 ```{r}
-# Get seven dataframes, filtered by list of countries for each continent.
 europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 head(europe_suicide)
+length(europe_suicide)
 americas_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Americas',]
 head(americas_suicide)
+length(americas_suicide)
 asia_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Asia',]
 head(asia_suicide)
+length(asia_suicide)
 oceania_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Oceania',]
 head(oceania_suicide)
+length(oceania_suicide)
 africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
 head(africa_suicide)
+length(africa_suicide)
 ```
 
 # 4. Interpretation of the results or discussion
