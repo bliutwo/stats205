@@ -230,6 +230,7 @@ for (i in seq_along(samples_of_countries))
 	cat("\n")
 }
 
+length(countries_to_test)
 countries_to_test
 ```
 
