@@ -59,7 +59,7 @@ write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 
 # Get seven dataframes, filtered by list of countries for each continent.
 
-europe_suicide = filtered_suicide_df[filtered_suicide_df$country == 'Europe']
+europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe']
 head(europe_suicide)
 ```
 
