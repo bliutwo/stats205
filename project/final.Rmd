@@ -132,6 +132,8 @@ for (i in seq_along(list_of_continents))
 	head(continent_eur)
 }
 
+length(countries_per_continent)
+
 countries_per_continent[[0]] <- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
 head(countries_per_continent[[0]])
 
