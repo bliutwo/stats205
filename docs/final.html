@@ -665,48 +665,48 @@ for (i in seq_along(countries_per_continent))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Bosnia and Herzegovina Malta                  Belgium               
-##  [4] Ireland                Luxembourg             Republic of Moldova   
-##  [7] Netherlands            Serbia                 Italy                 
-## [10] Germany                Monaco                 Ukraine               
-## [13] Spain                  Albania                Sweden                
-## [16] Austria                Estonia               
+##  [1] Greece             TFYR Macedonia     Monaco            
+##  [4] Norway             Switzerland        Netherlands       
+##  [7] Austria            Slovakia           Slovenia          
+## [10] Iceland            Romania            Malta             
+## [13] Serbia             Latvia             Denmark           
+## [16] Russian Federation Portugal          
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Nicaragua                          Panama                            
-##  [3] Aruba                              Costa Rica                        
-##  [5] Trinidad and Tobago                Dominican Republic                
-##  [7] Paraguay                           Guadeloupe                        
-##  [9] Canada                             Saint Vincent and Grenadines      
-## [11] French Guiana                      Venezuela (Bolivarian Republic of)
-## [13] Chile                              Mexico                            
-## [15] Guyana                             Ecuador                           
-## [17] Grenada                           
+##  [1] Saint Kitts and Nevis        Turks and Caicos Islands    
+##  [3] Saint Vincent and Grenadines Argentina                   
+##  [5] El Salvador                  Bahamas                     
+##  [7] Costa Rica                   Canada                      
+##  [9] Paraguay                     British Virgin Islands      
+## [11] Nicaragua                    Guatemala                   
+## [13] Brazil                       Martinique                  
+## [15] Ecuador                      Anguilla                    
+## [17] Chile                       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Mongolia              Iran (Islamic Rep of) Iraq                 
-##  [4] Armenia               Hong Kong SAR         Thailand             
-##  [7] Sri Lanka             Philippines           Saudi Arabia         
-## [10] Singapore             Turkey                Jordan               
-## [13] Macau                 Kazakhstan            United Arab Emirates 
-## [16] Israel                Qatar                
+##  [1] Philippines       Macau             Oman             
+##  [4] Hong Kong SAR     Azerbaijan        Iraq             
+##  [7] Armenia           Jordan            Turkey           
+## [10] Republic of Korea Sri Lanka         Singapore        
+## [13] Qatar             Tajikistan        Maldives         
+## [16] Israel            Malaysia         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Australia   &lt;NA&gt;        Kiribati    New Zealand Fiji       
+## [1] Kiribati    Fiji        &lt;NA&gt;        Australia   New Zealand
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Reunion               Morocco               Tunisia              
-##  [4] Cabo Verde            Mauritius             Zimbabwe             
-##  [7] Mayotte               Egypt                 &lt;NA&gt;                 
-## [10] Seychelles            South Africa          Sao Tome and Principe
+##  [1] Reunion               Mayotte               Egypt                
+##  [4] Sao Tome and Principe Mauritius             Morocco              
+##  [7] Seychelles            &lt;NA&gt;                  Tunisia              
+## [10] Zimbabwe              South Africa          Cabo Verde           
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <p>Let’s filter the original dataframe only to include countries that we have sampled:</p>
@@ -732,7 +732,7 @@ length(countries_to_test)</code></pre>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Basically, <code>for</code> loops are functions themselves. R prints out the result of a command automatically, but functions are not inherently a command, and will therefore not print anything unless explicitly run. The solution is to have <code>print(command())</code> to get output. You will never again spend hours trying to find out why a <code>for</code> loop doesn’t print anything because you’re no longer an R newbie.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>Basically, <code>for</code> loops are functions themselves. R prints out the result of a command automatically, but functions are not inherently a command, and will therefore not print anything unless explicitly run. The solution is to have <code>print(command())</code> to get output for your <code>for</code> loop. You will never again spend hours trying to find out why a <code>for</code> loop doesn’t print anything because you’re no longer an R newbie.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 

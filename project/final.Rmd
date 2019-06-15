@@ -131,7 +131,7 @@ for (i in seq_along(countries_per_continent))
 
 [Link to Pandoc Markdown formatting](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex)
 
-[^1]:Basically, `for` loops are functions themselves. R prints out the result of a command automatically, but functions are not inherently a command, and will therefore not print anything unless explicitly run. The solution is to have `print(command())` to get output. You will never again spend hours trying to find out why a `for` loop doesn't print anything because you're no longer an R newbie.
+[^1]:Basically, `for` loops are functions themselves. R prints out the result of a command automatically, but functions are not inherently a command, and will therefore not print anything unless explicitly run. The solution is to have `print(command())` to get output for your `for` loop. You will never again spend hours trying to find out why a `for` loop doesn't print anything because you're no longer an R newbie.
 
 Randomly sample 17 countries from each continent:
 
