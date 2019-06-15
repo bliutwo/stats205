@@ -188,7 +188,7 @@ for (i in seq_along(samples_of_countries))
 {
 	current_samples <- samples_of_countries[[i]]
 	# print(current_samples)
-	append(countries_to_test, current_samples)
+	append(x = countries_to_test, values = current_samples)
 }
 
 length(countries_to_test)

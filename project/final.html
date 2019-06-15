@@ -665,48 +665,50 @@ for (i in seq_along(countries_per_continent))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Hungary             United Kingdom      Finland            
-##  [4] Bulgaria            Monaco              Iceland            
-##  [7] Belarus             TFYR Macedonia      Belgium            
-## [10] Ukraine             San Marino          Latvia             
-## [13] Ireland             Croatia             Republic of Moldova
-## [16] Germany             Lithuania          
+##  [1] Iceland        Montenegro     Romania        &lt;NA&gt;          
+##  [5] Sweden         San Marino     Lithuania      Hungary       
+##  [9] Greece         Spain          Bulgaria       Belarus       
+## [13] France         Portugal       Czech Republic Italy         
+## [17] Ukraine       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Guatemala                   Falkland Islands (Malvinas)
-##  [3] Bermuda                     &lt;NA&gt;                       
-##  [5] British Virgin Islands      Cuba                       
-##  [7] Montserrat                  Uruguay                    
-##  [9] Antigua and Barbuda         Dominican Republic         
-## [11] Ecuador                     Canada                     
-## [13] El Salvador                 Turks and Caicos Islands   
-## [15] United States of America    Grenada                    
-## [17] Nicaragua                  
+##  [1] Cayman Islands               Guatemala                   
+##  [3] Antigua and Barbuda          United States of America    
+##  [5] Aruba                        Saint Vincent and Grenadines
+##  [7] Bolivia                      Ecuador                     
+##  [9] &lt;NA&gt;                         Uruguay                     
+## [11] Saint Kitts and Nevis        Martinique                  
+## [13] Anguilla                     Bermuda                     
+## [15] Paraguay                     Guyana                      
+## [17] Suriname                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Cyprus               Qatar                Uzbekistan          
-##  [4] Kyrgyzstan           Iraq                 Syrian Arab Republic
-##  [7] Maldives             Philippines          Kuwait              
-## [10] Georgia              Turkey               Brunei Darussalam   
-## [13] Kazakhstan           Tajikistan           Macau               
-## [16] Azerbaijan           Turkmenistan        
+##  [1] Turkmenistan                   Kyrgyzstan                    
+##  [3] Cyprus                         Saudi Arabia                  
+##  [5] Armenia                        Brunei Darussalam             
+##  [7] Japan                          Singapore                     
+##  [9] Israel                         Syrian Arab Republic          
+## [11] Maldives                       Occupied Palestinian Territory
+## [13] Kuwait                         Georgia                       
+## [15] Iran (Islamic Rep of)          Jordan                        
+## [17] United Arab Emirates          
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] &lt;NA&gt;        Kiribati    New Zealand Fiji        Australia  
+## [1] Fiji        Kiribati    &lt;NA&gt;        Australia   New Zealand
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Sao Tome and Principe Mayotte               Cabo Verde           
-##  [4] Morocco               Egypt                 South Africa         
-##  [7] Reunion               Seychelles            &lt;NA&gt;                 
-## [10] Zimbabwe              Mauritius             Tunisia              
+##  [1] South Africa          Seychelles            &lt;NA&gt;                 
+##  [4] Mauritius             Mayotte               Egypt                
+##  [7] Cabo Verde            Zimbabwe              Morocco              
+## [10] Reunion               Tunisia               Sao Tome and Principe
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <p>Let’s filter the original dataframe only to include countries that we have sampled:</p>
@@ -717,7 +719,7 @@ for (i in seq_along(samples_of_countries))
 {
     current_samples &lt;- samples_of_countries[[i]]
     # print(current_samples)
-    append(countries_to_test, current_samples)
+    append(x = countries_to_test, values = current_samples)
 }
 
 length(countries_to_test)</code></pre>
