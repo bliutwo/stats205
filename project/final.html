@@ -665,45 +665,48 @@ for (i in seq_along(countries_per_continent))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Sweden             Switzerland        Belarus           
-##  [4] Denmark            Belgium            Luxembourg        
-##  [7] &lt;NA&gt;               France             Ireland           
-## [10] Montenegro         Germany            Russian Federation
-## [13] Serbia             Netherlands        Malta             
-## [16] Greece             Lithuania         
+##  [1] Hungary             United Kingdom      Finland            
+##  [4] Bulgaria            Monaco              Iceland            
+##  [7] Belarus             TFYR Macedonia      Belgium            
+## [10] Ukraine             San Marino          Latvia             
+## [13] Ireland             Croatia             Republic of Moldova
+## [16] Germany             Lithuania          
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Trinidad and Tobago Brazil              Barbados           
-##  [4] Guatemala           Suriname            El Salvador        
-##  [7] Bolivia             Honduras            Cayman Islands     
-## [10] Chile               Montserrat          Puerto Rico        
-## [13] Jamaica             Colombia            Uruguay            
-## [16] Antigua and Barbuda Paraguay           
+##  [1] Guatemala                   Falkland Islands (Malvinas)
+##  [3] Bermuda                     &lt;NA&gt;                       
+##  [5] British Virgin Islands      Cuba                       
+##  [7] Montserrat                  Uruguay                    
+##  [9] Antigua and Barbuda         Dominican Republic         
+## [11] Ecuador                     Canada                     
+## [13] El Salvador                 Turks and Caicos Islands   
+## [15] United States of America    Grenada                    
+## [17] Nicaragua                  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Malaysia              Philippines           Jordan               
-##  [4] Turkey                Israel                Kuwait               
-##  [7] Oman                  Azerbaijan            United Arab Emirates 
-## [10] Japan                 Sri Lanka             Syrian Arab Republic 
-## [13] Cyprus                Maldives              Kyrgyzstan           
-## [16] Iran (Islamic Rep of) Republic of Korea    
+##  [1] Cyprus               Qatar                Uzbekistan          
+##  [4] Kyrgyzstan           Iraq                 Syrian Arab Republic
+##  [7] Maldives             Philippines          Kuwait              
+## [10] Georgia              Turkey               Brunei Darussalam   
+## [13] Kazakhstan           Tajikistan           Macau               
+## [16] Azerbaijan           Turkmenistan        
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] New Zealand Kiribati    Fiji        &lt;NA&gt;        Australia  
+## [1] &lt;NA&gt;        Kiribati    New Zealand Fiji        Australia  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Cabo Verde            Reunion               Mauritius            
-##  [4] Seychelles            Egypt                 Morocco              
-##  [7] Mayotte               Tunisia               South Africa         
-## [10] Zimbabwe              &lt;NA&gt;                  Sao Tome and Principe
+##  [1] Sao Tome and Principe Mayotte               Cabo Verde           
+##  [4] Morocco               Egypt                 South Africa         
+##  [7] Reunion               Seychelles            &lt;NA&gt;                 
+## [10] Zimbabwe              Mauritius             Tunisia              
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <p>Let’s filter the original dataframe only to include countries that we have sampled:</p>
@@ -724,57 +727,13 @@ length(countries_to_test)</code></pre>
     print(countries_to_test[[i]])
 }
 
-# Not run: 
-x &lt;- list(a=1,b=2,c=3)
-x</code></pre>
-<pre><code>## $a
-## [1] 1
-## 
-## $b
-## [1] 2
-## 
-## $c
-## [1] 3</code></pre>
-<pre class="r"><code>list.append(x,d=4,e=5)</code></pre>
-<pre><code>## $a
-## [1] 1
-## 
-## $b
-## [1] 2
-## 
-## $c
-## [1] 3
-## 
-## $d
-## [1] 4
-## 
-## $e
-## [1] 5</code></pre>
-<pre class="r"><code>list.append(x,d=4,f=c(2,3))</code></pre>
-<pre><code>## $a
-## [1] 1
-## 
-## $b
-## [1] 2
-## 
-## $c
-## [1] 3
-## 
-## $d
-## [1] 4
-## 
-## $f
-## [1] 2 3</code></pre>
-<pre class="r"><code>x</code></pre>
-<pre><code>## $a
-## [1] 1
-## 
-## $b
-## [1] 2
-## 
-## $c
-## [1] 3</code></pre>
-<pre class="r"><code>## End(Not run)</code></pre>
+# # Not run: 
+# x &lt;- list(a=1,b=2,c=3)
+# x
+# list.append(x,d=4,e=5)
+# list.append(x,d=4,f=c(2,3))
+# x
+# ## End(Not run)</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
