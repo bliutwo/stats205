@@ -490,11 +490,14 @@ length(list_of_continents)</code></pre>
 <pre class="r"><code>for (i in seq_along(list_of_continents))
 {
     cat(toString(list_of_continents[i]))
+    cont_string = toString(list_of_continents[i])
     cat(&quot;\n&quot;)
-    countries_per_continent[[i]] &lt;- filtered_suicide_df[filtered_suicide_df$continent == toString(list_of_continents[i]),]
+    countries_per_continent[[i]] &lt;- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
     head(countries_per_continent[[i]])
-    # continent &lt;- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
-    # head(continent)
+    continent &lt;- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
+    head(continent)
+    continent_eur &lt;- filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]
+    head(continent_eur)
 }</code></pre>
 <pre><code>## Europe
 ## Americas
