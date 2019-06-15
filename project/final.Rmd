@@ -103,6 +103,7 @@ We will now create six dataframes, filtered by list of countries for each contin
 for (continent in list_of_continents)
 {
 	cat(continent)
+	cat("\n")
 }
 ```
 
