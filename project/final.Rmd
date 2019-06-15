@@ -106,9 +106,6 @@ for (i in seq_along(list_of_continents))
 {
 	cat(list_of_continents[i])
 	cat("\n")
-	# list.append(countries_per_continent, filtered_suicide_df[filtered_suicide_df$continent == continent,])
-	# head(countries_per_continent[[length(countries_per_continent) - 1]])
-	# cat("\n")
 	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
 	head(countries_per_continent[[i]])
 }
