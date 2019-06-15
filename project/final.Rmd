@@ -114,7 +114,7 @@ head(asdfg)
 
 for (i in seq_along(list_of_continents))
 {
-	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == cont_string,]
+	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
 }
 
 length(countries_per_continent)
