@@ -97,9 +97,9 @@ We will now create six dataframes, filtered by list of countries for each contin
 # oceania_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Oceania',]
 # head(oceania_suicide)
 # length(oceania_suicide$country)
-# africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
-# head(africa_suicide)
-# length(africa_suicide$country)
+africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
+head(africa_suicide)
+length(africa_suicide$country)
 library(rlist)
 countries_per_continent <- list()
 length(list_of_continents)
