@@ -25,7 +25,7 @@ We will use the crude rate of suicide per 100,000 people.
 
 ```{r}
 who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
-nrow(who_suicide_statistics_df)
+head(who_suicide_statistics_df)
 colnames(who_suicide_statistics_df)
 ```
 
@@ -36,7 +36,7 @@ colnames(who_suicide_statistics_df)
 ```{r}
 library(tidyverse)
 filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
-nrow(filtered_suicide_df)
+head(filtered_suicide_df)
 write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 ```
 
@@ -50,7 +50,6 @@ Filter countries by continent:
 
 
 ```{r}
-install.packages("countrycode", dependencies=TRUE, repos='http://cran.us.r-project.org')
 library(countrycode)
 filtered_suicide_df$continent <- countrycode(sourcevar = filtered_suicide_df[, "country"],
                             origin = "country.name",

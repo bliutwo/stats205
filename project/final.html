@@ -397,8 +397,14 @@ $(document).ready(function () {
 <p>This analysis provides information on age-standardized rates…</p>
 </blockquote>
 <pre class="r"><code>who_suicide_statistics_df &lt;- read.csv(&quot;who_suicide_statistics.csv&quot;)
-nrow(who_suicide_statistics_df)</code></pre>
-<pre><code>## [1] 43776</code></pre>
+head(who_suicide_statistics_df)</code></pre>
+<pre><code>##   country year    sex         age suicides_no population
+## 1 Albania 1985 female 15-24 years          NA     277900
+## 2 Albania 1985 female 25-34 years          NA     246800
+## 3 Albania 1985 female 35-54 years          NA     267500
+## 4 Albania 1985 female  5-14 years          NA     298300
+## 5 Albania 1985 female 55-74 years          NA     138700
+## 6 Albania 1985 female   75+ years          NA      34200</code></pre>
 <pre class="r"><code>colnames(who_suicide_statistics_df)</code></pre>
 <pre><code>## [1] &quot;country&quot;     &quot;year&quot;        &quot;sex&quot;         &quot;age&quot;         &quot;suicides_no&quot;
 ## [6] &quot;population&quot;</code></pre>
@@ -408,8 +414,14 @@ nrow(who_suicide_statistics_df)</code></pre>
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 <pre class="r"><code>library(tidyverse)
 filtered_suicide_df &lt;- drop_na(who_suicide_statistics_df, &quot;suicides_no&quot;)
-nrow(filtered_suicide_df)</code></pre>
-<pre><code>## [1] 41520</code></pre>
+head(filtered_suicide_df)</code></pre>
+<pre><code>##    country year    sex         age suicides_no population
+## 25 Albania 1987 female 15-24 years          14     289700
+## 26 Albania 1987 female 25-34 years           4     257200
+## 27 Albania 1987 female 35-54 years           6     278800
+## 28 Albania 1987 female  5-14 years           0     311000
+## 29 Albania 1987 female 55-74 years           0     144600
+## 30 Albania 1987 female   75+ years           1      35600</code></pre>
 <pre class="r"><code>write.csv(filtered_suicide_df, &#39;filtered_suicide.csv&#39;)</code></pre>
 <blockquote>
 <p>After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.</p>
@@ -418,9 +430,6 @@ nrow(filtered_suicide_df)</code></pre>
     \frac{100 \textrm{ countries}}{7 \textrm{ continents}} \approx 14 \textrm{ to } 15 \textrm{ countries per continent}
 \]</span></p>
 <p>Filter countries by continent:</p>
-<pre class="r"><code>install.packages(&quot;countrycode&quot;, dependencies=TRUE, repos=&#39;http://cran.us.r-project.org&#39;)</code></pre>
-<pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre class="r"><code>library(countrycode)
 filtered_suicide_df$continent &lt;- countrycode(sourcevar = filtered_suicide_df[, &quot;country&quot;],
                             origin = &quot;country.name&quot;,
