@@ -139,7 +139,10 @@ Randomly sample 17 countries from each continent:
 list_of_continents
 for (i in seq_along(countries_per_continent))
 {
-	print(unique(countries_per_continent[[i]]$country))
+	countries <- unique(countries_per_continent[[i]]$country))
+	print(countries)
+	print(length(countries))
+	cat("\n")
 }
 ```
 
