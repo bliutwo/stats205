@@ -187,6 +187,7 @@ library(rlist)
 for (i in seq_along(samples_of_countries))
 {
 	current_samples <- samples_of_countries[[i]]
+	print(current_samples)
 	list.append(countries_to_test, current_samples)
 }
 
