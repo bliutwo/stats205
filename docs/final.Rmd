@@ -190,6 +190,8 @@ for (i in seq_along(samples_of_countries))
 	list.append(countries_to_test, current_samples)
 }
 
+length(countries_to_test)
+
 for (i in seq_along(countries_to_test))
 {
 	print(countries_to_test[[i]])
