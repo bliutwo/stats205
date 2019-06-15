@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.29)  14 JUN 2019 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.29)  14 JUN 2019 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -999,8 +999,8 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Runaway argument?
 ^^M## [[1]]^^M##                       country year    sex         ag\ETC.
 ! TeX capacity exceeded, sorry [main memory size=5000000].
-l.89173 ## NA.7964     
-                       <NA>   NA <NA> <NA>          NA         NA      <NA> 
+l.89172 ## NA.7963     <NA>   NA <NA> <NA>       
+                                                    NA         NA      <NA> 
 Here is how much of TeX's memory you used:
  12788 strings out of 492982
  185132 string characters out of 6134896
