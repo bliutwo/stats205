@@ -18,14 +18,14 @@ knitr::opts_chunk$set(echo = TRUE)
 # 3. Data analysis or simulation study
 
 ```{r}
-who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
+who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv"); who_suicide_statistics_df
 colnames(who_suicide_statistics_df)
 ```
 
 Filter and save countries with missing suicide rate.
 
 ```{r}
-# filtered_suicide_df <- filter(who_suicide_statistics, )
+# filtered_suicide_df <- filter(who_suicide_statistics, "suicides_no" == None)
 ```
 
 # 4. Interpretation of the results or discussion
