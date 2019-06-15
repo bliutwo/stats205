@@ -483,24 +483,19 @@ head(not_in_a_continent)</code></pre>
 # length(africa_suicide$country)
 library(rlist)
 countries_per_continent &lt;- list()
-for (continent in list_of_continents)
+for (i in seq_along(list_of_continents))
 {
-    cat(continent)
+    cat(list_of_continents[i])
     cat(&quot;\n&quot;)
-    list.append(countries_per_continent, filtered_suicide_df[filtered_suicide_df$continent == continent,])
-    head(tail(countries_per_continent, n=1))
-    cat(&quot;\n&quot;)
+    # list.append(countries_per_continent, filtered_suicide_df[filtered_suicide_df$continent == continent,])
+    # head(countries_per_continent[[length(countries_per_continent) - 1]])
+    # cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## Europe
-## 
 ## Americas
-## 
 ## Asia
-## 
 ## Oceania
-## 
 ## Africa
-## 
 ## NA</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
