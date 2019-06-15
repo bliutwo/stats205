@@ -26,7 +26,7 @@ colnames(who_suicide_statistics_df)
 Filter and save countries with missing suicide rate.
 
 ```{r}
-filtered_suicide_df <- filter(who_suicide_statistics_df, "suicides_no" == NA)
+filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
 nrow(filtered_suicide_df)
 ```
 
