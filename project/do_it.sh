@@ -1,6 +1,6 @@
 #!/bin/bash
 
-R --vanilla --no-save < final.R
+R --vanilla --no-save < make_final.R
 
 cp final.html ../docs
 cp final.pdf ../docs
