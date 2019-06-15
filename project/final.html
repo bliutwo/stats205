@@ -465,6 +465,11 @@ head(not_in_a_continent)</code></pre>
 <pre><code>## [1] Rodrigues            Virgin Islands (USA)
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
 <p>Let us make the choice not to include these countries in the analysis, since there are only two countries.</p>
+<pre class="r"><code># Take off `NA` from list of continents
+list_of_continents[-length(list_of_continents)]</code></pre>
+<pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;</code></pre>
+<pre class="r"><code>list_of_continents</code></pre>
+<pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;   NA</code></pre>
 <p>We will now create six dataframes, filtered by list of countries for each continent.</p>
 <!-- # europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 # head(europe_suicide)

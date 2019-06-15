@@ -81,6 +81,12 @@ unique(not_in_a_continent$country)
 
 Let us make the choice not to include these countries in the analysis, since there are only two countries.
 
+```{r}
+# Take off `NA` from list of continents
+list_of_continents[-length(list_of_continents)]
+list_of_continents
+```
+
 
 We will now create six dataframes, filtered by list of countries for each continent.
 
