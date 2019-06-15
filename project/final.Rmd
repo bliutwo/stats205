@@ -112,6 +112,10 @@ for (i in seq_along(list_of_continents))
 	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
 	head(countries_per_continent[[i]])
 }
+for (i in seq_along(countries_per_continent))
+{
+	countries_per_continent[[i]]
+}
 ```
 
 # 4. Interpretation of the results or discussion
