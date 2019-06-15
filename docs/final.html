@@ -667,51 +667,50 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Croatia                Greece                 Latvia                
-##  [4] Czech Republic         Denmark                Serbia                
-##  [7] Malta                  Bosnia and Herzegovina Republic of Moldova   
-## [10] Russian Federation     Norway                 TFYR Macedonia        
-## [13] Germany                Monaco                 San Marino            
-## [16] United Kingdom         Spain                 
+##  [1] Portugal       Netherlands    Czech Republic France        
+##  [5] Italy          Estonia        Hungary        Bulgaria      
+##  [9] Sweden         Montenegro     TFYR Macedonia Germany       
+## [13] Finland        Serbia         Belgium        Poland        
+## [17] Malta         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Cayman Islands                     Venezuela (Bolivarian Republic of)
-##  [3] Brazil                             Bahamas                           
-##  [5] Netherlands Antilles               Martinique                        
-##  [7] Grenada                            Barbados                          
-##  [9] Mexico                             British Virgin Islands            
-## [11] Guatemala                          &lt;NA&gt;                              
-## [13] Trinidad and Tobago                Cuba                              
-## [15] Saint Vincent and Grenadines       Antigua and Barbuda               
-## [17] Suriname                          
+##  [1] Costa Rica                Turks and Caicos Islands 
+##  [3] Guadeloupe                El Salvador              
+##  [5] Saint Kitts and Nevis     Cuba                     
+##  [7] Dominican Republic        Guyana                   
+##  [9] Trinidad and Tobago       Montserrat               
+## [11] Colombia                  Anguilla                 
+## [13] Jamaica                   Barbados                 
+## [15] Mexico                    Saint Pierre and Miquelon
+## [17] Nicaragua                
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Turkey                         Uzbekistan                    
-##  [3] Tajikistan                     Jordan                        
-##  [5] Occupied Palestinian Territory Cyprus                        
-##  [7] Thailand                       Azerbaijan                    
-##  [9] Oman                           Georgia                       
-## [11] Sri Lanka                      Saudi Arabia                  
-## [13] Republic of Korea              Iraq                          
-## [15] &lt;NA&gt;                           Qatar                         
-## [17] Japan                         
+##  [1] Malaysia                       Singapore                     
+##  [3] Kyrgyzstan                     Japan                         
+##  [5] Kuwait                         Tajikistan                    
+##  [7] Hong Kong SAR                  Iraq                          
+##  [9] United Arab Emirates           Occupied Palestinian Territory
+## [11] Saudi Arabia                   Israel                        
+## [13] Turkey                         Brunei Darussalam             
+## [15] Kazakhstan                     Cyprus                        
+## [17] Maldives                      
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] New Zealand Australia   Fiji        Kiribati    &lt;NA&gt;       
+## [1] New Zealand &lt;NA&gt;        Kiribati    Australia   Fiji       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] &lt;NA&gt;                  Sao Tome and Principe Seychelles           
-##  [4] Egypt                 Cabo Verde            Reunion              
-##  [7] South Africa          Mayotte               Zimbabwe             
-## [10] Tunisia               Morocco               Mauritius            
+##  [1] Zimbabwe              Egypt                 Sao Tome and Principe
+##  [4] South Africa          Mauritius             Mayotte              
+##  [7] &lt;NA&gt;                  Morocco               Reunion              
+## [10] Seychelles            Tunisia               Cabo Verde           
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -755,711 +754,222 @@ for (i in seq_along(samples_of_countries))
         #   print(sample[[k]])
         # }
         sample &lt;- samples_of_countries[[i]]
-        print(sample[[j]])
-        print(typeof(sample[[j]]))
-        print(toString(sample[[j]]))
-        print(typeof(toString(sample[[j]])))
+        # print(sample[[j]])
+        # print(typeof(sample[[j]]))
+        # print(toString(sample[[j]]))
+        # print(typeof(toString(sample[[j]])))
         country_string &lt;- toString(sample[[j]])
-        cat(&quot;\n\n&quot;)
+        # cat(&quot;\n\n&quot;)
         # countries_to_test[a] &lt;- samples_of_countries[[i]][[j]]
         countries_to_test[a] &lt;- country_string
         a &lt;- a + 1
     }
-    cat(&quot;\n\n\n\n&quot;)
-}</code></pre>
-<pre><code>## [1] Croatia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Croatia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Greece
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Greece&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Latvia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Latvia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Czech Republic
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Czech Republic&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Denmark
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Denmark&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Serbia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Serbia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Malta
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Malta&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Bosnia and Herzegovina
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Bosnia and Herzegovina&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Republic of Moldova
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Republic of Moldova&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Russian Federation
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Russian Federation&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Norway
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Norway&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] TFYR Macedonia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;TFYR Macedonia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Germany
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Germany&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Monaco
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Monaco&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] San Marino
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;San Marino&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] United Kingdom
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;United Kingdom&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Spain
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Spain&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## 
-## 
-## 
-## 
-## [1] Cayman Islands
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Cayman Islands&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Venezuela (Bolivarian Republic of)
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Venezuela (Bolivarian Republic of)&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Brazil
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Brazil&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Bahamas
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Bahamas&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Netherlands Antilles
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Netherlands Antilles&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Martinique
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Martinique&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Grenada
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Grenada&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Barbados
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Barbados&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Mexico
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Mexico&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] British Virgin Islands
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;British Virgin Islands&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Guatemala
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Guatemala&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;NA&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Trinidad and Tobago
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Trinidad and Tobago&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Cuba
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Cuba&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Saint Vincent and Grenadines
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Saint Vincent and Grenadines&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Antigua and Barbuda
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Antigua and Barbuda&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Suriname
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Suriname&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## 
-## 
-## 
-## 
-## [1] Turkey
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Turkey&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Uzbekistan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Uzbekistan&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Tajikistan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Tajikistan&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Jordan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Jordan&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Occupied Palestinian Territory
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Occupied Palestinian Territory&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Cyprus
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Cyprus&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Thailand
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Thailand&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Azerbaijan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Azerbaijan&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Oman
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Oman&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Georgia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Georgia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Sri Lanka
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Sri Lanka&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Saudi Arabia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Saudi Arabia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Republic of Korea
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Republic of Korea&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Iraq
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Iraq&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;NA&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Qatar
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Qatar&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Japan
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Japan&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## 
-## 
-## 
-## 
-## [1] New Zealand
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;New Zealand&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Australia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Australia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Fiji
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Fiji&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Kiribati
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Kiribati&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;NA&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## 
-## 
-## 
-## 
-## [1] &lt;NA&gt;
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;NA&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Sao Tome and Principe
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Sao Tome and Principe&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Seychelles
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Seychelles&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Egypt
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Egypt&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Cabo Verde
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Cabo Verde&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Reunion
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Reunion&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] South Africa
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;South Africa&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Mayotte
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Mayotte&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Zimbabwe
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Zimbabwe&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Tunisia
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Tunisia&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Morocco
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Morocco&quot;
-## [1] &quot;character&quot;
-## 
-## 
-## [1] Mauritius
-## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
-## [1] &quot;integer&quot;
-## [1] &quot;Mauritius&quot;
-## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code>length(countries_to_test)</code></pre>
+    # cat(&quot;\n\n\n\n&quot;)
+}
+
+length(countries_to_test)</code></pre>
 <pre><code>## [1] 67</code></pre>
 <pre class="r"><code>countries_to_test</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;Greece&quot;
+## [1] &quot;Netherlands&quot;
 ## 
 ## [[2]]
-## [1] &quot;Latvia&quot;
-## 
-## [[3]]
 ## [1] &quot;Czech Republic&quot;
 ## 
+## [[3]]
+## [1] &quot;France&quot;
+## 
 ## [[4]]
-## [1] &quot;Denmark&quot;
+## [1] &quot;Italy&quot;
 ## 
 ## [[5]]
-## [1] &quot;Serbia&quot;
+## [1] &quot;Estonia&quot;
 ## 
 ## [[6]]
-## [1] &quot;Malta&quot;
+## [1] &quot;Hungary&quot;
 ## 
 ## [[7]]
-## [1] &quot;Bosnia and Herzegovina&quot;
+## [1] &quot;Bulgaria&quot;
 ## 
 ## [[8]]
-## [1] &quot;Republic of Moldova&quot;
+## [1] &quot;Sweden&quot;
 ## 
 ## [[9]]
-## [1] &quot;Russian Federation&quot;
+## [1] &quot;Montenegro&quot;
 ## 
 ## [[10]]
-## [1] &quot;Norway&quot;
-## 
-## [[11]]
 ## [1] &quot;TFYR Macedonia&quot;
 ## 
-## [[12]]
+## [[11]]
 ## [1] &quot;Germany&quot;
 ## 
+## [[12]]
+## [1] &quot;Finland&quot;
+## 
 ## [[13]]
-## [1] &quot;Monaco&quot;
+## [1] &quot;Serbia&quot;
 ## 
 ## [[14]]
-## [1] &quot;San Marino&quot;
+## [1] &quot;Belgium&quot;
 ## 
 ## [[15]]
-## [1] &quot;United Kingdom&quot;
+## [1] &quot;Poland&quot;
 ## 
 ## [[16]]
-## [1] &quot;Spain&quot;
+## [1] &quot;Malta&quot;
 ## 
 ## [[17]]
-## [1] &quot;Cayman Islands&quot;
+## [1] &quot;Costa Rica&quot;
 ## 
 ## [[18]]
-## [1] &quot;Venezuela (Bolivarian Republic of)&quot;
+## [1] &quot;Turks and Caicos Islands&quot;
 ## 
 ## [[19]]
-## [1] &quot;Brazil&quot;
+## [1] &quot;Guadeloupe&quot;
 ## 
 ## [[20]]
-## [1] &quot;Bahamas&quot;
+## [1] &quot;El Salvador&quot;
 ## 
 ## [[21]]
-## [1] &quot;Netherlands Antilles&quot;
+## [1] &quot;Saint Kitts and Nevis&quot;
 ## 
 ## [[22]]
-## [1] &quot;Martinique&quot;
-## 
-## [[23]]
-## [1] &quot;Grenada&quot;
-## 
-## [[24]]
-## [1] &quot;Barbados&quot;
-## 
-## [[25]]
-## [1] &quot;Mexico&quot;
-## 
-## [[26]]
-## [1] &quot;British Virgin Islands&quot;
-## 
-## [[27]]
-## [1] &quot;Guatemala&quot;
-## 
-## [[28]]
-## [1] &quot;NA&quot;
-## 
-## [[29]]
-## [1] &quot;Trinidad and Tobago&quot;
-## 
-## [[30]]
 ## [1] &quot;Cuba&quot;
 ## 
+## [[23]]
+## [1] &quot;Dominican Republic&quot;
+## 
+## [[24]]
+## [1] &quot;Guyana&quot;
+## 
+## [[25]]
+## [1] &quot;Trinidad and Tobago&quot;
+## 
+## [[26]]
+## [1] &quot;Montserrat&quot;
+## 
+## [[27]]
+## [1] &quot;Colombia&quot;
+## 
+## [[28]]
+## [1] &quot;Anguilla&quot;
+## 
+## [[29]]
+## [1] &quot;Jamaica&quot;
+## 
+## [[30]]
+## [1] &quot;Barbados&quot;
+## 
 ## [[31]]
-## [1] &quot;Saint Vincent and Grenadines&quot;
+## [1] &quot;Mexico&quot;
 ## 
 ## [[32]]
-## [1] &quot;Antigua and Barbuda&quot;
+## [1] &quot;Saint Pierre and Miquelon&quot;
 ## 
 ## [[33]]
-## [1] &quot;Suriname&quot;
+## [1] &quot;Nicaragua&quot;
 ## 
 ## [[34]]
-## [1] &quot;Turkey&quot;
+## [1] &quot;Malaysia&quot;
 ## 
 ## [[35]]
-## [1] &quot;Uzbekistan&quot;
+## [1] &quot;Singapore&quot;
 ## 
 ## [[36]]
-## [1] &quot;Tajikistan&quot;
+## [1] &quot;Kyrgyzstan&quot;
 ## 
 ## [[37]]
-## [1] &quot;Jordan&quot;
+## [1] &quot;Japan&quot;
 ## 
 ## [[38]]
-## [1] &quot;Occupied Palestinian Territory&quot;
+## [1] &quot;Kuwait&quot;
 ## 
 ## [[39]]
-## [1] &quot;Cyprus&quot;
+## [1] &quot;Tajikistan&quot;
 ## 
 ## [[40]]
-## [1] &quot;Thailand&quot;
+## [1] &quot;Hong Kong SAR&quot;
 ## 
 ## [[41]]
-## [1] &quot;Azerbaijan&quot;
-## 
-## [[42]]
-## [1] &quot;Oman&quot;
-## 
-## [[43]]
-## [1] &quot;Georgia&quot;
-## 
-## [[44]]
-## [1] &quot;Sri Lanka&quot;
-## 
-## [[45]]
-## [1] &quot;Saudi Arabia&quot;
-## 
-## [[46]]
-## [1] &quot;Republic of Korea&quot;
-## 
-## [[47]]
 ## [1] &quot;Iraq&quot;
 ## 
+## [[42]]
+## [1] &quot;United Arab Emirates&quot;
+## 
+## [[43]]
+## [1] &quot;Occupied Palestinian Territory&quot;
+## 
+## [[44]]
+## [1] &quot;Saudi Arabia&quot;
+## 
+## [[45]]
+## [1] &quot;Israel&quot;
+## 
+## [[46]]
+## [1] &quot;Turkey&quot;
+## 
+## [[47]]
+## [1] &quot;Brunei Darussalam&quot;
+## 
 ## [[48]]
-## [1] &quot;NA&quot;
+## [1] &quot;Kazakhstan&quot;
 ## 
 ## [[49]]
-## [1] &quot;Qatar&quot;
+## [1] &quot;Cyprus&quot;
 ## 
 ## [[50]]
-## [1] &quot;Japan&quot;
+## [1] &quot;Maldives&quot;
 ## 
 ## [[51]]
 ## [1] &quot;New Zealand&quot;
 ## 
 ## [[52]]
-## [1] &quot;Australia&quot;
+## [1] &quot;NA&quot;
 ## 
 ## [[53]]
-## [1] &quot;Fiji&quot;
-## 
-## [[54]]
 ## [1] &quot;Kiribati&quot;
 ## 
+## [[54]]
+## [1] &quot;Australia&quot;
+## 
 ## [[55]]
-## [1] &quot;NA&quot;
+## [1] &quot;Fiji&quot;
 ## 
 ## [[56]]
-## [1] &quot;NA&quot;
-## 
-## [[57]]
-## [1] &quot;Sao Tome and Principe&quot;
-## 
-## [[58]]
-## [1] &quot;Seychelles&quot;
-## 
-## [[59]]
-## [1] &quot;Egypt&quot;
-## 
-## [[60]]
-## [1] &quot;Cabo Verde&quot;
-## 
-## [[61]]
-## [1] &quot;Reunion&quot;
-## 
-## [[62]]
-## [1] &quot;South Africa&quot;
-## 
-## [[63]]
-## [1] &quot;Mayotte&quot;
-## 
-## [[64]]
 ## [1] &quot;Zimbabwe&quot;
 ## 
-## [[65]]
-## [1] &quot;Tunisia&quot;
+## [[57]]
+## [1] &quot;Egypt&quot;
 ## 
-## [[66]]
+## [[58]]
+## [1] &quot;Sao Tome and Principe&quot;
+## 
+## [[59]]
+## [1] &quot;South Africa&quot;
+## 
+## [[60]]
+## [1] &quot;Mauritius&quot;
+## 
+## [[61]]
+## [1] &quot;Mayotte&quot;
+## 
+## [[62]]
+## [1] &quot;NA&quot;
+## 
+## [[63]]
 ## [1] &quot;Morocco&quot;
 ## 
+## [[64]]
+## [1] &quot;Reunion&quot;
+## 
+## [[65]]
+## [1] &quot;Seychelles&quot;
+## 
+## [[66]]
+## [1] &quot;Tunisia&quot;
+## 
 ## [[67]]
-## [1] &quot;Mauritius&quot;</code></pre>
+## [1] &quot;Cabo Verde&quot;</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
