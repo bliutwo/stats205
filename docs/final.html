@@ -448,6 +448,19 @@ filtered_suicide_df$continent &lt;- countrycode(sourcevar = filtered_suicide_df[
 # Get list of continents
 unique(filtered_suicide_df$continent)</code></pre>
 <pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;   NA</code></pre>
+<p>Notably, there are countries that are not on any of the listed continents. Let’s see which ones those are:</p>
+<pre class="r"><code>not_in_a_continent = filtered_suicide_df[is.na(filtered_suicide_df$continent),]
+head(not_in_a_continent)</code></pre>
+<pre><code>##         country year    sex         age suicides_no population continent
+## 32317 Rodrigues 2001 female 15-24 years           0         NA      &lt;NA&gt;
+## 32318 Rodrigues 2001 female 25-34 years           0         NA      &lt;NA&gt;
+## 32319 Rodrigues 2001 female 35-54 years           0         NA      &lt;NA&gt;
+## 32320 Rodrigues 2001 female  5-14 years           0         NA      &lt;NA&gt;
+## 32321 Rodrigues 2001 female 55-74 years           0         NA      &lt;NA&gt;
+## 32322 Rodrigues 2001 female   75+ years           0         NA      &lt;NA&gt;</code></pre>
+<pre class="r"><code>unique(not_in_a_continent$country)</code></pre>
+<pre><code>## [1] Rodrigues            Virgin Islands (USA)
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
 <pre class="r"><code># Get seven dataframes, filtered by list of countries for each continent.
 europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == &#39;Europe&#39;,]
 head(europe_suicide)</code></pre>
