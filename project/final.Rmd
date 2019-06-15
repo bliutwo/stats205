@@ -52,7 +52,7 @@ Filter countries by continent:
 ```{r}
 install.packages("countrycode", dependencies=TRUE, repos='http://cran.us.r-project.org')
 library(countrycode)
-filtered_suicide_df$continent <- countrycode(sourcevar = df[, "country"],
+filtered_suicide_df$continent <- countrycode(sourcevar = filtered_suicide_df[, "country"],
                             origin = "country.name",
                             destination = "continent")
 

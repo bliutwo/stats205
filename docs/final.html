@@ -422,16 +422,19 @@ nrow(filtered_suicide_df)</code></pre>
 <pre><code>## Installing package into &#39;/home/bliutwo/R/x86_64-pc-linux-gnu-library/3.6&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre class="r"><code>library(countrycode)
-df &lt;- data.frame(country = c(&quot;Afghanistan&quot;,
-                             &quot;Algeria&quot;,
-                             &quot;USA&quot;,
-                             &quot;France&quot;,
-                             &quot;New Zealand&quot;,
-                             &quot;Fantasyland&quot;))
-df$continent &lt;- countrycode(sourcevar = df[, &quot;country&quot;],
+filtered_suicide_df$continent &lt;- countrycode(sourcevar = filtered_suicide_df[, &quot;country&quot;],
                             origin = &quot;country.name&quot;,
                             destination = &quot;continent&quot;)</code></pre>
-<pre><code>## Warning in countrycode(sourcevar = df[, &quot;country&quot;], origin = &quot;country.name&quot;, : Some values were not matched unambiguously: Fantasyland</code></pre>
+<pre><code>## Warning in countrycode(sourcevar = filtered_suicide_df[, &quot;country&quot;], origin = &quot;country.name&quot;, : Some values were not matched unambiguously: Rodrigues, Virgin Islands (USA)</code></pre>
+<pre><code>## Warning in countrycode(sourcevar = filtered_suicide_df[, &quot;country&quot;], origin = &quot;country.name&quot;, : Some strings were matched more than once, and therefore set to &lt;NA&gt; in the result: Virgin Islands (USA),Americas,Americas</code></pre>
+<pre class="r"><code>head(filtered_suicide_df)</code></pre>
+<pre><code>##    country year    sex         age suicides_no population continent
+## 25 Albania 1987 female 15-24 years          14     289700    Europe
+## 26 Albania 1987 female 25-34 years           4     257200    Europe
+## 27 Albania 1987 female 35-54 years           6     278800    Europe
+## 28 Albania 1987 female  5-14 years           0     311000    Europe
+## 29 Albania 1987 female 55-74 years           0     144600    Europe
+## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
 <pre class="r"><code># Get seven dataframes, filtered by list of countries for each continent.</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
