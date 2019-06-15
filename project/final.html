@@ -466,10 +466,9 @@ head(not_in_a_continent)</code></pre>
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
 <p>Let us make the choice not to include these countries in the analysis, since there are only two countries.</p>
 <pre class="r"><code># Take off `NA` from list of continents
-list_of_continents[-length(list_of_continents)]</code></pre>
+list_of_continents &lt;- list_of_continents[-length(list_of_continents)]
+list_of_continents</code></pre>
 <pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;</code></pre>
-<pre class="r"><code>list_of_continents</code></pre>
-<pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;   NA</code></pre>
 <p>We will now create six dataframes, filtered by list of countries for each continent.</p>
 <!-- # europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 # head(europe_suicide)
@@ -495,9 +494,9 @@ for (i in seq_along(list_of_continents))
 }
 
 length(countries_per_continent)</code></pre>
-<pre><code>## [1] 6</code></pre>
+<pre><code>## [1] 5</code></pre>
 <pre class="r"><code>length(countries_per_continent)</code></pre>
-<pre><code>## [1] 6</code></pre>
+<pre><code>## [1] 5</code></pre>
 <pre class="r"><code>for (i in seq_along(countries_per_continent))
 {
     print(head(countries_per_continent[[i]]))
@@ -541,15 +540,7 @@ length(countries_per_continent)</code></pre>
 ## 7671 Cabo Verde 2011 female 35-54 years           2      49078    Africa
 ## 7672 Cabo Verde 2011 female  5-14 years           0      56558    Africa
 ## 7673 Cabo Verde 2011 female 55-74 years           2      19887    Africa
-## 7674 Cabo Verde 2011 female   75+ years           0       7582    Africa
-## 
-##      country year  sex  age suicides_no population continent
-## NA      &lt;NA&gt;   NA &lt;NA&gt; &lt;NA&gt;          NA         NA      &lt;NA&gt;
-## NA.1    &lt;NA&gt;   NA &lt;NA&gt; &lt;NA&gt;          NA         NA      &lt;NA&gt;
-## NA.2    &lt;NA&gt;   NA &lt;NA&gt; &lt;NA&gt;          NA         NA      &lt;NA&gt;
-## NA.3    &lt;NA&gt;   NA &lt;NA&gt; &lt;NA&gt;          NA         NA      &lt;NA&gt;
-## NA.4    &lt;NA&gt;   NA &lt;NA&gt; &lt;NA&gt;          NA         NA      &lt;NA&gt;
-## NA.5    &lt;NA&gt;   NA &lt;NA&gt; &lt;NA&gt;          NA         NA      &lt;NA&gt;</code></pre>
+## 7674 Cabo Verde 2011 female   75+ years           0       7582    Africa</code></pre>
 <p><a href="https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop">This text links to very important information about why a <code>for</code> loop doesn’t print anything.</a></p>
 <p>Basically, <code>for</code> loops are functions themselves. Since R prints out the result of a command automatically, but functions are not inherently a command (unless explicitly run), you need to have <code>print(command())</code> in order to get output.</p>
 </div>

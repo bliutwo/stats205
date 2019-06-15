@@ -83,7 +83,7 @@ Let us make the choice not to include these countries in the analysis, since the
 
 ```{r}
 # Take off `NA` from list of continents
-list_of_continents[-length(list_of_continents)]
+list_of_continents <- list_of_continents[-length(list_of_continents)]
 list_of_continents
 ```
 
