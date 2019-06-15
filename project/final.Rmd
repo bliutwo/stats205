@@ -102,7 +102,7 @@ We will now create six dataframes, filtered by list of countries for each contin
 # length(africa_suicide$country)
 for (continent in list_of_continents)
 {
-	string(continent)
+	cat(continent)
 }
 ```
 
