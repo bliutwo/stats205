@@ -422,7 +422,6 @@ head(filtered_suicide_df)</code></pre>
 ## 28 Albania 1987 female  5-14 years           0     311000
 ## 29 Albania 1987 female 55-74 years           0     144600
 ## 30 Albania 1987 female   75+ years           1      35600</code></pre>
-<pre class="r"><code>write.csv(filtered_suicide_df, &#39;filtered_suicide.csv&#39;)</code></pre>
 <blockquote>
 <p>After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.</p>
 </blockquote>
@@ -444,7 +443,13 @@ filtered_suicide_df$continent &lt;- countrycode(sourcevar = filtered_suicide_df[
 ## 28 Albania 1987 female  5-14 years           0     311000    Europe
 ## 29 Albania 1987 female 55-74 years           0     144600    Europe
 ## 30 Albania 1987 female   75+ years           1      35600    Europe</code></pre>
-<pre class="r"><code># Get seven dataframes, filtered by list of countries for each continent.</code></pre>
+<pre class="r"><code>write.csv(filtered_suicide_df, &#39;filtered_suicide.csv&#39;)
+
+# Get seven dataframes, filtered by list of countries for each continent.
+
+europe_suicide = filtered_suicide_df[filtered_suicide_df$country == &#39;Europe&#39;]
+head(europe_suicide)</code></pre>
+<pre><code>## data frame with 0 columns and 6 rows</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>

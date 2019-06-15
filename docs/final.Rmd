@@ -37,7 +37,6 @@ colnames(who_suicide_statistics_df)
 library(tidyverse)
 filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
 head(filtered_suicide_df)
-write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 ```
 
 >After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.
@@ -56,8 +55,12 @@ filtered_suicide_df$continent <- countrycode(sourcevar = filtered_suicide_df[, "
                             destination = "continent")
 
 head(filtered_suicide_df)
+write.csv(filtered_suicide_df, 'filtered_suicide.csv')
 
 # Get seven dataframes, filtered by list of countries for each continent.
+
+europe_suicide = filtered_suicide_df[filtered_suicide_df$country == 'Europe']
+head(europe_suicide)
 
 ```
 
