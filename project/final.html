@@ -546,6 +546,77 @@ length(countries_per_continent)</code></pre>
 <p>Randomly sample 17 countries from each continent:</p>
 <pre class="r"><code>list_of_continents</code></pre>
 <pre><code>## [1] &quot;Europe&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Oceania&quot;  &quot;Africa&quot;</code></pre>
+<pre class="r"><code>for (i in seq_along(countries_per_continent))
+{
+    print(unique(countries_per_continent[[i]]$country))
+}</code></pre>
+<pre><code>##  [1] Albania                Austria                Belarus               
+##  [4] Belgium                Bosnia and Herzegovina Bulgaria              
+##  [7] Croatia                Czech Republic         Denmark               
+## [10] Estonia                Finland                France                
+## [13] Germany                Greece                 Hungary               
+## [16] Iceland                Ireland                Italy                 
+## [19] Latvia                 Lithuania              Luxembourg            
+## [22] Malta                  Monaco                 Montenegro            
+## [25] Netherlands            Norway                 Poland                
+## [28] Portugal               Republic of Moldova    &lt;NA&gt;                  
+## [31] Romania                Russian Federation     San Marino            
+## [34] Serbia                 Slovakia               Slovenia              
+## [37] Spain                  Sweden                 Switzerland           
+## [40] TFYR Macedonia         Ukraine                United Kingdom        
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+##  [1] Anguilla                           Antigua and Barbuda               
+##  [3] Argentina                          Aruba                             
+##  [5] Bahamas                            Barbados                          
+##  [7] Belize                             Bermuda                           
+##  [9] Bolivia                            Brazil                            
+## [11] British Virgin Islands             Canada                            
+## [13] Cayman Islands                     Chile                             
+## [15] Colombia                           Costa Rica                        
+## [17] Cuba                               Dominica                          
+## [19] Dominican Republic                 Ecuador                           
+## [21] El Salvador                        Falkland Islands (Malvinas)       
+## [23] French Guiana                      Grenada                           
+## [25] Guadeloupe                         Guatemala                         
+## [27] Guyana                             Haiti                             
+## [29] Honduras                           Jamaica                           
+## [31] Martinique                         Mexico                            
+## [33] Montserrat                         Netherlands Antilles              
+## [35] Nicaragua                          Panama                            
+## [37] Paraguay                           Peru                              
+## [39] Puerto Rico                        &lt;NA&gt;                              
+## [41] Saint Kitts and Nevis              Saint Lucia                       
+## [43] Saint Pierre and Miquelon          Saint Vincent and Grenadines      
+## [45] Suriname                           Trinidad and Tobago               
+## [47] Turks and Caicos Islands           United States of America          
+## [49] Uruguay                            Venezuela (Bolivarian Republic of)
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+##  [1] Armenia                        Azerbaijan                    
+##  [3] Bahrain                        Brunei Darussalam             
+##  [5] Cyprus                         Georgia                       
+##  [7] Hong Kong SAR                  Iran (Islamic Rep of)         
+##  [9] Iraq                           Israel                        
+## [11] Japan                          Jordan                        
+## [13] Kazakhstan                     Kuwait                        
+## [15] Kyrgyzstan                     Macau                         
+## [17] Malaysia                       Maldives                      
+## [19] Mongolia                       Occupied Palestinian Territory
+## [21] Oman                           Philippines                   
+## [23] Qatar                          Republic of Korea             
+## [25] &lt;NA&gt;                           Saudi Arabia                  
+## [27] Singapore                      Sri Lanka                     
+## [29] Syrian Arab Republic           Tajikistan                    
+## [31] Thailand                       Turkey                        
+## [33] Turkmenistan                   United Arab Emirates          
+## [35] Uzbekistan                    
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] Australia   Fiji        Kiribati    New Zealand &lt;NA&gt;       
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+##  [1] Cabo Verde            Egypt                 Mauritius            
+##  [4] Mayotte               Morocco               Reunion              
+##  [7] &lt;NA&gt;                  Sao Tome and Principe Seychelles           
+## [10] South Africa          Tunisia               Zimbabwe             
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
