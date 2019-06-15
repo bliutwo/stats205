@@ -102,6 +102,7 @@ We will now create six dataframes, filtered by list of countries for each contin
 # length(africa_suicide$country)
 library(rlist)
 countries_per_continent <- list()
+length(list_of_continents)
 for (i in seq_along(list_of_continents))
 {
 	cat(list_of_continents[i])
