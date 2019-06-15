@@ -130,6 +130,11 @@ for (i in seq_along(list_of_continents))
 	# why does THIS not work if that works?
 	continent_eur <- filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 	head(continent_eur)
+
+	# LITERALLY COPY PASTING IT
+	stringerino <- "Europe"
+	asdfg <- filtered_suicide_df[filtered_suicide_df$continent == stringerino,]
+	head(asdfg)
 }
 
 length(countries_per_continent)
