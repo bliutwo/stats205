@@ -438,7 +438,7 @@ $(document).ready(function () {
 <h1>3. Data analysis or simulation study</h1>
 <p>We will use the crude rate of suicide per 100,000 people.</p>
 <blockquote>
-<p>This analysis provides information on age-standardized rates… &lt;!–</p>
+<p>This analysis provides information on age-standardized rates…</p>
 </blockquote>
 <pre class="r"><code>who_suicide_statistics_df &lt;- read.csv(&quot;who_suicide_statistics.csv&quot;)
 head(who_suicide_statistics_df)</code></pre>
@@ -452,7 +452,9 @@ head(who_suicide_statistics_df)</code></pre>
 <pre class="r"><code>colnames(who_suicide_statistics_df)</code></pre>
 <pre><code>## [1] &quot;country&quot;     &quot;year&quot;        &quot;sex&quot;         &quot;age&quot;         &quot;suicides_no&quot;
 ## [6] &quot;population&quot;</code></pre>
-<p>–&gt; &gt;Filter and save countries with missing suicide rate.</p>
+<blockquote>
+<p>Filter and save countries with missing suicide rate.</p>
+</blockquote>
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
 <pre class="r"><code>library(tidyverse)
 filtered_suicide_df &lt;- drop_na(who_suicide_statistics_df, &quot;suicides_no&quot;)
@@ -709,48 +711,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Hungary                Belarus                &lt;NA&gt;                  
-##  [4] San Marino             Republic of Moldova    Iceland               
-##  [7] Estonia                Denmark                Switzerland           
-## [10] Montenegro             Sweden                 Greece                
-## [13] Romania                Monaco                 Bulgaria              
-## [16] Bosnia and Herzegovina Netherlands           
+##  [1] Belgium                Germany                Czech Republic        
+##  [4] Republic of Moldova    Slovakia               Bulgaria              
+##  [7] Greece                 &lt;NA&gt;                   Slovenia              
+## [10] Romania                Latvia                 Italy                 
+## [13] Switzerland            Sweden                 Estonia               
+## [16] Netherlands            Bosnia and Herzegovina
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Peru                               Grenada                           
-##  [3] Bermuda                            Nicaragua                         
-##  [5] Saint Lucia                        Haiti                             
-##  [7] Netherlands Antilles               Jamaica                           
-##  [9] Falkland Islands (Malvinas)        Chile                             
-## [11] Panama                             Puerto Rico                       
-## [13] Costa Rica                         Suriname                          
-## [15] Mexico                             Venezuela (Bolivarian Republic of)
-## [17] Ecuador                           
+##  [1] Dominican Republic           Trinidad and Tobago         
+##  [3] Dominica                     Saint Vincent and Grenadines
+##  [5] Turks and Caicos Islands     Brazil                      
+##  [7] Argentina                    Suriname                    
+##  [9] United States of America     Bolivia                     
+## [11] Haiti                        &lt;NA&gt;                        
+## [13] Guadeloupe                   Montserrat                  
+## [15] Mexico                       Honduras                    
+## [17] Paraguay                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Brunei Darussalam     Oman                  Thailand             
-##  [4] Turkmenistan          Syrian Arab Republic  Japan                
-##  [7] Macau                 Hong Kong SAR         Iraq                 
-## [10] Bahrain               Jordan                Georgia              
-## [13] Mongolia              Azerbaijan            Iran (Islamic Rep of)
-## [16] Malaysia              Maldives             
+##  [1] Kyrgyzstan                     Qatar                         
+##  [3] Jordan                         Maldives                      
+##  [5] Cyprus                         &lt;NA&gt;                          
+##  [7] Azerbaijan                     Oman                          
+##  [9] United Arab Emirates           Georgia                       
+## [11] Armenia                        Malaysia                      
+## [13] Occupied Palestinian Territory Republic of Korea             
+## [15] Saudi Arabia                   Philippines                   
+## [17] Sri Lanka                     
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Fiji        Australia   New Zealand &lt;NA&gt;        Kiribati   
+## [1] Fiji        Australia   Kiribati    &lt;NA&gt;        New Zealand
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Sao Tome and Principe Mauritius             Egypt                
-##  [4] Zimbabwe              Tunisia               Mayotte              
-##  [7] Reunion               South Africa          &lt;NA&gt;                 
-## [10] Seychelles            Morocco               Cabo Verde           
+##  [1] Cabo Verde            Egypt                 Mayotte              
+##  [4] Morocco               Mauritius             South Africa         
+##  [7] Tunisia               Seychelles            Reunion              
+## [10] Sao Tome and Principe &lt;NA&gt;                  Zimbabwe             
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
