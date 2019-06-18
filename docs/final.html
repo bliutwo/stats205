@@ -428,7 +428,7 @@ $(document).ready(function () {
 <div id="cross-validation" class="section level2">
 <h2>Cross validation</h2>
 <blockquote>
-<p>Cross-validation, sometimes called rotation estimation,<span class="citation">(Geisser 1993)</span>[2][3] or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).[4][5] The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
+<p>Cross-validation, sometimes called rotation estimation,<span class="citation">(Geisser 1993)</span><span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span><span class="citation">(<span class="citeproc-not-found" data-reference-id="devijver_kittler_1982"><strong>???</strong></span>)</span> or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).[4][5] The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
 <p>One round of cross-validation involves partitioning a sample of data into complementary subsets, performing the analysis on one subset (called the training set), and validating the analysis on the other subset (called the validation set or testing set). To reduce variability, in most methods multiple rounds of cross-validation are performed using different partitions, and the validation results are combined (e.g. averaged) over the rounds to give an estimate of the model’s predictive performance.</p>
 <p>In summary, cross-validation combines (averages) measures of fitness in prediction to derive a more accurate estimate of model prediction performance.[7]</p>
 </blockquote>
@@ -711,51 +711,48 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] San Marino             Estonia                Bosnia and Herzegovina
-##  [4] Belarus                Greece                 Ukraine               
-##  [7] Bulgaria               Monaco                 Republic of Moldova   
-## [10] Montenegro             Austria                Albania               
-## [13] Slovenia               Ireland                Belgium               
-## [16] Norway                 Slovakia              
+##  [1] Italy                  France                 Finland               
+##  [4] Hungary                Portugal               Belarus               
+##  [7] Estonia                Greece                 Netherlands           
+## [10] Iceland                Austria                Bosnia and Herzegovina
+## [13] Croatia                Spain                  Serbia                
+## [16] Poland                 Romania               
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Martinique                         Canada                            
-##  [3] El Salvador                        Haiti                             
-##  [5] Dominican Republic                 Bahamas                           
-##  [7] Saint Kitts and Nevis              Venezuela (Bolivarian Republic of)
-##  [9] Costa Rica                         Colombia                          
-## [11] Guatemala                          United States of America          
-## [13] Suriname                           Nicaragua                         
-## [15] Chile                              Jamaica                           
-## [17] Turks and Caicos Islands          
+##  [1] Haiti                              Bermuda                           
+##  [3] Netherlands Antilles               Argentina                         
+##  [5] Honduras                           Trinidad and Tobago               
+##  [7] Cuba                               Bolivia                           
+##  [9] Ecuador                            Panama                            
+## [11] Dominica                           Peru                              
+## [13] Guatemala                          Uruguay                           
+## [15] Barbados                           Venezuela (Bolivarian Republic of)
+## [17] &lt;NA&gt;                              
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Turkey                         Republic of Korea             
-##  [3] Iran (Islamic Rep of)          Singapore                     
-##  [5] Azerbaijan                     Thailand                      
-##  [7] Occupied Palestinian Territory Uzbekistan                    
-##  [9] Oman                           Georgia                       
-## [11] Armenia                        Sri Lanka                     
-## [13] Macau                          Kazakhstan                    
-## [15] Cyprus                         Malaysia                      
-## [17] Maldives                      
+##  [1] Turkey               Japan                Philippines         
+##  [4] Hong Kong SAR        Malaysia             Tajikistan          
+##  [7] Kyrgyzstan           Uzbekistan           Syrian Arab Republic
+## [10] Oman                 Macau                Georgia             
+## [13] Sri Lanka            Bahrain              Jordan              
+## [16] Republic of Korea    Kazakhstan          
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] &lt;NA&gt;        Australia   Fiji        Kiribati    New Zealand
+## [1] New Zealand &lt;NA&gt;        Kiribati    Fiji        Australia  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Mauritius             Sao Tome and Principe Cabo Verde           
-##  [4] Mayotte               Reunion               South Africa         
-##  [7] Tunisia               Seychelles            Zimbabwe             
-## [10] Egypt                 Morocco               &lt;NA&gt;                 
+##  [1] Mayotte               Morocco               &lt;NA&gt;                 
+##  [4] Zimbabwe              Reunion               Tunisia              
+##  [7] Seychelles            Sao Tome and Principe Egypt                
+## [10] Cabo Verde            Mauritius             South Africa         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -812,6 +809,9 @@ length(countries_to_test)</code></pre>
 <div id="refs" class="references">
 <div id="ref-parametric_or_non-parametric_bootstrap">
 <p>“A Parametric or Non-Parametric Bootstrap?” n.d. <em>Parametric or Non-Parametric Bootstrap</em>. <a href="https://influentialpoints.com/Training/nonparametric-or-parametric_bootstrap.htm">https://influentialpoints.com/Training/nonparametric-or-parametric_bootstrap.htm</a>.</p>
+</div>
+<div id="ref-acm_digital_library">
+<p>“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection.” n.d. <em>ACM Digital Library</em>. Morgan Kaufmann Publishers Inc. <a href="https://dl.acm.org/citation.cfm?id=1643047">https://dl.acm.org/citation.cfm?id=1643047</a>.</p>
 </div>
 <div id="ref-from_wolfram_mathworld">
 <p>“Bootstrap Methods.” n.d. <em>From Wolfram MathWorld</em>. <a href="http://mathworld.wolfram.com/BootstrapMethods.html">http://mathworld.wolfram.com/BootstrapMethods.html</a>.</p>
