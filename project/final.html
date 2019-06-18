@@ -411,7 +411,7 @@ $(document).ready(function () {
 <h2>Linear regression - Kendall rank correlation coefficient</h2>
 <blockquote>
 <p>In statistics, the Kendall rank correlation coefficient, commonly referred to as Kendall’s tau coefficient (after the Greek letter <span class="math inline">\(\tau\)</span>), is a statistic used to measure the ordinal association between two measured quantities. A tau test is a non-parametric hypothesis test for statistical dependence based on the tau coefficient.</p>
-<p>It is a measure of rank correlation: the similarity of the orderings of the data when ranked by each of the quantities. It is named after Maurice Kendall, who developed it in 1938,<span class="citation">(<span class="citeproc-not-found" data-reference-id="kendall_1938"><strong>???</strong></span>)</span> though Gustav Fechner had proposed a similar measure in the context of time series in 1897.[2]</p>
+<p>It is a measure of rank correlation: the similarity of the orderings of the data when ranked by each of the quantities. It is named after Maurice Kendall, who developed it in 1938,<span class="citation">(Kendall 1938)</span> though Gustav Fechner had proposed a similar measure in the context of time series in 1897.<span class="citation">(“Measures of Association for Ordinal Data,” n.d.)</span></p>
 <p>Intuitively, the Kendall correlation between two variables will be high when observations have a similar (or identical for a correlation of 1) rank (i.e. relative position label of the observations within the variable: 1st, 2nd, 3rd, etc.) between the two variables, and low when observations have a dissimilar (or fully different for a correlation of -1) rank between the two variables.</p>
 <p>Both Kendall’s <span class="math inline">\(\tau\)</span> and Spearman’s <span class="math inline">\(\rho\)</span> can be formulated as special cases of a more general correlation coefficient.</p>
 </blockquote>
@@ -697,48 +697,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Germany                Switzerland            Belarus               
-##  [4] Hungary                Poland                 Ireland               
-##  [7] Belgium                Bosnia and Herzegovina Norway                
-## [10] Finland                Slovakia               Estonia               
-## [13] Italy                  Romania                Spain                 
-## [16] Bulgaria               &lt;NA&gt;                  
+##  [1] TFYR Macedonia         Republic of Moldova    Germany               
+##  [4] Belgium                Hungary                Finland               
+##  [7] Bosnia and Herzegovina Luxembourg             Romania               
+## [10] Russian Federation     Austria                Czech Republic        
+## [13] Serbia                 United Kingdom         Monaco                
+## [16] Italy                  Belarus               
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] British Virgin Islands    Peru                     
-##  [3] United States of America  Guatemala                
-##  [5] Trinidad and Tobago       French Guiana            
-##  [7] Montserrat                Saint Pierre and Miquelon
-##  [9] Guyana                    Dominica                 
-## [11] Argentina                 Bermuda                  
-## [13] Aruba                     Antigua and Barbuda      
-## [15] Puerto Rico               Netherlands Antilles     
-## [17] El Salvador              
+##  [1] Canada                       Colombia                    
+##  [3] Martinique                   Paraguay                    
+##  [5] Belize                       Honduras                    
+##  [7] Dominica                     Antigua and Barbuda         
+##  [9] Mexico                       French Guiana               
+## [11] Bahamas                      El Salvador                 
+## [13] Panama                       Saint Vincent and Grenadines
+## [15] Uruguay                      Argentina                   
+## [17] United States of America    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Kazakhstan            Azerbaijan            Philippines          
-##  [4] Malaysia              Armenia               Macau                
-##  [7] Oman                  Japan                 Tajikistan           
-## [10] Brunei Darussalam     &lt;NA&gt;                  Uzbekistan           
-## [13] Thailand              Iraq                  Kuwait               
-## [16] Syrian Arab Republic  Iran (Islamic Rep of)
+##  [1] Hong Kong SAR                  Cyprus                        
+##  [3] Occupied Palestinian Territory Bahrain                       
+##  [5] Thailand                       Turkmenistan                  
+##  [7] Singapore                      Iraq                          
+##  [9] Mongolia                       Turkey                        
+## [11] Macau                          Maldives                      
+## [13] Oman                           Azerbaijan                    
+## [15] Philippines                    Saudi Arabia                  
+## [17] Iran (Islamic Rep of)         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] &lt;NA&gt;        New Zealand Kiribati    Fiji        Australia  
+## [1] Fiji        New Zealand Australia   &lt;NA&gt;        Kiribati   
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] South Africa          Zimbabwe              Reunion              
-##  [4] Seychelles            Morocco               Mayotte              
-##  [7] Tunisia               Cabo Verde            Sao Tome and Principe
-## [10] &lt;NA&gt;                  Egypt                 Mauritius            
+##  [1] Morocco               South Africa          &lt;NA&gt;                 
+##  [4] Zimbabwe              Tunisia               Seychelles           
+##  [7] Cabo Verde            Sao Tome and Principe Mauritius            
+## [10] Egypt                 Mayotte               Reunion              
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -787,205 +790,205 @@ length(countries_to_test)</code></pre>
 <pre><code>## [1] 67</code></pre>
 <pre class="r"><code>countries_to_test</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;Switzerland&quot;
+## [1] &quot;Republic of Moldova&quot;
 ## 
 ## [[2]]
-## [1] &quot;Belarus&quot;
+## [1] &quot;Germany&quot;
 ## 
 ## [[3]]
-## [1] &quot;Hungary&quot;
-## 
-## [[4]]
-## [1] &quot;Poland&quot;
-## 
-## [[5]]
-## [1] &quot;Ireland&quot;
-## 
-## [[6]]
 ## [1] &quot;Belgium&quot;
 ## 
-## [[7]]
-## [1] &quot;Bosnia and Herzegovina&quot;
+## [[4]]
+## [1] &quot;Hungary&quot;
 ## 
-## [[8]]
-## [1] &quot;Norway&quot;
-## 
-## [[9]]
+## [[5]]
 ## [1] &quot;Finland&quot;
 ## 
-## [[10]]
-## [1] &quot;Slovakia&quot;
+## [[6]]
+## [1] &quot;Bosnia and Herzegovina&quot;
 ## 
-## [[11]]
-## [1] &quot;Estonia&quot;
+## [[7]]
+## [1] &quot;Luxembourg&quot;
 ## 
-## [[12]]
-## [1] &quot;Italy&quot;
-## 
-## [[13]]
+## [[8]]
 ## [1] &quot;Romania&quot;
 ## 
+## [[9]]
+## [1] &quot;Russian Federation&quot;
+## 
+## [[10]]
+## [1] &quot;Austria&quot;
+## 
+## [[11]]
+## [1] &quot;Czech Republic&quot;
+## 
+## [[12]]
+## [1] &quot;Serbia&quot;
+## 
+## [[13]]
+## [1] &quot;United Kingdom&quot;
+## 
 ## [[14]]
-## [1] &quot;Spain&quot;
+## [1] &quot;Monaco&quot;
 ## 
 ## [[15]]
-## [1] &quot;Bulgaria&quot;
+## [1] &quot;Italy&quot;
 ## 
 ## [[16]]
-## [1] &quot;NA&quot;
+## [1] &quot;Belarus&quot;
 ## 
 ## [[17]]
-## [1] &quot;British Virgin Islands&quot;
+## [1] &quot;Canada&quot;
 ## 
 ## [[18]]
-## [1] &quot;Peru&quot;
+## [1] &quot;Colombia&quot;
 ## 
 ## [[19]]
-## [1] &quot;United States of America&quot;
+## [1] &quot;Martinique&quot;
 ## 
 ## [[20]]
-## [1] &quot;Guatemala&quot;
+## [1] &quot;Paraguay&quot;
 ## 
 ## [[21]]
-## [1] &quot;Trinidad and Tobago&quot;
+## [1] &quot;Belize&quot;
 ## 
 ## [[22]]
-## [1] &quot;French Guiana&quot;
+## [1] &quot;Honduras&quot;
 ## 
 ## [[23]]
-## [1] &quot;Montserrat&quot;
-## 
-## [[24]]
-## [1] &quot;Saint Pierre and Miquelon&quot;
-## 
-## [[25]]
-## [1] &quot;Guyana&quot;
-## 
-## [[26]]
 ## [1] &quot;Dominica&quot;
 ## 
-## [[27]]
-## [1] &quot;Argentina&quot;
-## 
-## [[28]]
-## [1] &quot;Bermuda&quot;
-## 
-## [[29]]
-## [1] &quot;Aruba&quot;
-## 
-## [[30]]
+## [[24]]
 ## [1] &quot;Antigua and Barbuda&quot;
 ## 
-## [[31]]
-## [1] &quot;Puerto Rico&quot;
+## [[25]]
+## [1] &quot;Mexico&quot;
 ## 
-## [[32]]
-## [1] &quot;Netherlands Antilles&quot;
+## [[26]]
+## [1] &quot;French Guiana&quot;
 ## 
-## [[33]]
+## [[27]]
+## [1] &quot;Bahamas&quot;
+## 
+## [[28]]
 ## [1] &quot;El Salvador&quot;
 ## 
+## [[29]]
+## [1] &quot;Panama&quot;
+## 
+## [[30]]
+## [1] &quot;Saint Vincent and Grenadines&quot;
+## 
+## [[31]]
+## [1] &quot;Uruguay&quot;
+## 
+## [[32]]
+## [1] &quot;Argentina&quot;
+## 
+## [[33]]
+## [1] &quot;United States of America&quot;
+## 
 ## [[34]]
-## [1] &quot;Kazakhstan&quot;
+## [1] &quot;Hong Kong SAR&quot;
 ## 
 ## [[35]]
-## [1] &quot;Azerbaijan&quot;
+## [1] &quot;Cyprus&quot;
 ## 
 ## [[36]]
-## [1] &quot;Philippines&quot;
+## [1] &quot;Occupied Palestinian Territory&quot;
 ## 
 ## [[37]]
-## [1] &quot;Malaysia&quot;
+## [1] &quot;Bahrain&quot;
 ## 
 ## [[38]]
-## [1] &quot;Armenia&quot;
-## 
-## [[39]]
-## [1] &quot;Macau&quot;
-## 
-## [[40]]
-## [1] &quot;Oman&quot;
-## 
-## [[41]]
-## [1] &quot;Japan&quot;
-## 
-## [[42]]
-## [1] &quot;Tajikistan&quot;
-## 
-## [[43]]
-## [1] &quot;Brunei Darussalam&quot;
-## 
-## [[44]]
-## [1] &quot;NA&quot;
-## 
-## [[45]]
-## [1] &quot;Uzbekistan&quot;
-## 
-## [[46]]
 ## [1] &quot;Thailand&quot;
 ## 
-## [[47]]
+## [[39]]
+## [1] &quot;Turkmenistan&quot;
+## 
+## [[40]]
+## [1] &quot;Singapore&quot;
+## 
+## [[41]]
 ## [1] &quot;Iraq&quot;
 ## 
+## [[42]]
+## [1] &quot;Mongolia&quot;
+## 
+## [[43]]
+## [1] &quot;Turkey&quot;
+## 
+## [[44]]
+## [1] &quot;Macau&quot;
+## 
+## [[45]]
+## [1] &quot;Maldives&quot;
+## 
+## [[46]]
+## [1] &quot;Oman&quot;
+## 
+## [[47]]
+## [1] &quot;Azerbaijan&quot;
+## 
 ## [[48]]
-## [1] &quot;Kuwait&quot;
+## [1] &quot;Philippines&quot;
 ## 
 ## [[49]]
-## [1] &quot;Syrian Arab Republic&quot;
+## [1] &quot;Saudi Arabia&quot;
 ## 
 ## [[50]]
 ## [1] &quot;Iran (Islamic Rep of)&quot;
 ## 
 ## [[51]]
-## [1] &quot;NA&quot;
+## [1] &quot;Fiji&quot;
 ## 
 ## [[52]]
 ## [1] &quot;New Zealand&quot;
 ## 
 ## [[53]]
-## [1] &quot;Kiribati&quot;
-## 
-## [[54]]
-## [1] &quot;Fiji&quot;
-## 
-## [[55]]
 ## [1] &quot;Australia&quot;
 ## 
-## [[56]]
-## [1] &quot;South Africa&quot;
-## 
-## [[57]]
-## [1] &quot;Zimbabwe&quot;
-## 
-## [[58]]
-## [1] &quot;Reunion&quot;
-## 
-## [[59]]
-## [1] &quot;Seychelles&quot;
-## 
-## [[60]]
-## [1] &quot;Morocco&quot;
-## 
-## [[61]]
-## [1] &quot;Mayotte&quot;
-## 
-## [[62]]
-## [1] &quot;Tunisia&quot;
-## 
-## [[63]]
-## [1] &quot;Cabo Verde&quot;
-## 
-## [[64]]
-## [1] &quot;Sao Tome and Principe&quot;
-## 
-## [[65]]
+## [[54]]
 ## [1] &quot;NA&quot;
 ## 
-## [[66]]
+## [[55]]
+## [1] &quot;Kiribati&quot;
+## 
+## [[56]]
+## [1] &quot;Morocco&quot;
+## 
+## [[57]]
+## [1] &quot;South Africa&quot;
+## 
+## [[58]]
+## [1] &quot;NA&quot;
+## 
+## [[59]]
+## [1] &quot;Zimbabwe&quot;
+## 
+## [[60]]
+## [1] &quot;Tunisia&quot;
+## 
+## [[61]]
+## [1] &quot;Seychelles&quot;
+## 
+## [[62]]
+## [1] &quot;Cabo Verde&quot;
+## 
+## [[63]]
+## [1] &quot;Sao Tome and Principe&quot;
+## 
+## [[64]]
+## [1] &quot;Mauritius&quot;
+## 
+## [[65]]
 ## [1] &quot;Egypt&quot;
 ## 
+## [[66]]
+## [1] &quot;Mayotte&quot;
+## 
 ## [[67]]
-## [1] &quot;Mauritius&quot;</code></pre>
+## [1] &quot;Reunion&quot;</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
@@ -1001,6 +1004,12 @@ length(countries_to_test)</code></pre>
 </div>
 <div id="ref-efron_tibshirani_1993">
 <p>Efron, Bradley, and Robert Tibshirani. 1993. <em>An Introduction to the Bootstrap</em>. Chapman; Hall.</p>
+</div>
+<div id="ref-kendall_1938">
+<p>Kendall, M. G. 1938. “A New Measure of Rank Correlation.” <em>Biometrika</em> 30 (1/2): 81. <a href="https://doi.org/10.2307/2332226">https://doi.org/10.2307/2332226</a>.</p>
+</div>
+<div id="ref-measures_of_association">
+<p>“Measures of Association for Ordinal Data.” n.d. <em>Measures of Association</em>, 64–85. <a href="https://doi.org/10.4135/9781412984942.n5">https://doi.org/10.4135/9781412984942.n5</a>.</p>
 </div>
 <div id="ref-szamil_2018">
 <p>Szamil. 2018. “WHO Suicide Statistics.” <em>Kaggle</em>. <a href="https://www.kaggle.com/szamil/who-suicide-statistics">https://www.kaggle.com/szamil/who-suicide-statistics</a>.</p>
