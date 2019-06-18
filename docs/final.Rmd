@@ -39,8 +39,24 @@ We will use the statistical techniques of nonparametric bootstrap and parametric
 >It may also be used for constructing hypothesis tests. It is often used as an alternative to statistical inference based on the assumption of a parametric model when that assumption is in doubt, or where parametric inference is impossible or requires complicated formulas for the calculation of standard errors.
 
 ## Nonparametric vs. Parametric bootstrap
-
-
+ 
+>Whereas nonparametric bootstraps make no assumptions about how your observations are distributed, and resample your original sample, parametric bootstraps resample a known distribution function, whose parameters are estimated from your sample.
+>These bootstrap estimates are either used to attach confidence limits nonparametrically - or a second parametric model is fitted using parameters estimated from the distribution of the bootstrap estimates, from which confidence limits are obtained analytically.
+>The advantages and disadvantages of this approach, compared to nonparametric bootstrapping, can be summarised as follows.
+>
+>In the nonparametric bootstrap, samples are drawn from a discrete set of n observations. This can be a serious disadvantage in small sample sizes because spurious fine structure in the original sample, but absent from the population sampled, may be faithfully reproduced in the simulated data.
+>Another concern is that because small samples have only a few values, covering a restricted range, nonparametric bootstrap samples underestimate the amount of variation in the population you originally sampled. As a result, statisticians generally see samples of 10 or less as too small for reliable nonparametric bootstrapping.
+>
+>Small samples convey little reliable information about the higher moments of their population distribution function - in which case, a relatively simple function may be adequate.
+>
+>Although parametric bootstrapping provides more power than the nonparametric bootstrap, it does so on the basis of an inherently arbitrary choice of model. Whilst the cumulative distribution of even quite small samples deviate little from that of their population, it can be far from easy to select the most appropriate mathematical function a priori.
+>Maximum likelihood estimators are commonly used for parametric bootstrapping despite the fact that this criterion is nearly always based upon their large sample behaviour.
+>
+>Choosing an appropriate parametric error structure for a statistic based upon small samples can be awkward to justify. Bootstrap t statistics present an additional problem, partly because of problems in estimating standard errors analytically, partly because of difficulties in working out a suitable number of degrees of freedom for your pivot's (presumed, but often large-sample-based) distribution.
+>
+>So although parametric bootstrapping can be relatively straightforward to perform, and may be used to construct confidence intervals for the sample median of small samples, the bootstrap and estimator distribution functions are often very different. In addition, confidence limits may enclose invalid parameter values, and the coverage error is no better than nonparametric intervals.
+>
+>Confusingly, whilst the parametric bootstrap is sometimes described as a basic bootstrap, resampling residuals is sometimes referred to as being 'semi parametric' - which is also used to describe test-inversion and smoothed sample bootstraps. Resampling residuals is most popularly used to obtain bootstrap confidence intervals for regression coefficients, for example in nonparametric regression. [@parametric_or_non-parametric_bootstrap]
 
 ## Linear regression - Kendall rank correlation coefficient
 

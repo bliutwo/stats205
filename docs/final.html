@@ -406,6 +406,15 @@ $(document).ready(function () {
 </div>
 <div id="nonparametric-vs.-parametric-bootstrap" class="section level2">
 <h2>Nonparametric vs. Parametric bootstrap</h2>
+<blockquote>
+<p>Whereas nonparametric bootstraps make no assumptions about how your observations are distributed, and resample your original sample, parametric bootstraps resample a known distribution function, whose parameters are estimated from your sample. These bootstrap estimates are either used to attach confidence limits nonparametrically - or a second parametric model is fitted using parameters estimated from the distribution of the bootstrap estimates, from which confidence limits are obtained analytically. The advantages and disadvantages of this approach, compared to nonparametric bootstrapping, can be summarised as follows.</p>
+<p>In the nonparametric bootstrap, samples are drawn from a discrete set of n observations. This can be a serious disadvantage in small sample sizes because spurious fine structure in the original sample, but absent from the population sampled, may be faithfully reproduced in the simulated data. Another concern is that because small samples have only a few values, covering a restricted range, nonparametric bootstrap samples underestimate the amount of variation in the population you originally sampled. As a result, statisticians generally see samples of 10 or less as too small for reliable nonparametric bootstrapping.</p>
+<p>Small samples convey little reliable information about the higher moments of their population distribution function - in which case, a relatively simple function may be adequate.</p>
+<p>Although parametric bootstrapping provides more power than the nonparametric bootstrap, it does so on the basis of an inherently arbitrary choice of model. Whilst the cumulative distribution of even quite small samples deviate little from that of their population, it can be far from easy to select the most appropriate mathematical function a priori. Maximum likelihood estimators are commonly used for parametric bootstrapping despite the fact that this criterion is nearly always based upon their large sample behaviour.</p>
+<p>Choosing an appropriate parametric error structure for a statistic based upon small samples can be awkward to justify. Bootstrap t statistics present an additional problem, partly because of problems in estimating standard errors analytically, partly because of difficulties in working out a suitable number of degrees of freedom for your pivot’s (presumed, but often large-sample-based) distribution.</p>
+<p>So although parametric bootstrapping can be relatively straightforward to perform, and may be used to construct confidence intervals for the sample median of small samples, the bootstrap and estimator distribution functions are often very different. In addition, confidence limits may enclose invalid parameter values, and the coverage error is no better than nonparametric intervals.</p>
+<p>Confusingly, whilst the parametric bootstrap is sometimes described as a basic bootstrap, resampling residuals is sometimes referred to as being ‘semi parametric’ - which is also used to describe test-inversion and smoothed sample bootstraps. Resampling residuals is most popularly used to obtain bootstrap confidence intervals for regression coefficients, for example in nonparametric regression. <span class="citation">(“A Parametric or Non-Parametric Bootstrap?” n.d.)</span></p>
+</blockquote>
 </div>
 <div id="linear-regression---kendall-rank-correlation-coefficient" class="section level2">
 <h2>Linear regression - Kendall rank correlation coefficient</h2>
@@ -697,48 +706,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Portugal               Luxembourg             Belarus               
-##  [4] Italy                  Monaco                 Germany               
-##  [7] Estonia                Belgium                TFYR Macedonia        
-## [10] Lithuania              Ireland                Slovenia              
-## [13] Hungary                Republic of Moldova    Bosnia and Herzegovina
-## [16] Spain                  &lt;NA&gt;                  
+##  [1] Austria                Montenegro             Greece                
+##  [4] Germany                Ukraine                Bosnia and Herzegovina
+##  [7] Italy                  Spain                  Iceland               
+## [10] Poland                 Monaco                 Bulgaria              
+## [13] Serbia                 Albania                Luxembourg            
+## [16] Estonia                &lt;NA&gt;                  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Saint Pierre and Miquelon Colombia                 
-##  [3] Brazil                    Cayman Islands           
-##  [5] Peru                      Chile                    
-##  [7] Ecuador                   Grenada                  
-##  [9] Turks and Caicos Islands  Canada                   
-## [11] Montserrat                Trinidad and Tobago      
-## [13] Guadeloupe                United States of America 
-## [15] Bahamas                   Barbados                 
-## [17] Cuba                     
+##  [1] Ecuador                            Venezuela (Bolivarian Republic of)
+##  [3] Guatemala                          Saint Lucia                       
+##  [5] Turks and Caicos Islands           Honduras                          
+##  [7] French Guiana                      Netherlands Antilles              
+##  [9] Uruguay                            Saint Pierre and Miquelon         
+## [11] United States of America           Grenada                           
+## [13] Colombia                           Cuba                              
+## [15] Haiti                              Belize                            
+## [17] Costa Rica                        
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Turkmenistan          Israel                Maldives             
-##  [4] Kuwait                Armenia               Malaysia             
-##  [7] &lt;NA&gt;                  Azerbaijan            Kazakhstan           
-## [10] Japan                 Macau                 Saudi Arabia         
-## [13] Iran (Islamic Rep of) Jordan                Qatar                
-## [16] Tajikistan            Syrian Arab Republic 
+##  [1] Republic of Korea              Qatar                         
+##  [3] Macau                          Thailand                      
+##  [5] Sri Lanka                      Georgia                       
+##  [7] Turkey                         &lt;NA&gt;                          
+##  [9] Occupied Palestinian Territory Hong Kong SAR                 
+## [11] Kyrgyzstan                     Maldives                      
+## [13] Syrian Arab Republic           Saudi Arabia                  
+## [15] Kuwait                         Iran (Islamic Rep of)         
+## [17] Iraq                          
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Fiji        Australia   New Zealand Kiribati    &lt;NA&gt;       
+## [1] Kiribati    &lt;NA&gt;        New Zealand Australia   Fiji       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Mauritius             Zimbabwe              Cabo Verde           
-##  [4] South Africa          Seychelles            Sao Tome and Principe
-##  [7] Reunion               Tunisia               Egypt                
-## [10] Mayotte               Morocco               &lt;NA&gt;                 
+##  [1] Mayotte               &lt;NA&gt;                  Cabo Verde           
+##  [4] Sao Tome and Principe Seychelles            Zimbabwe             
+##  [7] Morocco               Mauritius             Egypt                
+## [10] Tunisia               Reunion               South Africa         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -793,6 +805,9 @@ length(countries_to_test)</code></pre>
 <div id="references" class="section level1 unnumbered">
 <h1>5. References</h1>
 <div id="refs" class="references">
+<div id="ref-parametric_or_non-parametric_bootstrap">
+<p>“A Parametric or Non-Parametric Bootstrap?” n.d. <em>Parametric or Non-Parametric Bootstrap</em>. <a href="https://influentialpoints.com/Training/nonparametric-or-parametric_bootstrap.htm">https://influentialpoints.com/Training/nonparametric-or-parametric_bootstrap.htm</a>.</p>
+</div>
 <div id="ref-from_wolfram_mathworld">
 <p>“Bootstrap Methods.” n.d. <em>From Wolfram MathWorld</em>. <a href="http://mathworld.wolfram.com/BootstrapMethods.html">http://mathworld.wolfram.com/BootstrapMethods.html</a>.</p>
 </div>
