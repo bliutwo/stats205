@@ -82,14 +82,43 @@ We will use the crude rate of suicide per 100,000 people.
 
 >This analysis provides information on age-standardized rates...
 
+```{r}
+who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
+head(who_suicide_statistics_df)
+colnames(who_suicide_statistics_df)
+```
+
 >Filter and save countries with missing suicide rate.
 
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
+
+```{r}
+library(tidyverse)
+filtered_suicide_df <- drop_na(who_suicide_statistics_df, "suicides_no")
+head(filtered_suicide_df)
+```
+
 >After filtering countries with missing suicide rate, take a random sample of 100 countries and make sure each continent has approximately equal countries.
 
 Filter countries by continent:
 
+
+```{r}
+library(countrycode)
+filtered_suicide_df$continent <- countrycode(sourcevar = filtered_suicide_df[, "country"],
+                            origin = "country.name",
+                            destination = "continent")
+
+head(filtered_suicide_df)
+write.csv(filtered_suicide_df, 'filtered_suicide.csv')
+```
+
 Let us find out which continents are counted:
+
+```{r}
+# Get list of continents
+list_of_continents <- unique(filtered_suicide_df$continent); list_of_continents
+```
 
 Therefore,
 
@@ -102,11 +131,23 @@ we should randomly sample 17 countries from each continent.
 
 Notably, there are countries that are not on any of the listed continents. Let us see which ones those are:
 
+```{r}
+not_in_a_continent = filtered_suicide_df[is.na(filtered_suicide_df$continent),]
+write.csv(not_in_a_continent, 'not_in_a_continent.csv')
+head(not_in_a_continent)
+unique(not_in_a_continent$country)
+```
 
 Let us make the choice not to include these countries in the analysis, since there are only two countries.
 
+```{r}
+# Take off `NA` from list of continents
+list_of_continents <- list_of_continents[-length(list_of_continents)]
+list_of_continents
+```
 
-We create six dataframes, filtered by list of countries for each continent.
+
+We will now create six dataframes, filtered by list of countries for each continent.
 
 <!-- # europe_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Europe',]
 # head(europe_suicide)
@@ -124,6 +165,27 @@ We create six dataframes, filtered by list of countries for each continent.
 # head(africa_suicide)
 # length(africa_suicide$country) -->
 
+```{r}
+# library(rlist)
+countries_per_continent <- list()
+
+for (i in seq_along(list_of_continents))
+{
+	countries_per_continent[[i]] <- filtered_suicide_df[filtered_suicide_df$continent == list_of_continents[i],]
+}
+
+length(countries_per_continent)
+
+length(countries_per_continent)
+
+for (i in seq_along(countries_per_continent))
+{
+	print(head(countries_per_continent[[i]]))
+	print(length(countries_per_continent[[i]]))
+	cat("\n")
+}
+```
+
 [This text links to very important information about why a `for` loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop)[^1]
 
 [Link to Pandoc Markdown formatting](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex)
@@ -132,10 +194,51 @@ We create six dataframes, filtered by list of countries for each continent.
 
 Randomly sample 17 countries from each continent:
 
+```{r}
+list_of_continents
+for (i in seq_along(countries_per_continent))
+{
+	print(list_of_continents[i])
+	countries <- unique(countries_per_continent[[i]]$country)
+	print(countries)
+	print(length(countries))
+	cat("\n")
+}
+```
 
 Since there are only 5 countries in Oceania and 12 countries in Africa, we will use all 5 countries of Oceania and all 12 countries of Africa.
 
+```{r}
+samples_of_countries <- list()
+num_samples <- 17
+for (i in seq_along(countries_per_continent))
+{
+	countries <- unique(countries_per_continent[[i]]$country)
+	current_sample <- list()
+	if (length(countries) >= num_samples)
+	{
+		current_sample <- sample(countries, 17)
+	} else {
+		current_sample <- sample(countries, length(countries))
+	}
+	samples_of_countries[[i]] <- current_sample
+}
+```
+
 Let's see the countries that we will be sampling:
+
+```{r}
+total <- 0
+for (i in seq_along(samples_of_countries))
+{
+	print(list_of_continents[i])
+	print(samples_of_countries[[i]])
+	print(length(samples_of_countries[[i]]))
+	total <- total + length(samples_of_countries[[i]])
+	cat("\n")
+}
+total
+```
 
 
 <!-- # Make singular list of countries
@@ -164,6 +267,26 @@ Let's see the countries that we will be sampling:
 # ## End(Not run) -->
 
 Let's filter the original dataframe only to include countries that we have sampled:
+
+```{r}
+countries_to_test <- list()
+a <- 0
+for (i in seq_along(samples_of_countries))
+{
+	# find out a way to access each country name
+	# print each country name
+	for (j in seq_along(samples_of_countries[[i]]))
+	{
+		sample <- samples_of_countries[[i]]
+		country_string <- toString(sample[[j]])
+		countries_to_test[a] <- country_string
+		a <- a + 1
+	}
+}
+
+length(countries_to_test)
+# countries_to_test
+```
 
 
 # 4. Interpretation of the results or discussion
