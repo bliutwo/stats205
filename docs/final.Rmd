@@ -50,7 +50,7 @@ We will use the statistical techniques of nonparametric bootstrap and parametric
 >
 >Intuitively, the Kendall correlation between two variables will be high when observations have a similar (or identical for a correlation of 1) rank (i.e. relative position label of the observations within the variable: 1st, 2nd, 3rd, etc.) between the two variables, and low when observations have a dissimilar (or fully different for a correlation of -1) rank between the two variables.
 >
->Both Kendall's {\displaystyle \tau } \tau  and Spearman's {\displaystyle \rho } \rho  can be formulated as special cases of a more general correlation coefficient.
+>Both Kendall's $\tau$  and Spearman's $\rho$ can be formulated as special cases of a more general correlation coefficient.
 
 ## Cross validation
 
