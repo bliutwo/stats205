@@ -81,13 +81,13 @@ We will use the statistical techniques of nonparametric bootstrap and parametric
 We will use the crude rate of suicide per 100,000 people.
 
 >This analysis provides information on age-standardized rates...
-
+<!-- 
 ```{r}
 who_suicide_statistics_df <- read.csv("who_suicide_statistics.csv")
 head(who_suicide_statistics_df)
 colnames(who_suicide_statistics_df)
 ```
-
+ -->
 >Filter and save countries with missing suicide rate.
 
 <!-- install.packages("devtools", dependencies=TRUE, repos='http://cran.us.r-project.org') -->
