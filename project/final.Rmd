@@ -270,7 +270,7 @@ countries_to_test
 # 4. Interpretation of the results or discussion
 
 # 5. References
-<!-- 
+
 @patashnik-bibtexing
 
-@mrx05 -->
+@mrx05
