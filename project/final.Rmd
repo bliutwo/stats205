@@ -168,5 +168,11 @@ Let's filter the original dataframe only to include countries that we have sampl
 
 # 4. Interpretation of the results or discussion
 
+So in the case that I found the characteristics with high correlation coefficients, I would know which ones are positively correlated at an $\alpha = 0.05$ level, and I would say something along the liens of "these are the factors that predict suicide."
+
+Then, in the case that I did the tests that I said I would, I would say which ones predict suicide more accurately.
+
+Then I would make some grand conclusion and also pose new research questions.
+
 # 5. References
 
