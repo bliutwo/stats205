@@ -428,7 +428,7 @@ $(document).ready(function () {
 <div id="cross-validation" class="section level2">
 <h2>Cross validation</h2>
 <blockquote>
-<p>Cross-validation, sometimes called rotation estimation <span class="citation">(Geisser 1993)</span> <span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span> <span class="citation">(Devijver and Kittler 1982)</span>, or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set). <span class="citation">(2 et al., n.d.)</span> <span class="citation">(“Newbie Question: Confused About Train, Validation and Test Data!” n.d.)</span>. The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias [6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
+<p>Cross-validation, sometimes called rotation estimation <span class="citation">(Geisser 1993)</span> <span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span> <span class="citation">(Devijver and Kittler 1982)</span>, or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set). <span class="citation">(2 et al., n.d.)</span> <span class="citation">(“Newbie Question: Confused About Train, Validation and Test Data!” n.d.)</span>. The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias <span class="citation">(Cawley and Talbot, n.d.)</span> and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
 <p>One round of cross-validation involves partitioning a sample of data into complementary subsets, performing the analysis on one subset (called the training set), and validating the analysis on the other subset (called the validation set or testing set). To reduce variability, in most methods multiple rounds of cross-validation are performed using different partitions, and the validation results are combined (e.g. averaged) over the rounds to give an estimate of the model’s predictive performance.</p>
 <p>In summary, cross-validation combines (averages) measures of fitness in prediction to derive a more accurate estimate of model prediction performance.[7]</p>
 </blockquote>
@@ -711,51 +711,48 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Netherlands         Montenegro          Belarus            
-##  [4] Serbia              Latvia              Republic of Moldova
-##  [7] TFYR Macedonia      Spain               Finland            
-## [10] Luxembourg          Iceland             Russian Federation 
-## [13] United Kingdom      Italy               Portugal           
-## [16] Croatia             &lt;NA&gt;               
+##  [1] Austria             Sweden              Republic of Moldova
+##  [4] Iceland             Germany             Slovakia           
+##  [7] Croatia             Monaco              France             
+## [10] Romania             Spain               Norway             
+## [13] Albania             TFYR Macedonia      Luxembourg         
+## [16] Hungary             Russian Federation 
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Brazil                   Netherlands Antilles    
-##  [3] &lt;NA&gt;                     Colombia                
-##  [5] Saint Lucia              Jamaica                 
-##  [7] Belize                   Antigua and Barbuda     
-##  [9] El Salvador              Grenada                 
-## [11] Haiti                    United States of America
-## [13] Uruguay                  Bolivia                 
-## [15] Dominican Republic       Dominica                
-## [17] Montserrat              
+##  [1] Uruguay                      Guatemala                   
+##  [3] Canada                       Turks and Caicos Islands    
+##  [5] Barbados                     Saint Vincent and Grenadines
+##  [7] Anguilla                     Brazil                      
+##  [9] Dominican Republic           Haiti                       
+## [11] Ecuador                      Cayman Islands              
+## [13] Bolivia                      Dominica                    
+## [15] Antigua and Barbuda          Belize                      
+## [17] Paraguay                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Armenia                        Macau                         
-##  [3] Iraq                           Bahrain                       
-##  [5] Mongolia                       Kyrgyzstan                    
-##  [7] United Arab Emirates           Saudi Arabia                  
-##  [9] Georgia                        Cyprus                        
-## [11] Iran (Islamic Rep of)          Tajikistan                    
-## [13] Occupied Palestinian Territory Republic of Korea             
-## [15] Malaysia                       Syrian Arab Republic          
-## [17] Singapore                     
+##  [1] Philippines          Turkmenistan         Maldives            
+##  [4] Republic of Korea    Israel               Oman                
+##  [7] Kuwait               Thailand             Iraq                
+## [10] Japan                Bahrain              Saudi Arabia        
+## [13] &lt;NA&gt;                 Macau                Jordan              
+## [16] United Arab Emirates Azerbaijan          
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Australia   Fiji        &lt;NA&gt;        New Zealand Kiribati   
+## [1] &lt;NA&gt;        Kiribati    New Zealand Fiji        Australia  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] South Africa          Cabo Verde            Mauritius            
-##  [4] Seychelles            Morocco               Egypt                
-##  [7] Reunion               Tunisia               &lt;NA&gt;                 
-## [10] Zimbabwe              Sao Tome and Principe Mayotte              
+##  [1] Seychelles            &lt;NA&gt;                  Sao Tome and Principe
+##  [4] South Africa          Mayotte               Cabo Verde           
+##  [7] Mauritius             Reunion               Egypt                
+## [10] Zimbabwe              Morocco               Tunisia              
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -821,6 +818,9 @@ length(countries_to_test)</code></pre>
 </div>
 <div id="ref-from_wolfram_mathworld">
 <p>“Bootstrap Methods.” n.d. <em>From Wolfram MathWorld</em>. <a href="http://mathworld.wolfram.com/BootstrapMethods.html">http://mathworld.wolfram.com/BootstrapMethods.html</a>.</p>
+</div>
+<div id="ref-cawley_talbot">
+<p>Cawley, Gavin C., and Nicola L. Talbot. n.d. “On over-Fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation.” <em>Journal of Machine Learning Research</em>. <a href="http://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf">http://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf</a>.</p>
 </div>
 <div id="ref-devijver_kittler_1982">
 <p>Devijver, Pierre A., and Josef Kittler. 1982. <em>Pattern Recognition: A Statistical Approach</em>. Sung Kang.</p>
