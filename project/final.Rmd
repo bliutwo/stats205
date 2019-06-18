@@ -44,7 +44,7 @@ We will use the statistical techniques of nonparametric bootstrap and parametric
 >These bootstrap estimates are either used to attach confidence limits nonparametrically - or a second parametric model is fitted using parameters estimated from the distribution of the bootstrap estimates, from which confidence limits are obtained analytically.
 >The advantages and disadvantages of this approach, compared to nonparametric bootstrapping, can be summarised as follows.
 >
->In the nonparametric bootstrap, samples are drawn from a discrete set of n observations. This can be a serious disadvantage in small sample sizes because spurious fine structure in the original sample, but absent from the population sampled, may be faithfully reproduced in the simulated data.
+>In the nonparametric bootstrap, samples are drawn from a discrete set of $n$ observations. This can be a serious disadvantage in small sample sizes because spurious fine structure in the original sample, but absent from the population sampled, may be faithfully reproduced in the simulated data.
 >Another concern is that because small samples have only a few values, covering a restricted range, nonparametric bootstrap samples underestimate the amount of variation in the population you originally sampled. As a result, statisticians generally see samples of 10 or less as too small for reliable nonparametric bootstrapping.
 >
 >Small samples convey little reliable information about the higher moments of their population distribution function - in which case, a relatively simple function may be adequate.
