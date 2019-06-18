@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 1. Background of the data and why it is interesting or important
 
->The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate.
+The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate [@szamil_2018].
 
 The reason this data is interesting and important is that suicide is prevalent in many times and places around the world, but many places and times have different suicide rates. When it comes to suicide, there are many potential factors or attributes that may be correlated with an increased risk of suicide, such as:
 

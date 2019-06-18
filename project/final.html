@@ -383,9 +383,7 @@ $(document).ready(function () {
 
 <div id="background-of-the-data-and-why-it-is-interesting-or-important" class="section level1">
 <h1>1. Background of the data and why it is interesting or important</h1>
-<blockquote>
-<p>The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate.</p>
-</blockquote>
+<p>The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate <span class="citation">(Szamil 2018)</span>.</p>
 <p>The reason this data is interesting and important is that suicide is prevalent in many times and places around the world, but many places and times have different suicide rates. When it comes to suicide, there are many potential factors or attributes that may be correlated with an increased risk of suicide, such as:</p>
 <ul>
 <li>a person’s sex</li>
@@ -699,48 +697,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Serbia                 Russian Federation     Hungary               
-##  [4] Albania                Norway                 Belarus               
-##  [7] Switzerland            Spain                  Greece                
-## [10] Slovakia               Slovenia               Poland                
-## [13] Bosnia and Herzegovina Luxembourg             Iceland               
-## [16] Bulgaria               Austria               
+##  [1] Belarus             Czech Republic      Hungary            
+##  [4] Luxembourg          &lt;NA&gt;                Spain              
+##  [7] Ukraine             Latvia              Russian Federation 
+## [10] Republic of Moldova Denmark             Lithuania          
+## [13] Iceland             Poland              France             
+## [16] Malta               Italy              
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Barbados                           Ecuador                           
-##  [3] Martinique                         Mexico                            
-##  [5] Saint Kitts and Nevis              Montserrat                        
-##  [7] Dominican Republic                 Paraguay                          
-##  [9] Panama                             Anguilla                          
-## [11] Nicaragua                          Saint Lucia                       
-## [13] Venezuela (Bolivarian Republic of) Guyana                            
-## [15] Belize                             El Salvador                       
-## [17] Turks and Caicos Islands          
+##  [1] Anguilla                    Guadeloupe                 
+##  [3] Argentina                   Saint Kitts and Nevis      
+##  [5] Puerto Rico                 British Virgin Islands     
+##  [7] Ecuador                     Costa Rica                 
+##  [9] Turks and Caicos Islands    Martinique                 
+## [11] El Salvador                 Colombia                   
+## [13] Canada                      French Guiana              
+## [15] Guyana                      Dominican Republic         
+## [17] Falkland Islands (Malvinas)
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Sri Lanka            Republic of Korea    Singapore           
-##  [4] Azerbaijan           Hong Kong SAR        Turkmenistan        
-##  [7] Mongolia             Israel               Turkey              
-## [10] Qatar                Japan                Syrian Arab Republic
-## [13] Armenia              Thailand             Kyrgyzstan          
-## [16] Georgia              Kazakhstan          
+##  [1] Macau                          Tajikistan                    
+##  [3] &lt;NA&gt;                           Iran (Islamic Rep of)         
+##  [5] Thailand                       Brunei Darussalam             
+##  [7] Qatar                          Occupied Palestinian Territory
+##  [9] Jordan                         Japan                         
+## [11] Kyrgyzstan                     Israel                        
+## [13] Kazakhstan                     Turkey                        
+## [15] Azerbaijan                     Maldives                      
+## [17] Hong Kong SAR                 
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] New Zealand Fiji        Australia   &lt;NA&gt;        Kiribati   
+## [1] &lt;NA&gt;        Kiribati    Fiji        Australia   New Zealand
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Mauritius             South Africa          Morocco              
-##  [4] Seychelles            &lt;NA&gt;                  Sao Tome and Principe
-##  [7] Reunion               Mayotte               Tunisia              
-## [10] Egypt                 Zimbabwe              Cabo Verde           
+##  [1] &lt;NA&gt;                  South Africa          Sao Tome and Principe
+##  [4] Cabo Verde            Morocco               Mauritius            
+##  [7] Seychelles            Egypt                 Tunisia              
+## [10] Mayotte               Reunion               Zimbabwe             
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -789,205 +790,205 @@ length(countries_to_test)</code></pre>
 <pre><code>## [1] 67</code></pre>
 <pre class="r"><code>countries_to_test</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;Russian Federation&quot;
+## [1] &quot;Czech Republic&quot;
 ## 
 ## [[2]]
 ## [1] &quot;Hungary&quot;
 ## 
 ## [[3]]
-## [1] &quot;Albania&quot;
-## 
-## [[4]]
-## [1] &quot;Norway&quot;
-## 
-## [[5]]
-## [1] &quot;Belarus&quot;
-## 
-## [[6]]
-## [1] &quot;Switzerland&quot;
-## 
-## [[7]]
-## [1] &quot;Spain&quot;
-## 
-## [[8]]
-## [1] &quot;Greece&quot;
-## 
-## [[9]]
-## [1] &quot;Slovakia&quot;
-## 
-## [[10]]
-## [1] &quot;Slovenia&quot;
-## 
-## [[11]]
-## [1] &quot;Poland&quot;
-## 
-## [[12]]
-## [1] &quot;Bosnia and Herzegovina&quot;
-## 
-## [[13]]
 ## [1] &quot;Luxembourg&quot;
 ## 
-## [[14]]
-## [1] &quot;Iceland&quot;
-## 
-## [[15]]
-## [1] &quot;Bulgaria&quot;
-## 
-## [[16]]
-## [1] &quot;Austria&quot;
-## 
-## [[17]]
-## [1] &quot;Barbados&quot;
-## 
-## [[18]]
-## [1] &quot;Ecuador&quot;
-## 
-## [[19]]
-## [1] &quot;Martinique&quot;
-## 
-## [[20]]
-## [1] &quot;Mexico&quot;
-## 
-## [[21]]
-## [1] &quot;Saint Kitts and Nevis&quot;
-## 
-## [[22]]
-## [1] &quot;Montserrat&quot;
-## 
-## [[23]]
-## [1] &quot;Dominican Republic&quot;
-## 
-## [[24]]
-## [1] &quot;Paraguay&quot;
-## 
-## [[25]]
-## [1] &quot;Panama&quot;
-## 
-## [[26]]
-## [1] &quot;Anguilla&quot;
-## 
-## [[27]]
-## [1] &quot;Nicaragua&quot;
-## 
-## [[28]]
-## [1] &quot;Saint Lucia&quot;
-## 
-## [[29]]
-## [1] &quot;Venezuela (Bolivarian Republic of)&quot;
-## 
-## [[30]]
-## [1] &quot;Guyana&quot;
-## 
-## [[31]]
-## [1] &quot;Belize&quot;
-## 
-## [[32]]
-## [1] &quot;El Salvador&quot;
-## 
-## [[33]]
-## [1] &quot;Turks and Caicos Islands&quot;
-## 
-## [[34]]
-## [1] &quot;Sri Lanka&quot;
-## 
-## [[35]]
-## [1] &quot;Republic of Korea&quot;
-## 
-## [[36]]
-## [1] &quot;Singapore&quot;
-## 
-## [[37]]
-## [1] &quot;Azerbaijan&quot;
-## 
-## [[38]]
-## [1] &quot;Hong Kong SAR&quot;
-## 
-## [[39]]
-## [1] &quot;Turkmenistan&quot;
-## 
-## [[40]]
-## [1] &quot;Mongolia&quot;
-## 
-## [[41]]
-## [1] &quot;Israel&quot;
-## 
-## [[42]]
-## [1] &quot;Turkey&quot;
-## 
-## [[43]]
-## [1] &quot;Qatar&quot;
-## 
-## [[44]]
-## [1] &quot;Japan&quot;
-## 
-## [[45]]
-## [1] &quot;Syrian Arab Republic&quot;
-## 
-## [[46]]
-## [1] &quot;Armenia&quot;
-## 
-## [[47]]
-## [1] &quot;Thailand&quot;
-## 
-## [[48]]
-## [1] &quot;Kyrgyzstan&quot;
-## 
-## [[49]]
-## [1] &quot;Georgia&quot;
-## 
-## [[50]]
-## [1] &quot;Kazakhstan&quot;
-## 
-## [[51]]
-## [1] &quot;New Zealand&quot;
-## 
-## [[52]]
-## [1] &quot;Fiji&quot;
-## 
-## [[53]]
-## [1] &quot;Australia&quot;
-## 
-## [[54]]
+## [[4]]
 ## [1] &quot;NA&quot;
 ## 
-## [[55]]
+## [[5]]
+## [1] &quot;Spain&quot;
+## 
+## [[6]]
+## [1] &quot;Ukraine&quot;
+## 
+## [[7]]
+## [1] &quot;Latvia&quot;
+## 
+## [[8]]
+## [1] &quot;Russian Federation&quot;
+## 
+## [[9]]
+## [1] &quot;Republic of Moldova&quot;
+## 
+## [[10]]
+## [1] &quot;Denmark&quot;
+## 
+## [[11]]
+## [1] &quot;Lithuania&quot;
+## 
+## [[12]]
+## [1] &quot;Iceland&quot;
+## 
+## [[13]]
+## [1] &quot;Poland&quot;
+## 
+## [[14]]
+## [1] &quot;France&quot;
+## 
+## [[15]]
+## [1] &quot;Malta&quot;
+## 
+## [[16]]
+## [1] &quot;Italy&quot;
+## 
+## [[17]]
+## [1] &quot;Anguilla&quot;
+## 
+## [[18]]
+## [1] &quot;Guadeloupe&quot;
+## 
+## [[19]]
+## [1] &quot;Argentina&quot;
+## 
+## [[20]]
+## [1] &quot;Saint Kitts and Nevis&quot;
+## 
+## [[21]]
+## [1] &quot;Puerto Rico&quot;
+## 
+## [[22]]
+## [1] &quot;British Virgin Islands&quot;
+## 
+## [[23]]
+## [1] &quot;Ecuador&quot;
+## 
+## [[24]]
+## [1] &quot;Costa Rica&quot;
+## 
+## [[25]]
+## [1] &quot;Turks and Caicos Islands&quot;
+## 
+## [[26]]
+## [1] &quot;Martinique&quot;
+## 
+## [[27]]
+## [1] &quot;El Salvador&quot;
+## 
+## [[28]]
+## [1] &quot;Colombia&quot;
+## 
+## [[29]]
+## [1] &quot;Canada&quot;
+## 
+## [[30]]
+## [1] &quot;French Guiana&quot;
+## 
+## [[31]]
+## [1] &quot;Guyana&quot;
+## 
+## [[32]]
+## [1] &quot;Dominican Republic&quot;
+## 
+## [[33]]
+## [1] &quot;Falkland Islands (Malvinas)&quot;
+## 
+## [[34]]
+## [1] &quot;Macau&quot;
+## 
+## [[35]]
+## [1] &quot;Tajikistan&quot;
+## 
+## [[36]]
+## [1] &quot;NA&quot;
+## 
+## [[37]]
+## [1] &quot;Iran (Islamic Rep of)&quot;
+## 
+## [[38]]
+## [1] &quot;Thailand&quot;
+## 
+## [[39]]
+## [1] &quot;Brunei Darussalam&quot;
+## 
+## [[40]]
+## [1] &quot;Qatar&quot;
+## 
+## [[41]]
+## [1] &quot;Occupied Palestinian Territory&quot;
+## 
+## [[42]]
+## [1] &quot;Jordan&quot;
+## 
+## [[43]]
+## [1] &quot;Japan&quot;
+## 
+## [[44]]
+## [1] &quot;Kyrgyzstan&quot;
+## 
+## [[45]]
+## [1] &quot;Israel&quot;
+## 
+## [[46]]
+## [1] &quot;Kazakhstan&quot;
+## 
+## [[47]]
+## [1] &quot;Turkey&quot;
+## 
+## [[48]]
+## [1] &quot;Azerbaijan&quot;
+## 
+## [[49]]
+## [1] &quot;Maldives&quot;
+## 
+## [[50]]
+## [1] &quot;Hong Kong SAR&quot;
+## 
+## [[51]]
+## [1] &quot;NA&quot;
+## 
+## [[52]]
 ## [1] &quot;Kiribati&quot;
 ## 
+## [[53]]
+## [1] &quot;Fiji&quot;
+## 
+## [[54]]
+## [1] &quot;Australia&quot;
+## 
+## [[55]]
+## [1] &quot;New Zealand&quot;
+## 
 ## [[56]]
-## [1] &quot;Mauritius&quot;
+## [1] &quot;NA&quot;
 ## 
 ## [[57]]
 ## [1] &quot;South Africa&quot;
 ## 
 ## [[58]]
-## [1] &quot;Morocco&quot;
-## 
-## [[59]]
-## [1] &quot;Seychelles&quot;
-## 
-## [[60]]
-## [1] &quot;NA&quot;
-## 
-## [[61]]
 ## [1] &quot;Sao Tome and Principe&quot;
 ## 
+## [[59]]
+## [1] &quot;Cabo Verde&quot;
+## 
+## [[60]]
+## [1] &quot;Morocco&quot;
+## 
+## [[61]]
+## [1] &quot;Mauritius&quot;
+## 
 ## [[62]]
-## [1] &quot;Reunion&quot;
+## [1] &quot;Seychelles&quot;
 ## 
 ## [[63]]
-## [1] &quot;Mayotte&quot;
+## [1] &quot;Egypt&quot;
 ## 
 ## [[64]]
 ## [1] &quot;Tunisia&quot;
 ## 
 ## [[65]]
-## [1] &quot;Egypt&quot;
+## [1] &quot;Mayotte&quot;
 ## 
 ## [[66]]
-## [1] &quot;Zimbabwe&quot;
+## [1] &quot;Reunion&quot;
 ## 
 ## [[67]]
-## [1] &quot;Cabo Verde&quot;</code></pre>
+## [1] &quot;Zimbabwe&quot;</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
@@ -1000,6 +1001,9 @@ length(countries_to_test)</code></pre>
 </div>
 <div id="ref-efron_tibshirani_1993">
 <p>Efron, Bradley, and Robert Tibshirani. 1993. <em>An Introduction to the Bootstrap</em>. Chapman; Hall.</p>
+</div>
+<div id="ref-szamil_2018">
+<p>Szamil. 2018. “WHO Suicide Statistics.” <em>Kaggle</em>. <a href="https://www.kaggle.com/szamil/who-suicide-statistics">https://www.kaggle.com/szamil/who-suicide-statistics</a>.</p>
 </div>
 </div>
 </div>
