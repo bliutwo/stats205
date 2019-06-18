@@ -2,6 +2,7 @@
 title: 'STATS 205: Final Project Write-Up'
 author: "Brian Liu"
 date: "6/14/2019"
+bibliography: bibliography.bib
 output:
   pdf_document: default
   html_document: default
@@ -13,9 +14,31 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # 1. Background of the data and why it is interesting or important
 
->The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate...
+>The data we are using is the data from WHO suicide statistics from Kaggle. This gives population-based statistics on suicide rate.
+
+The reason this data is interesting and important is that suicide is prevalent in many times and places around the world, but many places and times have different suicide rates. When it comes to suicide, there are many potential factors or attributes that may be correlated with an increased risk of suicide, such as:
+
+- a person's sex
+- the age group a person belongs to
+- the generation a person was born in
+
+The goal is to find significant correlations between these factors and suicide rates: that is, does $x$ factor positively predict suicide rate?
+
+The simple inspiration is suicide prevention: If we can identify the factors that correlate positively with, or predict high suicide rates, then we can target our suicide prevention efforts towards populations with those high-risk factors or attributes.
 
 # 2. Explanation of the method studied and its properties
+
+We will use the statistical techniques of **nonparametric bootstrap** and parametric bootstrap methods to aid in prediction, with linear regression as well, and use cross-validation to test if, given new data for a population, this population is at risk of suicide. In other words, predict if the suicide rate would be abnormally or significantly high, and then compare the performance between the two methods (nonparametric and parametric).
+
+## Nonparametric bootstrap
+
+**Nonparametric bootstrap** is 
+
+## Parametric bootstrap
+
+## Linear regression
+
+## Cross validation
 
 # 3. Data analysis or simulation study
 
@@ -231,4 +254,6 @@ countries_to_test
 
 
 # 4. Interpretation of the results or discussion
+
+# 5. References
 
