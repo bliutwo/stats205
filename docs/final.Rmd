@@ -28,7 +28,7 @@ The simple inspiration is suicide prevention: If we can identify the factors tha
 
 # 2. Explanation of the method studied and its properties
 
-We will use the statistical techniques of nonparametric bootstrap and parametric bootstrap methods to aid in prediction, with linear regression as well, and use cross-validation to test if, given new data for a population, this population is at risk of suicide. In other words, predict if the suicide rate would be abnormally or significantly high, and then compare the performance between the two methods (nonparametric and parametric).
+We will use the statistical techniques of nonparametric bootstrap and parametric bootstrap methods to aid in prediction, with linear regression as well (Kendall coefficient), and use cross-validation to test if, given new data for a population, this population is at risk of suicide. In other words, predict if the suicide rate would be abnormally or significantly high, and then compare the performance between the two methods (nonparametric and parametric).
 
 ## Bootstrapping
 
@@ -69,6 +69,12 @@ We will use the statistical techniques of nonparametric bootstrap and parametric
 >Both Kendall's $\tau$ and Spearman's $\rho$ can be formulated as special cases of a more general correlation coefficient.
 
 ## Cross validation
+
+Cross-validation, sometimes called rotation estimation,[@geisser_1993][2][3] or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).[4][5] The goal of cross-validation is to test the model's ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).
+
+One round of cross-validation involves partitioning a sample of data into complementary subsets, performing the analysis on one subset (called the training set), and validating the analysis on the other subset (called the validation set or testing set). To reduce variability, in most methods multiple rounds of cross-validation are performed using different partitions, and the validation results are combined (e.g. averaged) over the rounds to give an estimate of the model's predictive performance.
+
+In summary, cross-validation combines (averages) measures of fitness in prediction to derive a more accurate estimate of model prediction performance.[7]
 
 # 3. Data analysis or simulation study
 

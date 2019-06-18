@@ -395,7 +395,7 @@ $(document).ready(function () {
 </div>
 <div id="explanation-of-the-method-studied-and-its-properties" class="section level1">
 <h1>2. Explanation of the method studied and its properties</h1>
-<p>We will use the statistical techniques of nonparametric bootstrap and parametric bootstrap methods to aid in prediction, with linear regression as well, and use cross-validation to test if, given new data for a population, this population is at risk of suicide. In other words, predict if the suicide rate would be abnormally or significantly high, and then compare the performance between the two methods (nonparametric and parametric).</p>
+<p>We will use the statistical techniques of nonparametric bootstrap and parametric bootstrap methods to aid in prediction, with linear regression as well (Kendall coefficient), and use cross-validation to test if, given new data for a population, this population is at risk of suicide. In other words, predict if the suicide rate would be abnormally or significantly high, and then compare the performance between the two methods (nonparametric and parametric).</p>
 <div id="bootstrapping" class="section level2">
 <h2>Bootstrapping</h2>
 <blockquote>
@@ -427,6 +427,9 @@ $(document).ready(function () {
 </div>
 <div id="cross-validation" class="section level2">
 <h2>Cross validation</h2>
+<p>Cross-validation, sometimes called rotation estimation,<span class="citation">(Geisser 1993)</span>[2][3] or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).[4][5] The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
+<p>One round of cross-validation involves partitioning a sample of data into complementary subsets, performing the analysis on one subset (called the training set), and validating the analysis on the other subset (called the validation set or testing set). To reduce variability, in most methods multiple rounds of cross-validation are performed using different partitions, and the validation results are combined (e.g. averaged) over the rounds to give an estimate of the model’s predictive performance.</p>
+<p>In summary, cross-validation combines (averages) measures of fitness in prediction to derive a more accurate estimate of model prediction performance.[7]</p>
 </div>
 </div>
 <div id="data-analysis-or-simulation-study" class="section level1">
@@ -706,48 +709,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Bulgaria            Austria             Netherlands        
-##  [4] San Marino          Slovakia            Czech Republic     
-##  [7] TFYR Macedonia      Belgium             Switzerland        
-## [10] Iceland             Ireland             Slovenia           
-## [13] Estonia             Serbia              &lt;NA&gt;               
-## [16] Republic of Moldova Latvia             
+##  [1] Greece              Austria             Norway             
+##  [4] Spain               Belgium             Lithuania          
+##  [7] Hungary             Sweden              Romania            
+## [10] Denmark             Republic of Moldova Russian Federation 
+## [13] Belarus             Slovakia            Luxembourg         
+## [16] Finland             Czech Republic     
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] El Salvador               Netherlands Antilles     
-##  [3] British Virgin Islands    Guadeloupe               
-##  [5] Barbados                  Panama                   
-##  [7] Bolivia                   Guatemala                
-##  [9] Dominican Republic        Mexico                   
-## [11] Anguilla                  Antigua and Barbuda      
-## [13] Belize                    Saint Pierre and Miquelon
-## [15] Saint Lucia               French Guiana            
-## [17] Argentina                
+##  [1] Uruguay                   El Salvador              
+##  [3] Martinique                Guadeloupe               
+##  [5] French Guiana             Honduras                 
+##  [7] Saint Pierre and Miquelon Grenada                  
+##  [9] Bolivia                   Antigua and Barbuda      
+## [11] Peru                      Belize                   
+## [13] Chile                     Bermuda                  
+## [15] Cayman Islands            Trinidad and Tobago      
+## [17] Guyana                   
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Hong Kong SAR         Kyrgyzstan            Turkey               
-##  [4] Iraq                  Saudi Arabia          Qatar                
-##  [7] Azerbaijan            Uzbekistan            Mongolia             
-## [10] Sri Lanka             Maldives              Bahrain              
-## [13] Cyprus                Kuwait                Georgia              
-## [16] Brunei Darussalam     Iran (Islamic Rep of)
+##  [1] Republic of Korea              Armenia                       
+##  [3] Saudi Arabia                   Azerbaijan                    
+##  [5] Cyprus                         Georgia                       
+##  [7] Philippines                    Brunei Darussalam             
+##  [9] Kyrgyzstan                     Kuwait                        
+## [11] Japan                          Uzbekistan                    
+## [13] Turkey                         Thailand                      
+## [15] United Arab Emirates           Occupied Palestinian Territory
+## [17] Kazakhstan                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Kiribati    Fiji        &lt;NA&gt;        Australia   New Zealand
+## [1] New Zealand Kiribati    Fiji        Australia   &lt;NA&gt;       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Mauritius             Zimbabwe              Cabo Verde           
-##  [4] Sao Tome and Principe Egypt                 Mayotte              
-##  [7] &lt;NA&gt;                  Reunion               Tunisia              
-## [10] Seychelles            Morocco               South Africa         
+##  [1] Morocco               &lt;NA&gt;                  Tunisia              
+##  [4] Zimbabwe              Seychelles            Cabo Verde           
+##  [7] Mayotte               Sao Tome and Principe Reunion              
+## [10] Mauritius             Egypt                 South Africa         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -813,6 +819,9 @@ length(countries_to_test)</code></pre>
 </div>
 <div id="ref-efron_tibshirani_1993">
 <p>Efron, Bradley, and Robert Tibshirani. 1993. <em>An Introduction to the Bootstrap</em>. Chapman; Hall.</p>
+</div>
+<div id="ref-geisser_1993">
+<p>Geisser, Seymour. 1993. <em>Predictive Inference: An Introduction</em>. Chapman &amp; Hall.</p>
 </div>
 <div id="ref-kendall_1938">
 <p>Kendall, M. G. 1938. “A New Measure of Rank Correlation.” <em>Biometrika</em> 30 (1/2): 81. <a href="https://doi.org/10.2307/2332226">https://doi.org/10.2307/2332226</a>.</p>
