@@ -1,0 +1,1000 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={STATS 205: Final Project Write-Up},
+            pdfauthor={Brian Liu},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{STATS 205: Final Project Write-Up}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Brian Liu}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{6/14/2019}
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{background-of-the-data-and-why-it-is-interesting-or-important}{%
+\section{1. Background of the data and why it is interesting or
+important}\label{background-of-the-data-and-why-it-is-interesting-or-important}}
+
+\begin{quote}
+The data we are using is the data from WHO suicide statistics from
+Kaggle. This gives population-based statistics on suicide rate.
+\end{quote}
+
+The reason this data is interesting and important is that suicide is
+prevalent in many times and places around the world, but many places and
+times have different suicide rates. When it comes to suicide, there are
+many potential factors or attributes that may be correlated with an
+increased risk of suicide, such as:
+
+\begin{itemize}
+\tightlist
+\item
+  a person's sex
+\item
+  the age group a person belongs to
+\item
+  the generation a person was born in
+\end{itemize}
+
+The goal is to find significant correlations between these factors and
+suicide rates: that is, does \(x\) factor positively predict suicide
+rate?
+
+The simple inspiration is suicide prevention: If we can identify the
+factors that correlate positively with, or predict high suicide rates,
+then we can target our suicide prevention efforts towards populations
+with those high-risk factors or attributes.
+
+\hypertarget{explanation-of-the-method-studied-and-its-properties}{%
+\section{2. Explanation of the method studied and its
+properties}\label{explanation-of-the-method-studied-and-its-properties}}
+
+We will use the statistical techniques of nonparametric bootstrap and
+parametric bootstrap methods to aid in prediction, with linear
+regression as well, and use cross-validation to test if, given new data
+for a population, this population is at risk of suicide. In other words,
+predict if the suicide rate would be abnormally or significantly high,
+and then compare the performance between the two methods (nonparametric
+and parametric).
+
+\hypertarget{bootstrapping}{%
+\subsection{Bootstrapping}\label{bootstrapping}}
+
+\begin{quote}
+In statistics, bootstrapping is any test or metric that relies on random
+sampling with replacement. Bootstrapping allows assigning measures of
+accuracy (defined in terms of bias, variance, confidence intervals,
+prediction error or some other such measure) to sample estimates. This
+technique allows estimation of the sampling distribution of almost any
+statistic using random sampling methods. Generally, it falls in the
+broader class of resampling methods.
+
+Bootstrapping is the practice of estimating properties of an estimator
+(such as its variance) by measuring those properties when sampling from
+an approximating distribution. One standard choice for an approximating
+distribution is the empirical distribution function of the observed
+data. In the case where a set of observations can be assumed to be from
+an independent and identically distributed population, this can be
+implemented by constructing a number of resamples with replacement, of
+the observed dataset (and of equal size to the observed dataset).
+
+It may also be used for constructing hypothesis tests. It is often used
+as an alternative to statistical inference based on the assumption of a
+parametric model when that assumption is in doubt, or where parametric
+inference is impossible or requires complicated formulas for the
+calculation of standard errors.
+\end{quote}
+
+\hypertarget{nonparametric-vs.-parametric-bootstrap}{%
+\subsection{Nonparametric vs.~Parametric
+bootstrap}\label{nonparametric-vs.-parametric-bootstrap}}
+
+\hypertarget{linear-regression---kendall-rank-correlation-coefficient}{%
+\subsection{Linear regression - Kendall rank correlation
+coefficient}\label{linear-regression---kendall-rank-correlation-coefficient}}
+
+\begin{quote}
+In statistics, the Kendall rank correlation coefficient, commonly
+referred to as Kendall's tau coefficient (after the Greek letter
+\(\tau\)), is a statistic used to measure the ordinal association
+between two measured quantities. A tau test is a non-parametric
+hypothesis test for statistical dependence based on the tau coefficient.
+
+It is a measure of rank correlation: the similarity of the orderings of
+the data when ranked by each of the quantities. It is named after
+Maurice Kendall, who developed it in 1938,{[}1{]} though Gustav Fechner
+had proposed a similar measure in the context of time series in
+1897.{[}2{]}
+
+Intuitively, the Kendall correlation between two variables will be high
+when observations have a similar (or identical for a correlation of 1)
+rank (i.e.~relative position label of the observations within the
+variable: 1st, 2nd, 3rd, etc.) between the two variables, and low when
+observations have a dissimilar (or fully different for a correlation of
+-1) rank between the two variables.
+
+Both Kendall's \(\tau\) and Spearman's \(\rho\) can be formulated as
+special cases of a more general correlation coefficient.
+\end{quote}
+
+\hypertarget{cross-validation}{%
+\subsection{Cross validation}\label{cross-validation}}
+
+\hypertarget{data-analysis-or-simulation-study}{%
+\section{3. Data analysis or simulation
+study}\label{data-analysis-or-simulation-study}}
+
+We will use the crude rate of suicide per 100,000 people.
+
+\begin{quote}
+This analysis provides information on age-standardized rates\ldots{}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{who_suicide_statistics_df <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"who_suicide_statistics.csv"}\NormalTok{)}
+\KeywordTok{head}\NormalTok{(who_suicide_statistics_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   country year    sex         age suicides_no population
+## 1 Albania 1985 female 15-24 years          NA     277900
+## 2 Albania 1985 female 25-34 years          NA     246800
+## 3 Albania 1985 female 35-54 years          NA     267500
+## 4 Albania 1985 female  5-14 years          NA     298300
+## 5 Albania 1985 female 55-74 years          NA     138700
+## 6 Albania 1985 female   75+ years          NA      34200
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{colnames}\NormalTok{(who_suicide_statistics_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "country"     "year"        "sex"         "age"         "suicides_no"
+## [6] "population"
+\end{verbatim}
+
+\begin{quote}
+Filter and save countries with missing suicide rate.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Registered S3 methods overwritten by 'ggplot2':
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching packages ---------------------------------- tidyverse 1.2.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.1.1     v purrr   0.3.2
+## v tibble  2.1.1     v dplyr   0.8.1
+## v tidyr   0.8.3     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtered_suicide_df <-}\StringTok{ }\KeywordTok{drop_na}\NormalTok{(who_suicide_statistics_df, }\StringTok{"suicides_no"}\NormalTok{)}
+\KeywordTok{head}\NormalTok{(filtered_suicide_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    country year    sex         age suicides_no population
+## 25 Albania 1987 female 15-24 years          14     289700
+## 26 Albania 1987 female 25-34 years           4     257200
+## 27 Albania 1987 female 35-54 years           6     278800
+## 28 Albania 1987 female  5-14 years           0     311000
+## 29 Albania 1987 female 55-74 years           0     144600
+## 30 Albania 1987 female   75+ years           1      35600
+\end{verbatim}
+
+\begin{quote}
+After filtering countries with missing suicide rate, take a random
+sample of 100 countries and make sure each continent has approximately
+equal countries.
+\end{quote}
+
+Filter countries by continent:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(countrycode)}
+\NormalTok{filtered_suicide_df}\OperatorTok{$}\NormalTok{continent <-}\StringTok{ }\KeywordTok{countrycode}\NormalTok{(}\DataTypeTok{sourcevar =}\NormalTok{ filtered_suicide_df[, }\StringTok{"country"}\NormalTok{],}
+                            \DataTypeTok{origin =} \StringTok{"country.name"}\NormalTok{,}
+                            \DataTypeTok{destination =} \StringTok{"continent"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in countrycode(sourcevar = filtered_suicide_df[, "country"], origin = "country.name", : Some values were not matched unambiguously: Rodrigues, Virgin Islands (USA)
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in countrycode(sourcevar = filtered_suicide_df[, "country"], origin = "country.name", : Some strings were matched more than once, and therefore set to <NA> in the result: Virgin Islands (USA),Americas,Americas
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(filtered_suicide_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    country year    sex         age suicides_no population continent
+## 25 Albania 1987 female 15-24 years          14     289700    Europe
+## 26 Albania 1987 female 25-34 years           4     257200    Europe
+## 27 Albania 1987 female 35-54 years           6     278800    Europe
+## 28 Albania 1987 female  5-14 years           0     311000    Europe
+## 29 Albania 1987 female 55-74 years           0     144600    Europe
+## 30 Albania 1987 female   75+ years           1      35600    Europe
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{write.csv}\NormalTok{(filtered_suicide_df, }\StringTok{'filtered_suicide.csv'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Let us find out which continents are counted:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Get list of continents}
+\NormalTok{list_of_continents <-}\StringTok{ }\KeywordTok{unique}\NormalTok{(filtered_suicide_df}\OperatorTok{$}\NormalTok{continent); list_of_continents}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Europe"   "Americas" "Asia"     "Oceania"  "Africa"   NA
+\end{verbatim}
+
+Therefore,
+
+\[
+    \frac{100 \textrm{ countries}}{6 \textrm{ continents}} \approx 16 \textrm{ to } 17 \textrm{ countries per continent}
+\]
+
+we should randomly sample 17 countries from each continent.
+
+Notably, there are countries that are not on any of the listed
+continents. Let us see which ones those are:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{not_in_a_continent =}\StringTok{ }\NormalTok{filtered_suicide_df[}\KeywordTok{is.na}\NormalTok{(filtered_suicide_df}\OperatorTok{$}\NormalTok{continent),]}
+\KeywordTok{write.csv}\NormalTok{(not_in_a_continent, }\StringTok{'not_in_a_continent.csv'}\NormalTok{)}
+\KeywordTok{head}\NormalTok{(not_in_a_continent)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         country year    sex         age suicides_no population continent
+## 32317 Rodrigues 2001 female 15-24 years           0         NA      <NA>
+## 32318 Rodrigues 2001 female 25-34 years           0         NA      <NA>
+## 32319 Rodrigues 2001 female 35-54 years           0         NA      <NA>
+## 32320 Rodrigues 2001 female  5-14 years           0         NA      <NA>
+## 32321 Rodrigues 2001 female 55-74 years           0         NA      <NA>
+## 32322 Rodrigues 2001 female   75+ years           0         NA      <NA>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{unique}\NormalTok{(not_in_a_continent}\OperatorTok{$}\NormalTok{country)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] Rodrigues            Virgin Islands (USA)
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+\end{verbatim}
+
+Let us make the choice not to include these countries in the analysis,
+since there are only two countries.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Take off `NA` from list of continents}
+\NormalTok{list_of_continents <-}\StringTok{ }\NormalTok{list_of_continents[}\OperatorTok{-}\KeywordTok{length}\NormalTok{(list_of_continents)]}
+\NormalTok{list_of_continents}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Europe"   "Americas" "Asia"     "Oceania"  "Africa"
+\end{verbatim}
+
+We will now create six dataframes, filtered by list of countries for
+each continent.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# library(rlist)}
+\NormalTok{countries_per_continent <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(list_of_continents))}
+\NormalTok{\{}
+\NormalTok{    countries_per_continent[[i]] <-}\StringTok{ }\NormalTok{filtered_suicide_df[filtered_suicide_df}\OperatorTok{$}\NormalTok{continent }\OperatorTok{==}\StringTok{ }\NormalTok{list_of_continents[i],]}
+\NormalTok{\}}
+
+\KeywordTok{length}\NormalTok{(countries_per_continent)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{length}\NormalTok{(countries_per_continent)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(countries_per_continent))}
+\NormalTok{\{}
+    \KeywordTok{print}\NormalTok{(}\KeywordTok{head}\NormalTok{(countries_per_continent[[i]]))}
+    \KeywordTok{print}\NormalTok{(}\KeywordTok{length}\NormalTok{(countries_per_continent[[i]]))}
+    \KeywordTok{cat}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    country year    sex         age suicides_no population continent
+## 25 Albania 1987 female 15-24 years          14     289700    Europe
+## 26 Albania 1987 female 25-34 years           4     257200    Europe
+## 27 Albania 1987 female 35-54 years           6     278800    Europe
+## 28 Albania 1987 female  5-14 years           0     311000    Europe
+## 29 Albania 1987 female 55-74 years           0     144600    Europe
+## 30 Albania 1987 female   75+ years           1      35600    Europe
+## [1] 7
+## 
+##      country year    sex         age suicides_no population continent
+## 373 Anguilla 1983 female 15-24 years           0         NA  Americas
+## 374 Anguilla 1983 female 25-34 years           0         NA  Americas
+## 375 Anguilla 1983 female 35-54 years           0         NA  Americas
+## 376 Anguilla 1983 female  5-14 years           0         NA  Americas
+## 377 Anguilla 1983 female 55-74 years           0         NA  Americas
+## 378 Anguilla 1983 female   75+ years           0         NA  Americas
+## [1] 7
+## 
+##      country year    sex         age suicides_no population continent
+## 1501 Armenia 1981 female 15-24 years           5     348000      Asia
+## 1502 Armenia 1981 female 25-34 years           6     242200      Asia
+## 1503 Armenia 1981 female 35-54 years           6     333500      Asia
+## 1504 Armenia 1981 female  5-14 years           0     295200      Asia
+## 1505 Armenia 1981 female 55-74 years          10     164300      Asia
+## 1506 Armenia 1981 female   75+ years           7      43100      Asia
+## [1] 7
+## 
+##        country year    sex         age suicides_no population continent
+## 2161 Australia 1979 female 15-24 years          71    1236800   Oceania
+## 2162 Australia 1979 female 25-34 years          86    1138500   Oceania
+## 2163 Australia 1979 female 35-54 years         171    1572100   Oceania
+## 2164 Australia 1979 female  5-14 years           1    1246500   Oceania
+## 2165 Australia 1979 female 55-74 years         135    1137800   Oceania
+## 2166 Australia 1979 female   75+ years          15     309900   Oceania
+## [1] 7
+## 
+##         country year    sex         age suicides_no population continent
+## 7669 Cabo Verde 2011 female 15-24 years           1      56039    Africa
+## 7670 Cabo Verde 2011 female 25-34 years           0      38528    Africa
+## 7671 Cabo Verde 2011 female 35-54 years           2      49078    Africa
+## 7672 Cabo Verde 2011 female  5-14 years           0      56558    Africa
+## 7673 Cabo Verde 2011 female 55-74 years           2      19887    Africa
+## 7674 Cabo Verde 2011 female   75+ years           0       7582    Africa
+## [1] 7
+\end{verbatim}
+
+\href{https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop}{This
+text links to very important information about why a \texttt{for} loop
+doesn't print anything.}\footnote{Basically, \texttt{for} loops are
+  functions themselves. R prints out the result of a command
+  automatically, but functions are not inherently a command, and since
+  \texttt{for} loops are functions, nothing will be printed. The
+  solution is to have \texttt{print(command())} within the \texttt{for}
+  loop to get output for your \texttt{for} loop. You will never again
+  spend hours trying to find out why a \texttt{for} loop doesn't print
+  anything because you're no longer an R newbie.}
+
+\href{https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html\%23raw-tex}{Link
+to Pandoc Markdown formatting}
+
+Randomly sample 17 countries from each continent:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{list_of_continents}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Europe"   "Americas" "Asia"     "Oceania"  "Africa"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(countries_per_continent))}
+\NormalTok{\{}
+    \KeywordTok{print}\NormalTok{(list_of_continents[i])}
+\NormalTok{    countries <-}\StringTok{ }\KeywordTok{unique}\NormalTok{(countries_per_continent[[i]]}\OperatorTok{$}\NormalTok{country)}
+    \KeywordTok{print}\NormalTok{(countries)}
+    \KeywordTok{print}\NormalTok{(}\KeywordTok{length}\NormalTok{(countries))}
+    \KeywordTok{cat}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Europe"
+##  [1] Albania                Austria                Belarus               
+##  [4] Belgium                Bosnia and Herzegovina Bulgaria              
+##  [7] Croatia                Czech Republic         Denmark               
+## [10] Estonia                Finland                France                
+## [13] Germany                Greece                 Hungary               
+## [16] Iceland                Ireland                Italy                 
+## [19] Latvia                 Lithuania              Luxembourg            
+## [22] Malta                  Monaco                 Montenegro            
+## [25] Netherlands            Norway                 Poland                
+## [28] Portugal               Republic of Moldova    <NA>                  
+## [31] Romania                Russian Federation     San Marino            
+## [34] Serbia                 Slovakia               Slovenia              
+## [37] Spain                  Sweden                 Switzerland           
+## [40] TFYR Macedonia         Ukraine                United Kingdom        
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 42
+## 
+## [1] "Americas"
+##  [1] Anguilla                           Antigua and Barbuda               
+##  [3] Argentina                          Aruba                             
+##  [5] Bahamas                            Barbados                          
+##  [7] Belize                             Bermuda                           
+##  [9] Bolivia                            Brazil                            
+## [11] British Virgin Islands             Canada                            
+## [13] Cayman Islands                     Chile                             
+## [15] Colombia                           Costa Rica                        
+## [17] Cuba                               Dominica                          
+## [19] Dominican Republic                 Ecuador                           
+## [21] El Salvador                        Falkland Islands (Malvinas)       
+## [23] French Guiana                      Grenada                           
+## [25] Guadeloupe                         Guatemala                         
+## [27] Guyana                             Haiti                             
+## [29] Honduras                           Jamaica                           
+## [31] Martinique                         Mexico                            
+## [33] Montserrat                         Netherlands Antilles              
+## [35] Nicaragua                          Panama                            
+## [37] Paraguay                           Peru                              
+## [39] Puerto Rico                        <NA>                              
+## [41] Saint Kitts and Nevis              Saint Lucia                       
+## [43] Saint Pierre and Miquelon          Saint Vincent and Grenadines      
+## [45] Suriname                           Trinidad and Tobago               
+## [47] Turks and Caicos Islands           United States of America          
+## [49] Uruguay                            Venezuela (Bolivarian Republic of)
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 50
+## 
+## [1] "Asia"
+##  [1] Armenia                        Azerbaijan                    
+##  [3] Bahrain                        Brunei Darussalam             
+##  [5] Cyprus                         Georgia                       
+##  [7] Hong Kong SAR                  Iran (Islamic Rep of)         
+##  [9] Iraq                           Israel                        
+## [11] Japan                          Jordan                        
+## [13] Kazakhstan                     Kuwait                        
+## [15] Kyrgyzstan                     Macau                         
+## [17] Malaysia                       Maldives                      
+## [19] Mongolia                       Occupied Palestinian Territory
+## [21] Oman                           Philippines                   
+## [23] Qatar                          Republic of Korea             
+## [25] <NA>                           Saudi Arabia                  
+## [27] Singapore                      Sri Lanka                     
+## [29] Syrian Arab Republic           Tajikistan                    
+## [31] Thailand                       Turkey                        
+## [33] Turkmenistan                   United Arab Emirates          
+## [35] Uzbekistan                    
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 35
+## 
+## [1] "Oceania"
+## [1] Australia   Fiji        Kiribati    New Zealand <NA>       
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 5
+## 
+## [1] "Africa"
+##  [1] Cabo Verde            Egypt                 Mauritius            
+##  [4] Mayotte               Morocco               Reunion              
+##  [7] <NA>                  Sao Tome and Principe Seychelles           
+## [10] South Africa          Tunisia               Zimbabwe             
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 12
+\end{verbatim}
+
+Since there are only 5 countries in Oceania and 12 countries in Africa,
+we will use all 5 countries of Oceania and all 12 countries of Africa.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{samples_of_countries <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+\NormalTok{num_samples <-}\StringTok{ }\DecValTok{17}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(countries_per_continent))}
+\NormalTok{\{}
+\NormalTok{    countries <-}\StringTok{ }\KeywordTok{unique}\NormalTok{(countries_per_continent[[i]]}\OperatorTok{$}\NormalTok{country)}
+\NormalTok{    current_sample <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+    \ControlFlowTok{if}\NormalTok{ (}\KeywordTok{length}\NormalTok{(countries) }\OperatorTok{>=}\StringTok{ }\NormalTok{num_samples)}
+\NormalTok{    \{}
+\NormalTok{        current_sample <-}\StringTok{ }\KeywordTok{sample}\NormalTok{(countries, }\DecValTok{17}\NormalTok{)}
+\NormalTok{    \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{        current_sample <-}\StringTok{ }\KeywordTok{sample}\NormalTok{(countries, }\KeywordTok{length}\NormalTok{(countries))}
+\NormalTok{    \}}
+\NormalTok{    samples_of_countries[[i]] <-}\StringTok{ }\NormalTok{current_sample}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Let's see the countries that we will be sampling:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{total <-}\StringTok{ }\DecValTok{0}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(samples_of_countries))}
+\NormalTok{\{}
+    \KeywordTok{print}\NormalTok{(list_of_continents[i])}
+    \KeywordTok{print}\NormalTok{(samples_of_countries[[i]])}
+    \KeywordTok{print}\NormalTok{(}\KeywordTok{length}\NormalTok{(samples_of_countries[[i]]))}
+\NormalTok{    total <-}\StringTok{ }\NormalTok{total }\OperatorTok{+}\StringTok{ }\KeywordTok{length}\NormalTok{(samples_of_countries[[i]])}
+    \KeywordTok{cat}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Europe"
+##  [1] Monaco              Ukraine             Latvia             
+##  [4] Albania             Germany             Belgium            
+##  [7] Estonia             Czech Republic      Lithuania          
+## [10] Slovakia            Republic of Moldova TFYR Macedonia     
+## [13] Finland             Hungary             Croatia            
+## [16] United Kingdom      Sweden             
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 17
+## 
+## [1] "Americas"
+##  [1] Guatemala                   Dominica                   
+##  [3] Peru                        Anguilla                   
+##  [5] Canada                      Nicaragua                  
+##  [7] Argentina                   Colombia                   
+##  [9] French Guiana               Brazil                     
+## [11] Honduras                    Saint Lucia                
+## [13] El Salvador                 Paraguay                   
+## [15] British Virgin Islands      Falkland Islands (Malvinas)
+## [17] Belize                     
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 17
+## 
+## [1] "Asia"
+##  [1] Oman                  Singapore             Azerbaijan           
+##  [4] Thailand              Kazakhstan            Iran (Islamic Rep of)
+##  [7] Kyrgyzstan            Syrian Arab Republic  Hong Kong SAR        
+## [10] Malaysia              Sri Lanka             Philippines          
+## [13] Iraq                  Mongolia              Turkmenistan         
+## [16] Turkey                Cyprus               
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 17
+## 
+## [1] "Oceania"
+## [1] New Zealand Australia   Kiribati    <NA>        Fiji       
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 5
+## 
+## [1] "Africa"
+##  [1] Reunion               Sao Tome and Principe South Africa         
+##  [4] Zimbabwe              Seychelles            Egypt                
+##  [7] Cabo Verde            Mayotte               <NA>                 
+## [10] Mauritius             Tunisia               Morocco              
+## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
+## [1] 12
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{total}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 68
+\end{verbatim}
+
+Let's filter the original dataframe only to include countries that we
+have sampled:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{countries_to_test <-}\StringTok{ }\KeywordTok{list}\NormalTok{()}
+\NormalTok{a <-}\StringTok{ }\DecValTok{0}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(samples_of_countries))}
+\NormalTok{\{}
+    \CommentTok{# find out a way to access each country name}
+    \CommentTok{# print each country name}
+    \ControlFlowTok{for}\NormalTok{ (j }\ControlFlowTok{in} \KeywordTok{seq_along}\NormalTok{(samples_of_countries[[i]]))}
+\NormalTok{    \{}
+\NormalTok{        sample <-}\StringTok{ }\NormalTok{samples_of_countries[[i]]}
+\NormalTok{        country_string <-}\StringTok{ }\KeywordTok{toString}\NormalTok{(sample[[j]])}
+\NormalTok{        countries_to_test[a] <-}\StringTok{ }\NormalTok{country_string}
+\NormalTok{        a <-}\StringTok{ }\NormalTok{a }\OperatorTok{+}\StringTok{ }\DecValTok{1}
+\NormalTok{    \}}
+\NormalTok{\}}
+
+\KeywordTok{length}\NormalTok{(countries_to_test)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 67
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{countries_to_test}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] "Ukraine"
+## 
+## [[2]]
+## [1] "Latvia"
+## 
+## [[3]]
+## [1] "Albania"
+## 
+## [[4]]
+## [1] "Germany"
+## 
+## [[5]]
+## [1] "Belgium"
+## 
+## [[6]]
+## [1] "Estonia"
+## 
+## [[7]]
+## [1] "Czech Republic"
+## 
+## [[8]]
+## [1] "Lithuania"
+## 
+## [[9]]
+## [1] "Slovakia"
+## 
+## [[10]]
+## [1] "Republic of Moldova"
+## 
+## [[11]]
+## [1] "TFYR Macedonia"
+## 
+## [[12]]
+## [1] "Finland"
+## 
+## [[13]]
+## [1] "Hungary"
+## 
+## [[14]]
+## [1] "Croatia"
+## 
+## [[15]]
+## [1] "United Kingdom"
+## 
+## [[16]]
+## [1] "Sweden"
+## 
+## [[17]]
+## [1] "Guatemala"
+## 
+## [[18]]
+## [1] "Dominica"
+## 
+## [[19]]
+## [1] "Peru"
+## 
+## [[20]]
+## [1] "Anguilla"
+## 
+## [[21]]
+## [1] "Canada"
+## 
+## [[22]]
+## [1] "Nicaragua"
+## 
+## [[23]]
+## [1] "Argentina"
+## 
+## [[24]]
+## [1] "Colombia"
+## 
+## [[25]]
+## [1] "French Guiana"
+## 
+## [[26]]
+## [1] "Brazil"
+## 
+## [[27]]
+## [1] "Honduras"
+## 
+## [[28]]
+## [1] "Saint Lucia"
+## 
+## [[29]]
+## [1] "El Salvador"
+## 
+## [[30]]
+## [1] "Paraguay"
+## 
+## [[31]]
+## [1] "British Virgin Islands"
+## 
+## [[32]]
+## [1] "Falkland Islands (Malvinas)"
+## 
+## [[33]]
+## [1] "Belize"
+## 
+## [[34]]
+## [1] "Oman"
+## 
+## [[35]]
+## [1] "Singapore"
+## 
+## [[36]]
+## [1] "Azerbaijan"
+## 
+## [[37]]
+## [1] "Thailand"
+## 
+## [[38]]
+## [1] "Kazakhstan"
+## 
+## [[39]]
+## [1] "Iran (Islamic Rep of)"
+## 
+## [[40]]
+## [1] "Kyrgyzstan"
+## 
+## [[41]]
+## [1] "Syrian Arab Republic"
+## 
+## [[42]]
+## [1] "Hong Kong SAR"
+## 
+## [[43]]
+## [1] "Malaysia"
+## 
+## [[44]]
+## [1] "Sri Lanka"
+## 
+## [[45]]
+## [1] "Philippines"
+## 
+## [[46]]
+## [1] "Iraq"
+## 
+## [[47]]
+## [1] "Mongolia"
+## 
+## [[48]]
+## [1] "Turkmenistan"
+## 
+## [[49]]
+## [1] "Turkey"
+## 
+## [[50]]
+## [1] "Cyprus"
+## 
+## [[51]]
+## [1] "New Zealand"
+## 
+## [[52]]
+## [1] "Australia"
+## 
+## [[53]]
+## [1] "Kiribati"
+## 
+## [[54]]
+## [1] "NA"
+## 
+## [[55]]
+## [1] "Fiji"
+## 
+## [[56]]
+## [1] "Reunion"
+## 
+## [[57]]
+## [1] "Sao Tome and Principe"
+## 
+## [[58]]
+## [1] "South Africa"
+## 
+## [[59]]
+## [1] "Zimbabwe"
+## 
+## [[60]]
+## [1] "Seychelles"
+## 
+## [[61]]
+## [1] "Egypt"
+## 
+## [[62]]
+## [1] "Cabo Verde"
+## 
+## [[63]]
+## [1] "Mayotte"
+## 
+## [[64]]
+## [1] "NA"
+## 
+## [[65]]
+## [1] "Mauritius"
+## 
+## [[66]]
+## [1] "Tunisia"
+## 
+## [[67]]
+## [1] "Morocco"
+\end{verbatim}
+
+\hypertarget{interpretation-of-the-results-or-discussion}{%
+\section{4. Interpretation of the results or
+discussion}\label{interpretation-of-the-results-or-discussion}}
+
+\hypertarget{references}{%
+\section{5. References}\label{references}}
+
+\(\printbibliography\)
+
+
+\end{document}

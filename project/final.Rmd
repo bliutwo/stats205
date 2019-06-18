@@ -271,6 +271,4 @@ countries_to_test
 
 # 5. References
 
-@patashnik-bibtexing
-
-@mrx05
+$\printbibliography$
