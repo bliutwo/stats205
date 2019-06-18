@@ -123,8 +123,8 @@ We create six dataframes, filtered by list of countries for each continent.
 <!-- # africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
 # head(africa_suicide)
 # length(africa_suicide$country) -->
-
-[This text links to very important information about why a `for` loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop)[^1]
+<!-- 
+[This text links to very important information about why a `for` loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop)[^1] -->
 
 [Link to Pandoc Markdown formatting](https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex)
 

@@ -472,7 +472,8 @@ $(document).ready(function () {
 <!-- # africa_suicide = filtered_suicide_df[filtered_suicide_df$continent == 'Africa',]
 # head(africa_suicide)
 # length(africa_suicide$country) -->
-<p><a href="https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop">This text links to very important information about why a <code>for</code> loop doesn’t print anything.</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<!-- 
+[This text links to very important information about why a `for` loop doesn't print anything.](https://stackoverflow.com/questions/14987743/head-function-does-not-work-within-for-loop)[^1] -->
 <p><a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html%23raw-tex">Link to Pandoc Markdown formatting</a></p>
 <p>Randomly sample 17 countries from each continent:</p>
 <p>Since there are only 5 countries in Oceania and 12 countries in Africa, we will use all 5 countries of Oceania and all 12 countries of Africa.</p>
@@ -552,12 +553,6 @@ $(document).ready(function () {
 <p>Szamil. 2018. “WHO Suicide Statistics.” <em>Kaggle</em>. <a href="https://www.kaggle.com/szamil/who-suicide-statistics">https://www.kaggle.com/szamil/who-suicide-statistics</a>.</p>
 </div>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Basically, <code>for</code> loops are functions themselves. R prints out the result of a command automatically, but functions are not inherently a command, and since <code>for</code> loops are functions, nothing will be printed. The solution is to have <code>print(command())</code> within the <code>for</code> loop to get output for your <code>for</code> loop. You will never again spend hours trying to find out why a <code>for</code> loop doesn’t print anything because you’re no longer an R newbie.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-</ol>
 </div>
 
 
