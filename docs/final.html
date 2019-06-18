@@ -399,7 +399,7 @@ $(document).ready(function () {
 <div id="bootstrapping" class="section level2">
 <h2>Bootstrapping</h2>
 <blockquote>
-<p>In statistics, bootstrapping is any test or metric that relies on random sampling with replacement. Bootstrapping allows assigning measures of accuracy (defined in terms of bias, variance, confidence intervals, prediction error or some other such measure) to sample estimates <span class="citation">(Efron and Tibshirani 1993; Efron 2003)</span>. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods. Generally, it falls in the broader class of resampling methods.</p>
+<p>In statistics, bootstrapping is any test or metric that relies on random sampling with replacement. Bootstrapping allows assigning measures of accuracy (defined in terms of bias, variance, confidence intervals, prediction error or some other such measure) to sample estimates <span class="citation">(Efron and Tibshirani 1993; Efron 2003)</span>. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods. Generally, it falls in the broader class of resampling methods<span class="citation">(“Bootstrap Methods,” n.d.)</span>.</p>
 <p>Bootstrapping is the practice of estimating properties of an estimator (such as its variance) by measuring those properties when sampling from an approximating distribution. One standard choice for an approximating distribution is the empirical distribution function of the observed data. In the case where a set of observations can be assumed to be from an independent and identically distributed population, this can be implemented by constructing a number of resamples with replacement, of the observed dataset (and of equal size to the observed dataset).</p>
 <p>It may also be used for constructing hypothesis tests. It is often used as an alternative to statistical inference based on the assumption of a parametric model when that assumption is in doubt, or where parametric inference is impossible or requires complicated formulas for the calculation of standard errors.</p>
 </blockquote>
@@ -697,51 +697,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Belarus             Czech Republic      Hungary            
-##  [4] Luxembourg          &lt;NA&gt;                Spain              
-##  [7] Ukraine             Latvia              Russian Federation 
-## [10] Republic of Moldova Denmark             Lithuania          
-## [13] Iceland             Poland              France             
-## [16] Malta               Italy              
+##  [1] Republic of Moldova    Ukraine                Bosnia and Herzegovina
+##  [4] Iceland                Belarus                Hungary               
+##  [7] Greece                 Sweden                 Bulgaria              
+## [10] Czech Republic         France                 Croatia               
+## [13] San Marino             Norway                 Estonia               
+## [16] Serbia                 Montenegro            
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Anguilla                    Guadeloupe                 
-##  [3] Argentina                   Saint Kitts and Nevis      
-##  [5] Puerto Rico                 British Virgin Islands     
-##  [7] Ecuador                     Costa Rica                 
-##  [9] Turks and Caicos Islands    Martinique                 
-## [11] El Salvador                 Colombia                   
-## [13] Canada                      French Guiana              
-## [15] Guyana                      Dominican Republic         
-## [17] Falkland Islands (Malvinas)
+##  [1] Belize                             French Guiana                     
+##  [3] Cuba                               United States of America          
+##  [5] Cayman Islands                     Anguilla                          
+##  [7] Costa Rica                         British Virgin Islands            
+##  [9] Antigua and Barbuda                Saint Pierre and Miquelon         
+## [11] Netherlands Antilles               Venezuela (Bolivarian Republic of)
+## [13] Saint Lucia                        Uruguay                           
+## [15] Colombia                           Turks and Caicos Islands          
+## [17] Argentina                         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Macau                          Tajikistan                    
-##  [3] &lt;NA&gt;                           Iran (Islamic Rep of)         
-##  [5] Thailand                       Brunei Darussalam             
-##  [7] Qatar                          Occupied Palestinian Territory
-##  [9] Jordan                         Japan                         
-## [11] Kyrgyzstan                     Israel                        
-## [13] Kazakhstan                     Turkey                        
-## [15] Azerbaijan                     Maldives                      
-## [17] Hong Kong SAR                 
+##  [1] Macau                          Uzbekistan                    
+##  [3] Saudi Arabia                   Oman                          
+##  [5] Armenia                        Kyrgyzstan                    
+##  [7] Georgia                        Republic of Korea             
+##  [9] Jordan                         Brunei Darussalam             
+## [11] Qatar                          Kazakhstan                    
+## [13] Hong Kong SAR                  Philippines                   
+## [15] United Arab Emirates           Iran (Islamic Rep of)         
+## [17] Occupied Palestinian Territory
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] &lt;NA&gt;        Kiribati    Fiji        Australia   New Zealand
+## [1] Fiji        Kiribati    Australia   New Zealand &lt;NA&gt;       
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] &lt;NA&gt;                  South Africa          Sao Tome and Principe
-##  [4] Cabo Verde            Morocco               Mauritius            
-##  [7] Seychelles            Egypt                 Tunisia              
-## [10] Mayotte               Reunion               Zimbabwe             
+##  [1] Zimbabwe              South Africa          &lt;NA&gt;                 
+##  [4] Sao Tome and Principe Seychelles            Egypt                
+##  [7] Cabo Verde            Mauritius             Tunisia              
+## [10] Mayotte               Reunion               Morocco              
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -790,193 +790,193 @@ length(countries_to_test)</code></pre>
 <pre><code>## [1] 67</code></pre>
 <pre class="r"><code>countries_to_test</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;Czech Republic&quot;
-## 
-## [[2]]
-## [1] &quot;Hungary&quot;
-## 
-## [[3]]
-## [1] &quot;Luxembourg&quot;
-## 
-## [[4]]
-## [1] &quot;NA&quot;
-## 
-## [[5]]
-## [1] &quot;Spain&quot;
-## 
-## [[6]]
 ## [1] &quot;Ukraine&quot;
 ## 
-## [[7]]
-## [1] &quot;Latvia&quot;
+## [[2]]
+## [1] &quot;Bosnia and Herzegovina&quot;
 ## 
-## [[8]]
-## [1] &quot;Russian Federation&quot;
-## 
-## [[9]]
-## [1] &quot;Republic of Moldova&quot;
-## 
-## [[10]]
-## [1] &quot;Denmark&quot;
-## 
-## [[11]]
-## [1] &quot;Lithuania&quot;
-## 
-## [[12]]
+## [[3]]
 ## [1] &quot;Iceland&quot;
 ## 
-## [[13]]
-## [1] &quot;Poland&quot;
+## [[4]]
+## [1] &quot;Belarus&quot;
 ## 
-## [[14]]
+## [[5]]
+## [1] &quot;Hungary&quot;
+## 
+## [[6]]
+## [1] &quot;Greece&quot;
+## 
+## [[7]]
+## [1] &quot;Sweden&quot;
+## 
+## [[8]]
+## [1] &quot;Bulgaria&quot;
+## 
+## [[9]]
+## [1] &quot;Czech Republic&quot;
+## 
+## [[10]]
 ## [1] &quot;France&quot;
 ## 
+## [[11]]
+## [1] &quot;Croatia&quot;
+## 
+## [[12]]
+## [1] &quot;San Marino&quot;
+## 
+## [[13]]
+## [1] &quot;Norway&quot;
+## 
+## [[14]]
+## [1] &quot;Estonia&quot;
+## 
 ## [[15]]
-## [1] &quot;Malta&quot;
+## [1] &quot;Serbia&quot;
 ## 
 ## [[16]]
-## [1] &quot;Italy&quot;
+## [1] &quot;Montenegro&quot;
 ## 
 ## [[17]]
-## [1] &quot;Anguilla&quot;
+## [1] &quot;Belize&quot;
 ## 
 ## [[18]]
-## [1] &quot;Guadeloupe&quot;
-## 
-## [[19]]
-## [1] &quot;Argentina&quot;
-## 
-## [[20]]
-## [1] &quot;Saint Kitts and Nevis&quot;
-## 
-## [[21]]
-## [1] &quot;Puerto Rico&quot;
-## 
-## [[22]]
-## [1] &quot;British Virgin Islands&quot;
-## 
-## [[23]]
-## [1] &quot;Ecuador&quot;
-## 
-## [[24]]
-## [1] &quot;Costa Rica&quot;
-## 
-## [[25]]
-## [1] &quot;Turks and Caicos Islands&quot;
-## 
-## [[26]]
-## [1] &quot;Martinique&quot;
-## 
-## [[27]]
-## [1] &quot;El Salvador&quot;
-## 
-## [[28]]
-## [1] &quot;Colombia&quot;
-## 
-## [[29]]
-## [1] &quot;Canada&quot;
-## 
-## [[30]]
 ## [1] &quot;French Guiana&quot;
 ## 
+## [[19]]
+## [1] &quot;Cuba&quot;
+## 
+## [[20]]
+## [1] &quot;United States of America&quot;
+## 
+## [[21]]
+## [1] &quot;Cayman Islands&quot;
+## 
+## [[22]]
+## [1] &quot;Anguilla&quot;
+## 
+## [[23]]
+## [1] &quot;Costa Rica&quot;
+## 
+## [[24]]
+## [1] &quot;British Virgin Islands&quot;
+## 
+## [[25]]
+## [1] &quot;Antigua and Barbuda&quot;
+## 
+## [[26]]
+## [1] &quot;Saint Pierre and Miquelon&quot;
+## 
+## [[27]]
+## [1] &quot;Netherlands Antilles&quot;
+## 
+## [[28]]
+## [1] &quot;Venezuela (Bolivarian Republic of)&quot;
+## 
+## [[29]]
+## [1] &quot;Saint Lucia&quot;
+## 
+## [[30]]
+## [1] &quot;Uruguay&quot;
+## 
 ## [[31]]
-## [1] &quot;Guyana&quot;
+## [1] &quot;Colombia&quot;
 ## 
 ## [[32]]
-## [1] &quot;Dominican Republic&quot;
+## [1] &quot;Turks and Caicos Islands&quot;
 ## 
 ## [[33]]
-## [1] &quot;Falkland Islands (Malvinas)&quot;
+## [1] &quot;Argentina&quot;
 ## 
 ## [[34]]
 ## [1] &quot;Macau&quot;
 ## 
 ## [[35]]
-## [1] &quot;Tajikistan&quot;
+## [1] &quot;Uzbekistan&quot;
 ## 
 ## [[36]]
-## [1] &quot;NA&quot;
+## [1] &quot;Saudi Arabia&quot;
 ## 
 ## [[37]]
-## [1] &quot;Iran (Islamic Rep of)&quot;
+## [1] &quot;Oman&quot;
 ## 
 ## [[38]]
-## [1] &quot;Thailand&quot;
+## [1] &quot;Armenia&quot;
 ## 
 ## [[39]]
-## [1] &quot;Brunei Darussalam&quot;
+## [1] &quot;Kyrgyzstan&quot;
 ## 
 ## [[40]]
-## [1] &quot;Qatar&quot;
+## [1] &quot;Georgia&quot;
 ## 
 ## [[41]]
-## [1] &quot;Occupied Palestinian Territory&quot;
+## [1] &quot;Republic of Korea&quot;
 ## 
 ## [[42]]
 ## [1] &quot;Jordan&quot;
 ## 
 ## [[43]]
-## [1] &quot;Japan&quot;
+## [1] &quot;Brunei Darussalam&quot;
 ## 
 ## [[44]]
-## [1] &quot;Kyrgyzstan&quot;
+## [1] &quot;Qatar&quot;
 ## 
 ## [[45]]
-## [1] &quot;Israel&quot;
-## 
-## [[46]]
 ## [1] &quot;Kazakhstan&quot;
 ## 
-## [[47]]
-## [1] &quot;Turkey&quot;
-## 
-## [[48]]
-## [1] &quot;Azerbaijan&quot;
-## 
-## [[49]]
-## [1] &quot;Maldives&quot;
-## 
-## [[50]]
+## [[46]]
 ## [1] &quot;Hong Kong SAR&quot;
 ## 
+## [[47]]
+## [1] &quot;Philippines&quot;
+## 
+## [[48]]
+## [1] &quot;United Arab Emirates&quot;
+## 
+## [[49]]
+## [1] &quot;Iran (Islamic Rep of)&quot;
+## 
+## [[50]]
+## [1] &quot;Occupied Palestinian Territory&quot;
+## 
 ## [[51]]
-## [1] &quot;NA&quot;
+## [1] &quot;Fiji&quot;
 ## 
 ## [[52]]
 ## [1] &quot;Kiribati&quot;
 ## 
 ## [[53]]
-## [1] &quot;Fiji&quot;
-## 
-## [[54]]
 ## [1] &quot;Australia&quot;
 ## 
-## [[55]]
+## [[54]]
 ## [1] &quot;New Zealand&quot;
 ## 
-## [[56]]
+## [[55]]
 ## [1] &quot;NA&quot;
+## 
+## [[56]]
+## [1] &quot;Zimbabwe&quot;
 ## 
 ## [[57]]
 ## [1] &quot;South Africa&quot;
 ## 
 ## [[58]]
-## [1] &quot;Sao Tome and Principe&quot;
+## [1] &quot;NA&quot;
 ## 
 ## [[59]]
-## [1] &quot;Cabo Verde&quot;
+## [1] &quot;Sao Tome and Principe&quot;
 ## 
 ## [[60]]
-## [1] &quot;Morocco&quot;
-## 
-## [[61]]
-## [1] &quot;Mauritius&quot;
-## 
-## [[62]]
 ## [1] &quot;Seychelles&quot;
 ## 
-## [[63]]
+## [[61]]
 ## [1] &quot;Egypt&quot;
+## 
+## [[62]]
+## [1] &quot;Cabo Verde&quot;
+## 
+## [[63]]
+## [1] &quot;Mauritius&quot;
 ## 
 ## [[64]]
 ## [1] &quot;Tunisia&quot;
@@ -988,7 +988,7 @@ length(countries_to_test)</code></pre>
 ## [1] &quot;Reunion&quot;
 ## 
 ## [[67]]
-## [1] &quot;Zimbabwe&quot;</code></pre>
+## [1] &quot;Morocco&quot;</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
@@ -996,6 +996,9 @@ length(countries_to_test)</code></pre>
 <div id="references" class="section level1 unnumbered">
 <h1>5. References</h1>
 <div id="refs" class="references">
+<div id="ref-from_wolfram_mathworld">
+<p>“Bootstrap Methods.” n.d. <em>From Wolfram MathWorld</em>. <a href="http://mathworld.wolfram.com/BootstrapMethods.html">http://mathworld.wolfram.com/BootstrapMethods.html</a>.</p>
+</div>
 <div id="ref-efron_2003">
 <p>Efron, Bradley. 2003. <em>Second Thoughts on the Bootstrap</em>. Department of Biostatistics, Stanford University.</p>
 </div>
