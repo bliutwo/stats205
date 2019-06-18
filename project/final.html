@@ -699,51 +699,48 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Denmark                Germany                United Kingdom        
-##  [4] Montenegro             TFYR Macedonia         Finland               
-##  [7] Belgium                Serbia                 Slovakia              
-## [10] Hungary                Estonia                Luxembourg            
-## [13] Portugal               Slovenia               Ireland               
-## [16] Bosnia and Herzegovina Switzerland           
+##  [1] Republic of Moldova Czech Republic      Belgium            
+##  [4] Russian Federation  Austria             United Kingdom     
+##  [7] Ukraine             Greece              Italy              
+## [10] Germany             Switzerland         Iceland            
+## [13] Lithuania           Malta               Estonia            
+## [16] Slovakia            San Marino         
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Guadeloupe                  Grenada                    
-##  [3] Saint Lucia                 Puerto Rico                
-##  [5] Antigua and Barbuda         Falkland Islands (Malvinas)
-##  [7] Colombia                    Panama                     
-##  [9] Belize                      Cuba                       
-## [11] Paraguay                    Argentina                  
-## [13] Jamaica                     Brazil                     
-## [15] Netherlands Antilles        Ecuador                    
-## [17] Saint Pierre and Miquelon  
+##  [1] Martinique                         Panama                            
+##  [3] Aruba                              United States of America          
+##  [5] Canada                             Saint Pierre and Miquelon         
+##  [7] Trinidad and Tobago                Honduras                          
+##  [9] Belize                             Venezuela (Bolivarian Republic of)
+## [11] Cayman Islands                     Paraguay                          
+## [13] Bolivia                            Dominica                          
+## [15] Saint Lucia                        Jamaica                           
+## [17] Ecuador                           
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Azerbaijan                     United Arab Emirates          
-##  [3] Singapore                      Occupied Palestinian Territory
-##  [5] Uzbekistan                     Philippines                   
-##  [7] Armenia                        Turkmenistan                  
-##  [9] Iran (Islamic Rep of)          Thailand                      
-## [11] Jordan                         Brunei Darussalam             
-## [13] Oman                           Kazakhstan                    
-## [15] Maldives                       Iraq                          
-## [17] Saudi Arabia                  
+##  [1] Brunei Darussalam Qatar             Uzbekistan       
+##  [4] Singapore         Maldives          Mongolia         
+##  [7] Thailand          Turkmenistan      Azerbaijan       
+## [10] Cyprus            Japan             Iraq             
+## [13] Philippines       Malaysia          Hong Kong SAR    
+## [16] Macau             Saudi Arabia     
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Kiribati    New Zealand Fiji        &lt;NA&gt;        Australia  
+## [1] Kiribati    Fiji        New Zealand &lt;NA&gt;        Australia  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Egypt                 Tunisia               Mauritius            
-##  [4] Seychelles            Zimbabwe              Reunion              
-##  [7] Cabo Verde            Sao Tome and Principe &lt;NA&gt;                 
-## [10] Morocco               Mayotte               South Africa         
+##  [1] Tunisia               Mauritius             South Africa         
+##  [4] Mayotte               Zimbabwe              Seychelles           
+##  [7] Reunion               Morocco               Cabo Verde           
+## [10] Sao Tome and Principe &lt;NA&gt;                  Egypt                
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -792,151 +789,151 @@ length(countries_to_test)</code></pre>
 <pre><code>## [1] 67</code></pre>
 <pre class="r"><code>countries_to_test</code></pre>
 <pre><code>## [[1]]
-## [1] &quot;Germany&quot;
+## [1] &quot;Czech Republic&quot;
 ## 
 ## [[2]]
-## [1] &quot;United Kingdom&quot;
-## 
-## [[3]]
-## [1] &quot;Montenegro&quot;
-## 
-## [[4]]
-## [1] &quot;TFYR Macedonia&quot;
-## 
-## [[5]]
-## [1] &quot;Finland&quot;
-## 
-## [[6]]
 ## [1] &quot;Belgium&quot;
 ## 
+## [[3]]
+## [1] &quot;Russian Federation&quot;
+## 
+## [[4]]
+## [1] &quot;Austria&quot;
+## 
+## [[5]]
+## [1] &quot;United Kingdom&quot;
+## 
+## [[6]]
+## [1] &quot;Ukraine&quot;
+## 
 ## [[7]]
-## [1] &quot;Serbia&quot;
+## [1] &quot;Greece&quot;
 ## 
 ## [[8]]
-## [1] &quot;Slovakia&quot;
+## [1] &quot;Italy&quot;
 ## 
 ## [[9]]
-## [1] &quot;Hungary&quot;
+## [1] &quot;Germany&quot;
 ## 
 ## [[10]]
-## [1] &quot;Estonia&quot;
-## 
-## [[11]]
-## [1] &quot;Luxembourg&quot;
-## 
-## [[12]]
-## [1] &quot;Portugal&quot;
-## 
-## [[13]]
-## [1] &quot;Slovenia&quot;
-## 
-## [[14]]
-## [1] &quot;Ireland&quot;
-## 
-## [[15]]
-## [1] &quot;Bosnia and Herzegovina&quot;
-## 
-## [[16]]
 ## [1] &quot;Switzerland&quot;
 ## 
+## [[11]]
+## [1] &quot;Iceland&quot;
+## 
+## [[12]]
+## [1] &quot;Lithuania&quot;
+## 
+## [[13]]
+## [1] &quot;Malta&quot;
+## 
+## [[14]]
+## [1] &quot;Estonia&quot;
+## 
+## [[15]]
+## [1] &quot;Slovakia&quot;
+## 
+## [[16]]
+## [1] &quot;San Marino&quot;
+## 
 ## [[17]]
-## [1] &quot;Guadeloupe&quot;
+## [1] &quot;Martinique&quot;
 ## 
 ## [[18]]
-## [1] &quot;Grenada&quot;
+## [1] &quot;Panama&quot;
 ## 
 ## [[19]]
-## [1] &quot;Saint Lucia&quot;
+## [1] &quot;Aruba&quot;
 ## 
 ## [[20]]
-## [1] &quot;Puerto Rico&quot;
+## [1] &quot;United States of America&quot;
 ## 
 ## [[21]]
-## [1] &quot;Antigua and Barbuda&quot;
+## [1] &quot;Canada&quot;
 ## 
 ## [[22]]
-## [1] &quot;Falkland Islands (Malvinas)&quot;
+## [1] &quot;Saint Pierre and Miquelon&quot;
 ## 
 ## [[23]]
-## [1] &quot;Colombia&quot;
+## [1] &quot;Trinidad and Tobago&quot;
 ## 
 ## [[24]]
-## [1] &quot;Panama&quot;
+## [1] &quot;Honduras&quot;
 ## 
 ## [[25]]
 ## [1] &quot;Belize&quot;
 ## 
 ## [[26]]
-## [1] &quot;Cuba&quot;
+## [1] &quot;Venezuela (Bolivarian Republic of)&quot;
 ## 
 ## [[27]]
-## [1] &quot;Paraguay&quot;
+## [1] &quot;Cayman Islands&quot;
 ## 
 ## [[28]]
-## [1] &quot;Argentina&quot;
+## [1] &quot;Paraguay&quot;
 ## 
 ## [[29]]
-## [1] &quot;Jamaica&quot;
+## [1] &quot;Bolivia&quot;
 ## 
 ## [[30]]
-## [1] &quot;Brazil&quot;
+## [1] &quot;Dominica&quot;
 ## 
 ## [[31]]
-## [1] &quot;Netherlands Antilles&quot;
+## [1] &quot;Saint Lucia&quot;
 ## 
 ## [[32]]
-## [1] &quot;Ecuador&quot;
+## [1] &quot;Jamaica&quot;
 ## 
 ## [[33]]
-## [1] &quot;Saint Pierre and Miquelon&quot;
+## [1] &quot;Ecuador&quot;
 ## 
 ## [[34]]
-## [1] &quot;Azerbaijan&quot;
+## [1] &quot;Brunei Darussalam&quot;
 ## 
 ## [[35]]
-## [1] &quot;United Arab Emirates&quot;
+## [1] &quot;Qatar&quot;
 ## 
 ## [[36]]
-## [1] &quot;Singapore&quot;
-## 
-## [[37]]
-## [1] &quot;Occupied Palestinian Territory&quot;
-## 
-## [[38]]
 ## [1] &quot;Uzbekistan&quot;
 ## 
+## [[37]]
+## [1] &quot;Singapore&quot;
+## 
+## [[38]]
+## [1] &quot;Maldives&quot;
+## 
 ## [[39]]
-## [1] &quot;Philippines&quot;
+## [1] &quot;Mongolia&quot;
 ## 
 ## [[40]]
-## [1] &quot;Armenia&quot;
+## [1] &quot;Thailand&quot;
 ## 
 ## [[41]]
 ## [1] &quot;Turkmenistan&quot;
 ## 
 ## [[42]]
-## [1] &quot;Iran (Islamic Rep of)&quot;
+## [1] &quot;Azerbaijan&quot;
 ## 
 ## [[43]]
-## [1] &quot;Thailand&quot;
+## [1] &quot;Cyprus&quot;
 ## 
 ## [[44]]
-## [1] &quot;Jordan&quot;
+## [1] &quot;Japan&quot;
 ## 
 ## [[45]]
-## [1] &quot;Brunei Darussalam&quot;
+## [1] &quot;Iraq&quot;
 ## 
 ## [[46]]
-## [1] &quot;Oman&quot;
+## [1] &quot;Philippines&quot;
 ## 
 ## [[47]]
-## [1] &quot;Kazakhstan&quot;
+## [1] &quot;Malaysia&quot;
 ## 
 ## [[48]]
-## [1] &quot;Maldives&quot;
+## [1] &quot;Hong Kong SAR&quot;
 ## 
 ## [[49]]
-## [1] &quot;Iraq&quot;
+## [1] &quot;Macau&quot;
 ## 
 ## [[50]]
 ## [1] &quot;Saudi Arabia&quot;
@@ -945,10 +942,10 @@ length(countries_to_test)</code></pre>
 ## [1] &quot;Kiribati&quot;
 ## 
 ## [[52]]
-## [1] &quot;New Zealand&quot;
+## [1] &quot;Fiji&quot;
 ## 
 ## [[53]]
-## [1] &quot;Fiji&quot;
+## [1] &quot;New Zealand&quot;
 ## 
 ## [[54]]
 ## [1] &quot;NA&quot;
@@ -957,46 +954,52 @@ length(countries_to_test)</code></pre>
 ## [1] &quot;Australia&quot;
 ## 
 ## [[56]]
-## [1] &quot;Egypt&quot;
-## 
-## [[57]]
 ## [1] &quot;Tunisia&quot;
 ## 
-## [[58]]
+## [[57]]
 ## [1] &quot;Mauritius&quot;
 ## 
+## [[58]]
+## [1] &quot;South Africa&quot;
+## 
 ## [[59]]
-## [1] &quot;Seychelles&quot;
+## [1] &quot;Mayotte&quot;
 ## 
 ## [[60]]
 ## [1] &quot;Zimbabwe&quot;
 ## 
 ## [[61]]
-## [1] &quot;Reunion&quot;
+## [1] &quot;Seychelles&quot;
 ## 
 ## [[62]]
-## [1] &quot;Cabo Verde&quot;
+## [1] &quot;Reunion&quot;
 ## 
 ## [[63]]
-## [1] &quot;Sao Tome and Principe&quot;
-## 
-## [[64]]
-## [1] &quot;NA&quot;
-## 
-## [[65]]
 ## [1] &quot;Morocco&quot;
 ## 
+## [[64]]
+## [1] &quot;Cabo Verde&quot;
+## 
+## [[65]]
+## [1] &quot;Sao Tome and Principe&quot;
+## 
 ## [[66]]
-## [1] &quot;Mayotte&quot;
+## [1] &quot;NA&quot;
 ## 
 ## [[67]]
-## [1] &quot;South Africa&quot;</code></pre>
+## [1] &quot;Egypt&quot;</code></pre>
 </div>
 <div id="interpretation-of-the-results-or-discussion" class="section level1">
 <h1>4. Interpretation of the results or discussion</h1>
 </div>
 <div id="references" class="section level1">
 <h1>5. References</h1>
+<p><span class="citation">Patashnik (1988)</span></p>
+<div id="refs" class="references">
+<div id="ref-patashnik-bibtexing">
+<p>Patashnik, Oren. 1988. “BIBTEXing.”</p>
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr />
