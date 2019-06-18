@@ -420,7 +420,7 @@ $(document).ready(function () {
 <h2>Linear regression - Kendall rank correlation coefficient</h2>
 <blockquote>
 <p>In statistics, the Kendall rank correlation coefficient, commonly referred to as Kendall’s tau coefficient (after the Greek letter <span class="math inline">\(\tau\)</span>), is a statistic used to measure the ordinal association between two measured quantities. A tau test is a non-parametric hypothesis test for statistical dependence based on the tau coefficient.</p>
-<p>It is a measure of rank correlation: the similarity of the orderings of the data when ranked by each of the quantities. It is named after Maurice Kendall, who developed it in 1938,<span class="citation">(Kendall 1938)</span> though Gustav Fechner had proposed a similar measure in the context of time series in 1897.<span class="citation">(“Measures of Association for Ordinal Data,” n.d.)</span></p>
+<p>It is a measure of rank correlation: the similarity of the orderings of the data when ranked by each of the quantities. It is named after Maurice Kendall, who developed it in 1938 <span class="citation">(Kendall 1938)</span>, though Gustav Fechner had proposed a similar measure in the context of time series in 1897 <span class="citation">(“Measures of Association for Ordinal Data,” n.d.)</span>.</p>
 <p>Intuitively, the Kendall correlation between two variables will be high when observations have a similar (or identical for a correlation of 1) rank (i.e. relative position label of the observations within the variable: 1st, 2nd, 3rd, etc.) between the two variables, and low when observations have a dissimilar (or fully different for a correlation of -1) rank between the two variables.</p>
 <p>Both Kendall’s <span class="math inline">\(\tau\)</span> and Spearman’s <span class="math inline">\(\rho\)</span> can be formulated as special cases of a more general correlation coefficient.</p>
 </blockquote>
@@ -428,7 +428,7 @@ $(document).ready(function () {
 <div id="cross-validation" class="section level2">
 <h2>Cross validation</h2>
 <blockquote>
-<p>Cross-validation, sometimes called rotation estimation,<span class="citation">(Geisser 1993)</span><span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span><span class="citation">(Devijver and Kittler 1982)</span> or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).<span class="citation">(2 et al., n.d.)</span>[5] The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
+<p>Cross-validation, sometimes called rotation estimation <span class="citation">(Geisser 1993)</span> <span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span> <span class="citation">(Devijver and Kittler 1982)</span>, or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set). <span class="citation">2 et al. (n.d.)</span>] <span class="citation">(“Newbie Question: Confused About Train, Validation and Test Data!” n.d.)</span>. The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias [6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
 <p>One round of cross-validation involves partitioning a sample of data into complementary subsets, performing the analysis on one subset (called the training set), and validating the analysis on the other subset (called the validation set or testing set). To reduce variability, in most methods multiple rounds of cross-validation are performed using different partitions, and the validation results are combined (e.g. averaged) over the rounds to give an estimate of the model’s predictive performance.</p>
 <p>In summary, cross-validation combines (averages) measures of fitness in prediction to derive a more accurate estimate of model prediction performance.[7]</p>
 </blockquote>
@@ -711,48 +711,51 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] Malta                  Netherlands            Germany               
-##  [4] Bosnia and Herzegovina Hungary                Czech Republic        
-##  [7] Slovakia               Russian Federation     San Marino            
-## [10] Ukraine                &lt;NA&gt;                   Norway                
-## [13] Denmark                Belgium                Monaco                
-## [16] Greece                 Finland               
+##  [1] Russian Federation Latvia             San Marino        
+##  [4] Czech Republic     Serbia             Bulgaria          
+##  [7] Estonia            TFYR Macedonia     Iceland           
+## [10] Belarus            Portugal           Croatia           
+## [13] Albania            Spain              Monaco            
+## [16] Belgium            United Kingdom    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] British Virgin Islands   Costa Rica              
-##  [3] Turks and Caicos Islands Dominican Republic      
-##  [5] Brazil                   Bolivia                 
-##  [7] Bermuda                  Anguilla                
-##  [9] Mexico                   United States of America
-## [11] French Guiana            Montserrat              
-## [13] Colombia                 Belize                  
-## [15] Netherlands Antilles     Saint Lucia             
-## [17] Peru                    
+##  [1] Venezuela (Bolivarian Republic of) Bahamas                           
+##  [3] &lt;NA&gt;                               Guatemala                         
+##  [5] Bermuda                            Trinidad and Tobago               
+##  [7] Panama                             Uruguay                           
+##  [9] Grenada                            El Salvador                       
+## [11] Dominica                           Cuba                              
+## [13] Anguilla                           Chile                             
+## [15] French Guiana                      Turks and Caicos Islands          
+## [17] Ecuador                           
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Mongolia             Malaysia             Kuwait              
-##  [4] Jordan               Iraq                 Thailand            
-##  [7] Bahrain              Azerbaijan           &lt;NA&gt;                
-## [10] Hong Kong SAR        United Arab Emirates Georgia             
-## [13] Syrian Arab Republic Uzbekistan           Brunei Darussalam   
-## [16] Qatar                Turkmenistan        
+##  [1] Uzbekistan                     Kuwait                        
+##  [3] Singapore                      Kyrgyzstan                    
+##  [5] Iraq                           Thailand                      
+##  [7] Maldives                       Azerbaijan                    
+##  [9] Kazakhstan                     Sri Lanka                     
+## [11] Bahrain                        Macau                         
+## [13] &lt;NA&gt;                           Occupied Palestinian Territory
+## [15] Iran (Islamic Rep of)          Philippines                   
+## [17] Tajikistan                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] New Zealand &lt;NA&gt;        Kiribati    Fiji        Australia  
+## [1] Kiribati    &lt;NA&gt;        Fiji        New Zealand Australia  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] Egypt                 Mauritius             Sao Tome and Principe
-##  [4] Reunion               Zimbabwe              Tunisia              
-##  [7] South Africa          Morocco               Mayotte              
-## [10] Seychelles            &lt;NA&gt;                  Cabo Verde           
+##  [1] Mayotte               Morocco               Mauritius            
+##  [4] Zimbabwe              Cabo Verde            Egypt                
+##  [7] Tunisia               South Africa          Sao Tome and Principe
+## [10] Seychelles            Reunion               &lt;NA&gt;                 
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -836,6 +839,9 @@ length(countries_to_test)</code></pre>
 </div>
 <div id="ref-measures_of_association">
 <p>“Measures of Association for Ordinal Data.” n.d. <em>Measures of Association</em>, 64–85. <a href="https://doi.org/10.4135/9781412984942.n5">https://doi.org/10.4135/9781412984942.n5</a>.</p>
+</div>
+<div id="ref-newbie_question">
+<p>“Newbie Question: Confused About Train, Validation and Test Data!” n.d. <em>Newbie Question: Confused About Train, Validation and Test Data! | Heaton Research</em>. <a href="https://web.archive.org/web/20150314221014/http://www.heatonresearch.com/node/1823">https://web.archive.org/web/20150314221014/http://www.heatonresearch.com/node/1823</a>.</p>
 </div>
 <div id="ref-szamil_2018">
 <p>Szamil. 2018. “WHO Suicide Statistics.” <em>Kaggle</em>. <a href="https://www.kaggle.com/szamil/who-suicide-statistics">https://www.kaggle.com/szamil/who-suicide-statistics</a>.</p>
