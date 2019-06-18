@@ -428,7 +428,7 @@ $(document).ready(function () {
 <div id="cross-validation" class="section level2">
 <h2>Cross validation</h2>
 <blockquote>
-<p>Cross-validation, sometimes called rotation estimation,<span class="citation">(Geisser 1993)</span><span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span><span class="citation">(Devijver and Kittler 1982)</span> or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).[4][5] The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
+<p>Cross-validation, sometimes called rotation estimation,<span class="citation">(Geisser 1993)</span><span class="citation">(“A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection,” n.d.)</span><span class="citation">(Devijver and Kittler 1982)</span> or out-of-sample testing is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. In a prediction problem, a model is usually given a dataset of known data on which training is run (training dataset), and a dataset of unknown data (or first seen data) against which the model is tested (called the validation dataset or testing set).<span class="citation">(2 et al., n.d.)</span>[5] The goal of cross-validation is to test the model’s ability to predict new data that was not used in estimating it, in order to flag problems like overfitting or selection bias[6] and to give an insight on how the model will generalize to an independent dataset (i.e., an unknown dataset, for instance from a real problem).</p>
 <p>One round of cross-validation involves partitioning a sample of data into complementary subsets, performing the analysis on one subset (called the training set), and validating the analysis on the other subset (called the validation set or testing set). To reduce variability, in most methods multiple rounds of cross-validation are performed using different partitions, and the validation results are combined (e.g. averaged) over the rounds to give an estimate of the model’s predictive performance.</p>
 <p>In summary, cross-validation combines (averages) measures of fitness in prediction to derive a more accurate estimate of model prediction performance.[7]</p>
 </blockquote>
@@ -711,48 +711,48 @@ for (i in seq_along(samples_of_countries))
     cat(&quot;\n&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Europe&quot;
-##  [1] TFYR Macedonia      Estonia             Republic of Moldova
-##  [4] United Kingdom      San Marino          Netherlands        
-##  [7] Sweden              Germany             France             
-## [10] Bulgaria            Malta               Denmark            
-## [13] &lt;NA&gt;                Slovakia            Iceland            
-## [16] Belarus             Luxembourg         
+##  [1] Malta                  Netherlands            Germany               
+##  [4] Bosnia and Herzegovina Hungary                Czech Republic        
+##  [7] Slovakia               Russian Federation     San Marino            
+## [10] Ukraine                &lt;NA&gt;                   Norway                
+## [13] Denmark                Belgium                Monaco                
+## [16] Greece                 Finland               
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Americas&quot;
-##  [1] Bahamas                      Barbados                    
-##  [3] Saint Lucia                  Cayman Islands              
-##  [5] Anguilla                     Dominica                    
-##  [7] Saint Vincent and Grenadines &lt;NA&gt;                        
-##  [9] Martinique                   Turks and Caicos Islands    
-## [11] Panama                       Saint Pierre and Miquelon   
-## [13] Colombia                     Trinidad and Tobago         
-## [15] Nicaragua                    Cuba                        
-## [17] Belize                      
+##  [1] British Virgin Islands   Costa Rica              
+##  [3] Turks and Caicos Islands Dominican Republic      
+##  [5] Brazil                   Bolivia                 
+##  [7] Bermuda                  Anguilla                
+##  [9] Mexico                   United States of America
+## [11] French Guiana            Montserrat              
+## [13] Colombia                 Belize                  
+## [15] Netherlands Antilles     Saint Lucia             
+## [17] Peru                    
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Asia&quot;
-##  [1] Tajikistan           Azerbaijan           Turkey              
-##  [4] Thailand             Uzbekistan           Georgia             
-##  [7] Saudi Arabia         Singapore            United Arab Emirates
-## [10] Iraq                 Kyrgyzstan           Japan               
-## [13] Qatar                Turkmenistan         Syrian Arab Republic
-## [16] Bahrain              Jordan              
+##  [1] Mongolia             Malaysia             Kuwait              
+##  [4] Jordan               Iraq                 Thailand            
+##  [7] Bahrain              Azerbaijan           &lt;NA&gt;                
+## [10] Hong Kong SAR        United Arab Emirates Georgia             
+## [13] Syrian Arab Republic Uzbekistan           Brunei Darussalam   
+## [16] Qatar                Turkmenistan        
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 17
 ## 
 ## [1] &quot;Oceania&quot;
-## [1] Australia   Fiji        Kiribati    New Zealand &lt;NA&gt;       
+## [1] New Zealand &lt;NA&gt;        Kiribati    Fiji        Australia  
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 5
 ## 
 ## [1] &quot;Africa&quot;
-##  [1] South Africa          Zimbabwe              Mayotte              
-##  [4] Egypt                 Cabo Verde            Sao Tome and Principe
-##  [7] Morocco               &lt;NA&gt;                  Reunion              
-## [10] Tunisia               Mauritius             Seychelles           
+##  [1] Egypt                 Mauritius             Sao Tome and Principe
+##  [4] Reunion               Zimbabwe              Tunisia              
+##  [7] South Africa          Morocco               Mayotte              
+## [10] Seychelles            &lt;NA&gt;                  Cabo Verde           
 ## 141 Levels: Albania Anguilla Antigua and Barbuda Argentina ... Zimbabwe
 ## [1] 12</code></pre>
 <pre class="r"><code>total</code></pre>
@@ -807,6 +807,9 @@ length(countries_to_test)</code></pre>
 <div id="references" class="section level1 unnumbered">
 <h1>5. References</h1>
 <div id="refs" class="references">
+<div id="ref-xiaohan2012xiaohan2012-2_alexander-galkinalexande-galkin-5_mohsen-najafzadehmohsen-1_et-al">
+<p>2, Alexander GalkinAlexander Galkin 5, mohsen najafzadehmohsen najafzadeh 2, innovIsmailinnovIsmail 75753, Ryan ZottiRyan Zotti 3, Frank HarrellFrank Harrell 56.9k4115247, Yu ZhouYu Zhou 22122, et al. n.d. “What Is the Difference Between Test Set and Validation Set?” <em>Cross Validated</em>. <a href="https://stats.stackexchange.com/questions/19048/what-is-the-difference-between-test-set-and-validation-set/19051#19051">https://stats.stackexchange.com/questions/19048/what-is-the-difference-between-test-set-and-validation-set/19051#19051</a>.</p>
+</div>
 <div id="ref-parametric_or_non-parametric_bootstrap">
 <p>“A Parametric or Non-Parametric Bootstrap?” n.d. <em>Parametric or Non-Parametric Bootstrap</em>. <a href="https://influentialpoints.com/Training/nonparametric-or-parametric_bootstrap.htm">https://influentialpoints.com/Training/nonparametric-or-parametric_bootstrap.htm</a>.</p>
 </div>
